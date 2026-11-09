@@ -49,9 +49,9 @@ That is how much NVIDIA’s market value fell. In one trading day. January 2025.
 
 *[Pause.]*
 
-And apparently, things haven't been going too well for its CEO, Jensen Huang, either.
+*[CLICK 1: Jensen Huang meme appears.]*
 
-*[CLICK: Jensen Huang meme appears.]*
+And apparently, things haven't been going too well for its CEO, Jensen Huang, either.
 
 Well... not exactly. But even the “king of AI” isn't safe from a controversy.
 
@@ -61,13 +61,13 @@ But let's put the headlines aside for a moment. Because that $600 billion tells 
 
 Market value is what all of a company’s shares are worth together. So in a single day, investors decided NVIDIA was worth $600 billion less.
 
-*[CLICK: The meme leaves. DeepSeek appears with “<$6M vs $100M+”.]*
+*[CLICK 2: The meme leaves. DeepSeek appears with “<$6M vs $100M+”.]*
 
 What happened? A small Chinese lab called DeepSeek said it trained a top AI model for under $6 million. Big US labs spend over $100 million.
 
 Investors panicked. Their logic was simple. If AI gets this cheap, the world needs fewer NVIDIA chips.
 
-*[Click. The question appears. Look around the room.]*
+*[CLICK 3: The question appears. Look around the room.]*
 
 So here is our question for the next thirty minutes. **Was cheaper AI the real threat?**
 
@@ -223,9 +223,11 @@ That is our problem.
 
 Let me put the problem in one sentence.
 
-NVIDIA charges premium prices because customers are locked into CUDA. And its four biggest customers now have both the reason and the means to break free.
+NVIDIA charges premium prices because customers are locked into CUDA.
 
 *[CLICK 1: Reason and means appear.]*
+
+And its four biggest customers now have both the reason and the means to break free.
 
 The reason? NVIDIA’s high prices.
 
