@@ -254,25 +254,28 @@ My colleague will take us through the evidence. First question: how much does NV
 **Presenter:** Group 2  
 **Estimated time:** ~2.5 min
 
-**On screen:** 78% of NVIDIA’s revenue now comes from one business, and it is NVIDIA’s only proven growth engine
+**On screen:** 78% of NVIDIA’s revenue now comes from one business, and it is NVIDIA’s only proven growth engine  
+**Clicks:** 3 (operating margin, the portfolio map, “if NVIDIA stands still”)
 
 ### Speaker script
 
-*[Point to the three bars, left to right.]*
+*[The three columns grow left to right. Point to them in order.]*
 
 Two years earlier, data centers were 39% of NVIDIA’s revenue. Then 56%. Now 78%.
 
 Almost four out of every five dollars come from one business.
 
-And it is very profitable. Operating expenses grew only 2%, so about 85 cents of every extra dollar of sales became operating profit. Operating profit is what is left after making the chips and running the company.
+*[CLICK 1: Operating margin appears.]*
 
-*[Move to the map on the right.]*
+And it is very profitable. Operating margin went from 15.7% to 54.1% in one year. Operating expenses grew only 2%, so about 85 cents of every extra dollar of sales became operating profit. Operating profit is what is left after making the chips and running the company.
+
+*[CLICK 2: The portfolio map appears.]*
 
 The case uses a Blue Ocean tool that sorts businesses into three groups. Pioneers offer value nobody offered before. Migrators are better than rivals, but in a crowded market. Settlers are me-too.
 
-Today, the AI data center business is a pioneer. Gaming is a migrator. AI Foundry, NVIDIA’s new service that helps companies build their own AI models, might be the next pioneer. But the case shows no revenue for it yet. **We will test it with a pilot aimed at first-time buyers on slide 12.**
+Today, the AI data center business is a pioneer. Gaming is a migrator. It dipped 27% in fiscal 2023 and recovered in 2024, so the shift really came from data center revenue growing four and a half times. AI Foundry, NVIDIA’s new service that helps companies build their own AI models, might be the next pioneer. But the case shows no revenue for it yet. **We will test it with a pilot aimed at first-time buyers on slide 12.**
 
-*[Click. Let the box slide across.]*
+*[CLICK 3: The data center box slides into the migrator column.]*
 
 Now watch what happens if NVIDIA stands still. Rivals catch up. The data center slides into the migrator column.
 

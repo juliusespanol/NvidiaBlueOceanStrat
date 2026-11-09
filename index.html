@@ -101,8 +101,6 @@ svg text{font-family:var(--mono);fill:var(--mute)}
 .pchip.dc{left:26px;top:120px;background:rgba(118,185,0,.16);border:1.5px solid var(--green);color:var(--green-hi)}
 .pchip.gm{left:319px;top:120px;background:rgba(255,255,255,.04);border:1px solid var(--line2);color:var(--mute)}
 .pchip.af{left:26px;top:270px;border:1.5px dashed var(--dim);color:var(--mute)}
-section[data-step="1"] .pchip.dc{left:319px;top:270px;background:rgba(255,194,102,.1);border-color:var(--amber);color:var(--amber)}
-section[data-step="1"] .pchip.gm{left:612px;top:120px}
 .pms .warn{position:absolute;left:26px;top:120px;width:250px;padding:16px 18px;box-sizing:border-box;border:1.5px solid var(--amber);border-radius:5px;color:var(--amber);font-family:var(--display);font-size:27px;font-weight:650;line-height:1.15}
 .mix-row{display:grid;grid-template-columns:90px 1fr;align-items:center;gap:22px}
 .mix-row .yr{font-family:var(--mono);font-size:21px;color:var(--mute)}
@@ -593,19 +591,48 @@ Key line: Five questions decide what NVIDIA should do.</aside>
 </section>
 
 <!-- 6 Q1 -->
-<section class="slide" data-bg="dim" data-poll="Case poll Q8: B · Q9: A · Q10: D · Q11: C · Q12: B" data-label="78% of NVIDIA's revenue now comes from one business, and it is NVIDIA's only proven growth engine">
+<section id="slide-6-q1" class="slide" data-bg="dim" data-poll="Case poll Q8: B · Q9: A · Q10: D · Q11: C · Q12: B" data-label="78% of NVIDIA's revenue now comes from one business, and it is NVIDIA's only proven growth engine">
+<style>
+/* Columns grow left to right on entry. Click 1: margin. Click 2: portfolio map. Click 3: "if NVIDIA stands still". */
+#slide-6-q1 .cols{display:flex;align-items:flex-end;gap:64px;height:420px;padding-left:8px;border-bottom:1px solid var(--line2)}
+#slide-6-q1 .vc{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;width:150px;height:100%;gap:14px}
+#slide-6-q1 .vc .v{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:46px;letter-spacing:-.02em;color:var(--fg);opacity:0}
+#slide-6-q1.active .vc .v{animation:s6fade .6s ease forwards;animation-delay:calc(var(--gd) + .5s)}
+@keyframes s6fade{to{opacity:1}}
+#slide-6-q1 .vc .bar{width:100%;border-radius:3px 3px 0 0;background:var(--green)}
+#slide-6-q1 .vc:last-child .bar{box-shadow:0 0 50px rgba(118,185,0,.35)}
+#slide-6-q1 .vc:last-child .v{color:var(--green-hi)}
+#slide-6-q1 .yrs{display:flex;gap:64px;padding-left:8px;margin-top:12px}
+#slide-6-q1 .yrs span{width:150px;text-align:center;font-family:var(--mono);font-size:22px;font-weight:500;color:var(--mute)}
+#slide-6-q1 .margin{display:flex;flex-direction:column;gap:8px;margin-top:34px}
+#slide-6-q1 .margin .mg{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:58px;letter-spacing:-.02em;line-height:1}
+#slide-6-q1 .margin .mg .arr{color:var(--dim);font-weight:300;margin:0 14px}
+#slide-6-q1 .margin p{font-size:23px;color:var(--mute)}
+#slide-6-q1[data-step="3"] .pchip.dc{left:319px;top:270px;background:rgba(255,194,102,.1);border-color:var(--amber);color:var(--amber)}
+#slide-6-q1[data-step="3"] .pchip.gm{left:612px;top:120px}
+@media(prefers-reduced-motion:reduce){#slide-6-q1 .vc .v{opacity:1;animation:none!important}}
+</style>
   <header class="hd b">
   <h2>78% of NVIDIA's revenue now comes from one business, and it is NVIDIA's only proven growth engine</h2></header>
-  <div class="row" style="flex:1;min-height:0;gap:56px">
-    <div class="col b" style="flex:1;gap:26px;justify-content:center">
-      <span class="k">Data center share of revenue <span class="tag c">COMPUTED</span></span>
-      <div class="mix-row"><span class="yr">FY22</span><div class="mix-bar"><div class="dcs grow-x" style="width:39.4%;--gd:.9s">39%</div></div></div>
-      <div class="mix-row"><span class="yr">FY23</span><div class="mix-bar"><div class="dcs grow-x" style="width:55.6%;--gd:1.05s">56%</div></div></div>
-      <div class="mix-row"><span class="yr">FY24</span><div class="mix-bar"><div class="dcs grow-x" style="width:78%;--gd:1.2s">78%</div></div></div>
-      <p class="txt" style="font-size:24px">Operating margin rose from <b>15.7%</b> to <b>54.1%</b> (FY23 to FY24). Operating expenses grew only <b>2%</b>, so about 85 cents of each extra sales dollar became operating profit. <span class="tag c">COMPUTED</span></p>
+  <div class="row" style="flex:1;min-height:0;gap:80px">
+    <div class="col b" style="flex:1;gap:20px;justify-content:center">
+      <span class="k">Data center share of revenue <span class="tag c" style="margin-left:8px">COMPUTED</span></span>
+      <div>
+        <div class="cols" role="img" aria-label="Data center share of NVIDIA revenue: FY22 39%, FY23 56%, FY24 78%">
+          <div class="vc" style="--gd:.9s"><span class="v">39%</span><div class="bar grow-y" style="height:180px;--gd:.9s"></div></div>
+          <div class="vc" style="--gd:1.3s"><span class="v">56%</span><div class="bar grow-y" style="height:258px;--gd:1.3s"></div></div>
+          <div class="vc" style="--gd:1.7s"><span class="v">78%</span><div class="bar grow-y" style="height:359px;--gd:1.7s"></div></div>
+        </div>
+        <div class="yrs"><span>FY22</span><span>FY23</span><span>FY24</span></div>
+      </div>
+      <div class="margin" data-frag="1">
+        <span class="k">Operating margin, FY23 → FY24 <span class="tag c" style="margin-left:8px">COMPUTED</span></span>
+        <div class="mg">15.7%<span class="arr">→</span><span class="g">54.1%</span></div>
+        <p>About 85¢ of each extra sales dollar became profit.</p>
+      </div>
     </div>
-    <div class="col b" style="width:880px;gap:16px">
-      <div class="row" style="justify-content:space-between;align-items:center"><span class="k">Blue Ocean portfolio map</span><span class="k" style="color:var(--green)">Press → for “if NVIDIA stands still”</span></div>
+    <div class="col" data-frag="2" style="width:880px;gap:16px;justify-content:center">
+      <span class="k">Blue Ocean portfolio map</span>
       <div class="pms">
         <div class="pc"><span class="k">Pioneer</span><small>creates new value</small></div>
         <div class="pc"><span class="k">Migrator</span><small>better than most</small></div>
@@ -613,12 +640,29 @@ Key line: Five questions decide what NVIDIA should do.</aside>
         <div class="pchip dc"><b>AI data center</b>78% of revenue</div>
         <div class="pchip gm"><b>Gaming GPUs</b>17% of revenue</div>
         <div class="pchip af"><b>AI Foundry</b>potential pioneer, tested by a pilot (slide 12)</div>
-        <div class="warn" data-frag="1">No proven pioneer left</div>
+        <div class="warn" data-frag="3">No proven pioneer left</div>
       </div>
-      <p class="txt" style="font-size:22px">Gaming dipped 27% in FY2023 and recovered in FY2024. The shift came from data center revenue growing 4.5×. <span class="tag c">COMPUTED</span></p>
     </div>
   </div>
-  <aside class="notes">Question one. In fiscal 2022, data center was 39 percent of NVIDIA's revenue. Two years later it was 78 percent. And it is very profitable: operating expenses grew only 2 percent, so about 85 cents of every extra dollar of sales became operating profit. Now look at the portfolio map on the right. Today, the AI data center business is a pioneer: it created a market that did not exist. Gaming is a migrator: good, but competing. AI Foundry might be the next pioneer, but the case gives it no revenue yet. We will test it with a pilot aimed at first-time buyers on slide 12. [Click] Now watch what happens if NVIDIA stands still. Rivals and in-house chips catch up, and the data center slides into the migrator column. NVIDIA is left with no proven pioneer. That is why it has to act now. Second question: why can NVIDIA charge so much?</aside>
+  <aside class="notes">[The three columns grow left to right. Point to them in order.]
+
+Question one. In fiscal 2022, data center was 39 percent of NVIDIA's revenue. Then 56 percent. Now 78 percent. Almost four of every five dollars come from one business.
+
+[CLICK 1: Operating margin appears.]
+
+And it is very profitable. Operating margin went from 15.7 to 54.1 percent in one year. Operating expenses grew only 2 percent, so about 85 cents of every extra dollar of sales became operating profit.
+
+[CLICK 2: The portfolio map appears.]
+
+The case uses a Blue Ocean tool that sorts businesses into pioneers, migrators and settlers. Today, the AI data center business is a pioneer: it created a market that did not exist. Gaming is a migrator: good, but competing. It dipped 27 percent in fiscal 2023 and recovered in 2024, so the shift really came from data center revenue growing four and a half times. AI Foundry might be the next pioneer, but the case gives it no revenue yet. We will test it with a pilot aimed at first-time buyers on slide 12.
+
+[CLICK 3: The data center box slides into the migrator column.]
+
+Now watch what happens if NVIDIA stands still. Rivals and in-house chips catch up, and the data center slides into the migrator column. NVIDIA is left with no proven pioneer. That is why it has to act now.
+
+Second question: why can NVIDIA charge so much?
+
+Key line: If NVIDIA stands still, it has no proven pioneer left.</aside>
 </section>
 
 <!-- 7 Q2 -->
