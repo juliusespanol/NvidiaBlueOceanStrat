@@ -18,7 +18,7 @@ Retrieved 2026-11-09 from public nvidia.com pages (robots.txt allows access). Im
 | `moat_system/rack_backplane_DIAGRAM.png` | What is inside a rack | in | 1352x788 | https://developer.nvidia.com/blog/nvidia-contributes-nvidia-gb200-nvl72-designs-to-open-compute-project/ |
 | `moat_system/gb200_rack.jpg` | The product customers actually buy | in | 1920x1080 | https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/ |
 | `moat_system/gb200_rack_cable_spine.png` | Rack with cable spine | in | 1920x1080 | https://developer.nvidia.com/blog/nvidia-gb200-nvl72-delivers-trillion-parameter-llm-training-and-real-time-inference/ |
-| `moat_system/blackwell_chip.jpg` | The chip itself | in | 1200x630 | https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/ |
+| `moat_system/blackwell_chip.webp` | The chip itself (transparent background) | in | 1731x909 | https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/ |
 | `moat_system/compute_tray.png` | Chip to tray step | in | 1920x1080 | https://developer.nvidia.com/blog/nvidia-gb200-nvl72-delivers-trillion-parameter-llm-training-and-real-time-inference/ |
 | `moat_system/hgx_a100_board.jpg` | Earlier-generation board | in | 774x515 | https://developer.nvidia.com/blog/nvidia-contributes-nvidia-gb200-nvl72-designs-to-open-compute-project/ |
 | `networking/spectrum_x_system.jpg` | Networking: the less visible profit pool | in | 1920x1080 | https://www.nvidia.com/en-us/networking/spectrumx/ |

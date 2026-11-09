@@ -214,8 +214,8 @@ That is our problem.
 **Presenter:** Group 1  
 **Estimated time:** ~1.5 min
 
-**On screen:** Can NVIDIA keep its pricing power?  
-**Clicks:** 3 (reason and means, the four questions, antitrust)
+**On screen:** How can NVIDIA keep its pricing power and keep growing?  
+**Clicks:** 3 (reason and means, the five questions, the condition)
 
 ### Speaker script
 
@@ -223,7 +223,9 @@ That is our problem.
 
 Let me put the problem in one sentence.
 
-NVIDIA charges premium prices because customers are locked into CUDA.
+How can NVIDIA keep its pricing power, and keep growing?
+
+It charges premium prices because customers are locked into CUDA.
 
 *[CLICK 1: Reason and means appear.]*
 
@@ -231,21 +233,21 @@ And its four biggest customers now have both the reason and the means to break f
 
 The reason? NVIDIA’s high prices.
 
-The means? Their size. Their own software. Their own clouds.
+The means? Their money. Their engineers. Their own clouds, so they can rent out their own chips.
 
-*[CLICK 2: The four questions appear. Point to them one at a time.]*
+*[CLICK 2: The five questions appear. Point to them one at a time.]*
 
-To decide what NVIDIA should do, we need four answers. How much rides on this business? Why can NVIDIA charge so much? Who can break the lock-in? And what is it worth to stop them?
+To decide what NVIDIA should do, we need five answers. How much rides on this business? Why can NVIDIA charge so much? Who can break the lock-in? What is it worth to keep them? And where can NVIDIA find new customers who are not building their own chips?
 
-*[CLICK 3: Antitrust appears.]*
+*[CLICK 3: The condition appears.]*
 
-One more limit. Antitrust. Those are the laws that stop a dominant company from blocking competition. Regulators are already watching NVIDIA.
+And one condition. NVIDIA has to do this without pushing those customers out faster, and without drawing antitrust action. Antitrust laws stop a dominant company from blocking competition, and regulators are already watching NVIDIA.
 
 *[Handoff. Turn and open your hand toward the Group 2 presenter.]*
 
 My colleague will take us through the evidence. First question: how much does NVIDIA depend on this one business?
 
-**Key line:** Four questions decide what NVIDIA should do.
+**Key line:** Five questions decide what NVIDIA should do.
 
 ## Slide 6 of 16: Analysis · Q1
 
