@@ -2,7 +2,7 @@
 <title>NVIDIA Case Keynote</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap">
 <style>
 /* Layout: one 1920x1080 stage scaled to the window, floating over a live-rendered GPU die that changes with the story. */
 :root{
@@ -12,7 +12,7 @@
   --amber:#ffc266; --amber2:#ffd699; --amber3:#e8a040; --amber4:#b87a26;
   --display:'Archivo','Helvetica Neue',Arial,sans-serif;
   --body:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;
-  --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+  --mono:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;
   color-scheme:dark;
 }
 html,body{height:100%;margin:0;overflow:hidden;background:var(--ink);color:var(--fg)}
@@ -61,7 +61,7 @@ p{margin:0}
 .panel::before{content:"";position:absolute;left:0;top:0;width:28px;height:1px;background:var(--green)}
 .row{display:flex;gap:36px}
 .col{display:flex;flex-direction:column;gap:20px;min-width:0}
-.k{font-family:var(--mono);font-size:18px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.k{font-family:var(--mono);font-weight:500;font-size:18px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
 .big{font-family:var(--display);font-stretch:118%;font-weight:800;letter-spacing:-.03em;line-height:.92;font-variant-numeric:tabular-nums}
 
 /* cover */
@@ -316,7 +316,7 @@ Key line: The real threat is on NVIDIA’s own customer list.</aside>
       <rect class="mvbar" style="transition-delay:.3s" x="1472" y="380" width="52" height="140" fill="url(#gb)"/>
       <rect class="mvbar" style="transition-delay:.5s" x="1552" y="100" width="52" height="420" fill="url(#gb)"/>
       <g data-frag="3">
-        <g class="halo" font-size="26" text-anchor="middle" style="font-family:'JetBrains Mono',monospace;font-weight:600">
+        <g class="halo" font-size="26" text-anchor="middle" style="font-family:'IBM Plex Sans',sans-serif;font-weight:600">
           <text x="1418" y="450" fill="#ffffff">$0.4T</text><text x="1498" y="366" fill="#ffffff">$1T</text><text x="1578" y="84" fill="#a8e33a" font-size="30">$3T+</text>
         </g>
         <g class="halo" font-size="22" text-anchor="middle" style="font-weight:600"><text x="1418" y="556" fill="#eef3ea">2022</text><text x="1578" y="556" fill="#eef3ea">2024</text></g>
@@ -673,7 +673,7 @@ Key line: Five questions decide what NVIDIA should do.</aside>
       <g stroke="#2c3a2e" stroke-width="2"><line x1="832" y1="300" x2="832" y2="80"/><line x1="832" y1="300" x2="230" y2="300"/><line x1="832" y1="300" x2="1434" y2="300"/><line x1="832" y1="300" x2="832" y2="520"/></g>
       <path d="M1434 380 C1434 520 1250 540 1050 528" fill="none" stroke="#ffc266" stroke-width="3" stroke-dasharray="10 8">
         <animate attributeName="stroke-dashoffset" from="0" to="-36" dur="1.2s" repeatCount="indefinite"/></path>
-      <text x="1300" y="586" text-anchor="middle" font-size="20" fill="#ffc266" style="font-family:'JetBrains Mono',monospace;letter-spacing:.08em">SAME FOUR FIRMS</text>
+      <text x="1300" y="586" text-anchor="middle" font-size="20" fill="#ffc266" style="font-family:'IBM Plex Sans',sans-serif;letter-spacing:.08em">SAME FOUR FIRMS</text>
     </svg>
     <div class="node" style="left:832px;top:80px"><span class="rt">New entrants · Medium</span><p>$8.8B of VC into chip startups in 2023, but CUDA and scarce TSMC capacity hold them back.</p></div>
     <div class="node" style="left:230px;top:300px"><span class="rt">Supplier power · High</span><p>TSMC alone mass-produces 3nm, booked to 2026. ASML is the only EUV maker.</p></div>
