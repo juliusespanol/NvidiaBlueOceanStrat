@@ -370,7 +370,7 @@ So what will these four do next?
 ## SLIDE 10 of 16 · Analysis · Q3 · Group 2 · ~2 min
 
 **On screen:** The big buyers will move work to their own chips wherever it is cheaper  
-**Clicks:** 2 (the prediction flow with moving workloads, then the Amazon example)
+**Clicks:** 2 (the corners fold away and the prediction flow takes their place, then the Amazon example)
 
 *[The four corners fly in. Walk through them in order.]*
 
@@ -384,7 +384,7 @@ Belief: Google’s CEO said spending too little on AI is riskier than spending t
 
 Capabilities: Amazon, Microsoft and Google hold 65% of the cloud market. Google’s own chip costs it 70 to 80% less than NVIDIA’s A100.
 
-*[CLICK 1: The prediction appears and workloads start flowing. Say it clearly.]*
+*[CLICK 1: The four corners fold into the Top 4 badge, and the prediction takes their place. Workloads start flowing. Say it clearly.]*
 
 So here is our prediction. They will not move everything at once, and they will not move only one kind of work.
 

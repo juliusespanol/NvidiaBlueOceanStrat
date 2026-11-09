@@ -1020,68 +1020,70 @@ Q&A note (details taken off the slide): New entrants: $8.8 billion of venture mo
    Click 2: Amazon example (Inferentia + Trainium). */
 #slide-10-fc{--ease:cubic-bezier(.16,.84,.24,1)}
 #slide-10-fc .c10{position:relative;flex:1;min-height:0}
-#slide-10-fc .lbl{position:absolute;left:0;top:0;color:var(--green);font-size:20px}
+#slide-10-fc .lbl{position:absolute;left:0;top:0;color:var(--green);font-size:20px;transition:opacity .5s ease}
+#slide-10-fc:is([data-step="1"],[data-step="2"]) .lbl{opacity:0!important}
 /* corners */
-#slide-10-fc .grid{position:absolute;left:0;right:0;top:44px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:110px 110px;gap:12px;transform-origin:50% 50%;transition:opacity .6s ease .15s,transform .75s cubic-bezier(.65,0,.35,1),filter .6s ease}
-#slide-10-fc .cn{position:relative;border:1px solid var(--line2);border-radius:6px;background:rgba(10,15,11,.94);padding:20px 28px;display:flex;flex-direction:column;justify-content:center;gap:8px;
+#slide-10-fc .grid{position:absolute;left:0;right:0;top:44px;bottom:20px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:20px;transform-origin:50% 50%;transition:opacity .6s ease .15s,transform .75s cubic-bezier(.65,0,.35,1),filter .6s ease}
+#slide-10-fc .cn{position:relative;border:1px solid var(--line2);border-radius:6px;background:rgba(10,15,11,.94);padding:30px 44px;display:flex;flex-direction:column;justify-content:center;gap:16px;
   opacity:0;transform:translate(var(--fx),var(--fy)) scale(.94)}
 #slide-10-fc.active .cn{animation:c10in .9s var(--ease) forwards;animation-delay:var(--dl)}
 @keyframes c10in{to{opacity:1;transform:none}}
-#slide-10-fc .cn.l{padding-right:110px}
-#slide-10-fc .cn.r{padding-left:110px}
+#slide-10-fc .cn.l{padding-right:150px}
+#slide-10-fc .cn.r{padding-left:150px}
+#slide-10-fc .cn .k{font-size:21px}
 #slide-10-fc .cn .k{display:flex;gap:12px;align-items:baseline}
 #slide-10-fc .cn .k i{font-style:normal;color:var(--green)}
-#slide-10-fc .cn p{margin:0;font-family:var(--display);font-weight:600;font-size:28px;line-height:1.15;letter-spacing:-.005em;color:var(--fg)}
+#slide-10-fc .cn p{margin:0;font-family:var(--display);font-weight:600;font-size:40px;line-height:1.15;letter-spacing:-.01em;color:var(--fg)}
 #slide-10-fc .cn p small{font-family:var(--body);font-weight:400;font-size:19px;color:var(--dim);margin-left:10px}
-#slide-10-fc .cn .tag{position:absolute;top:18px;right:20px}
-#slide-10-fc .cn.l .tag{right:110px}
-#slide-10-fc .bw{position:absolute;left:50%;top:160px;width:0;height:0;z-index:2;transition:transform .6s cubic-bezier(.65,0,.35,1) .55s,opacity .45s ease .75s}
-#slide-10-fc .badge{position:absolute;left:0;top:0;width:140px;height:140px;margin:-70px 0 0 -70px;border-radius:50%;border:1.5px solid var(--green);background:radial-gradient(circle,#132008,#070b08 72%);
+#slide-10-fc .cn .tag{position:absolute;top:24px;right:26px}
+#slide-10-fc .cn.l .tag{right:150px}
+#slide-10-fc .bw{position:absolute;left:50%;top:calc(44px + (100% - 64px) / 2);width:0;height:0;z-index:2;transition:transform .6s cubic-bezier(.65,0,.35,1) .55s,opacity .45s ease .75s}
+#slide-10-fc .badge{position:absolute;left:0;top:0;width:200px;height:200px;margin:-100px 0 0 -100px;border-radius:50%;border:1.5px solid var(--green);background:radial-gradient(circle,#132008,#070b08 72%);
   display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 0 60px rgba(118,185,0,.25);opacity:0;transform:scale(.6);z-index:2;transition:opacity .8s ease,filter .8s ease}
 #slide-10-fc.active .badge{animation:c10pop .8s var(--ease) 1.25s forwards}
 @keyframes c10pop{to{opacity:1;transform:none}}
-#slide-10-fc .badge b{font-family:var(--display);font-stretch:115%;font-weight:800;font-size:40px;line-height:1;color:var(--green-hi)}
-#slide-10-fc .badge span{font-size:17px;color:var(--mute);letter-spacing:.08em;text-transform:uppercase;margin-top:6px}
+#slide-10-fc .badge b{font-family:var(--display);font-stretch:115%;font-weight:800;font-size:58px;line-height:1;color:var(--green-hi)}
+#slide-10-fc .badge span{font-size:21px;color:var(--mute);letter-spacing:.08em;text-transform:uppercase;margin-top:6px}
 #slide-10-fc:is([data-step="1"],[data-step="2"]) .grid{opacity:0;transform:scale(.18);filter:blur(6px);pointer-events:none}
 #slide-10-fc:is([data-step="1"],[data-step="2"]) .bw{transform:scale(1.25);opacity:0}
 #slide-10-fc .bw{transition-delay:0s,0s}
 #slide-10-fc:is([data-step="1"],[data-step="2"]) .bw{transition-delay:.55s,.75s}
 /* prediction */
-#slide-10-fc .pred{position:absolute;left:0;right:0;top:120px;height:380px}
+#slide-10-fc .pred{position:absolute;left:0;right:0;top:40px;height:600px}
 #slide-10-fc .pred[data-frag]{transform:translateY(60px) scale(.97)}
 #slide-10-fc .pred.on{transform:none;transition-delay:.85s}
 #slide-10-fc .pred .hd10{display:flex;align-items:center;gap:16px}
 #slide-10-fc .pred .hd10 .k{color:var(--amber)}
-#slide-10-fc .flow{position:absolute;left:0;top:52px;width:1664px;height:250px}
+#slide-10-fc .flow{position:absolute;left:0;top:64px;width:1664px;height:400px}
 #slide-10-fc .flow svg{position:absolute;inset:0;overflow:visible}
 #slide-10-fc .flow path{fill:none;stroke:var(--line2);stroke-width:2.5}
 #slide-10-fc .flow path.y{stroke:rgba(255,194,102,.55)}
 #slide-10-fc .flow path.n{stroke:rgba(118,185,0,.55)}
-#slide-10-fc .flow text{font-family:var(--display);font-size:22px;font-weight:700;letter-spacing:.06em}
+#slide-10-fc .flow text{font-family:var(--display);font-size:26px;font-weight:700;letter-spacing:.06em}
 #slide-10-fc .bx{position:absolute;box-sizing:border-box;border-radius:8px;display:flex;align-items:center;z-index:2}
-#slide-10-fc .bx.st{left:0;top:85px;width:290px;height:80px;border:1px solid var(--line2);background:rgba(10,15,11,.96);justify-content:center;gap:14px;font-family:var(--display);font-size:26px;font-weight:600;color:var(--fg)}
+#slide-10-fc .bx.st{left:0;top:150px;width:330px;height:100px;border:1px solid var(--line2);background:rgba(10,15,11,.96);justify-content:center;gap:16px;font-family:var(--display);font-size:30px;font-weight:600;color:var(--fg)}
 #slide-10-fc .bx.st .stack{display:flex;flex-direction:column;gap:5px}
 #slide-10-fc .bx.st .stack i{display:block;width:30px;height:9px;border-radius:2px;background:var(--mute)}
-#slide-10-fc .bx.q{left:420px;top:60px;width:520px;height:130px;border:1.5px solid var(--fg);background:#0b100c;padding:0 34px;font-family:var(--display);font-size:29px;font-weight:650;line-height:1.2;color:var(--fg);text-align:center;justify-content:center}
-#slide-10-fc .bx.o{left:1160px;width:504px;height:104px;padding:0 26px;gap:22px;font-family:var(--display);font-size:28px;font-weight:650;color:var(--fg);line-height:1.15}
-#slide-10-fc .bx.o small{display:block;font-family:var(--body);font-size:19px;font-weight:400;color:var(--mute);margin-top:4px}
+#slide-10-fc .bx.q{left:440px;top:100px;width:500px;height:200px;border:1.5px solid var(--fg);background:#0b100c;padding:0 40px;font-family:var(--display);font-size:36px;font-weight:650;line-height:1.2;color:var(--fg);text-align:center;justify-content:center}
+#slide-10-fc .bx.o{left:1120px;width:544px;height:150px;padding:0 30px;gap:24px;font-family:var(--display);font-size:34px;white-space:nowrap;font-weight:650;color:var(--fg);line-height:1.15}
+#slide-10-fc .bx.o small{display:block;font-family:var(--body);font-size:22px;font-weight:400;color:var(--mute);margin-top:4px}
 #slide-10-fc .bx.o.yes{top:0;border:1.5px solid var(--amber);background:rgba(30,22,8,.94);box-shadow:0 0 60px rgba(255,194,102,.12)}
-#slide-10-fc .bx.o.no{top:146px;border:1.5px solid var(--green);background:rgba(13,22,6,.94);box-shadow:0 0 60px rgba(118,185,0,.12)}
-#slide-10-fc .chipico{flex:none;width:62px;height:62px;border:2.5px solid var(--amber);border-radius:6px;position:relative;box-sizing:border-box;
+#slide-10-fc .bx.o.no{top:250px;border:1.5px solid var(--green);background:rgba(13,22,6,.94);box-shadow:0 0 60px rgba(118,185,0,.12)}
+#slide-10-fc .chipico{flex:none;width:76px;height:76px;border:2.5px solid var(--amber);border-radius:6px;position:relative;box-sizing:border-box;
   background:repeating-linear-gradient(90deg,transparent 0 9px,rgba(255,194,102,.25) 9px 11px)}
 #slide-10-fc .chipico::before,#slide-10-fc .chipico::after{content:"";position:absolute;left:8px;right:8px;height:8px;background:repeating-linear-gradient(90deg,var(--amber) 0 4px,transparent 4px 9px)}
 #slide-10-fc .chipico::before{top:-11px}#slide-10-fc .chipico::after{bottom:-11px}
-#slide-10-fc .bx.o img{flex:none;width:112px;height:auto;margin:-10px -8px -10px -10px;filter:drop-shadow(0 0 18px rgba(118,185,0,.35))}
+#slide-10-fc .bx.o img{flex:none;width:136px;height:auto;margin:-10px -8px -10px -10px;filter:drop-shadow(0 0 18px rgba(118,185,0,.35))}
 /* workload dots */
 #slide-10-fc .dot{position:absolute;left:0;top:0;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:3px;opacity:0;z-index:1}
-#slide-10-fc .dot.y{background:var(--amber);box-shadow:0 0 14px rgba(255,194,102,.8);offset-path:path('M290 125 L940 125 C1050 125 1050 52 1160 52')}
-#slide-10-fc .dot.n{background:var(--green-hi);box-shadow:0 0 14px rgba(168,227,58,.8);offset-path:path('M290 125 L940 125 C1050 125 1050 198 1160 198')}
+#slide-10-fc .dot.y{background:var(--amber);box-shadow:0 0 14px rgba(255,194,102,.8);offset-path:path('M330 200 L940 200 C1030 200 1030 75 1120 75')}
+#slide-10-fc .dot.n{background:var(--green-hi);box-shadow:0 0 14px rgba(168,227,58,.8);offset-path:path('M330 200 L940 200 C1030 200 1030 325 1120 325')}
 #slide-10-fc .dot{offset-rotate:0deg}
 #slide-10-fc:is([data-step="1"],[data-step="2"]) .dot{animation:c10run 3.6s cubic-bezier(.45,0,.55,1) infinite;animation-delay:var(--dd)}
 @keyframes c10run{0%{offset-distance:0%;opacity:0}8%{opacity:1}88%{opacity:1}100%{offset-distance:100%;opacity:0}}
 /* click 2 */
-#slide-10-fc .amz{position:absolute;left:0;right:0;top:318px;display:flex;align-items:center;gap:18px;padding:16px 24px;border-left:3px solid var(--amber);background:linear-gradient(90deg,rgba(255,194,102,.09),transparent 70%)}
-#slide-10-fc .amz p{margin:0;font-size:25px;color:var(--mute)}
+#slide-10-fc .amz{position:absolute;left:0;right:0;top:478px;display:flex;align-items:center;gap:18px;padding:16px 24px;border-left:3px solid var(--amber);background:linear-gradient(90deg,rgba(255,194,102,.09),transparent 70%)}
+#slide-10-fc .amz p{margin:0;font-size:29px;color:var(--mute)}
 #slide-10-fc .amz b{color:var(--fg);font-weight:600}
 @media(prefers-reduced-motion:reduce){
   #slide-10-fc .cn,#slide-10-fc .badge{opacity:1;transform:none;animation:none!important}
@@ -1103,12 +1105,12 @@ Q&A note (details taken off the slide): New entrants: $8.8 billion of venture mo
     <div class="pred" data-frag="1">
       <div class="hd10"><span class="k">Likely next move</span><span class="tag i">OUR PREDICTION</span></div>
       <div class="flow">
-        <svg viewBox="0 0 1664 250" width="1664" height="250" aria-hidden="true">
-          <path d="M290 125 L420 125"/>
-          <path class="y" d="M940 125 C1050 125 1050 52 1160 52"/>
-          <path class="n" d="M940 125 C1050 125 1050 198 1160 198"/>
-          <text x="1046" y="62" style="fill:var(--amber)">YES</text>
-          <text x="1046" y="214" style="fill:var(--green-hi)">NO</text>
+        <svg viewBox="0 0 1664 400" width="1664" height="400" aria-hidden="true">
+          <path d="M330 200 L440 200"/>
+          <path class="y" d="M940 200 C1030 200 1030 75 1120 75"/>
+          <path class="n" d="M940 200 C1030 200 1030 325 1120 325"/>
+          <text x="1000" y="112" style="fill:var(--amber)">YES</text>
+          <text x="1000" y="316" style="fill:var(--green-hi)">NO</text>
         </svg>
         <div class="dot y" style="--dd:0s"></div><div class="dot n" style="--dd:.9s"></div><div class="dot y" style="--dd:1.8s"></div><div class="dot n" style="--dd:2.7s"></div>
         <div class="bx st"><span class="stack"><i></i><i></i><i></i></span>Each AI workload</div>
@@ -1131,7 +1133,7 @@ Belief: Google’s CEO said spending too little on AI is riskier than spending t
 
 Capabilities: Amazon, Microsoft and Google hold 65% of the cloud market. Google’s own chip costs it 70 to 80% less than NVIDIA’s A100.
 
-[CLICK 1: The prediction appears and workloads start flowing. Say it clearly.]
+[CLICK 1: The four corners fold into the Top 4 badge, and the prediction takes their place. Workloads start flowing. Say it clearly.]
 
 So here is our prediction. They will not move everything at once, and they will not move only one kind of work.
 
@@ -1429,7 +1431,7 @@ Key line: Make staying the best option, and the biggest buyers stay.</aside>
 </main>
 
 <div id="bar" aria-hidden="true"></div>
-<div id="hint" class="ui"><button type="button" id="bp" aria-label="Previous slide">←</button><button type="button" id="bn" aria-label="Next slide">→</button><button type="button" id="bnotes">N · notes</button><button type="button" id="bidx">I · titles</button><button type="button" id="bfs">F · full screen</button></div>
+<div id="hint" class="ui"><button type="button" id="bp" aria-label="Previous slide">←</button><button type="button" id="bn" aria-label="Next slide">→</button><button type="button" id="bnotes" hidden>N · notes</button><button type="button" id="bidx" hidden>I · titles</button><button type="button" id="bfs" hidden>F · full screen</button></div>
 <div id="notes" class="ui" hidden><div class="nh" id="nh">Speaker script</div><div id="nt"></div></div>
 <div id="index" class="ui" hidden><div class="in"><h4>Read the titles only</h4><p class="sub">If the class reads only these, they should get the whole argument. Click one to jump.</p><ol id="il"></ol></div></div>
 
