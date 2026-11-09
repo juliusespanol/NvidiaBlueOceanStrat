@@ -268,17 +268,20 @@ Key line: The real threat is on NVIDIA’s own customer list.</aside>
 </section>
 
 <!-- 2 FACTS -->
-<section id="slide-2-facts" class="slide" data-bg="dim" data-poll="Case poll Q1: C · Q3: C" data-label="From gaming chips to $3 trillion">
+<section id="slide-2-facts" class="slide" data-bg="dim" data-poll="Case poll Q1: C · Q3: C" data-label="NVIDIA’s Journey to $3 Trillion">
 <style>
-#slide-2-facts .dc-photo{position:absolute;right:0;bottom:0;width:1300px;height:760px;object-fit:cover;object-position:center 60%;z-index:-1;opacity:0;transition:opacity 1.4s ease;pointer-events:none;
+#slide-2-facts .ft>span:not(.pg){display:none}
+#slide-2-facts .ft .pg{margin-left:auto}
+#slide-2-facts .dc-photo{position:absolute;right:0;bottom:-170px;width:1300px;height:760px;object-fit:cover;object-position:center 60%;z-index:-1;opacity:0;transition:opacity 1.4s ease;pointer-events:none;
   -webkit-mask-image:radial-gradient(ellipse 70% 60% at 65% 70%,#000 35%,transparent 80%);mask-image:radial-gradient(ellipse 70% 60% at 65% 70%,#000 35%,transparent 80%)}
-#slide-2-facts[data-step="3"] .dc-photo{opacity:.42}
-#slide-2-facts .chip-card{position:absolute;left:0;top:150px;width:300px;height:213px;margin:0;border-radius:8px;overflow:hidden;border:1px solid var(--line2);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+#slide-2-facts[data-step="3"] .dc-photo{opacity:.38}
+#slide-2-facts .chip-card,#slide-2-facts .cuda-card{position:absolute;top:183px;height:180px;margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line2);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+#slide-2-facts .chip-card{left:0;width:254px}
 #slide-2-facts .chip-card img{display:block;width:100%;height:100%;object-fit:cover}
 #slide-2-facts .mvbar{transform:scaleY(0);transform-box:fill-box;transform-origin:50% 100%;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
 #slide-2-facts[data-step="3"] .mvbar{transform:scaleY(1)}
-#slide-2-facts .cuda-card{position:absolute;left:330px;top:181px;width:300px;margin:0;filter:drop-shadow(0 20px 40px rgba(0,0,0,.55))}
-#slide-2-facts .cuda-card img{display:block;width:100%;height:auto}
+#slide-2-facts .cuda-card{left:300px;width:297px}
+#slide-2-facts .cuda-card img{display:block;width:100%;height:100%;object-fit:cover}
 #slide-2-facts .road{stroke-dasharray:420;stroke-dashoffset:420;transition:stroke-dashoffset 1.1s cubic-bezier(.4,0,.2,1)}
 #slide-2-facts:not([data-step="0"]) .road{stroke-dashoffset:0}
 #slide-2-facts .halo{paint-order:stroke;stroke:#050805;stroke-width:7px;stroke-linejoin:round}
@@ -287,8 +290,7 @@ Key line: The real threat is on NVIDIA’s own customer list.</aside>
 @media(prefers-reduced-motion:reduce){#slide-2-facts .mvbar,#slide-2-facts .road{transition:none}}
 </style>
   <img class="dc-photo" src="nvidia_assets/_picks/ai_factory/data_center_row.jpg" alt="">
-  <header class="hd b"><div class="eyebrow"><span class="act">Case facts</span><span class="q">How NVIDIA got here</span></div>
-  <h2>From gaming chips to $3 trillion</h2></header>
+  <header class="hd b"><h2>NVIDIA’s Journey to $3 Trillion</h2></header>
   <div class="chart-wrap b">
     <svg viewBox="0 0 1664 600" width="1664" height="600" role="img" aria-label="Timeline: 1999 first GPU, 2007 CUDA, November 2022 ChatGPT, then NVIDIA market value grows from about 0.4 trillion dollars in 2022 to over 3 trillion in 2024">
       <defs><linearGradient id="gb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a8e33a"/><stop offset="1" stop-color="#3d6100"/></linearGradient></defs>

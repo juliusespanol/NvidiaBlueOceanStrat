@@ -84,7 +84,7 @@ To see it, we first need to know how NVIDIA got so big.
 **Presenter:** Group 1  
 **Estimated time:** ~2 min
 
-**On screen:** From gaming chips to $3 trillion  
+**On screen:** NVIDIA’s Journey to $3 Trillion  
 **Clicks:** 3 (1999 → 2007 with the CUDA logo, then ChatGPT, then the market value bars)
 
 ### Speaker script
