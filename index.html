@@ -1153,49 +1153,100 @@ Q&A note: Current strategy detail taken off the slide: they rent their chips thr
 </section>
 
 <!-- 11 Q4 BREAK-EVEN -->
-<section class="slide" data-bg="dim" data-label="Losing about 1 in 6 dollars of top-buyer business would cost more than a targeted price cut">
+<section id="slide-11-be" class="slide" data-bg="dim" data-label="A 10% discount pays for itself if it keeps 1 in 7 dollars from leaving">
+<style>
+/* Entry: sliders + break-even 13.8% with a row of 7 chips (one slides away).
+   Click 1: the two options as bars ($2.4B vs $4.4B) + verdict. Click 2: the rule (purchase commitment). */
+#slide-11-be{--ease:cubic-bezier(.16,.84,.24,1)}
+#slide-11-be .s11{display:grid;grid-template-columns:700px 1fr;gap:56px;flex:1;min-height:0}
+#slide-11-be .lp{display:flex;flex-direction:column;gap:22px;padding:26px 36px}
+#slide-11-be .ctl label{font-size:27px}
+#slide-11-be .ctl label output{font-size:46px}
+#slide-11-be .ctl .hint{font-size:18px;line-height:1.4}
+#slide-11-be .bev{margin-top:auto;padding-top:20px;border-top:1px solid var(--line2);display:grid;grid-template-columns:auto 1fr;column-gap:30px;row-gap:10px;align-items:center}
+#slide-11-be .bev .k{grid-column:1/-1}
+#slide-11-be .bev .num{font-family:var(--display);font-stretch:118%;font-weight:800;font-size:108px;line-height:.9;letter-spacing:-.035em;color:var(--green-hi);text-shadow:0 0 60px rgba(118,185,0,.3);font-variant-numeric:tabular-nums}
+#slide-11-be .bev .one{display:flex;flex-direction:column;gap:14px}
+#slide-11-be .bev .one b{font-family:var(--display);font-size:34px;font-weight:650;color:var(--fg)}
+#slide-11-be .tiles{display:flex;gap:8px}
+#slide-11-be .tiles i{width:34px;height:34px;border-radius:4px;background:var(--green-lo);border:1px solid var(--green)}
+#slide-11-be .tiles i:last-child{background:rgba(255,194,102,.2);border-color:var(--amber)}
+#slide-11-be.active .tiles i:last-child{animation:s11leave 1.6s var(--ease) 2.2s forwards}
+@keyframes s11leave{to{transform:translateX(36px);opacity:.3}}
+#slide-11-be .bev p{grid-column:1/-1;margin:6px 0 0;font-size:21px;line-height:1.4;color:var(--mute)}
+/* right */
+#slide-11-be .rp{display:flex;flex-direction:column;justify-content:center;gap:40px}
+#slide-11-be .opt .top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:14px}
+#slide-11-be .opt .nm{font-family:var(--display);font-size:32px;font-weight:650;color:var(--fg)}
+#slide-11-be .opt .nm small{display:block;font-family:var(--body);font-size:19px;font-weight:400;color:var(--dim);margin-top:6px}
+#slide-11-be .opt .val{font-family:var(--display);font-stretch:115%;font-weight:800;font-size:64px;line-height:.9;letter-spacing:-.02em}
+#slide-11-be .opt.oa .val{color:var(--green-hi)} #slide-11-be .opt.ob .val{color:var(--amber)}
+#slide-11-be .trk{height:30px;background:rgba(255,255,255,.04);border-radius:3px;overflow:hidden}
+#slide-11-be .trk .fl{height:100%;border-radius:3px;transform:scaleX(0);transform-origin:0 50%;transition:transform 1.1s cubic-bezier(.2,.8,.2,1),width .35s ease}
+#slide-11-be .opt.oa .fl{background:var(--green);box-shadow:0 0 30px rgba(118,185,0,.35)}
+#slide-11-be .opt.ob .fl{background:var(--amber);box-shadow:0 0 30px rgba(255,194,102,.3)}
+#slide-11-be:is([data-step="1"],[data-step="2"]) .opt .fl{transform:scaleX(1)}
+#slide-11-be:is([data-step="1"],[data-step="2"]) .opt.ob .fl{transition-delay:.25s}
+#slide-11-be .verdict{margin:0;font-family:var(--display);font-size:30px;font-weight:600;line-height:1.3}
+#slide-11-be .rule{display:flex;flex-direction:column;gap:10px;padding:22px 28px;border-left:3px solid var(--amber);background:linear-gradient(90deg,rgba(255,194,102,.1),transparent 80%)}
+#slide-11-be .rule b{font-family:var(--display);font-size:34px;font-weight:700;color:var(--fg)}
+#slide-11-be .rule p{margin:0;font-size:24px;line-height:1.4;color:var(--mute)}
+@media(prefers-reduced-motion:reduce){#slide-11-be .tiles i:last-child{animation:none!important}#slide-11-be .trk .fl{transition:none}}
+</style>
   <header class="hd b">
-  <h2>Losing about 1 in 6 dollars of top-buyer business would cost more than a targeted price cut</h2></header>
-  <div class="calc">
-    <div class="panel col b" style="gap:20px;padding:28px 34px">
-      <span class="k">Illustrative scenario · FY2024 · drag to test <span class="tag i">ASSUMPTION</span></span>
-      <div class="ctl"><label for="m">Gross margin after a price cut to the top 4 <output id="mo">60%</output></label>
-        <input id="m" type="range" min="50" max="72" step="1" value="60" aria-describedby="mh"><span class="hint" id="mh">Today 72.7% · on $24.4B of top-4 sales</span></div>
-      <div class="ctl"><label for="l">Share of top-4 purchases moved in-house <output id="lo">25%</output></label>
-        <input id="l" type="range" min="5" max="50" step="1" value="25" aria-describedby="lh"><span class="hint" id="lh">If NVIDIA holds its price</span></div>
-      <div class="col" style="gap:4px;margin-top:auto"><span class="k">Break-even</span><span class="big g" style="font-size:92px" id="be">17.5%</span>
-      <p class="txt" style="font-size:22px">The price cut pays for itself if it keeps more than this share of top-4 business from going in-house. <span class="tag c">COMPUTED</span></p></div>
+  <h2>A 10% discount pays for itself if it keeps 1 in 7 dollars from leaving</h2></header>
+  <div class="s11 calc">
+    <div class="panel lp b">
+      <span class="k">Top-4 sales, FY2024 · drag to test <span class="tag i" style="margin-left:8px">ASSUMPTION</span></span>
+      <div class="ctl"><label for="m">Price discount to the top 4 <output id="mo">10%</output></label>
+        <input id="m" type="range" min="1" max="30" step="1" value="10" aria-describedby="mh"><span class="hint" id="mh">Starting gross margin 72.7% (company-wide, as a proxy) · unit costs unchanged · $24.4B of top-4 sales</span></div>
+      <div class="ctl"><label for="l">Top-4 volume lost if NVIDIA holds its price <output id="lo">25%</output></label>
+        <input id="l" type="range" min="5" max="50" step="1" value="25" aria-describedby="lh"><span class="hint" id="lh">Moved to their own chips</span></div>
+      <div class="bev">
+        <span class="k">Break-even volume loss <span class="tag c" style="margin-left:8px">COMPUTED</span></span>
+        <span class="num" id="be">13.8%</span>
+        <div class="one"><b id="be1">≈ 1 in 7 dollars</b><span class="tiles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+        <p>The discount pays off if holding the price would lose more than this share of top-4 volume. Discount ÷ 72.7%.</p>
+      </div>
     </div>
-    <div class="col b" style="gap:34px;justify-content:center">
-      <div class="cbar"><span class="lab" style="font-size:26px">A · Cut price<br><small class="hint" style="font-family:var(--mono);font-size:16px;color:var(--dim)">cost per year</small></span><div class="tr"><div class="fl" id="fa" style="width:34%;background:var(--green)">$3.1B</div></div></div>
-      <div class="cbar"><span class="lab" style="font-size:26px">B · Hold price, lose volume<br><small class="hint" style="font-family:var(--mono);font-size:16px;color:var(--dim)">gross profit lost per year</small></span><div class="tr"><div class="fl" id="fb" style="width:49%;background:var(--amber)">$4.4B</div></div></div>
-      <p class="verdict" id="vd">At these inputs, the targeted price cut costs less than the business it protects.</p>
-      <p class="txt" style="font-size:24px">The logic matters more than the exact numbers: volume lost to a customer's own chip rarely comes back, while a price cut can be adjusted next year.</p>
+    <div class="rp">
+      <div class="opt oa" data-frag="1"><div class="top"><span class="nm">A · Discount, keep all volume<small>gross profit given up per year</small></span><span class="val" id="va">$2.4B</span></div><div class="trk"><div class="fl" id="fa" style="width:27%"></div></div></div>
+      <div class="opt ob" data-frag="1"><div class="top"><span class="nm">B · Hold price, lose volume<small>gross profit lost per year</small></span><span class="val" id="vb">$4.4B</span></div><div class="trk"><div class="fl" id="fb" style="width:49%"></div></div></div>
+      <p class="verdict" id="vd" data-frag="1">At these inputs, the targeted discount costs less than the business it protects.</p>
+      <div class="rule" data-frag="2"><b>Tie any discount to a purchase commitment.</b><p>Volume lost to a customer’s own chip rarely comes back. A discount can be adjusted next year.</p></div>
     </div>
   </div>
   <aside class="notes">[Be upfront. Point to the ASSUMPTION tag.]
 
 This is the only slide built on assumptions. So we labelled it, and we will let you test it.
 
-The top four buy about $24 billion a year. NVIDIA makes almost $18 billion of gross profit on that.
+The top four buy about $24.4 billion a year. At NVIDIA’s 72.7% gross margin, that is about $17.7 billion of gross profit. We use the company-wide margin as a proxy, and we assume unit costs stay the same.
 
-Option A. NVIDIA cuts its margin for these four, from 73% to 60%. Cost: about $3.1 billion a year.
+Think of 100 dollars of sales to the top four. The chips cost NVIDIA $27.30, so it keeps $72.70.
 
-Option B. NVIDIA holds its price, and the four move a quarter of their buying to their own chips. Loss: about $4.4 billion a year.
+Option A. Give a 10% discount. The price falls to $90. The cost stays $27.30. So NVIDIA keeps $62.70, and it keeps all the volume.
 
-[Point to 17.5%.]
+Option B. Hold the price, and lose some volume to their own chips.
 
-The break-even is 17.5%. Break-even is the point where both options cost the same.
+[Point to 13.8%.]
 
-In plain words: if a price cut keeps more than one in six dollars from leaving, it pays for itself.
+The two are equal when 13.8% of the volume leaves, because 62.70 divided by 72.70 is 86.2%. Break-even is the point where both options earn the same.
+
+In plain words: if holding the price would lose more than about one in seven dollars, the discount pays for itself.
+
+[CLICK 1: The two bars grow.]
+
+In dollars, a 10% discount costs about $2.4 billion a year. Losing a quarter of their volume would cost about $4.4 billion of gross profit.
 
 [Optional: drag a slider if time allows.]
 
-One more thing. Once a customer’s own chip works, that business rarely comes back. A price cut can be reversed next year.
+[CLICK 2: The rule appears.]
+
+So any discount must be tied to a purchase commitment. And once a customer’s own chip works, that business rarely comes back. A discount can be adjusted next year.
 
 So which response should NVIDIA choose?
 
-Key line: Lost business rarely comes back. A price cut can be reversed.</aside>
+Key line: Tie any discount to a purchase commitment. Lost business rarely comes back.</aside>
 </section>
 
 <!-- 12 OPTIONS -->
@@ -1486,7 +1537,9 @@ function go(n,st){
   document.getElementById('nh').textContent='Speaker script · slide '+(cur<MAIN?cur+1:'B'+(cur-MAIN+1));
   [...document.querySelectorAll('#il button')].forEach((b,i)=>b.classList.toggle('cur',i===cur));
 }
-function next(){const s=slides[cur];if(step<s._max){step++;applyStep()}else if(cur<slides.length-1)go(cur+1,0)}
+let backups=false; /* B key: unlock the backup slides after the last main slide */
+const lastIdx=()=>backups?slides.length-1:MAIN-1;
+function next(){const s=slides[cur];if(step<s._max){step++;applyStep()}else if(cur<lastIdx())go(cur+1,0)}
 function prev(){if(step>0){step--;applyStep()}else if(cur>0)go(cur-1,slides[cur-1]._max)}
 
 /* index */
@@ -1511,6 +1564,7 @@ addEventListener('keydown',e=>{
   else if(k==='n'||k==='N')toggle('notes');
   else if(k==='i'||k==='I')toggle('index');
   else if(k==='f'||k==='F')fs();
+  else if(k==='b'||k==='B'){backups=!backups;if(!backups&&cur>=MAIN)go(MAIN-1,0)}
   else if(k==='Escape'){toggle('index',false);toggle('notes',false)}
 });
 stage.addEventListener('click',e=>{
@@ -1526,15 +1580,17 @@ const m=document.getElementById('m'),l=document.getElementById('l');
 const SALES=24.4,GM=72.7,GP=SALES*GM/100,MAXB=9;
 function calc(){
   const mv=+m.value,lv=+l.value;
-  const costA=(GM-mv)/100*SALES, lossB=lv/100*GP, be=costA/GP*100;
+  const costA=mv/100*SALES, lossB=lv/100*GP, be=mv/GM*100;
   document.getElementById('mo').textContent=mv+'%';
   document.getElementById('lo').textContent=lv+'%';
   document.getElementById('be').textContent=be.toFixed(1)+'%';
-  const fa=document.getElementById('fa'),fb=document.getElementById('fb');
-  fa.style.width=Math.max(8,costA/MAXB*100)+'%';fa.textContent='$'+costA.toFixed(1)+'B';
-  fb.style.width=Math.max(8,lossB/MAXB*100)+'%';fb.textContent='$'+lossB.toFixed(1)+'B';
+  document.getElementById('be1').textContent='≈ 1 in '+Math.round(100/be)+' dollars';
+  document.getElementById('va').textContent='$'+costA.toFixed(1)+'B';
+  document.getElementById('vb').textContent='$'+lossB.toFixed(1)+'B';
+  document.getElementById('fa').style.width=Math.max(3,costA/MAXB*100)+'%';
+  document.getElementById('fb').style.width=Math.max(3,lossB/MAXB*100)+'%';
   const vd=document.getElementById('vd');
-  vd.textContent=lossB>costA?'At these inputs, the targeted price cut costs less than the business it protects.':'At these inputs, holding the price costs less. The cut pays only if more business would leave.';
+  vd.textContent=lossB>costA?'At these inputs, the targeted discount costs less than the business it protects.':'At these inputs, holding the price costs less. The discount pays only if more business would leave.';
   vd.style.color=lossB>costA?'var(--green-hi)':'var(--amber)';
 }
 m.addEventListener('input',calc);l.addEventListener('input',calc);calc();
@@ -1605,6 +1661,7 @@ function frame(now){
 requestAnimationFrame(frame);
 
 const h=/^#s(\d+)$/.exec(location.hash);
+if(h&&+h[1]>MAIN)backups=true;
 go(h?(+h[1]-1):0,0);
 addEventListener('hashchange',()=>{const m2=/^#s(\d+)$/.exec(location.hash);if(m2&&+m2[1]-1!==cur)go(+m2[1]-1,0)});
 })();

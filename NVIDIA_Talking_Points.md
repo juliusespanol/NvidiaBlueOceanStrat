@@ -404,31 +404,40 @@ So the big buyers will keep moving work away. How much is it worth to NVIDIA to 
 
 ## SLIDE 11 of 16 · Analysis · Q4 · Group 3 · ~2 min
 
-**On screen:** Losing about 1 in 6 dollars of top-buyer business would cost more than a targeted price cut
+**On screen:** A 10% discount pays for itself if it keeps 1 in 7 dollars from leaving  
+**Clicks:** 2 (the two option bars, then the purchase-commitment rule). Sliders can be dragged at any time.
 
 *[Be upfront. Point to the ASSUMPTION tag.]*
 
 This is the only slide built on assumptions. So we labelled it, and we will let you test it.
 
-The top four buy about $24 billion a year. NVIDIA makes almost $18 billion of gross profit on that.
+The top four buy about $24.4 billion a year. At NVIDIA’s 72.7% gross margin, that is about $17.7 billion of gross profit. We use the company-wide margin as a proxy, and we assume unit costs stay the same.
 
-Option A. NVIDIA cuts its margin for these four, from 73% to 60%. Cost: about $3.1 billion a year.
+Think of 100 dollars of sales to the top four. The chips cost NVIDIA $27.30, so it keeps $72.70.
 
-Option B. NVIDIA holds its price, and the four move a quarter of their buying to their own chips. Loss: about $4.4 billion a year.
+Option A. Give a 10% discount. The price falls to $90. The cost stays $27.30. So NVIDIA keeps $62.70, and it keeps all the volume.
 
-*[Point to 17.5%.]*
+Option B. Hold the price, and lose some volume to their own chips.
 
-The break-even is 17.5%. Break-even is the point where both options cost the same.
+*[Point to 13.8%.]*
 
-In plain words: if a price cut keeps more than **one in six dollars** from leaving, it pays for itself.
+The two are equal when 13.8% of the volume leaves, because 62.70 divided by 72.70 is 86.2%. Break-even is the point where both options earn the same.
+
+In plain words: if holding the price would lose more than about one in seven dollars, the discount pays for itself.
+
+*[CLICK 1: The two bars grow.]*
+
+In dollars, a 10% discount costs about $2.4 billion a year. Losing a quarter of their volume would cost about $4.4 billion of gross profit.
 
 *[Optional: drag a slider if time allows.]*
 
-One more thing. Once a customer’s own chip works, that business rarely comes back. A price cut can be reversed next year.
+*[CLICK 2: The rule appears.]*
+
+So any discount must be tied to a purchase commitment. And once a customer’s own chip works, that business rarely comes back. A discount can be adjusted next year.
 
 So which response should NVIDIA choose?
 
-**Key line:** Lost business rarely comes back. A price cut can be reversed.
+**Key line:** Tie any discount to a purchase commitment. Lost business rarely comes back.
 
 ## SLIDE 12 of 16 · Options · Group 3 · ~1.5 min
 
