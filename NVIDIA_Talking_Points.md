@@ -468,29 +468,32 @@ The other four pass, and they become our three moves. Strengthening CUDA, we app
 
 ## SLIDE 13 of 16 · Recommendation · Group 3 · ~2.5 min
 
-**On screen:** Three moves, and what NVIDIA gives up to make them
+**On screen:** Invest in CUDA now, and test the other two moves before scaling them  
+**Clicks:** 3 (Move 2, Move 3, then the ERRC strip)
 
 *[Stand tall. Slow down. This is the answer.]*
 
-Our recommendation in one line. **Make staying with NVIDIA the cheapest and fastest option.** Don’t try to make leaving impossible.
+Our recommendation in one line. Protect the value of CUDA. Keep selling networking and systems when the big buyers use their own chips. And test whether AI Foundry can bring in first-time buyers.
 
-We used the ERRC grid, a Blue Ocean tool. It asks what to eliminate, raise, reduce and create.
+*[Move 1 is on screen.]*
 
-Three moves.
+Move one, we approve now. Strengthen CUDA. Keep improving NVIDIA’s libraries, models and tools, and make them fast and easy for developers who already work in PyTorch. PyTorch is free software many AI developers use, and it can run on other companies’ chips.
 
-Move one. Keep CUDA the fastest way to build AI. Even for developers who use PyTorch. PyTorch is free software many AI developers use, and it can run on other companies’ chips. So CUDA must stay the fastest option underneath it.
+*[CLICK 1: Move 2 appears.]*
 
-Move two. Keep the big buyers inside NVIDIA’s systems. Let their own chips plug into NVIDIA’s racks and networking. Offer semi-custom products, partly built to their needs. And cut prices for those four only where the numbers say it pays.
+Move two, we test first. Keep selling systems when customers build their own chips. Test whether one large buyer can connect its own chips to NVIDIA’s networking and racks. Offer semi-custom products where there is a clear need. And give a discount only against a purchase commitment, and only if it earns more gross profit than holding the price.
 
-Move three. Grow customers who can’t build their own chips. Ordinary companies. Governments. Newer cloud companies.
+*[CLICK 2: Move 3 appears.]*
 
-*[Point to “We give up”. Honest and firm.]*
+Move three, we pilot first. Test demand from first-time enterprise buyers. Use AI Foundry and an implementation partner to offer a standard package for one task companies still do by hand. A mid-sized insurer could be the first test. We scale it only if those companies pay to keep using it, and NVIDIA and its partner can deliver it profitably.
 
-And here is what NVIDIA gives up. Exclusive deals. Big acquisitions. And its top margins on its four biggest buyers.
+*[CLICK 3: The ERRC strip appears.]*
+
+We used the ERRC grid, a Blue Ocean tool. It asks what to eliminate, reduce, raise and create. We eliminate exclusive deals. We reduce discounts that come without a commitment. We raise how easy CUDA is to use. And we create two things: a plug-in path for their chips, and an AI Foundry package.
 
 Every move answers one finding. Here is the proof.
 
-**Key line:** Make staying with NVIDIA the cheapest and fastest option.
+**Key line:** Invest in CUDA now. Test the other two before scaling them.
 
 ## SLIDE 14 of 16 · Justification · Group 3 · ~1.5 min
 

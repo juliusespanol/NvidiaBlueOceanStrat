@@ -1365,37 +1365,84 @@ Q&A note: We used no weighted scores. The weights would be our own guesses, and 
 </section>
 
 <!-- 13 RECOMMENDATION -->
-<section class="slide" data-bg="dim" data-poll="Case poll Q15: D, E, F" data-label="Three moves, and what NVIDIA gives up to make them">
+<section id="slide-13-rec" class="slide" data-bg="dim" data-poll="Case poll Q15: D, E, F" data-label="Invest in CUDA now, and test the other two moves before scaling them">
+<style>
+/* Entry: Move 1 card. Click 1: Move 2. Click 2: Move 3. Click 3: the ERRC strip in plain words. */
+#slide-13-rec{--ease:cubic-bezier(.16,.84,.24,1)}
+#slide-13-rec .s13{flex:1;min-height:0;display:flex;flex-direction:column;gap:26px}
+#slide-13-rec .mv{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+#slide-13-rec .card{position:relative;overflow:hidden;border:1px solid var(--line2);border-radius:10px;background:#090d0a;display:flex;flex-direction:column}
+#slide-13-rec .card .ph{height:44%;flex:none;background-size:cover;background-position:center;position:relative}
+#slide-13-rec .card .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,13,10,.1),#090d0a 98%)}
+#slide-13-rec .card .bd{flex:1;padding:6px 32px 30px;display:flex;flex-direction:column;gap:14px;margin-top:-34px;position:relative}
+#slide-13-rec .card .n{display:flex;align-items:center;gap:14px}
+#slide-13-rec .card .n b{font-family:var(--display);font-stretch:115%;font-weight:800;font-size:56px;line-height:1;color:var(--green-hi)}
+#slide-13-rec .card .n span{font-family:var(--display);font-size:22px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green);border:1.5px solid var(--green-lo);border-radius:30px;padding:6px 16px}
+#slide-13-rec .card h3{font-size:36px;line-height:1.12}
+#slide-13-rec .card p{margin:0;font-size:24px;line-height:1.4;color:var(--mute)}
+#slide-13-rec .card[data-frag]{transform:translateY(40px) scale(.96)}
+#slide-13-rec .card[data-frag].on{transform:none}
+/* ERRC strip */
+#slide-13-rec .er4{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line2);border-radius:10px;overflow:hidden;background:rgba(10,15,11,.95)}
+#slide-13-rec .er4 div{padding:20px 26px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:6px;opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .6s var(--ease)}
+#slide-13-rec .er4 div:last-child{border-right:none}
+#slide-13-rec .er4 .k{font-size:19px}
+#slide-13-rec .er4 b{font-family:var(--display);font-size:27px;font-weight:600;line-height:1.2;color:var(--fg)}
+#slide-13-rec .er4 .el .k{color:var(--mute)} #slide-13-rec .er4 .rd .k{color:var(--amber)}
+#slide-13-rec .er4 .rs .k,#slide-13-rec .er4 .cr .k{color:var(--green-hi)}
+#slide-13-rec .er4.on div{opacity:1;transform:none}
+#slide-13-rec .er4.on div:nth-child(2){transition-delay:.12s}
+#slide-13-rec .er4.on div:nth-child(3){transition-delay:.24s}
+#slide-13-rec .er4.on div:nth-child(4){transition-delay:.36s}
+@media(prefers-reduced-motion:reduce){#slide-13-rec .er4 div{transition:none}}
+</style>
   <header class="hd b">
-  <h2>Three moves, and what NVIDIA gives up to make them</h2></header>
-  <div class="errc b">
-    <div><span class="et" style="color:var(--mute)">Eliminate</span><ul><li><b>Exclusive contracts</b> as a way to hold buyers</li><li><b>Big acquisitions</b> as a growth path (ARM was blocked)</li></ul></div>
-    <div><span class="et g">Raise</span><ul><li><b>CUDA speed under open tools</b> like PyTorch, so developers have no reason to look elsewhere<span class="mv">M1</span></li><li><b>Libraries, models and developer support</b><span class="mv">M1</span></li></ul></div>
-    <div><span class="et" style="color:var(--amber)">Reduce</span><ul><li><b>Margins on sales to the top 4 only</b>, through volume pricing reviewed yearly<span class="mv">M2</span></li><li><b>Reliance on four buyers</b> for 40% of sales<span class="mv">M3</span></li></ul></div>
-    <div><span class="et g">Create</span><ul><li><b>A plug-in path</b> so customers' own chips run inside NVIDIA racks and networking, plus semi-custom products<span class="mv">M2</span></li><li><b>Customers who cannot build their own chips</b>: enterprises via AI Foundry, governments, neo-clouds, inference and edge<span class="mv">M3</span></li></ul></div>
+  <h2>Invest in CUDA now, and test the other two moves before scaling them</h2></header>
+  <div class="s13">
+    <div class="mv">
+      <div class="card b"><div class="ph" style="background-image:url(nvidia_assets/_picks/moat_software/cuda_libraries.jpg)"></div>
+        <div class="bd"><div class="n"><b>1</b><span>Approve now</span></div>
+          <h3>Strengthen CUDA</h3>
+          <p>Better libraries, models and tools, especially for developers who already use PyTorch.</p></div></div>
+      <div class="card" data-frag="1"><div class="ph" style="background-image:url(nvidia_assets/_picks/moat_system/gb200_rack.jpg)"></div>
+        <div class="bd"><div class="n"><b>2</b><span>Test first</span></div>
+          <h3>Keep selling systems when buyers build their own chips</h3>
+          <p>Try it with one large buyer. Discounts only with a purchase commitment.</p></div></div>
+      <div class="card" data-frag="2"><div class="ph" style="background-image:url(nvidia_assets/_picks/ai_factory/ai_factory_hall.jpg)"></div>
+        <div class="bd"><div class="n"><b>3</b><span>Pilot first</span></div>
+          <h3>Win first-time enterprise buyers</h3>
+          <p>AI Foundry and a partner, starting with a mid-sized insurer.</p></div></div>
+    </div>
+    <div class="er4" data-frag="3" aria-label="ERRC grid">
+      <div class="el"><span class="k">Eliminate</span><b>Exclusive deals</b></div>
+      <div class="rd"><span class="k">Reduce</span><b>Discounts without a commitment</b></div>
+      <div class="rs"><span class="k">Raise</span><b>CUDA ease of use</b></div>
+      <div class="cr"><span class="k">Create</span><b>A plug-in path · an AI Foundry package</b></div>
+    </div>
   </div>
-  <div class="giveup b"><span class="k">We give up</span><span class="it">Exclusive deals</span><span class="it" style="color:var(--dim)">·</span><span class="it">Big acquisitions</span><span class="it" style="color:var(--dim)">·</span><span class="it">Top margins on sales to the four biggest buyers</span></div>
   <aside class="notes">[Stand tall. Slow down. This is the answer.]
 
-Our recommendation in one line. Make staying with NVIDIA the cheapest and fastest option. Don’t try to make leaving impossible.
+Our recommendation in one line. Protect the value of CUDA. Keep selling networking and systems when the big buyers use their own chips. And test whether AI Foundry can bring in first-time buyers.
 
-We used the ERRC grid, a Blue Ocean tool. It asks what to eliminate, raise, reduce and create.
+[Move 1 is on screen.]
 
-Three moves.
+Move one, we approve now. Strengthen CUDA. Keep improving NVIDIA’s libraries, models and tools, and make them fast and easy for developers who already work in PyTorch. PyTorch is free software many AI developers use, and it can run on other companies’ chips.
 
-Move one. Keep CUDA the fastest way to build AI. Even for developers who use PyTorch. PyTorch is free software many AI developers use, and it can run on other companies’ chips. So CUDA must stay the fastest option underneath it.
+[CLICK 1: Move 2 appears.]
 
-Move two. Keep the big buyers inside NVIDIA’s systems. Let their own chips plug into NVIDIA’s racks and networking. Offer semi-custom products, partly built to their needs. And cut prices for those four only where the numbers say it pays.
+Move two, we test first. Keep selling systems when customers build their own chips. Test whether one large buyer can connect its own chips to NVIDIA’s networking and racks. Offer semi-custom products where there is a clear need. And give a discount only against a purchase commitment, and only if it earns more gross profit than holding the price.
 
-Move three. Grow customers who can’t build their own chips. Ordinary companies. Governments. Newer cloud companies.
+[CLICK 2: Move 3 appears.]
 
-[Point to “We give up”. Honest and firm.]
+Move three, we pilot first. Test demand from first-time enterprise buyers. Use AI Foundry and an implementation partner to offer a standard package for one task companies still do by hand. A mid-sized insurer could be the first test. We scale it only if those companies pay to keep using it, and NVIDIA and its partner can deliver it profitably.
 
-And here is what NVIDIA gives up. Exclusive deals. Big acquisitions. And its top margins on its four biggest buyers.
+[CLICK 3: The ERRC strip appears.]
+
+We used the ERRC grid, a Blue Ocean tool. It asks what to eliminate, reduce, raise and create. We eliminate exclusive deals. We reduce discounts that come without a commitment. We raise how easy CUDA is to use. And we create two things: a plug-in path for their chips, and an AI Foundry package.
 
 Every move answers one finding. Here is the proof.
 
-Key line: Make staying with NVIDIA the cheapest and fastest option.</aside>
+Key line: Invest in CUDA now. Test the other two before scaling them.</aside>
 </section>
 
 <!-- 14 TRACE -->
@@ -1611,14 +1658,15 @@ function go(n,st){
     cur=n;slides[cur].classList.add('active');counts(slides[cur]);
   }
   step=st||0;applyStep();
-  document.getElementById('bar').style.width=((cur+1)/slides.length*100)+'%';
+  updBar();
   try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}
   const nt=slides[cur].querySelector('aside.notes');
   document.getElementById('nt').textContent=nt?nt.textContent:'';
   document.getElementById('nh').textContent='Speaker script · slide '+(cur<MAIN?cur+1:'B'+(cur-MAIN+1));
   [...document.querySelectorAll('#il button')].forEach((b,i)=>b.classList.toggle('cur',i===cur));
 }
-let backups=false; /* B key: unlock the backup slides after the last main slide */
+let backups=false;
+function updBar(){const tot=backups?slides.length:MAIN;document.getElementById('bar').style.width=Math.min(100,(cur+1)/tot*100)+'%'} /* B key: unlock the backup slides after the last main slide */
 const lastIdx=()=>backups?slides.length-1:MAIN-1;
 function next(){const s=slides[cur];if(step<s._max){step++;applyStep()}else if(cur<lastIdx())go(cur+1,0)}
 function prev(){if(step>0){step--;applyStep()}else if(cur>0)go(cur-1,slides[cur-1]._max)}
@@ -1645,7 +1693,7 @@ addEventListener('keydown',e=>{
   else if(k==='n'||k==='N')toggle('notes');
   else if(k==='i'||k==='I')toggle('index');
   else if(k==='f'||k==='F')fs();
-  else if(k==='b'||k==='B'){backups=!backups;if(!backups&&cur>=MAIN)go(MAIN-1,0)}
+  else if(k==='b'||k==='B'){backups=!backups;if(!backups&&cur>=MAIN)go(MAIN-1,0);updBar()}
   else if(k==='Escape'){toggle('index',false);toggle('notes',false)}
 });
 stage.addEventListener('click',e=>{
