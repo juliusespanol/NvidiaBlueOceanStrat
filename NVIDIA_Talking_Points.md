@@ -180,20 +180,20 @@ So who has enough money and engineers to pay that cost?
 **Presenter:** Group 1  
 **Estimated time:** ~1.5 min
 
-**On screen:** Their biggest customers are building their own chips  
+**On screen:** NVIDIA's biggest customers are now building their own chips (donut chart: top 4 = 40%, everyone else = 60%)  
 **Clicks:** 1 (each company’s own chip)
 
 ### Speaker script
 
 *[Gesture to each company as it lights up.]*
 
-These four. Microsoft. Meta. Amazon. Google.
+These four. Microsoft. Meta. Amazon. And Alphabet, which owns Google.
 
-Together they bought about 40% of everything NVIDIA sold. That is roughly $24 billion a year.
+[Point to the orange part of the circle.] Together they bought about 40% of everything NVIDIA sold. That is about 24.4 billion dollars a year. Everyone else, the grey part, is the other 60%.
 
 *[Let that number sit for a moment.]*
 
-*[CLICK 1: Each company’s own chip appears.]*
+*[CLICK 1: Each company’s own chip appears next to its name.]*
 
 And every one of them is now building its own AI chip. Microsoft has MAIA. Meta has MTIA. Amazon has Trainium and Inferentia. Google has the TPU.
 

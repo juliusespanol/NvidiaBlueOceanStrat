@@ -53,7 +53,7 @@ p{margin:0}
 .tag.i{color:var(--amber);border-color:var(--amber4)}
 .hd{display:flex;flex-direction:column;gap:22px}
 .num{font-variant-numeric:tabular-nums}
-.ft{position:absolute;left:128px;right:128px;bottom:50px;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:17px;letter-spacing:.1em;color:var(--dim);text-transform:uppercase}
+.ft{position:absolute;left:128px;right:128px;bottom:50px;display:flex;justify-content:flex-end;align-items:center;font-family:var(--mono);font-size:17px;letter-spacing:.1em;color:var(--dim);text-transform:uppercase}
 .ft .poll{color:var(--green);border:1px solid var(--green-lo);padding:5px 12px;border-radius:3px;letter-spacing:.06em}
 .ft .poll:empty{display:none}
 .ft .pg{color:var(--mute)}
@@ -270,8 +270,6 @@ Key line: The real threat is on NVIDIA’s own customer list.</aside>
 <!-- 2 FACTS -->
 <section id="slide-2-facts" class="slide" data-bg="dim" data-poll="Case poll Q1: C · Q3: C" data-label="NVIDIA’s Journey to $3 Trillion">
 <style>
-#slide-2-facts .ft>span:not(.pg){display:none}
-#slide-2-facts .ft .pg{margin-left:auto}
 #slide-2-facts .dc-photo{position:absolute;right:0;bottom:-170px;width:1300px;height:760px;object-fit:cover;object-position:center 60%;z-index:-1;opacity:0;transition:opacity 1.4s ease;pointer-events:none;
   -webkit-mask-image:radial-gradient(ellipse 70% 60% at 65% 70%,#000 35%,transparent 80%);mask-image:radial-gradient(ellipse 70% 60% at 65% 70%,#000 35%,transparent 80%)}
 #slide-2-facts[data-step="3"] .dc-photo{opacity:.38}
@@ -370,8 +368,6 @@ Note for Q&amp;A: If asked: “fiscal 2024” is NVIDIA’s financial year endin
 <!-- 3 FACTS LOOP -->
 <section id="slide-3-loop" class="slide" data-bg="dim" data-poll="Case poll Q2: C · Q6: A, D · Q7: D" data-label="NVIDIA sells one package that is hard to leave">
 <style>
-#slide-3-loop .ft>span:not(.pg){display:none}
-#slide-3-loop .ft .pg{margin-left:auto}
 #slide-3-loop .loop-label text{font-family:var(--display);font-weight:600}
 #slide-3-loop .lib-wall{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;opacity:.13;filter:blur(3px) saturate(.6);pointer-events:none;
   -webkit-mask-image:linear-gradient(180deg,transparent 15%,#000 55%,transparent 95%);mask-image:linear-gradient(180deg,transparent 15%,#000 55%,transparent 95%)}
@@ -454,36 +450,57 @@ Key line: The cost of leaving is what NVIDIA really sells.</aside>
 </section>
 
 <!-- 4 FACTS TOP 4 -->
-<section id="slide-4-customers" class="slide split-bg" data-bg="split" data-label="Their biggest customers are building their own chips">
+<section id="slide-4-customers" class="slide split-bg" data-bg="split" data-label="NVIDIA's biggest customers are now building their own chips">
 <style>
-#slide-4-customers .share-row{grid-template-columns:220px 450px 100px 1fr}
-#slide-4-customers .share-row .pct{font-family:var(--display);font-weight:750;font-size:36px;font-variant-numeric:tabular-nums}
-#slide-4-customers .share-row .chip{font-family:var(--display);font-size:34px;font-weight:650;letter-spacing:-.01em;white-space:nowrap}
-#slide-4-customers .chiphd{display:grid;grid-template-columns:220px 450px 100px 1fr;gap:24px;padding-bottom:10px}
+#slide-4-customers .donut .seg{fill:none;stroke-width:90;stroke-dasharray:0 var(--c)}
+#slide-4-customers.active .donut .seg{animation:d4sweep 1s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes d4sweep{to{stroke-dasharray:var(--len) var(--c)}}
+#slide-4-customers .donut .nm{font-family:var(--display);font-weight:700;font-size:40px;fill:var(--fg)}
+#slide-4-customers .donut .pc{font-weight:750;fill:var(--fg)}
+#slide-4-customers .donut .ch{font-family:var(--display);font-weight:600;font-size:30px;fill:var(--fg)}
+#slide-4-customers .donut .lb{font-family:var(--mono);font-size:19px;letter-spacing:.12em;fill:var(--amber);font-weight:500}
+#slide-4-customers .donut .ctr{font-family:var(--display);text-anchor:middle}
+@media(prefers-reduced-motion:reduce){#slide-4-customers .donut .seg,#slide-4-customers.active .donut .seg{animation:none;stroke-dasharray:var(--len) var(--c)}}
 </style>
   <header class="hd b">
-  <h2 style="max-width:1000px">Their biggest customers are building their own chips</h2></header>
-  <div class="col b" style="width:1250px;gap:0">
-    <div class="chiphd"><span class="k">Customer</span><span class="k">Share of NVIDIA sales</span><span></span><span class="k" data-frag="1" style="color:var(--amber)">Own AI chip</span></div>
-    <div class="share-row"><span class="nm">Microsoft</span><div><div class="bar grow-x" style="width:450px;--gd:.9s"></div></div><span class="pct" style="color:var(--amber)">15%</span><span class="chip" data-frag="1">MAIA</span></div>
-    <div class="share-row"><span class="nm">Meta</span><div><div class="bar grow-x" style="width:390px;background:var(--amber2);--gd:1.05s"></div></div><span class="pct" style="color:var(--amber2)">13%</span><span class="chip" data-frag="1" style="color:var(--amber2)">MTIA</span></div>
-    <div class="share-row"><span class="nm">Amazon</span><div><div class="bar grow-x" style="width:180px;background:var(--amber3);--gd:1.2s"></div></div><span class="pct" style="color:var(--amber3)">6%</span><span class="chip" data-frag="1" style="color:var(--amber3)">Trainium · Inferentia</span></div>
-    <div class="share-row"><span class="nm">Google</span><div><div class="bar grow-x" style="width:180px;background:var(--amber4);--gd:1.35s"></div></div><span class="pct" style="color:var(--amber4)">6%</span><span class="chip" data-frag="1" style="color:var(--amber4)">TPU</span></div>
+  <h2 style="max-width:1100px">NVIDIA's biggest customers are now building their own chips</h2></header>
+  <div class="b" style="flex:1;min-height:0;display:flex;align-items:center">
+    <svg class="donut" viewBox="0 0 1300 690" width="1210" height="642" role="img" aria-label="Donut chart of NVIDIA sales: Microsoft 15%, Meta 13%, Amazon 6%, Alphabet 6%, together about 40% or $24.4 billion a year; every other customer 60%">
+      <g transform="rotate(-90 330 340)">
+        <circle class="seg" cx="330" cy="340" r="250" stroke="var(--amber)" style="--len:231.6;--c:1570.8;stroke-dashoffset:0.0;animation-delay:0.90s"/>
+        <circle class="seg" cx="330" cy="340" r="250" stroke="var(--amber)" style="--len:200.2;--c:1570.8;stroke-dashoffset:-235.6;animation-delay:1.05s"/>
+        <circle class="seg" cx="330" cy="340" r="250" stroke="var(--amber)" style="--len:90.2;--c:1570.8;stroke-dashoffset:-439.8;animation-delay:1.20s"/>
+        <circle class="seg" cx="330" cy="340" r="250" stroke="var(--amber)" style="--len:90.2;--c:1570.8;stroke-dashoffset:-534.1;animation-delay:1.35s"/>
+        <circle class="seg rest" cx="330" cy="340" r="250" stroke="#3d4a3f" style="--len:938.5;--c:1570.8;stroke-dashoffset:-628.3;animation-delay:1.50s"/>
+      </g>
+      <text x="330" y="350" class="ctr" font-size="104" font-weight="800" style="fill:var(--amber)">≈40%</text>
+      <text x="330" y="402" class="ctr" font-size="34" font-weight="600" style="fill:var(--fg)">$24.4B a year</text>
+      <line x1="469" y1="66" x2="690" y2="66" stroke="#5f6b5e" stroke-width="2"/>
+      <text x="710" y="78" class="nm">Microsoft <tspan class="pc" dx="14">15%</tspan></text>
+      <g data-frag="1"><text x="710" y="118" class="ch"><tspan class="lb">OWN CHIP · </tspan>MAIA</text></g>
+      <line x1="630" y1="273" x2="690" y2="256" stroke="#5f6b5e" stroke-width="2"/>
+      <text x="710" y="268" class="nm">Meta <tspan class="pc" dx="14">13%</tspan></text>
+      <g data-frag="1"><text x="710" y="308" class="ch"><tspan class="lb">OWN CHIP · </tspan>MTIA</text></g>
+      <line x1="615" y1="453" x2="690" y2="438" stroke="#5f6b5e" stroke-width="2"/>
+      <text x="710" y="450" class="nm">Amazon <tspan class="pc" dx="14">6%</tspan></text>
+      <g data-frag="1"><text x="710" y="490" class="ch"><tspan class="lb">OWN CHIP · </tspan>Trainium · Inferentia</text></g>
+      <line x1="554" y1="550" x2="690" y2="560" stroke="#5f6b5e" stroke-width="2"/>
+      <text x="710" y="572" class="nm">Alphabet <tspan class="pc" dx="14">6%</tspan></text>
+      <g data-frag="1"><text x="710" y="612" class="ch"><tspan class="lb">OWN CHIP · </tspan>TPU</text></g>
+      <rect x="710" y="642" width="22" height="22" rx="3" fill="#3d4a3f"/>
+      <text x="746" y="661" class="ch" style="fill:var(--mute)">Every other customer <tspan font-weight="750" style="fill:var(--fg)">60%</tspan></text>
+    </svg>
   </div>
-  <div class="row b" style="gap:40px;align-items:baseline">
-    <span class="big a" style="font-size:110px">≈40%</span>
-    <span class="big" style="font-size:64px;color:var(--fg)">~$24B <span style="font-size:34px;font-weight:500;font-stretch:100%;color:var(--mute)">a year</span></span>
-    <span><span class="tag">GIVEN</span> <span class="tag c">COMPUTED</span></span>
-  </div>
+  <p class="txt b" style="font-size:22px;margin-top:-6px">Customer shares are outside estimates. <span class="tag">GIVEN</span> $24.4B = 40% × $60.9B <span class="tag c">COMPUTED</span></p>
   <aside class="notes">[Gesture to each company as it lights up.]
 
-These four. Microsoft. Meta. Amazon. Google.
+These four. Microsoft. Meta. Amazon. And Alphabet, which owns Google.
 
-Together they bought about 40% of everything NVIDIA sold. That is roughly $24 billion a year.
+[Point to the orange part of the circle.] Together they bought about 40% of everything NVIDIA sold. That is about 24.4 billion dollars a year. Everyone else, the grey part, is the other 60%.
 
 [Let that number sit for a moment.]
 
-[CLICK 1: Each company’s own chip appears.]
+[CLICK 1: Each company’s own chip appears next to its name.]
 
 And every one of them is now building its own AI chip. Microsoft has MAIA. Meta has MTIA. Amazon has Trainium and Inferentia. Google has the TPU.
 
@@ -838,8 +855,7 @@ slides.forEach((s,n)=>{
   s._max=s._frags.reduce((m,f)=>Math.max(m,+f.dataset.frag),0);
   const ft=document.createElement('footer');ft.className='ft';
   const pg=n<MAIN?String(n+1).padStart(2,'0')+' / '+MAIN:'Backup '+(n-MAIN+1);
-  ft.innerHTML='<span>NVIDIA case · ECO 502</span><span class="poll"></span><span class="pg"></span>';
-  ft.querySelector('.poll').textContent=s.dataset.poll||'';
+  ft.innerHTML='<span class="pg"></span>';
   ft.querySelector('.pg').textContent=pg;
   if(n>0) s.appendChild(ft);
 });
