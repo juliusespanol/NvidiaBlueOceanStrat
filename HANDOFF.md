@@ -1,9 +1,11 @@
-# NVIDIA Deck: Handoff (Nov 9, 2026)
+# NVIDIA Deck: Handoff (Nov 9, 2026, updated after slide 6)
 
 Read this first in a new chat. It covers what is done, how we work, and exactly what to do on each remaining slide.
 
 **Presentation:** ECO 502 NVIDIA group presentation, Nov 14, 2026, ~30 min, 3 speaker groups.
-**Git:** clean at commit `c3e323c` ("updated blackchip pic"). Slides 1–4 and everything on slide 5 so far are committed.
+**Git:** clean at commit `584e2cd` ("slide 6 updates"). Slides 1–6 and the font change are committed.
+
+**▶ Next up: slide 7** (see §6). Slides 1–6 are done.
 
 ---
 
@@ -38,16 +40,19 @@ Read this first in a new chat. It covers what is done, how we work, and exactly 
 - Checking routine: reload, press → to reveal all clicks, check `scrollHeight > clientHeight` for overflow, take a screenshot.
 - Inline SVG gotcha: `fill="var(--x)"` attributes don't work. Use `style="fill:var(--x)"`. A global rule also turns SVG text grey unless overridden.
 - Julius commits himself. Don't commit unless asked.
+- **Style direction from this round:** fewer words on screen, more things revealed by clicks/transitions (each extra fact gets its own click or goes to the notes). Mockups from Julius/Kim are guides, not pixel specs. Keep the deck's dim chip-grid background on every slide.
+- Julius and Kim often write in Taglish. Reply in kind is fine.
 
 ## 4. Global changes already made
 
 - **The small top headers** (`<div class="eyebrow">`, e.g. "Analysis · Q1") are **removed from all slides**. The `.eyebrow` CSS is left in but unused.
 - **Footers show the page number only** ("07 / 16", bottom right). "NVIDIA case · ECO 502" and the green "Case poll Q…" tags are gone (all poll answers still on B1). Built in JS: `ft.innerHTML='<span class="pg"></span>'`.
-- **Framework labels** (small green mono text, since the headers are gone):
+- **No monospace font anywhere.** Kim said JetBrains Mono (the small uppercase labels, tags, Q-numbers, page numbers, chart labels) looked "too AI". `--mono` now points to **IBM Plex Sans** (the body font), so every `var(--mono)` use changed at once; JetBrains Mono is removed from the Google Fonts link and the two inline SVG uses. `.k` labels are weight 500, letter-spacing .08em. **Don't bring a mono font back.** (The variable is still called `--mono`; that's only a name.)
+- **Framework labels** (small green text, since the headers are gone):
   - Slide 9: "Porter's Five Forces", top-left of the diagram.
   - Slide 10: "Four Corners · Microsoft, Meta, Amazon, Google", above the grid.
 
-## 5. Done: slides 1–4
+## 5. Done: slides 1–6
 
 | # | Title (on screen) | What changed |
 |---|---|---|
@@ -56,30 +61,28 @@ Read this first in a new chat. It covers what is done, how we work, and exactly 
 | 3 | "**NVIDIA sells one package that is hard to leave**" (was "The cost of leaving") | Loop pill "**5M+ developers**". Notes: "**More than** five million developers… code written for CUDA **runs only on NVIDIA chips**." |
 | 4 | "**NVIDIA's biggest customers are now building their own chips**" | Table replaced with a **donut chart** (Kim's request): one amber for Microsoft 15 / Meta 13 / Amazon 6 / **Alphabet** 6, grey for "Every other customer 60%". Centre: **≈40% · $24.4B a year**. Leader lines to labels. Chip names (MAIA, MTIA, Trainium · Inferentia, TPU) appear on click 1. Footnote: "Customer shares are outside estimates. GIVEN · $24.4B = 40% × $60.9B COMPUTED". Notes: "Alphabet, which owns Google", "about 24.4 billion dollars". Four amber shades were rejected because they failed the colour check. |
 
-## 6. In progress: slide 5 (problem + roadmap)
+### Slide 5: problem + roadmap (done)
+Built from Julius's mockup: a title shot that animates into the questions.
+- **Start:** big title alone on the left (86px, 3 lines, "keep growing?" in green) + short green rule; transparent Blackwell chip (`_picks/moat_system/blackwell_chip.webp`) on the right with a `-webkit-box-reflect` floor reflection. **Background is the normal `dim` chip grid**: Julius asked to keep it (a pure-black version was rejected).
+- **Click 1:** line under the rule: "Customers are **locked into CUDA**. Now the four biggest have the reason and the means to leave." (This settled the old "locked into CUDA" open item. The separate reason/means boxes are gone; details are in the notes.)
+- **Click 2:** title shrinks and moves to the top left (CSS transitions on `top`/`left`/`font-size`, keyed on `#slide-5-problem[data-step]`), chip eases back, Q1–Q5 rise in one by one as a vertical list.
+- **Click 3:** amber dashed box "Without · pushing them out faster or drawing antitrust action".
+- Notes + talking points updated with the new clicks.
 
-**Done:**
-- Title "**How can NVIDIA keep its pricing power and keep growing?**"
-- Statement paragraph **removed** (it's in the notes).
-- Three boxes: **The reason**: "High prices" · **The means**: "Money, engineers, own clouds" · **Without** (amber dashed): "Pushing them out faster or antitrust".
-- **5 questions**: Q1 How much rides on AI data centers? · Q2 Why can NVIDIA charge so much? · Q3 Who can break the lock-in? · Q4 What is it worth to **keep them**? · **Q5 Where can NVIDIA create new demand?**
-- Image: transparent **`nvidia_assets/_picks/moat_system/blackwell_chip.webp`** top right (old `.jpg` deleted).
-- Notes: five answers, "the condition", key line "Five questions decide what NVIDIA should do."
+### Slide 6: Q1 (done)
+Kim asked for **vertical columns** so the growth reads left to right, and Julius asked for less text via clicks.
+- **Entry:** title + three columns FY22 39% → FY23 56% → FY24 78% that grow one after another (height 4.6px per point; FY24 brightest with a glow). Label "Data center share of revenue · COMPUTED".
+- **Click 1:** operating margin "15.7% → 54.1%" + "About 85¢ of each extra sales dollar became profit."
+- **Click 2:** Blue Ocean portfolio map (AI Foundry chip says "potential pioneer, tested by a pilot (slide 12)").
+- **Click 3:** "if NVIDIA stands still": data center slides to migrator, "No proven pioneer left". (The map's move rules are now scoped to `#slide-6-q1[data-step="3"]`; the old global `section[data-step="1"] .pchip…` rules were removed.)
+- Moved to notes: "opex grew only 2%", the gaming dip line, the "Press →" hint.
+- **Title still the long one.** Proposed shorter title: "**NVIDIA now depends on AI data centers for almost all of its growth**". Julius hasn't approved yet. Ask.
 
-**Open item:** "**locked into CUDA**" (the root of the problem in Allen's statement) is now only in the notes. Options: a small label "Locked into CUDA", or the reason box "High prices from CUDA lock-in". Ask Julius.
-
-## 7. To do: slides 6–17 + backups
+## 6. To do: slides 7–17 + backups
 
 **Final order is 17 slides + B1, B2.** A new Q5 slide is inserted at 12, so current slides 12–16 become 13–17.
 
-### Slide 6: Q1 (`<!-- 6 Q1 -->`), SMALL
-- Now: title "78% of NVIDIA's revenue now comes from one business, and it is NVIDIA's only proven growth engine"; mix bars 39/56/78%; op. margin 15.7% → 54.1%, 85 cents; PMS map (AI data center = pioneer, Gaming GPUs 17% = migrator, AI Foundry "potential pioneer, no revenue in case"); click toggle "if NVIDIA stands still" → "No proven pioneer left"; note "Gaming dipped 27% in FY2023…".
-- Change AI Foundry chip text to "**potential pioneer, tested by a pilot (slide 12)**".
-- Notes: after "the case gives it no revenue yet" add "**We will test it with a pilot aimed at first-time buyers on slide 12.**"
-- Optional (WAC): "Operating expenses grew only 2%."
-- Title is long. Consider a shorter natural one (ask).
-
-### Slide 7: Q2 price vs volume (`<!-- 7 Q2 -->`), EDIT
+### Slide 7: Q2 price vs volume (`<!-- 7 Q2 -->`), EDIT  ← **START HERE**
 - Title → Kim/WAC: "**Data center revenue grew faster than estimated GPU shipments**" (also update `data-label`).
 - "Chips shipped" → "**Estimated GPU shipments**" · "Revenue per chip" → "**Revenue per GPU shipped**".
 - Replace "Buyers did not just buy more. They paid more than twice as much per chip." with "**Revenue per GPU also reflects product mix and non-GPU sales such as networking, so it is not a pure price. Slide 8 shows why buyers pay a premium.**"
@@ -166,16 +169,16 @@ Read this first in a new chat. It covers what is done, how we work, and exactly 
 ### B2: frameworks in reserve, SMALL
 - "Covered on slides 13–15" → **14–16**. Check the other slide references.
 
-## 8. Wrap-up tasks after slide 17
+## 7. Wrap-up tasks after slide 17
 
 - JS `const MAIN=16;` → **17** (page numbers "/ 17").
 - `NVIDIA_Talking_Points.md`: all "Slide N of 16" → "of 17", renumber 12–16 → 13–17, add the Slide 12 (Q5) section, update the "Who speaks when" table.
 - Speaker split (review §7): Group 1 = 1–5 · Group 2 = 6–10 · Group 3 = 11–17 (now heaviest). **Suggest moving slide 11 to Group 2.** Ask Julius.
 - Re-run the whole deck on the local server: every slide, every click, no overflow, all images load.
 
-## 9. Open decisions / waiting on
+## 8. Open decisions / waiting on
 
-1. Slide 5: show "locked into CUDA" on screen or not.
+1. ~~Slide 5: "locked into CUDA" on screen~~ Done (line under the title on click 1).
 2. Q15 missing letter (Kim).
 3. Speaker split with the new slide count.
-4. Shorter natural titles for slides 6, 10, 11 (Julius approves each).
+4. Shorter natural titles for slides 6, 10, 11 (Julius approves each). Slide 6 proposal is in §5.

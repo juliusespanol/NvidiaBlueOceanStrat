@@ -296,25 +296,34 @@ Next question. Why can NVIDIA charge so much?
 **Presenter:** Group 2  
 **Estimated time:** ~2 min
 
-**On screen:** NVIDIA’s growth came mostly from higher prices, not more chips
+**On screen:** Data center revenue grew faster than estimated GPU shipments  
+**Clicks:** 3 (the "not a pure price" note + labels on the NVIDIA tray, the gross margin columns, the NVIDIA tax gap)
 
 ### Speaker script
 
-*[Point to the two numbers, one at a time.]*
+*[The two numbers count up. Point to them one at a time.]*
 
-Between fiscal 2023 and 2024, NVIDIA shipped 42% more data center chips.
+Question two. Why can NVIDIA charge so much?
 
-But revenue per chip? Up 122%.
+Between fiscal 2023 and 2024, estimated data center GPU shipments rose 42%.
+
+But data center revenue per GPU shipped? Up 122%.
 
 *[Pause.]*
 
-Customers didn’t just buy more. They paid more than twice as much per chip.
+So revenue grew much faster than shipments.
 
-*[Move to the margin bars.]*
+*[CLICK 1: The note appears and the tray gets two labels: GPUs and networking.]*
+
+Be careful with that ratio. A data center sale is not just a GPU. Look at this tray: the GPUs sit on top, and the networking cards sit around them. So revenue per GPU also reflects a shift to pricier products and non-GPU sales like networking. It is not a pure price increase. What it does show is that buyers spent far more per chip. Slide 8 shows why they are willing to.
+
+*[CLICK 2: The gross margin columns grow.]*
 
 Now look at gross margin. That is the share of each sales dollar left after paying to make the product.
 
 NVIDIA: 73%. AMD: 47%. Intel: 41%.
+
+*[CLICK 3: The gap between NVIDIA and AMD lights up.]*
 
 Buyers have a name for that gap. They call it the **NVIDIA tax**.
 

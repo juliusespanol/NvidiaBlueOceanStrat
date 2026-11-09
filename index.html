@@ -666,25 +666,160 @@ Key line: If NVIDIA stands still, it has no proven pioneer left.</aside>
 </section>
 
 <!-- 7 Q2 -->
-<section class="slide" data-bg="dim" data-poll="Case poll Q5: B" data-label="NVIDIA's growth came mostly from higher prices, not more chips">
+<section id="slide-7-q2" class="slide" data-bg="dim" data-poll="Case poll Q5: B" data-label="Data center revenue grew faster than estimated GPU shipments">
+<style>
+/* Entry: shipment vs revenue-per-GPU bars race, numbers count up, compute tray floats in on the right.
+   Click 1: "not a pure price" note + GPU / networking pins on the tray.
+   Click 2: tray recedes, gross margin columns grow. Click 3: the NVIDIA-vs-AMD gap lights up as the "NVIDIA tax". */
+#slide-7-q2{--ease:cubic-bezier(.65,0,.2,1)}
+#slide-7-q2 .s7{position:relative;flex:1;min-height:0}
+#slide-7-q2 .pv{position:absolute;left:0;top:0;bottom:0;width:860px;display:flex;flex-direction:column;justify-content:center;gap:46px}
+#slide-7-q2 .mrow .top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:18px}
+#slide-7-q2 .mrow .nm{font-family:var(--display);font-size:34px;font-weight:650;letter-spacing:-.01em;color:var(--fg);line-height:1.1}
+#slide-7-q2 .mrow .nm small{display:block;font-family:var(--body);font-size:20px;font-weight:400;color:var(--dim);letter-spacing:.02em;margin-top:8px}
+#slide-7-q2 .mrow .num{font-family:var(--display);font-stretch:118%;font-weight:800;font-size:104px;line-height:.85;letter-spacing:-.035em;font-variant-numeric:tabular-nums;color:var(--mute)}
+#slide-7-q2 .mrow.rev .num{color:var(--green-hi);text-shadow:0 0 60px rgba(118,185,0,.35)}
+#slide-7-q2 .trk{position:relative;height:24px;background:rgba(255,255,255,.035);border-radius:3px}
+#slide-7-q2 .trk .f{position:absolute;left:0;top:0;bottom:0;border-radius:3px}
+#slide-7-q2 .mrow.ship .f{width:34.4%;background:var(--mute)}
+#slide-7-q2 .mrow.rev .f{width:100%;background:linear-gradient(90deg,var(--green-lo),var(--green) 40%,var(--green-hi));box-shadow:0 0 40px rgba(118,185,0,.35)}
+/* dashed marker: where shipments stopped, dropped through the revenue bar */
+#slide-7-q2 .mark{position:absolute;left:34.4%;top:-12px;bottom:-12px;border-left:2px dashed rgba(238,243,234,.55);opacity:0;transition:opacity .6s ease}
+#slide-7-q2.active .mark{animation:s7fade .6s ease 2.7s forwards}
+@keyframes s7fade{to{opacity:1}}
+#slide-7-q2 .note{display:flex;gap:20px;align-items:flex-start;padding:20px 26px;border-left:3px solid var(--green);background:linear-gradient(90deg,rgba(118,185,0,.08),transparent)}
+#slide-7-q2 .note p{font-size:26px;line-height:1.4;color:var(--mute);margin:0}
+#slide-7-q2 .note b{color:var(--fg);font-weight:600}
+
+/* right: the tray */
+#slide-7-q2 .art{position:absolute;left:930px;right:-40px;top:0;bottom:0;pointer-events:none}
+#slide-7-q2 .recede{position:absolute;inset:0;transition:opacity 1.1s ease,transform 1.3s var(--ease),filter 1.1s ease}
+#slide-7-q2 .float{position:absolute;left:20px;top:40px;width:720px;height:624px}
+#slide-7-q2.active .float{animation:s7float 7s ease-in-out 1.6s infinite alternate}
+@keyframes s7float{from{transform:translateY(0)}to{transform:translateY(-14px)}}
+#slide-7-q2 .glow{position:absolute;left:-10%;top:-6%;width:120%;height:110%;background:radial-gradient(closest-side,rgba(118,185,0,.22),rgba(118,185,0,.06) 55%,transparent 75%);filter:blur(10px)}
+#slide-7-q2.active .glow{animation:s7pulse 4.5s ease-in-out 1.6s infinite alternate}
+@keyframes s7pulse{from{opacity:.65}to{opacity:1}}
+#slide-7-q2 .float img,#slide-7-q2 .shine{position:absolute;inset:0;width:100%;height:100%;display:block}
+#slide-7-q2 .shine{-webkit-mask:url(nvidia_assets/_picks/moat_system/compute_tray_cut.webp) center/100% 100% no-repeat;mask:url(nvidia_assets/_picks/moat_system/compute_tray_cut.webp) center/100% 100% no-repeat;
+  background:linear-gradient(110deg,transparent 42%,rgba(168,227,58,.55) 50%,transparent 58%) 130% 0/300% 100% no-repeat;mix-blend-mode:screen}
+#slide-7-q2.active .shine{animation:s7shine 2.4s cubic-bezier(.4,0,.2,1) 1.3s both}
+#slide-7-q2[data-step="1"] .shine{animation:s7shine2 2.2s cubic-bezier(.4,0,.2,1) .1s both}
+@keyframes s7shine{from{background-position:130% 0}to{background-position:-30% 0}}
+@keyframes s7shine2{from{background-position:130% 0}to{background-position:-30% 0}}
+/* pins (positions in tray-image space, 720px wide) */
+#slide-7-q2 .pin{position:absolute;width:0;height:0}
+#slide-7-q2 .pin i{position:absolute;left:-9px;top:-9px;width:18px;height:18px;border-radius:50%;background:var(--green-hi);box-shadow:0 0 0 4px rgba(4,6,5,.8),0 0 24px rgba(168,227,58,.9)}
+#slide-7-q2 .pin i::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--green-hi);opacity:0}
+#slide-7-q2 .pin.on i::after{animation:s7ring 2s ease-out .3s infinite}
+@keyframes s7ring{from{transform:scale(1);opacity:.9}to{transform:scale(3.2);opacity:0}}
+#slide-7-q2 .pin .ln{position:absolute;background:rgba(238,243,234,.6)}
+#slide-7-q2 .pin span{position:absolute;white-space:nowrap;padding:9px 18px;border:1px solid var(--green-lo);border-radius:4px;background:rgba(4,6,5,.9);font-family:var(--display);font-size:25px;font-weight:650;color:var(--fg)}
+#slide-7-q2 .pin span em{font-style:normal;color:var(--green-hi)}
+#slide-7-q2 .pin.gpu{left:208px;top:60px}
+#slide-7-q2 .pin.gpu .ln{left:-1px;bottom:9px;width:2px;height:70px}
+#slide-7-q2 .pin.gpu span{left:-60px;bottom:79px}
+#slide-7-q2 .pin.net{left:380px;top:344px}
+#slide-7-q2 .pin.net .ln{left:9px;top:-1px;height:2px;width:230px}
+#slide-7-q2 .pin.net span{left:239px;top:-24px}
+
+/* right, click 2+: gross margin */
+#slide-7-q2 .gm{position:absolute;left:1000px;right:0;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;gap:26px}
+#slide-7-q2 .cols{position:relative;display:flex;align-items:flex-end;gap:56px;height:490px;border-bottom:1px solid var(--line2);padding-left:4px}
+#slide-7-q2 .mc{position:relative;width:150px;display:flex;flex-direction:column;align-items:center;gap:12px}
+#slide-7-q2 .mc .v{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:48px;letter-spacing:-.02em;color:var(--fg);opacity:0;transition:opacity .5s ease}
+#slide-7-q2 .mc .bar{width:100%;border-radius:3px 3px 0 0;transform:scaleY(0);transform-origin:50% 100%;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+#slide-7-q2 .mc.nv .bar{background:var(--green);box-shadow:0 0 50px rgba(118,185,0,.3)}
+#slide-7-q2 .mc.nv .v{color:var(--green-hi)}
+#slide-7-q2 .mc.amd .bar{background:var(--mute)}
+#slide-7-q2 .mc.intel .bar{background:var(--dim)}
+#slide-7-q2 .names{display:flex;gap:56px;padding-left:4px;margin-top:-12px}
+#slide-7-q2 .names span{width:150px;text-align:center;font-family:var(--display);font-size:26px;font-weight:600;color:var(--mute)}
+#slide-7-q2 .names span:first-child{color:var(--fg)}
+#slide-7-q2:is([data-step="2"],[data-step="3"]) .mc .bar{transform:scaleY(1);transition-delay:calc(var(--d) * 180ms + 250ms)}
+#slide-7-q2:is([data-step="2"],[data-step="3"]) .mc .v{opacity:1;transition-delay:calc(var(--d) * 180ms + 1000ms)}
+/* the gap */
+#slide-7-q2 .tax{position:absolute;left:4px;width:150px;bottom:263px;height:146px;box-sizing:border-box;border:2.5px dashed var(--amber);border-radius:3px;
+  background:repeating-linear-gradient(135deg,rgba(255,194,102,.28) 0 8px,rgba(255,194,102,.08) 8px 16px);display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-stretch:112%;font-weight:800;font-size:34px;color:var(--amber);text-shadow:0 1px 8px rgba(0,0,0,.6);opacity:0;transform:scale(.9);transition:opacity .6s ease,transform .8s cubic-bezier(.16,.84,.24,1)}
+#slide-7-q2 .lvl{position:absolute;left:4px;bottom:263px;width:356px;border-top:2.5px dashed var(--amber);transform:scaleX(0);transform-origin:100% 50%;transition:transform .9s var(--ease)}
+#slide-7-q2[data-step="3"] .lvl{transform:scaleX(1)}
+#slide-7-q2[data-step="3"] .tax{opacity:1;transform:none;transition-delay:.6s}
+#slide-7-q2 .gm .txt{max-width:640px;margin:0}
+#slide-7-q2 .gm .txt b.a{color:var(--amber)}
+/* recede the tray behind the margin chart */
+#slide-7-q2:is([data-step="2"],[data-step="3"]) .recede{opacity:.13;transform:translate(60px,30px) scale(1.06);filter:blur(2px)}
+#slide-7-q2:is([data-step="2"],[data-step="3"]) .pin{opacity:0}
+@media(prefers-reduced-motion:reduce){
+  #slide-7-q2 .float,#slide-7-q2 .glow,#slide-7-q2 .shine,#slide-7-q2 .pin i::after{animation:none!important}
+  #slide-7-q2 .mark{opacity:1;animation:none!important}
+  #slide-7-q2 .mc .bar,#slide-7-q2 .mc .v,#slide-7-q2 .lvl,#slide-7-q2 .tax,#slide-7-q2 .recede{transition:none!important}
+}
+</style>
   <header class="hd b">
-  <h2>NVIDIA's growth came mostly from higher prices, not more chips</h2></header>
-  <div class="vs">
-    <div class="panel b col" style="gap:30px;justify-content:center">
-      <span class="k">Data center, FY23 → FY24 <span class="tag c">COMPUTED</span></span>
-      <div class="hbar"><span class="lab">Chips shipped<small>2.64M → 3.76M</small></span><div class="track"><div class="fill grow-x" style="width:34%;background:var(--mute);--gd:1s">+42%</div></div></div>
-      <div class="hbar"><span class="lab">Revenue per chip<small>$5,684 → $12,640</small></span><div class="track"><div class="fill grow-x" style="width:100%;background:var(--green);--gd:1.2s">+122%</div></div></div>
-      <p class="txt">Buyers did not just buy more. They paid <b>more than twice as much per chip</b>.</p>
+  <h2>Data center revenue grew faster than estimated GPU shipments</h2></header>
+  <div class="s7">
+    <div class="art b">
+      <div class="recede">
+        <div class="float">
+          <div class="glow"></div>
+          <img src="nvidia_assets/_picks/moat_system/compute_tray_cut.webp" alt="An NVIDIA compute tray: GPUs on top, networking cards below">
+          <div class="shine"></div>
+          <div class="pin gpu" data-frag="1"><i></i><b class="ln"></b><span><em>GPUs</em></span></div>
+          <div class="pin net" data-frag="1"><i></i><b class="ln"></b><span>Networking</span></div>
+        </div>
+      </div>
     </div>
-    <div class="panel b col" style="gap:30px;justify-content:center">
-      <span class="k">Gross margin <span class="tag">GIVEN</span></span>
-      <div class="hbar"><span class="lab">NVIDIA</span><div class="track"><div class="fill grow-x" style="width:73%;background:var(--green);--gd:1.1s">73%</div></div></div>
-      <div class="hbar"><span class="lab">AMD</span><div class="track"><div class="fill grow-x" style="width:47%;background:var(--mute);--gd:1.25s">47%</div></div></div>
-      <div class="hbar"><span class="lab">Intel</span><div class="track"><div class="fill grow-x" style="width:41%;background:var(--dim);--gd:1.4s">41%</div></div></div>
-      <p class="txt">Buyers call the gap the <b>“NVIDIA tax”</b>. It is the reason they want to leave.</p>
+    <div class="pv">
+      <span class="k b">Data center, FY23 → FY24 <span class="tag c" style="margin-left:8px">COMPUTED</span></span>
+      <div class="mrow ship b">
+        <div class="top"><span class="nm">Estimated GPU shipments<small>2.64M → 3.76M</small></span><span class="num" data-count="42" data-prefix="+" data-suffix="%">+42%</span></div>
+        <div class="trk"><div class="f grow-x" style="--gd:1s"></div></div>
+      </div>
+      <div class="mrow rev b">
+        <div class="top"><span class="nm">Revenue per GPU shipped<small>$5,684 → $12,640</small></span><span class="num" data-count="122" data-prefix="+" data-suffix="%">+122%</span></div>
+        <div class="trk"><div class="f grow-x" style="--gd:1.3s"></div><div class="mark"></div></div>
+      </div>
+      <div class="note" data-frag="1"><p>Not a pure price. It also reflects product mix and <b>non-GPU sales such as networking</b>.</p></div>
+    </div>
+    <div class="gm" data-frag="2">
+      <span class="k">Gross margin <span class="tag" style="margin-left:8px">GIVEN</span></span>
+      <div>
+        <div class="cols" role="img" aria-label="Gross margin: NVIDIA 73%, AMD 47%, Intel 41%">
+          <div class="mc nv" style="--d:0"><span class="v">73%</span><div class="bar" style="height:409px"></div></div>
+          <div class="mc amd" style="--d:1"><span class="v">47%</span><div class="bar" style="height:263px"></div></div>
+          <div class="mc intel" style="--d:2"><span class="v">41%</span><div class="bar" style="height:230px"></div></div>
+          <div class="lvl"></div>
+          <div class="tax">+26 pts</div>
+        </div>
+        <div class="names" style="margin-top:14px"><span>NVIDIA</span><span>AMD</span><span>Intel</span></div>
+      </div>
+      <p class="txt" data-frag="3">Buyers call the gap the <b class="a">“NVIDIA tax”</b>. It is the reason they want to leave.</p>
     </div>
   </div>
-  <aside class="notes">Question two. Between fiscal 2023 and 2024, NVIDIA shipped 42 percent more data center chips. But revenue per chip went up 122 percent. So most of the growth came from price, not volume. And look at the margins: 73 percent for NVIDIA, 47 for AMD, 41 for Intel. Buyers have a name for that gap. They call it the NVIDIA tax. Here is the part to remember: the high margin is both NVIDIA's reward and its weak point. It is exactly what makes the biggest buyers want to build their own chips. So what are buyers actually paying for?</aside>
+  <aside class="notes">[The two numbers count up. Point to them one at a time.]
+
+Question two. Why can NVIDIA charge so much?
+
+Between fiscal 2023 and 2024, estimated data center GPU shipments rose 42 percent. But data center revenue per GPU shipped rose 122 percent. So revenue grew much faster than shipments.
+
+[CLICK 1: The note appears and the tray gets two labels: GPUs and networking.]
+
+Be careful with that ratio. A data center sale is not just a GPU. Look at this tray: the GPUs sit on top, and the networking cards sit around them. So revenue per GPU also reflects a shift to pricier products and non-GPU sales like networking. It is not a pure price increase. What it does show is that buyers spent far more per chip. Slide 8 shows why they are willing to.
+
+[CLICK 2: The gross margin columns grow.]
+
+Now look at gross margin. That is the share of each sales dollar left after paying to make the product. NVIDIA: 73 percent. AMD: 47. Intel: 41.
+
+[CLICK 3: The gap between NVIDIA and AMD lights up.]
+
+Buyers have a name for that gap. They call it the NVIDIA tax.
+
+Here is the part to remember: the high margin is both NVIDIA's reward and its weak point. It is exactly what makes the biggest buyers want to build their own chips.
+
+So what are buyers actually paying for?
+
+Key line: The 73% margin is NVIDIA's reward and its weak spot.</aside>
 </section>
 
 <!-- 8 Q2 -->
