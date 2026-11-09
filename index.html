@@ -1564,44 +1564,100 @@ Q&A note: The 73% is NVIDIA’s company-wide gross margin in fiscal 2024 (72.7%)
 </section>
 
 <!-- 15 RISKS -->
-<section class="slide" data-bg="dim" data-label="What could break the plan, and the early warning signs we would watch">
+<section id="slide-15-risk" class="slide" data-bg="dim" data-label="What could go wrong, and how we would know early">
+<style>
+/* Entry: risk to Move 1. Click 1: risk to Move 2. Click 2: risk to Move 3.
+   Click 3: the three numbers we would watch. Click 4: the closing line (room to act). */
+#slide-15-risk{--ease:cubic-bezier(.16,.84,.24,1)}
+#slide-15-risk .s15{flex:1;min-height:0;display:flex;flex-direction:column;gap:22px}
+#slide-15-risk .rk{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+#slide-15-risk .card{position:relative;overflow:hidden;border:1px solid var(--line2);border-radius:10px;background:#090d0a;display:flex;flex-direction:column}
+#slide-15-risk .card[data-frag]{transform:translateY(40px) scale(.96)}
+#slide-15-risk .card[data-frag].on{transform:none}
+#slide-15-risk .ph{height:246px;flex:none;background-size:cover;background-position:center;position:relative}
+#slide-15-risk .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,13,10,.15),#090d0a 98%)}
+#slide-15-risk .bd{flex:1;padding:0 30px 26px;margin-top:-30px;position:relative;display:flex;flex-direction:column;gap:14px}
+#slide-15-risk .mv{align-self:flex-start;font-family:var(--display);font-size:17px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green);border:1.5px solid var(--green-lo);border-radius:30px;padding:4px 13px;background:#090d0a}
+#slide-15-risk .card h3{font-size:31px;line-height:1.14}
+#slide-15-risk .ln{display:grid;grid-template-columns:30px 1fr;gap:4px 12px;align-items:start}
+#slide-15-risk .sig{margin-top:6px}
+#slide-15-risk .ln i{grid-row:span 2;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:17px;font-weight:700;margin-top:2px}
+#slide-15-risk .ln small{font-size:16px;letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+#slide-15-risk .ln span{font-size:21px;line-height:1.3;color:var(--fg)}
+#slide-15-risk .sig i{border:1.5px solid var(--amber4);color:var(--amber)}
+#slide-15-risk .sig small{color:var(--amber)}
+#slide-15-risk .res i{border:1.5px solid var(--green-lo);color:var(--green-hi)}
+#slide-15-risk .res small{color:var(--green-hi)}
+/* watch strip */
+#slide-15-risk .wt{display:grid;grid-template-columns:auto repeat(3,1fr);align-items:stretch;border:1px solid var(--line2);border-radius:10px;overflow:hidden;background:rgba(10,15,11,.95)}
+#slide-15-risk .wt>.k{display:flex;align-items:center;padding:0 28px;font-family:var(--display);font-size:20px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);border-right:1px solid var(--line)}
+#slide-15-risk .wt div{display:flex;align-items:center;gap:18px;padding:16px 26px;border-right:1px solid var(--line);opacity:0;transform:translateY(10px);transition:opacity .5s ease,transform .6s var(--ease)}
+#slide-15-risk .wt div:last-child{border-right:none}
+#slide-15-risk .wt b{font-family:var(--display);font-stretch:108%;font-weight:800;font-size:40px;line-height:1;color:var(--fg)}
+#slide-15-risk .wt span{font-size:20px;line-height:1.25;color:var(--mute)}
+#slide-15-risk .wt.on div{opacity:1;transform:none}
+#slide-15-risk .wt.on div:nth-of-type(2){transition-delay:.12s}
+#slide-15-risk .wt.on div:nth-of-type(3){transition-delay:.24s}
+/* closing line */
+#slide-15-risk .cl{display:flex;align-items:center;gap:22px;padding:18px 28px;border:1px solid var(--green);border-radius:10px;background:linear-gradient(90deg,rgba(118,185,0,.14),rgba(118,185,0,.03));box-shadow:0 0 50px rgba(118,185,0,.1)}
+#slide-15-risk .cl p{font-family:var(--display);font-size:30px;font-weight:600;line-height:1.2;color:var(--fg)}
+#slide-15-risk .cl p em{font-style:normal;color:var(--green-hi)}
+@media(prefers-reduced-motion:reduce){#slide-15-risk .wt div{transition:none}}
+</style>
   <header class="hd b">
-  <h2>What could break the plan, and the early warning signs we would watch</h2></header>
-  <table class="t b" style="font-size:22px">
-    <thead><tr><th style="width:30%">Risk</th><th style="width:36%">Early signal</th><th>Response</th></tr></thead>
-    <tbody>
-      <tr><td>In-house chips become “good enough” faster than expected</td><td>More of the top 4's inference runs on their own chips; outside AI labs sign up for TPU or Trainium</td><td>Speed up the plug-in path and semi-custom offers</td></tr>
-      <tr><td>Open software makes CUDA optional</td><td>New models ship without CUDA-specific code; ROCm and UXL adoption grows</td><td>Keep CUDA the fastest back end under PyTorch</td></tr>
-      <tr><td>Regulators act against NVIDIA's deals</td><td>New probes, like the Run.ai review in the case</td><td>Partnerships and licensing, no exclusive terms</td></tr>
-      <tr><td>Supply runs short at TSMC</td><td>Capacity bookings and lead times stretch</td><td>Monitor; no real second source exists for leading chips</td></tr>
-      <tr><td>AI gets cheaper and demand slows</td><td>Hyperscalers cut capital spending plans</td><td>Move 3 widens the customer base</td></tr>
-    </tbody>
-  </table>
-  <div class="giveup b" style="border-color:var(--line2);background:rgba(255,255,255,.02);padding:18px 26px">
-    <span class="k" style="color:var(--mute);white-space:nowrap">Our weak spot</span>
-    <span class="it" style="font-size:22px;color:var(--mute)">After the case, revenue kept growing and gross margin returned to about 75%. <span class="tag i">INTERNET</span> Competition usually hits margins before revenue, and in-house chips take years to mature. The time to act is while NVIDIA is strong.</span>
+  <h2>What could go wrong, and how we would know early</h2></header>
+  <div class="s15">
+    <div class="rk">
+      <div class="card b"><div class="ph" style="background-image:url(nvidia_assets/04_cuda_software/cuda-kv-toolkit-ari.jpg)"></div>
+        <div class="bd"><span class="mv">Risk to Move 1</span>
+          <h3>Open software makes CUDA optional</h3>
+          <div class="ln sig"><i>!</i><small>Warning sign</small><span>New AI models ship without CUDA-specific code</span></div>
+          <div class="ln res"><i>→</i><small>Our response</small><span>Keep CUDA the fastest option under PyTorch</span></div></div></div>
+      <div class="card" data-frag="1"><div class="ph" style="background-image:url(nvidia_assets/02_chips_blackwell/blackwell-architecture-ari-1920x1080.jpg)"></div>
+        <div class="bd"><span class="mv">Risk to Move 2</span>
+          <h3>Their own chips get good enough sooner than expected</h3>
+          <div class="ln sig"><i>!</i><small>Warning sign</small><span>More top-4 work moves to their own chips. Outside labs pick TPU or Trainium</span></div>
+          <div class="ln res"><i>→</i><small>Our response</small><span>Speed up the plug-in path</span></div></div></div>
+      <div class="card" data-frag="2"><div class="ph" style="background-image:url(nvidia_assets/06_data_center_ai_factory/nvidia-ai-factory-enterprise.jpg);background-position:center 30%"></div>
+        <div class="bd"><span class="mv">Risk to Move 3</span>
+          <h3>The pilot does not convert, or costs too much to deliver</h3>
+          <div class="ln sig"><i>!</i><small>Warning sign</small><span>Few first-time buyers move to paid use</span></div>
+          <div class="ln res"><i>→</i><small>Our response</small><span>Stop, or try another first-time segment</span></div></div></div>
+    </div>
+    <div class="wt" data-frag="3"><span class="k">We would watch</span>
+      <div><b>≈40%</b><span>Top-4 share of sales</span></div>
+      <div><b>73%</b><span>Gross margin trend</span></div>
+      <div><b>Training</b><span>Any big buyer moving it off NVIDIA</span></div>
+    </div>
+    <div class="cl" data-frag="4"><p>Strong revenue growth gives NVIDIA <em>room to act</em> while the core business is still performing well.</p></div>
   </div>
-  <aside class="notes">[Brisk through the risks. Slow down for the weak spot.]
+  <aside class="notes">[Brisk. One risk per move.]
 
-Every plan can fail. Here is how ours could, and what we would watch.
+Every plan can fail. Here is how each of our moves could, and how we would know early.
 
-Biggest risk: customers’ own chips get good enough faster than we expect. The warning sign: more of their AI work running on their own chips.
+Risk to move one: open software makes CUDA optional. The warning sign is new AI models shipping without any CUDA-specific code. Our response: keep CUDA the fastest option under PyTorch.
 
-Others: free software making CUDA optional. Regulators. Chip supply at TSMC. And AI getting so cheap that spending slows.
+[CLICK 1: Risk to Move 2 appears.]
 
-[Raise the weak spot yourself, before anyone asks. Look straight at the audience.]
+The biggest risk is to move two. The big buyers’ own chips get good enough sooner than we expect. The warning sign: more of the top four’s work moving to their own chips, and outside AI labs signing up for Google’s TPU or Amazon’s Trainium. Our response: speed up the plug-in path.
 
-Now let us challenge ourselves. After the case, NVIDIA’s revenue kept growing. Its margin went back to about 75%. So is the threat overstated?
+[CLICK 2: Risk to Move 3 appears.]
 
-We don’t think so. Competition usually hits prices before it hits sales. And in-house chips take years to mature.
+Risk to move three: the pilot doesn’t convert, or it costs too much to deliver. The warning sign is few first-time buyers moving to paid use. Our response: stop, or try another first-time segment. That’s why it’s a pilot.
 
-The time to act is while you are strong. Not after.
+[CLICK 3: The watch strip appears.]
+
+On top of that, we would watch three numbers. The top four’s share of sales, about 40% today. The gross margin trend, about 73% today. And any big buyer moving its training off NVIDIA. Training is where NVIDIA is strongest, so that would be the clearest sign.
+
+[CLICK 4: The closing line appears. Slow down.]
+
+And why act now? Strong revenue growth gives NVIDIA room to act while the core business is still performing well.
 
 So let’s test our recommendation. Put yourself in Microsoft’s position.
 
-Key line: Act while strong, not after.
+Key line: Act while the core business is still strong.
 
-Q&amp;A note: The post-case figures (revenue growth, ~75% margin) are from outside the case. Say so if asked.</aside>
+Q&A note: Other risks we would watch: regulators acting against NVIDIA’s deals (like the Run.ai review in the case), AI getting so cheap that spending slows (Move 3 widens the customer base), and chip supply at TSMC (no real second source for leading chips). After the case, NVIDIA’s revenue kept growing and its margin returned to about 75%; that figure is from outside the case, so say so if asked.</aside>
 </section>
 
 <!-- 16 CLOSE -->

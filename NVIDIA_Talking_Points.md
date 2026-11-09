@@ -539,29 +539,37 @@ Now, what could break this plan?
 
 ## SLIDE 15 of 16 · Risks · Group 3 · ~1.5 min
 
-**On screen:** What could break the plan, and the early warning signs we would watch
+**On screen:** What could go wrong, and how we would know early. One risk card per move (warning sign + our response), then a "We would watch" strip and the closing line.
 
-*[Brisk through the risks. Slow down for the weak spot.]*
+**Clicks:** 4 (risk to Move 2 · risk to Move 3 · watch strip · "room to act" line)
 
-Every plan can fail. Here is how ours could, and what we would watch.
+*[Brisk. One risk per move.]*
 
-Biggest risk: customers’ own chips get good enough faster than we expect. The warning sign: more of their AI work running on their own chips.
+Every plan can fail. Here is how each of our moves could, and how we would know early.
 
-Others: free software making CUDA optional. Regulators. Chip supply at TSMC. And AI getting so cheap that spending slows.
+Risk to move one: open software makes CUDA optional. The warning sign is new AI models shipping without any CUDA-specific code. Our response: keep CUDA the fastest option under PyTorch.
 
-*[Raise the weak spot yourself, before anyone asks. Look straight at the audience.]*
+*[CLICK 1: Risk to Move 2 appears.]*
 
-Now let us challenge ourselves. After the case, NVIDIA’s revenue kept growing. Its margin went back to about 75%. So is the threat overstated?
+The biggest risk is to move two. The big buyers’ own chips get good enough sooner than we expect. The warning sign: more of the top four’s work moving to their own chips, and outside AI labs signing up for Google’s TPU or Amazon’s Trainium. Our response: speed up the plug-in path.
 
-We don’t think so. Competition usually hits prices before it hits sales. And in-house chips take years to mature.
+*[CLICK 2: Risk to Move 3 appears.]*
 
-The time to act is while you are strong. Not after.
+Risk to move three: the pilot doesn’t convert, or it costs too much to deliver. The warning sign is few first-time buyers moving to paid use. Our response: stop, or try another first-time segment. That’s why it’s a pilot.
+
+*[CLICK 3: The watch strip appears.]*
+
+On top of that, we would watch three numbers. The top four’s share of sales, about 40% today. The gross margin trend, about 73% today. And any big buyer moving its training off NVIDIA. Training is where NVIDIA is strongest, so that would be the clearest sign.
+
+*[CLICK 4: The closing line appears. Slow down.]*
+
+And why act now? Strong revenue growth gives NVIDIA room to act while the core business is still performing well.
 
 So let’s test our recommendation. Put yourself in Microsoft’s position.
 
-**Key line:** Act while strong, not after.
+**Key line:** Act while the core business is still strong.
 
-**Note for Q&A:** The post-case figures (revenue growth, ~75% margin) are from outside the case. Say so if asked.
+**Note for Q&A:** Other risks we would watch: regulators acting against NVIDIA’s deals (like the Run.ai review in the case), AI getting so cheap that spending slows (Move 3 widens the customer base), and chip supply at TSMC (no real second source for leading chips). After the case, NVIDIA’s revenue kept growing and its margin returned to about 75%; that figure is from outside the case, so say so if asked.
 
 ## SLIDE 16 of 16 · Close · Group 3 · ~1.5 min
 
