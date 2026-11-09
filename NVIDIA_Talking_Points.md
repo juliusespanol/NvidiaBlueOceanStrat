@@ -6,7 +6,7 @@ ECO 502 · Group presentation · Nov 14, 2026 · For the deck “NVIDIA Case Key
 
 ## How to read this script
 
-Italic text in square brackets is a delivery cue. Do it, don’t say it.
+*Italic text in square brackets* is a delivery cue. Do it, don’t say it.
 
 Plain text is what you say. **Bold** words get extra stress.
 
@@ -32,14 +32,9 @@ Each slide ends with a **Key line**: if you forget everything else on that slide
 | 2 | 6–10 | The proof: four analysis questions (Q1–Q3) | ~10.5 min |
 | 3 | 11–16 | Q4, options, recommendation, justification, close | ~10.5 min |
 
-## Slide 1 of 16: Hook
-
-**Presenter:** Group 1  
-**Estimated time:** ~1.5 min
+## SLIDE 1 of 16 · Hook · Group 1 · ~1.5 min
 
 **On screen:** On one day in January 2025, NVIDIA lost $600 billion in market value. Was cheaper AI the real threat?
-
-### Speaker script
 
 *[Walk to the centre of the room. Say nothing. Let the number sit on screen for three seconds.]*
 
@@ -79,15 +74,10 @@ To see it, we first need to know how NVIDIA got so big.
 
 **Key line:** The real threat is on NVIDIA’s own customer list.
 
-## Slide 2 of 16: Case facts
-
-**Presenter:** Group 1  
-**Estimated time:** ~2 min
+## SLIDE 2 of 16 · Case facts · Group 1 · ~2 min
 
 **On screen:** NVIDIA’s Journey to $3 Trillion  
 **Clicks:** 3 (1999 → 2007 with the CUDA logo, then ChatGPT, then the market value bars)
-
-### Speaker script
 
 *[Point to the timeline and move your hand left to right.]*
 
@@ -123,15 +113,10 @@ So how did one company capture so much of this boom? Because NVIDIA does not jus
 
 **Note for Q&A:** If asked: “fiscal 2024” is NVIDIA’s financial year ending January 2024.
 
-## Slide 3 of 16: Case facts
-
-**Presenter:** Group 1  
-**Estimated time:** ~2 min
+## SLIDE 3 of 16 · Case facts · Group 1 · ~2 min
 
 **On screen:** NVIDIA sells one package that is hard to leave  
 **Clicks:** 6 (one per loop step, then the switching cost panel)
-
-### Speaker script
 
 *[Trace the loop on screen with your hand, one step at a time.]*
 
@@ -175,15 +160,10 @@ So who has enough money and engineers to pay that cost?
 
 **Key line:** The cost of leaving is what NVIDIA really sells.
 
-## Slide 4 of 16: Case facts
-
-**Presenter:** Group 1  
-**Estimated time:** ~1.5 min
+## SLIDE 4 of 16 · Case facts · Group 1 · ~1.5 min
 
 **On screen:** NVIDIA's biggest customers are now building their own chips (donut chart: top 4 = 40%, everyone else = 60%)  
 **Clicks:** 1 (each company’s own chip)
-
-### Speaker script
 
 *[Gesture to each company as it lights up.]*
 
@@ -209,15 +189,10 @@ That is our problem.
 
 **Key line:** NVIDIA’s biggest customers are building their own replacement for NVIDIA.
 
-## Slide 5 of 16: Problem
-
-**Presenter:** Group 1  
-**Estimated time:** ~1.5 min
+## SLIDE 5 of 16 · Problem · Group 1 · ~1.5 min
 
 **On screen:** How can NVIDIA keep its pricing power and keep growing? (title alone, large, next to the Blackwell chip)  
 **Clicks:** 3 (the CUDA lock-in line, the title moves up and the five questions appear, the condition)
-
-### Speaker script
 
 *[Slow and deliberate. This is the thesis of the presentation. Let the title sit alone for a beat.]*
 
@@ -249,15 +224,10 @@ My colleague will take us through the evidence. First question: how much does NV
 
 **Key line:** Five questions decide what NVIDIA should do.
 
-## Slide 6 of 16: Analysis · Q1
-
-**Presenter:** Group 2  
-**Estimated time:** ~2.5 min
+## SLIDE 6 of 16 · Analysis · Q1 · Group 2 · ~2.5 min
 
 **On screen:** 78% of NVIDIA’s revenue now comes from one business, and it is NVIDIA’s only proven growth engine  
 **Clicks:** 3 (operating margin, the portfolio map, “if NVIDIA stands still”)
-
-### Speaker script
 
 *[The three columns grow left to right. Point to them in order.]*
 
@@ -291,15 +261,10 @@ Next question. Why can NVIDIA charge so much?
 
 **Key line:** If NVIDIA stands still, it has no proven pioneer left.
 
-## Slide 7 of 16: Analysis · Q2
-
-**Presenter:** Group 2  
-**Estimated time:** ~2 min
+## SLIDE 7 of 16 · Analysis · Q2 · Group 2 · ~2 min
 
 **On screen:** Data center revenue grew faster than estimated GPU shipments  
 **Clicks:** 3 (the "not a pure price" note + labels on the NVIDIA tray, the gross margin columns, the NVIDIA tax gap)
-
-### Speaker script
 
 *[The two numbers count up. Point to them one at a time.]*
 
@@ -335,14 +300,9 @@ So what exactly are they paying for?
 
 **Key line:** The 73% margin is NVIDIA’s reward and its weak spot.
 
-## Slide 8 of 16: Analysis · Q2
-
-**Presenter:** Group 2  
-**Estimated time:** ~2 min
+## SLIDE 8 of 16 · Analysis · Q2 · Group 2 · ~2 min
 
 **On screen:** Buyers pay for the finished AI job, not for raw chip speed
-
-### Speaker script
 
 *[Playful. This slide surprises people. Set it up like a puzzle.]*
 
@@ -370,14 +330,9 @@ So if the difficulty of switching is what lets NVIDIA earn 73%, the real questio
 
 **Key line:** Buyers pay for the finished job, not the chip.
 
-## Slide 9 of 16: Analysis · Q3
-
-**Presenter:** Group 2  
-**Estimated time:** ~2 min
+## SLIDE 9 of 16 · Analysis · Q3 · Group 2 · ~2 min
 
 **On screen:** NVIDIA’s biggest buyers are also its biggest substitutes
-
-### Speaker script
 
 *[Point to the highlighted label: SAME FOUR FIRMS.]*
 
@@ -405,14 +360,9 @@ So what will these four do next?
 
 **Key line:** The buyers and the substitutes are the same four firms.
 
-## Slide 10 of 16: Analysis · Q3
-
-**Presenter:** Group 2  
-**Estimated time:** ~2 min
+## SLIDE 10 of 16 · Analysis · Q3 · Group 2 · ~2 min
 
 **On screen:** The big buyers will move their own inference work to their own chips and keep NVIDIA for the most advanced training
-
-### Speaker script
 
 *[Walk through the four corners in order.]*
 
@@ -440,14 +390,9 @@ So the big buyers will keep moving work away. How much is it worth to NVIDIA to 
 
 **Key line:** Everyday AI work moves to their chips; NVIDIA keeps the hardest jobs.
 
-## Slide 11 of 16: Analysis · Q4
-
-**Presenter:** Group 3  
-**Estimated time:** ~2 min
+## SLIDE 11 of 16 · Analysis · Q4 · Group 3 · ~2 min
 
 **On screen:** Losing about 1 in 6 dollars of top-buyer business would cost more than a targeted price cut
-
-### Speaker script
 
 *[Be upfront. Point to the ASSUMPTION tag.]*
 
@@ -473,14 +418,9 @@ So which response should NVIDIA choose?
 
 **Key line:** Lost business rarely comes back. A price cut can be reversed.
 
-## Slide 12 of 16: Options
-
-**Presenter:** Group 3  
-**Estimated time:** ~1.5 min
+## SLIDE 12 of 16 · Options · Group 3 · ~1.5 min
 
 **On screen:** Five possible responses, tested against what the analysis showed
-
-### Speaker script
 
 *[Steady and quick. Don’t read the table.]*
 
@@ -500,14 +440,9 @@ Three pass. Together, they become our recommendation.
 
 **Key line:** Two options fail. Three pass.
 
-## Slide 13 of 16: Recommendation
-
-**Presenter:** Group 3  
-**Estimated time:** ~2.5 min
+## SLIDE 13 of 16 · Recommendation · Group 3 · ~2.5 min
 
 **On screen:** Three moves, and what NVIDIA gives up to make them
-
-### Speaker script
 
 *[Stand tall. Slow down. This is the answer.]*
 
@@ -531,14 +466,9 @@ Every move answers one finding. Here is the proof.
 
 **Key line:** Make staying with NVIDIA the cheapest and fastest option.
 
-## Slide 14 of 16: Justification
-
-**Presenter:** Group 3  
-**Estimated time:** ~1.5 min
+## SLIDE 14 of 16 · Justification · Group 3 · ~1.5 min
 
 **On screen:** Each move answers one finding from the analysis
-
-### Speaker script
 
 *[Run your hand across one row to show how to read it.]*
 
@@ -560,14 +490,9 @@ Now, what could break this plan?
 
 **Key line:** No move without a finding behind it.
 
-## Slide 15 of 16: Justification
-
-**Presenter:** Group 3  
-**Estimated time:** ~1.5 min
+## SLIDE 15 of 16 · Justification · Group 3 · ~1.5 min
 
 **On screen:** What could break the plan, and the early warning signs we would watch
-
-### Speaker script
 
 *[Brisk through the risks. Slow down for the weak spot.]*
 
@@ -591,14 +516,9 @@ So let’s test our recommendation. Put yourself in Microsoft’s position.
 
 **Note for Q&A:** The post-case figures (revenue growth, ~75% margin) are from outside the case. Say so if asked.
 
-## Slide 16 of 16: Close
-
-**Presenter:** Group 3  
-**Estimated time:** ~1.5 min
+## SLIDE 16 of 16 · Close · Group 3 · ~1.5 min
 
 **On screen:** If you were Microsoft, would you still build your own chip if it could plug into NVIDIA’s systems?
-
-### Speaker script
 
 *[Pause. Look at the room. Ask, then wait.]*
 
@@ -626,9 +546,7 @@ Thank you.
 
 **Key line:** Make staying the best option, and the biggest buyers stay.
 
-## Backup slides B1 and B2
-
-**Presenter:** Group 3 (Q&A captain)
+## BACKUP SLIDES B1 and B2 · Group 3 (Q&A captain)
 
 *[Use only if the professor asks or runs the case poll. Don’t present these unprompted.]*
 
