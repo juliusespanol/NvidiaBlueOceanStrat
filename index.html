@@ -1446,38 +1446,121 @@ Key line: Invest in CUDA now. Test the other two before scaling them.</aside>
 </section>
 
 <!-- 14 TRACE -->
-<section class="slide" data-bg="dim" data-label="Each move answers one finding from the analysis">
+<section id="slide-14-trace" class="slide" data-bg="dim" data-label="Every move comes from a finding in our analysis">
+<style>
+/* Entry: the three findings (left). Clicks 1-3: an arrow draws and the matching move card slides in (right), the finding lights up.
+   Click 4: the two rejected options, struck through. */
+#slide-14-trace{--ease:cubic-bezier(.16,.84,.24,1)}
+#slide-14-trace .s14{flex:1;min-height:0;display:flex;flex-direction:column;gap:14px;margin-top:-10px}
+#slide-14-trace .heads{display:grid;grid-template-columns:1fr 112px 1.15fr;font-size:19px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:var(--mute)}
+#slide-14-trace .heads span:last-child{grid-column:3}
+#slide-14-trace .rws{flex:1;min-height:0;display:grid;grid-template-rows:1fr 1.22fr 1fr;gap:14px}
+#slide-14-trace .rw{display:grid;grid-template-columns:1fr 112px 1.15fr;align-items:stretch;min-height:0}
+/* finding card */
+#slide-14-trace .fd{display:grid;grid-template-columns:172px 1fr;align-items:center;gap:28px;padding:20px 30px 20px 28px;border:1px solid var(--line2);border-radius:10px;background:rgba(10,15,11,.95);transition:border-color .7s ease,box-shadow .7s ease}
+#slide-14-trace .st{display:flex;flex-direction:column;gap:8px;border-right:1px solid var(--line);padding:6px 20px 6px 0;justify-content:center}
+#slide-14-trace .st b{font-family:var(--display);font-stretch:108%;font-weight:800;font-size:54px;line-height:1;color:var(--fg);letter-spacing:-.02em;transition:color .7s ease}
+#slide-14-trace .st small{font-size:17px;line-height:1.25;color:var(--mute)}
+#slide-14-trace .fx{display:flex;flex-direction:column;gap:8px;min-width:0}
+#slide-14-trace .qs{font-family:var(--display);font-size:19px;font-weight:700;letter-spacing:.06em;color:var(--green);}
+#slide-14-trace .fd h3{font-size:28px;line-height:1.15}
+#slide-14-trace .fd p{font-size:20px;line-height:1.3;color:var(--mute)}
+#slide-14-trace .rw:has(.mvw.on) .fd{border-color:var(--green-lo);box-shadow:0 0 40px rgba(118,185,0,.08)}
+#slide-14-trace .rw:has(.mvw.on) .st b{color:var(--green-hi)}
+/* arrow */
+#slide-14-trace .ar{display:flex;align-items:center;justify-content:center;filter:none;transform:none}
+#slide-14-trace .ar svg{width:88px;height:40px;overflow:visible}
+#slide-14-trace .ar path{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:130;stroke-dashoffset:130;transition:stroke-dashoffset .6s ease}
+#slide-14-trace .ar.on path{stroke-dashoffset:0}
+/* move card */
+#slide-14-trace .mvw{min-height:0;display:flex;transform:translateX(-46px);filter:blur(6px);transition-delay:.3s}
+#slide-14-trace .mvw.on{transform:none;filter:none}
+#slide-14-trace .mv{position:relative;flex:1;overflow:hidden;border:1px solid var(--green);border-radius:10px;background:#090d0a;box-shadow:0 0 50px rgba(118,185,0,.12);display:grid;grid-template-columns:62px 1fr 210px;align-items:center;gap:22px;padding:20px 0 20px 28px}
+#slide-14-trace .mv .ph{position:absolute;top:0;right:0;bottom:0;width:220px;background-size:cover;background-position:center;opacity:.85}
+#slide-14-trace .mv .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#090d0a 0%,rgba(9,13,10,.4) 35%,rgba(9,13,10,0) 100%)}
+#slide-14-trace .mv .tx{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0}
+#slide-14-trace .mv .nb{position:relative;font-family:var(--display);font-stretch:115%;font-weight:800;font-size:58px;line-height:1;color:var(--green-hi);text-align:center;border-right:1px solid var(--green-lo);padding-right:18px}
+#slide-14-trace .mv .pl{font-family:var(--display);font-size:17px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green);border:1.5px solid var(--green-lo);border-radius:30px;padding:4px 13px}
+#slide-14-trace .mv h3{font-size:28px;line-height:1.15}
+#slide-14-trace .mv p{font-size:20px;line-height:1.3;color:var(--mute)}
+/* rejected */
+#slide-14-trace .rjx{display:flex;align-items:center;gap:30px;padding:13px 28px;border:1px solid var(--line2);border-radius:10px;background:rgba(10,15,11,.95)}
+#slide-14-trace .rjx>.k{font-family:var(--display);font-size:19px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);border:1.5px solid var(--amber4);border-radius:30px;padding:5px 15px;flex:none}
+#slide-14-trace .rjx .it{display:flex;align-items:baseline;gap:14px;flex:1;min-width:0}
+#slide-14-trace .rjx .it+.it{border-left:1px solid var(--line);padding-left:30px}
+#slide-14-trace .rjx h3{font-size:26px;position:relative;white-space:nowrap;color:var(--mute)}
+#slide-14-trace .rjx h3::after{content:"";position:absolute;left:0;top:55%;height:2.5px;width:100%;background:var(--amber);transform:scaleX(0);transform-origin:0 50%;transition:transform .6s ease .5s}
+#slide-14-trace .rjx.on h3::after{transform:scaleX(1)}
+#slide-14-trace .rjx .it span{font-size:21px;color:var(--mute)}
+@media(prefers-reduced-motion:reduce){#slide-14-trace .ar path,#slide-14-trace .rjx h3::after{transition:none}}
+</style>
   <header class="hd b">
-  <h2>Each move answers one finding from the analysis</h2></header>
-  <table class="t b" style="font-size:21px">
-    <thead><tr><th style="width:33%">Finding</th><th style="width:24%">Move</th><th>Economic logic</th></tr></thead>
-    <tbody>
-      <tr><td>Q2 · Buyers pay for the finished AI job; switching is hard, which supports 73% margins</td><td class="y">1 · Keep CUDA the fastest way to build AI</td><td>Switching costs keep demand inelastic, which supports the markup (Lerner Index)</td></tr>
-      <tr><td>Q3 · The top buyers are also the main substitutes; they will move inference in-house</td><td class="y">2 · Keep the top buyers inside NVIDIA's systems</td><td>Make-or-buy: if their chip works inside NVIDIA's system, they still buy NVIDIA networking, systems and software</td></tr>
-      <tr><td>Q4 · Losing volume costs more than a targeted price cut once more than ~17.5% would leave</td><td class="y">2 · Volume pricing for the top 4, reviewed yearly</td><td>A permanent loss of volume versus a price cut that can be adjusted</td></tr>
-      <tr><td>Q1 + Q3 · 78% from one business, 40% from four buyers, no proven pioneer if NVIDIA stands still</td><td class="y">3 · Grow customers who cannot build their own chips</td><td>Lower buyer concentration reduces buyer power (Porter) and builds the next pioneer (Blue Ocean)</td></tr>
-      <tr><td>Constraint · Antitrust and export controls</td><td>How, not what</td><td>Partnerships and licensing, no big acquisitions or exclusive deals, keep the response legal and fast</td></tr>
-    </tbody>
-  </table>
-  <aside class="notes">[Run your hand across one row to show how to read it.]
+  <h2>Every move comes from a finding in our analysis</h2></header>
+  <div class="s14">
+    <div class="heads b" style="--i:1"><span>What we found</span><span>What NVIDIA should do</span></div>
+    <div class="rws">
+      <div class="rw">
+        <div class="fd b" style="--i:2"><div class="st"><b>73%</b><small>gross margin</small></div>
+          <div class="fx"><span class="qs">Q2</span><h3>CUDA is costly to leave, so buyers are less sensitive to price</h3></div></div>
+        <div class="ar" data-frag="1"><svg viewBox="0 0 104 40"><path d="M6 20H96M82 8l14 12-14 12" style="stroke:var(--green)"/></svg></div>
+        <div class="mvw" data-frag="1"><div class="mv"><div class="ph" style="background-image:url(nvidia_assets/04_cuda_software/nsight-developer-tools.jpg)"></div>
+          <b class="nb">1</b><div class="tx"><span class="pl">Approve now</span><h3>Strengthen CUDA</h3><p>Protects NVIDIA’s pricing power</p></div></div></div>
+      </div>
+      <div class="rw">
+        <div class="fd b" style="--i:3"><div class="st"><b>≈40%</b><small>of sales from four buyers</small></div>
+          <div class="fx"><span class="qs">Q3 + Q4</span><h3>Even a partial shift matters</h3><p>Their chips can still run on NVIDIA networking and racks</p></div></div>
+        <div class="ar" data-frag="2"><svg viewBox="0 0 104 40"><path d="M6 20H96M82 8l14 12-14 12" style="stroke:var(--green)"/></svg></div>
+        <div class="mvw" data-frag="2"><div class="mv"><div class="ph" style="background-image:url(nvidia_assets/_picks/networking/connectx_exploded.jpg)"></div>
+          <b class="nb">2</b><div class="tx"><span class="pl">Test first</span><h3>Keep selling systems when buyers build their own chips</h3><p>Scale only if the profit kept beats the integration cost and any discount</p></div></div></div>
+      </div>
+      <div class="rw">
+        <div class="fd b" style="--i:4"><div class="st"><b>78%</b><small>of revenue from data centers</small></div>
+          <div class="fx"><span class="qs">Q1 + Q5</span><h3>NVIDIA needs another source of growth</h3><p>Many companies have put off custom AI</p></div></div>
+        <div class="ar" data-frag="3"><svg viewBox="0 0 104 40"><path d="M6 20H96M82 8l14 12-14 12" style="stroke:var(--green)"/></svg></div>
+        <div class="mvw" data-frag="3"><div class="mv"><div class="ph" style="background-image:url(nvidia_assets/04_cuda_software/nvaie-og.jpg)"></div>
+          <b class="nb">3</b><div class="tx"><span class="pl">Pilot first</span><h3>Win first-time enterprise buyers</h3><p>Scale only if buyers pay and it turns a profit</p></div></div></div>
+      </div>
+    </div>
+    <div class="rjx" data-frag="4"><span class="k">Rejected</span>
+      <div class="it"><h3>Exclusive contracts</h3><span>Regulators already watch NVIDIA closely</span></div>
+      <div class="it"><h3>Selling design know-how</h3><span>Would help rivals copy NVIDIA</span></div>
+    </div>
+  </div>
+  <aside class="notes">[The three findings are on screen. Point to the left column.]
 
-Read any row from left to right. Finding, then move.
+On the left, three things our analysis found. On the right, the move each one leads to.
 
-Buyers pay for the finished job. So NVIDIA protects the software that makes the job fast.
+From question two: CUDA is costly to leave, so buyers are less sensitive to price.
 
-The big buyers are also the substitutes. So NVIDIA keeps their chips inside its own systems.
+[CLICK 1: Move 1 appears.]
 
-Losing business costs more than a targeted price cut. So NVIDIA prices selectively for those four.
+So move one, strengthen CUDA. It protects NVIDIA’s pricing power.
 
-Too much rides on one business and four buyers. So NVIDIA grows customers who can’t build their own chips.
+[CLICK 2: Move 2 appears.]
+
+From questions three and four: the four biggest buyers are about 40% of NVIDIA’s sales, so even a partial shift to their own chips matters. But their chip can replace an NVIDIA GPU and still run on NVIDIA’s networking and racks.
+
+So move two, keep selling systems when they build their own chips. The test is simple: does the gross profit NVIDIA keeps cover the cost of connecting their chips, plus any discount? And CUDA stays tied to NVIDIA hardware. The plug-in path covers racks, networking and system software only.
+
+[CLICK 3: Move 3 appears.]
+
+From questions one and five: 78% of revenue comes from data centers, and about 40% from four buyers. NVIDIA needs another source of growth.
+
+So move three, the AI Foundry pilot. It tests whether companies that put off custom AI will pay for a package that NVIDIA and its partner can deliver profitably.
+
+[CLICK 4: The two rejected options are struck out.]
+
+And the two we rejected. Exclusive contracts, because regulators already watch NVIDIA closely. And selling design know-how, because it would help rivals copy NVIDIA.
 
 [Firm.]
 
-No move is on this slide without a finding behind it.
+No move without a finding behind it.
 
 Now, what could break this plan?
 
-Key line: No move without a finding behind it.</aside>
+Key line: Every move comes from a finding. No move without one.
+
+Q&A note: The 73% is NVIDIA’s company-wide gross margin in fiscal 2024 (72.7%), a GIVEN case figure. We don’t port CUDA to rival chips: the plug-in path is for racks, networking and system software.</aside>
 </section>
 
 <!-- 15 RISKS -->

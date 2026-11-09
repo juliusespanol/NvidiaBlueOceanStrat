@@ -497,29 +497,47 @@ Every move answers one finding. Here is the proof.
 
 ## SLIDE 14 of 16 · Justification · Group 3 · ~1.5 min
 
-**On screen:** Each move answers one finding from the analysis
+**On screen:** Every move comes from a finding in our analysis. Three finding cards on the left (73% · ≈40% · 78%), each move card arrives on the right.
 
-*[Run your hand across one row to show how to read it.]*
+**Clicks:** 4 (Move 1 · Move 2 · Move 3 · the two rejected options)
 
-Read any row from left to right. Finding, then move.
+*[The three findings are on screen. Point to the left column.]*
 
-Buyers pay for the finished job. So NVIDIA protects the software that makes the job fast.
+On the left, three things our analysis found. On the right, the move each one leads to.
 
-The big buyers are also the substitutes. So NVIDIA keeps their chips inside its own systems.
+From question two: CUDA is costly to leave, so buyers are less sensitive to price.
 
-Losing business costs more than a targeted price cut. So NVIDIA prices selectively for those four.
+*[CLICK 1: Move 1 appears.]*
 
-Too much rides on one business and four buyers. So NVIDIA grows customers who can’t build their own chips.
+So move one, strengthen CUDA. It protects NVIDIA’s pricing power.
+
+*[CLICK 2: Move 2 appears.]*
+
+From questions three and four: the four biggest buyers are about 40% of NVIDIA’s sales, so even a partial shift to their own chips matters. But their chip can replace an NVIDIA GPU and still run on NVIDIA’s networking and racks.
+
+So move two, keep selling systems when they build their own chips. The test is simple: does the gross profit NVIDIA keeps cover the cost of connecting their chips, plus any discount? And CUDA stays tied to NVIDIA hardware. The plug-in path covers racks, networking and system software only.
+
+*[CLICK 3: Move 3 appears.]*
+
+From questions one and five: 78% of revenue comes from data centers, and about 40% from four buyers. NVIDIA needs another source of growth.
+
+So move three, the AI Foundry pilot. It tests whether companies that put off custom AI will pay for a package that NVIDIA and its partner can deliver profitably.
+
+*[CLICK 4: The two rejected options are struck out.]*
+
+And the two we rejected. Exclusive contracts, because regulators already watch NVIDIA closely. And selling design know-how, because it would help rivals copy NVIDIA.
 
 *[Firm.]*
 
-No move is on this slide without a finding behind it.
+No move without a finding behind it.
 
 Now, what could break this plan?
 
-**Key line:** No move without a finding behind it.
+**Key line:** Every move comes from a finding. No move without one.
 
-## SLIDE 15 of 16 · Justification · Group 3 · ~1.5 min
+**Note for Q&A:** The 73% is NVIDIA’s company-wide gross margin in fiscal 2024 (72.7%), a GIVEN case figure. We don’t port CUDA to rival chips: the plug-in path is for racks, networking and system software.
+
+## SLIDE 15 of 16 · Risks · Group 3 · ~1.5 min
 
 **On screen:** What could break the plan, and the early warning signs we would watch
 

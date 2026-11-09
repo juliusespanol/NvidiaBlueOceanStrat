@@ -5,7 +5,7 @@ Read this first in a new chat. It covers what is done, how we work, and exactly 
 **Presentation:** ECO 502 NVIDIA group presentation, Nov 14, 2026, ~30 min, 3 speaker groups.
 **Git:** clean at commit `cd8cc9f` ("slide 13 added images"). Everything below marked done is committed. Julius commits himself.
 
-**▶ Next up: slide 14, the justification trace (`<!-- 14 TRACE -->`)** (see §6). Then 15, 16, the backups, and the leftovers in §7.
+**▶ Next up: slide 15, risks (`<!-- 15 RISKS -->`)** (see §6). Slide 14 was rebuilt Nov 10 (not yet committed). Then 16, the backups, and the leftovers in §7.
 
 **Slide numbers in this file = the deck as it is now: 16 main slides + B1, B2.** The planned new Q5 slide was **not** inserted (see §8, decision 1).
 
@@ -55,9 +55,9 @@ Read this first in a new chat. It covers what is done, how we work, and exactly 
 - **Backups behind B:** slide 16 is the last slide unless **B** is pressed. B unlocks B1–B2 after 16; B again locks them and jumps back to 16. Opening `#s17`/`#s18` by URL or from the titles list unlocks them. Code: `let backups`, `lastIdx()`, `updBar()` in the main script.
 - **Progress bar:** counts 16 slides when backups are off (slide 16 = 100%), 18 when on.
 - **Break-even calculator JS fixed:** `costA = mv/100*SALES`, `lossB = lv/100*GP`, `be = mv/GM*100`, plus `≈ 1 in N dollars`.
-- **Images already used** (avoid reusing): `ai_factory/data_center_row`, `ai_factory/ai_factory_hall` (slides 12 faint + 13), `company/deepseek_logo`, `geforce_chip_1999`, `jensen_opentowork_meme`, `nvidia_logo_stacked` (1, 9), `moat_software/cuda_libraries` (3, 12), `cuda_logo`, `moat_system/blackwell_chip` (5, 10), `compute_tray` (12), `compute_tray_cut` (7), `gb200_rack` (12), `04_cuda_software/nvidia-cuda-x-og` (13), `05_networking/infiniband-switches-2c50-d-2x` (13). Save `_picks/threat_response/nvlink_fusion_*` for slide 16.
+- **Images already used** (avoid reusing): `ai_factory/data_center_row`, `ai_factory/ai_factory_hall` (slides 12 faint + 13), `company/deepseek_logo`, `geforce_chip_1999`, `jensen_opentowork_meme`, `nvidia_logo_stacked` (1, 9), `moat_software/cuda_libraries` (3, 12), `cuda_logo`, `moat_system/blackwell_chip` (5, 10), `compute_tray` (12), `compute_tray_cut` (7), `gb200_rack` (12), `04_cuda_software/nvidia-cuda-x-og` (13), `05_networking/infiniband-switches-2c50-d-2x` (13), `04_cuda_software/nsight-developer-tools`, `_picks/networking/connectx_exploded`, `04_cuda_software/nvaie-og` (14). Save `_picks/threat_response/nvlink_fusion_*` for slide 16.
 
-## 5. Done: slides 1–13
+## 5. Done: slides 1–14
 
 | # | Title (on screen) | Status / what it is now |
 |---|---|---|
@@ -74,12 +74,13 @@ Read this first in a new chat. It covers what is done, how we work, and exactly 
 | 11 | "A 10% discount pays for itself if it keeps 1 in 7 dollars from leaving" | **Rebuilt** to the new WAC. Sliders (discount 1–30, default 10; volume lost 5–50, default 25), 13.8% break-even with "≈ 1 in 7 dollars" and 7 tiles. Click 1: A $2.4B vs B $4.4B bars + verdict. Click 2: "Tie any discount to a purchase commitment." Notes use Kim's $100 example. |
 | 12 | "We tested the case's five options, plus one of our own" | **Rebuilt** as cards with faint NVIDIA images: E / B + "our addition" / C in Move 1-2-3 columns, A and D in a bottom strip. Values from the new WAC table. Click 1: A and D struck out with reasons. Click 2: "Move 1 · Approve now / Move 2 · Test first / Move 3 · Pilot first" headers, kept cards turn green. |
 | 13 | "Invest in CUDA now, and test the other two moves before scaling them" | **Rebuilt.** Three move cards with photos: 1 Approve now (CUDA-X image), 2 Test first (InfiniBand switches), 3 Pilot first (AI factory hall). One card per click, then a one-line ERRC strip (Eliminate exclusive deals · Reduce discounts without a commitment · Raise CUDA ease of use · Create a plug-in path · an AI Foundry package). No M-tags, no "We give up". |
+| 14 | "Every move comes from a finding in our analysis" | **Rebuilt** (title awaiting Julius). Left: three finding cards with a big number (73% gross margin · Q2, ≈40% of sales from four buyers · Q3 + Q4, 78% of revenue from data centers · Q1 + Q5). Clicks 1–3: arrow draws, move card with photo slides in (Nsight dev tools, ConnectX exploded tray, NVIDIA AI Enterprise), its finding lights up. Click 4: "Rejected" strip, exclusive contracts + selling design know-how struck out. Seven-tests line not added (§8 #5). |
 
 Titles of 7, 9–13 were written by Claude; Julius said "Go" on each slide but did not comment on the titles individually.
 
 ## 6. To do: slides 14–16 + backups (deck numbering)
 
-### Slide 14: Justification trace (`<!-- 14 TRACE -->`), REBUILD  ← **START HERE**
+### Slide 14: Justification trace (`<!-- 14 TRACE -->`), ✅ DONE Nov 10 (see §5; plan kept below for reference)
 Currently a 5-row table with outdated content ("move inference in-house", "~17.5%", "Q1 + Q3", Lerner/Porter jargon). Text-heavy, will look "AI" to Julius. Rebuild to the **new WAC justification**:
 - **Move 1 ← Q2:** CUDA's switching costs make customers less sensitive to price and support NVIDIA's pricing power.
 - **Move 2 ← Q3 + Q4:** the four buyers are ~40% of sales, so even a partial shift in-house matters. A buyer's chip can replace an NVIDIA GPU while still using NVIDIA networking and racks. The test: does the gross profit NVIDIA keeps justify the integration cost and any discount? Keep the plug-in path at racks, networking and system software, **keeping CUDA tied to NVIDIA hardware**.
@@ -90,7 +91,7 @@ Currently a 5-row table with outdated content ("move inference in-house", "~17.5
 - Open: Allen's review wants one line "**Passes the Session 1 seven tests** (details in backup)". Ask Julius.
 - New title idea: "**Every move comes from one finding in our analysis**" (ask).
 
-### Slide 15: Risks (`<!-- 15 RISKS -->`), REBUILD
+### Slide 15: Risks (`<!-- 15 RISKS -->`), REBUILD  ← **START HERE**
 Currently a 5-row table + "Our weak spot" box (old timing argument, INTERNET 75% margin).
 - Row 1 signal → "More top-4 workloads move to their own chips; outside AI labs sign up for TPU or Trainium" (not "inference").
 - Replace the TSMC row with: "**The AI Foundry pilot does not convert, or costs too much to deliver**" · few first-time buyers move to paid use · stop, or switch to another first-time segment. Keep TSMC in the notes.
