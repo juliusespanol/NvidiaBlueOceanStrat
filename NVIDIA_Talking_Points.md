@@ -332,25 +332,30 @@ So if the difficulty of switching is what lets NVIDIA earn 73%, the real questio
 
 ## SLIDE 9 of 16 · Analysis · Q3 · Group 2 · ~2 min
 
-**On screen:** NVIDIA’s biggest buyers are also its biggest substitutes
+**On screen:** NVIDIA’s biggest buyers are also its biggest substitutes  
+**Clicks:** 2 (the other forces fade and buyers + substitutes turn amber, then the four names and their chips with “Same four firms”)
 
-*[Point to the highlighted label: SAME FOUR FIRMS.]*
+*[The NVIDIA hub appears, then the five forces pop out around it.]*
 
 We used Porter’s Five Forces, a tool from class. It shows who holds power in an industry: buyers, suppliers, rivals, new entrants and substitutes.
 
 A substitute is a different product that does the same job.
-
-*[Slow down. This is the main insight of the analysis.]*
-
-In most industries, buyers and substitutes are different companies. Here, they are the same four.
-
-Microsoft, Meta, Amazon and Google are NVIDIA’s biggest buyers. And their own chips are NVIDIA’s biggest substitutes.
 
 *[Pick up the pace. Move quickly past the other forces.]*
 
 AMD and Intel? Real rivals. But they mostly win when NVIDIA is sold out.
 
 Suppliers? TSMC in Taiwan makes NVIDIA’s most advanced chips, and nobody else can make them yet. That is a risk to watch. It is not the core problem.
+
+*[CLICK 1: The other forces fade. Buyers and substitutes turn amber.]*
+
+*[Slow down. This is the main insight of the analysis.]*
+
+In most industries, buyers and substitutes are different companies. Here, they are the same four.
+
+*[CLICK 2: The four names and their four chips appear, joined by “Same four firms”.]*
+
+Microsoft, Meta, Amazon and Google are NVIDIA’s biggest buyers. And their own chips, MAIA, MTIA, Trainium and the TPU, are NVIDIA’s biggest substitutes.
 
 *[Firm.]*
 
@@ -360,11 +365,14 @@ So what will these four do next?
 
 **Key line:** The buyers and the substitutes are the same four firms.
 
+**Note for Q&A (details taken off the slide):** New entrants: $8.8 billion of venture money went into chip startups in 2023, but CUDA and scarce TSMC capacity hold them back. Suppliers: TSMC alone mass-produces 3-nanometer chips and is booked to 2026; ASML is the only maker of the EUV machines. Rivals: AMD MI300X, Intel Gaudi 3, Huawei Ascend. Substitutes: Amazon’s Trainium trains at about half the cost; open software such as PyTorch and UXL makes switching easier.
+
 ## SLIDE 10 of 16 · Analysis · Q3 · Group 2 · ~2 min
 
-**On screen:** The big buyers will move their own inference work to their own chips and keep NVIDIA for the most advanced training
+**On screen:** The big buyers will move work to their own chips wherever it is cheaper  
+**Clicks:** 2 (the prediction flow with moving workloads, then the Amazon example)
 
-*[Walk through the four corners in order.]*
+*[The four corners fly in. Walk through them in order.]*
 
 To predict their next move, we used the Four Corners model. It looks at a competitor from four sides. What drives it. What it is doing now. What it believes. And what it can do.
 
@@ -376,19 +384,23 @@ Belief: Google’s CEO said spending too little on AI is riskier than spending t
 
 Capabilities: Amazon, Microsoft and Google hold 65% of the cloud market. Google’s own chip costs it 70 to 80% less than NVIDIA’s A100.
 
-*[Click to reveal the prediction. Say it clearly.]*
+*[CLICK 1: The prediction appears and workloads start flowing. Say it clearly.]*
 
-So here is our prediction. They will move their everyday AI work, called inference, onto their own chips.
+So here is our prediction. They will not move everything at once, and they will not move only one kind of work.
 
-Inference is when a trained AI answers your question. It happens billions of times a day.
+They will look at each AI workload. If their own chip can do it well enough, and for less, that work moves in-house. If not, it stays on NVIDIA.
 
-And they will keep NVIDIA only for the hardest job: training the most advanced models.
+*[CLICK 2: The Amazon example appears.]*
+
+And they already have the chips to do it. Amazon has Inferentia for inference, which is when a trained AI answers your question. And it has Trainium for training, which the case says trains at about half the cost.
 
 *[Handoff. Turn toward the Group 3 presenter.]*
 
 So the big buyers will keep moving work away. How much is it worth to NVIDIA to slow that down? Over to my colleague.
 
-**Key line:** Everyday AI work moves to their chips; NVIDIA keeps the hardest jobs.
+**Key line:** Each job moves to their own chips once those chips can do it for less.
+
+**Note for Q&A:** Current strategy detail taken off the slide: they rent their chips through their clouds rather than sell them, and Amazon tied Anthropic to its chips.
 
 ## SLIDE 11 of 16 · Analysis · Q4 · Group 3 · ~2 min
 
