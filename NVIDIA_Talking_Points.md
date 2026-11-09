@@ -61,6 +61,8 @@ But let's put the headlines aside for a moment. Because that $600 billion tells 
 
 Market value is what all of a company’s shares are worth together. So in a single day, investors decided NVIDIA was worth $600 billion less.
 
+*[CLICK: The meme leaves. DeepSeek appears with “<$6M vs $100M+”.]*
+
 What happened? A small Chinese lab called DeepSeek said it trained a top AI model for under $6 million. Big US labs spend over $100 million.
 
 Investors panicked. Their logic was simple. If AI gets this cheap, the world needs fewer NVIDIA chips.
@@ -82,7 +84,8 @@ To see it, we first need to know how NVIDIA got so big.
 **Presenter:** Group 1  
 **Estimated time:** ~2 min
 
-**On screen:** ChatGPT turned a gaming-chip company into the world’s most valuable company in two years
+**On screen:** From gaming chips to $3 trillion  
+**Clicks:** 3 (1999 → 2007 with the CUDA logo, then ChatGPT, then the market value bars)
 
 ### Speaker script
 
@@ -92,15 +95,19 @@ Rewind to 1999. NVIDIA makes the first GPU.
 
 A GPU, or graphics processing unit, is a chip that does thousands of small calculations at the same time. It was built to make video games look real.
 
+*[CLICK 1: The timeline moves to 2007 and the CUDA logo appears.]*
+
 In 2007, NVIDIA releases CUDA. CUDA is software that lets programmers use those gaming chips for any heavy number-crunching. Not just games.
 
 *[Step toward the screen. Raise your energy.]*
 
-Then, November 2022. ChatGPT launches. A hundred million people try it within a month. Every big company suddenly wants its own AI.
+*[CLICK 2: ChatGPT appears on the timeline.]*
+
+Then, November 2022. ChatGPT launches. A hundred million people try it within two months. Every big company suddenly wants its own AI.
 
 And training AI needs exactly what a GPU does best. Millions of small calculations, all at once.
 
-*[Point to the market value bars.]*
+*[CLICK 3: Market value bars grow. Point to them.]*
 
 NVIDIA’s value goes from about $400 billion to over $3 trillion. In about two years.
 
@@ -121,7 +128,8 @@ So how did one company capture so much of this boom? Because NVIDIA does not jus
 **Presenter:** Group 1  
 **Estimated time:** ~2 min
 
-**On screen:** NVIDIA sells chips, software and a developer community as one package, and that package is hard to leave
+**On screen:** The cost of leaving  
+**Clicks:** 6 (one per loop step, then the switching cost panel)
 
 ### Speaker script
 
@@ -129,17 +137,29 @@ So how did one company capture so much of this boom? Because NVIDIA does not jus
 
 Here is how NVIDIA makes money. It is a loop with five steps.
 
+*[CLICK 1: Step 1 appears.]*
+
 One. NVIDIA builds the fastest chips.
+
+*[CLICK 2: Step 2 appears.]*
 
 Two. CUDA makes those chips easy to program. It comes with over 300 ready-made libraries. A library is code someone already wrote, so you don’t have to.
 
+*[CLICK 3: Step 3 appears.]*
+
 Three. About five million developers learn CUDA. Their code runs best on NVIDIA.
 
+*[CLICK 4: Step 4 appears.]*
+
 Four. Buyers follow the developers. That gives NVIDIA pricing power: the ability to charge more without losing customers.
+
+*[CLICK 5: Step 5 appears.]*
 
 Five. Those profits pay for the next, faster chip. And the loop starts again.
 
 *[Stop moving. Lower your voice slightly. This is the key idea of the whole talk.]*
+
+*[CLICK 6: The switching cost panel appears.]*
 
 Now here is the important part. A customer who wants to leave NVIDIA can’t just swap one chip for another.
 
@@ -160,7 +180,8 @@ So who has enough money and engineers to pay that cost?
 **Presenter:** Group 1  
 **Estimated time:** ~1.5 min
 
-**On screen:** Four customers that make up 40% of NVIDIA’s sales are now building their own AI chips
+**On screen:** Their biggest customers are building their own chips  
+**Clicks:** 1 (each company’s own chip)
 
 ### Speaker script
 
@@ -171,6 +192,8 @@ These four. Microsoft. Meta. Amazon. Google.
 Together they bought about 40% of everything NVIDIA sold. That is roughly $24 billion a year.
 
 *[Let that number sit for a moment.]*
+
+*[CLICK 1: Each company’s own chip appears.]*
 
 And every one of them is now building its own AI chip. Microsoft has MAIA. Meta has MTIA. Amazon has Trainium and Inferentia. Google has the TPU.
 
@@ -191,7 +214,8 @@ That is our problem.
 **Presenter:** Group 1  
 **Estimated time:** ~1.5 min
 
-**On screen:** Can NVIDIA keep its pricing power when its biggest customers are building their own chips?
+**On screen:** Can NVIDIA keep its pricing power?  
+**Clicks:** 3 (reason and means, the four questions, antitrust)
 
 ### Speaker script
 
@@ -201,13 +225,17 @@ Let me put the problem in one sentence.
 
 NVIDIA charges premium prices because customers are locked into CUDA. And its four biggest customers now have both the reason and the means to break free.
 
+*[CLICK 1: Reason and means appear.]*
+
 The reason? NVIDIA’s high prices.
 
 The means? Their size. Their own software. Their own clouds.
 
-*[Point to the four questions, one at a time.]*
+*[CLICK 2: The four questions appear. Point to them one at a time.]*
 
 To decide what NVIDIA should do, we need four answers. How much rides on this business? Why can NVIDIA charge so much? Who can break the lock-in? And what is it worth to stop them?
+
+*[CLICK 3: Antitrust appears.]*
 
 One more limit. Antitrust. Those are the laws that stop a dominant company from blocking competition. Regulators are already watching NVIDIA.
 
