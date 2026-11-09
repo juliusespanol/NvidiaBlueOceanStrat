@@ -111,7 +111,7 @@ And training AI needs exactly what a GPU does best. Millions of small calculatio
 
 NVIDIA’s value goes from about $400 billion to over $3 trillion. In about two years.
 
-In fiscal 2024, revenue grows 126%. Data center revenue grows 217%.
+In fiscal 2024, revenue grows 126%, to 60.9 billion dollars. Data center revenue grows 217%, to 47.5 billion.
 
 A data center is a building full of computers that companies use to run software at scale. That is where AI lives.
 
