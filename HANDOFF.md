@@ -7,7 +7,7 @@ Read this first in a new chat. It covers what is done, how we work, and exactly 
 
 **▶ Next up: backups B1 and B2** (see §6). Slides 14–16 were rebuilt Nov 10 (not yet committed). Then the leftovers in §7.
 
-**Slide numbers in this file = the deck as it is now: 17 main slides (17 = Thank you / team, added Nov 10, `const MAIN=17`) + B1, B2.** The planned new Q5 slide was **not** inserted (see §8, decision 1).
+**Slide numbers in this file = the deck as it is now: 17 main slides (17 = Thank you / team, added Nov 10) + a blank opening slide before slide 1 (`#slide-0-blank`, background only, no page number; URL `#s0`, so `#sN` still = slide N; `const MAIN=18` counts the blank) + B1, B2.** The planned new Q5 slide was **not** inserted (see §8, decision 1).
 
 ---
 

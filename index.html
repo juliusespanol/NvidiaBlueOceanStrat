@@ -193,6 +193,11 @@ input[type=range]:focus-visible{outline:2px solid var(--green-hi);outline-offset
 <main id="stage" aria-live="polite">
 
 <!-- 1 HOOK -->
+<!-- 0 BLANK: background only. The presenter's first click starts slide 1. -->
+<section id="slide-0-blank" class="slide" data-bg="macro" data-label="(blank opening)">
+  <aside class="notes">[Blank screen, background only. Wait for the room. Click to start slide 1.]</aside>
+</section>
+
 <section id="slide-1-hook" class="slide cover" data-bg="macro" data-label="On one day in January 2025, NVIDIA lost $600 billion in market value. Was cheaper AI the real threat?">
 <style>
 #slide-1-hook .nv-logo{position:absolute;left:128px;top:120px;height:190px;width:auto}
@@ -1841,7 +1846,7 @@ Key line: Thank you.</aside>
 (()=>{
 const stage=document.getElementById('stage');
 const slides=[...stage.querySelectorAll('.slide')];
-const MAIN=17;
+const MAIN=18; /* index 0 = blank opening slide (#s0); slide N = index N */
 let cur=-1, step=0;
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -1850,7 +1855,7 @@ slides.forEach((s,n)=>{
   s._frags=[...s.querySelectorAll('[data-frag]')];
   s._max=s._frags.reduce((m,f)=>Math.max(m,+f.dataset.frag),0);
   const ft=document.createElement('footer');ft.className='ft';
-  const pg=n<MAIN?String(n+1).padStart(2,'0')+' / '+MAIN:'Backup '+(n-MAIN+1);
+  const pg=n===0?'':n<MAIN?String(n).padStart(2,'0')+' / '+(MAIN-1):'Backup '+(n-MAIN+1);
   ft.innerHTML='<span class="pg"></span>';
   ft.querySelector('.pg').textContent=pg;
   if(n>0) s.appendChild(ft);
@@ -1882,14 +1887,14 @@ function go(n,st){
   }
   step=st||0;applyStep();
   updBar();
-  try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}
+  try{history.replaceState(null,'','#s'+cur)}catch(e){}
   const nt=slides[cur].querySelector('aside.notes');
   document.getElementById('nt').textContent=nt?nt.textContent:'';
-  document.getElementById('nh').textContent='Speaker script · slide '+(cur<MAIN?cur+1:'B'+(cur-MAIN+1));
+  document.getElementById('nh').textContent='Speaker script · slide '+(cur<MAIN?cur:'B'+(cur-MAIN+1));
   [...document.querySelectorAll('#il button')].forEach((b,i)=>b.classList.toggle('cur',i===cur));
 }
 let backups=false;
-function updBar(){const tot=backups?slides.length:MAIN;document.getElementById('bar').style.width=Math.min(100,(cur+1)/tot*100)+'%'} /* B key: unlock the backup slides after the last main slide */
+function updBar(){const tot=backups?slides.length:MAIN;document.getElementById('bar').style.width=Math.min(100,cur/(tot-1)*100)+'%'} /* B key: unlock the backup slides after the last main slide */
 const lastIdx=()=>backups?slides.length-1:MAIN-1;
 function next(){const s=slides[cur];if(step<s._max){step++;applyStep()}else if(cur<lastIdx())go(cur+1,0)}
 function prev(){if(step>0){step--;applyStep()}else if(cur>0)go(cur-1,slides[cur-1]._max)}
@@ -1897,7 +1902,7 @@ function prev(){if(step>0){step--;applyStep()}else if(cur>0)go(cur-1,slides[cur-
 /* index */
 const il=document.getElementById('il');
 slides.forEach((s,i)=>{const li=document.createElement('li');const b=document.createElement('button');b.type='button';
-  b.innerHTML='<span></span><div></div>';b.querySelector('span').textContent=i<MAIN?String(i+1).padStart(2,'0'):'B'+(i-MAIN+1);
+  b.innerHTML='<span></span><div></div>';b.querySelector('span').textContent=i===0?'00':i<MAIN?String(i).padStart(2,'0'):'B'+(i-MAIN+1);
   b.querySelector('div').textContent=s.dataset.label;b.onclick=()=>{toggle('index',false);go(i,0)};li.appendChild(b);il.appendChild(li)});
 function toggle(id,force){const el=document.getElementById(id);el.hidden=force===undefined?!el.hidden:!force}
 function fs(){try{if(!document.fullscreenElement)document.documentElement.requestFullscreen().catch(()=>{});else document.exitFullscreen().catch(()=>{})}catch(e){}}
@@ -2013,9 +2018,9 @@ function frame(now){
 requestAnimationFrame(frame);
 
 const h=/^#s(\d+)$/.exec(location.hash);
-if(h&&+h[1]>MAIN)backups=true;
-go(h?(+h[1]-1):0,0);
-addEventListener('hashchange',()=>{const m2=/^#s(\d+)$/.exec(location.hash);if(m2&&+m2[1]-1!==cur)go(+m2[1]-1,0)});
+if(h&&+h[1]>=MAIN)backups=true;
+go(h?+h[1]:0,0);
+addEventListener('hashchange',()=>{const m2=/^#s(\d+)$/.exec(location.hash);if(m2&&+m2[1]!==cur){if(+m2[1]>=MAIN)backups=true;go(+m2[1],0)}});
 })();
 </script>
 
