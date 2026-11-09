@@ -37,7 +37,7 @@ Each slide ends with a **Key line**: if you forget everything else on that slide
 **Presenter:** Group 1  
 **Estimated time:** ~1.5 min
 
-**On screen:** −$600B · NVIDIA · one day · Jan 2025. Then: Was cheaper AI the real threat?
+**On screen:** On one day in January 2025, NVIDIA lost $600 billion in market value. Was cheaper AI the real threat?
 
 ### Speaker script
 
