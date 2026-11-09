@@ -209,7 +209,7 @@ input[type=range]:focus-visible{outline:2px solid var(--green-hi);outline-offset
 #slide-1-hook[data-step="2"] .hook-meme,#slide-1-hook[data-step="3"] .hook-meme{opacity:0;visibility:hidden;transform:translateY(-16px);filter:blur(8px)}
 #slide-1-hook .ds-card{position:absolute;right:128px;top:300px;width:530px;display:flex;flex-direction:column;gap:14px}
 #slide-1-hook .ds-card img{display:block;width:420px;height:auto;margin-bottom:28px}
-#slide-1-hook .ds-card .ds-num{font-family:var(--display);font-weight:800;font-size:150px;line-height:.9;color:#4d6bfe}
+#slide-1-hook .ds-card .ds-num{font-family:var(--display);font-weight:800;font-size:140px;line-height:.9;color:#4d6bfe}
 #slide-1-hook .ds-card .ds-vs{font-family:var(--display);font-size:38px;color:var(--mute)}
 #slide-1-hook .ds-card .ds-vs b{color:var(--fg);font-weight:700}
 body:has(#slide-1-hook.active) #nt{white-space:pre-line}
@@ -223,8 +223,8 @@ body:has(#slide-1-hook.active) #nt{white-space:pre-line}
   </figure>
   <div class="ds-card" data-frag="2" style="transition-delay:.35s">
     <img src="nvidia_assets/_picks/company/deepseek_logo.png" alt="DeepSeek logo">
-    <span class="k">Trained its top model for</span>
-    <span class="ds-num">&lt;$6M</span>
+    <span class="k">Claimed it trained a leading model for</span>
+    <span class="ds-num">&lt;$5.6M</span>
     <span class="ds-vs">Big US labs: <b>$100M+</b></span>
   </div>
   <div class="qline" data-frag="3">Was cheaper AI the real threat?</div>
@@ -248,9 +248,9 @@ But let&#x27;s put the headlines aside for a moment. Because that $600 billion t
 
 Market value is what all of a company’s shares are worth together. So in a single day, investors decided NVIDIA was worth $600 billion less.
 
-[CLICK 2: The meme leaves. DeepSeek appears with “<$6M vs $100M+”.]
+[CLICK 2: The meme leaves. DeepSeek appears with “<$5.6M vs $100M+”.]
 
-What happened? A small Chinese lab called DeepSeek said it trained a top AI model for under $6 million. Big US labs spend over $100 million.
+What happened? A small Chinese lab called DeepSeek claimed it trained a leading AI model for under $5.6 million. Big US labs spend over $100 million.
 
 Investors panicked. Their logic was simple. If AI gets this cheap, the world needs fewer NVIDIA chips.
 
@@ -370,6 +370,8 @@ Note for Q&amp;A: If asked: “fiscal 2024” is NVIDIA’s financial year endin
 <!-- 3 FACTS LOOP -->
 <section id="slide-3-loop" class="slide" data-bg="dim" data-poll="Case poll Q2: C · Q6: A, D · Q7: D" data-label="The cost of leaving">
 <style>
+#slide-3-loop .ft>span:not(.pg){display:none}
+#slide-3-loop .ft .pg{margin-left:auto}
 #slide-3-loop .loop-label text{font-family:var(--display);font-weight:600}
 #slide-3-loop .lib-wall{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;opacity:.13;filter:blur(3px) saturate(.6);pointer-events:none;
   -webkit-mask-image:linear-gradient(180deg,transparent 15%,#000 55%,transparent 95%);mask-image:linear-gradient(180deg,transparent 15%,#000 55%,transparent 95%)}
@@ -383,7 +385,7 @@ Note for Q&amp;A: If asked: “fiscal 2024” is NVIDIA’s financial year endin
   <header class="hd b"><div class="eyebrow"><span class="act">Case facts</span><span class="q">The business model</span></div>
   <h2>The cost of leaving</h2></header>
   <div class="row b" style="flex:1;min-height:0;align-items:center;gap:90px">
-    <svg viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Five-step loop: faster GPUs, CUDA with 300 plus libraries, 5 million developers, pricing power, profits fund the next chip, back to faster GPUs">
+    <svg viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Five-step loop: faster GPUs, CUDA with 300 plus libraries, 5 million plus developers, pricing power, profits fund the next chip, back to faster GPUs">
       <circle cx="380" cy="300" r="230" fill="none" stroke="#1d281f" stroke-width="2"/>
       <path id="ring" d="M380 70 A230 230 0 1 1 379.9 70" fill="none" stroke="#76b900" stroke-width="2" stroke-dasharray="4 10" opacity=".7"/>
       <circle r="9" fill="#a8e33a"><animateMotion dur="7s" repeatCount="indefinite" rotate="auto"><mpath href="#ring"/></animateMotion></circle>
@@ -394,7 +396,7 @@ Note for Q&amp;A: If asked: “fiscal 2024” is NVIDIA’s financial year endin
       <g class="loop-label" font-size="24" text-anchor="middle">
         <g data-frag="1"><rect class="loop-node" x="260" y="40" width="240" height="60" rx="30"/><text x="380" y="79" fill="#eef3ea">1 · Fastest chips</text></g>
         <g data-frag="2"><rect class="loop-node" x="470" y="198" width="320" height="60" rx="30"/><text x="630" y="237" fill="#eef3ea">2 · CUDA, 300+ libraries</text></g>
-        <g data-frag="3"><rect class="loop-node" x="400" y="458" width="260" height="60" rx="30"/><text x="530" y="497" fill="#eef3ea">3 · 5M developers</text></g>
+        <g data-frag="3"><rect class="loop-node" x="400" y="458" width="260" height="60" rx="30"/><text x="530" y="497" fill="#eef3ea">3 · 5M+ developers</text></g>
         <g data-frag="4"><rect class="loop-node" x="100" y="458" width="260" height="60" rx="30" style="stroke:#76b900"/><text x="230" y="497" fill="#a8e33a">4 · Pricing power</text></g>
         <g data-frag="5"><rect class="loop-node" x="0" y="198" width="280" height="60" rx="30"/><text x="140" y="237" fill="#eef3ea">5 · Profits → next chip</text></g>
       </g>
@@ -422,7 +424,7 @@ Two. CUDA makes those chips easy to program. It comes with over 300 ready-made l
 
 [CLICK 3: Step 3 appears.]
 
-Three. About five million developers learn CUDA. Their code runs best on NVIDIA.
+Three. More than five million developers learn CUDA. And code written for CUDA runs only on NVIDIA chips.
 
 [CLICK 4: Step 4 appears.]
 

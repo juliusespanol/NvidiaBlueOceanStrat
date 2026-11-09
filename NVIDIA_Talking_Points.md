@@ -61,9 +61,9 @@ But let's put the headlines aside for a moment. Because that $600 billion tells 
 
 Market value is what all of a company’s shares are worth together. So in a single day, investors decided NVIDIA was worth $600 billion less.
 
-*[CLICK 2: The meme leaves. DeepSeek appears with “<$6M vs $100M+”.]*
+*[CLICK 2: The meme leaves. DeepSeek appears with “<$5.6M vs $100M+”.]*
 
-What happened? A small Chinese lab called DeepSeek said it trained a top AI model for under $6 million. Big US labs spend over $100 million.
+What happened? A small Chinese lab called DeepSeek claimed it trained a leading AI model for under $5.6 million. Big US labs spend over $100 million.
 
 Investors panicked. Their logic was simple. If AI gets this cheap, the world needs fewer NVIDIA chips.
 
@@ -147,7 +147,7 @@ Two. CUDA makes those chips easy to program. It comes with over 300 ready-made l
 
 *[CLICK 3: Step 3 appears.]*
 
-Three. About five million developers learn CUDA. Their code runs best on NVIDIA.
+Three. More than five million developers learn CUDA. And code written for CUDA runs only on NVIDIA chips.
 
 *[CLICK 4: Step 4 appears.]*
 
