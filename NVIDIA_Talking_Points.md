@@ -128,7 +128,7 @@ So how did one company capture so much of this boom? Because NVIDIA does not jus
 **Presenter:** Group 1  
 **Estimated time:** ~2 min
 
-**On screen:** The cost of leaving  
+**On screen:** NVIDIA sells one package that is hard to leave  
 **Clicks:** 6 (one per loop step, then the switching cost panel)
 
 ### Speaker script

@@ -1,8 +1,14 @@
-# NVIDIA Deck: Source of Truth (Allen's WAC v3)
+# NVIDIA Deck: Source of Truth (Allen's WAC v3 + Allen's Deck Review)
 
-**Source:** `WAC - NVIDIA v3.docx` (Allen, Learning Team 2)
+**Sources (both from Allen):**
+1. `WAC - NVIDIA v3.docx` (Learning Team 2), sections 1–7 below. **What we say:** facts, numbers, problem, questions, options, moves, justification.
+2. `NVIDIA_Deck_Review_vs_Our_Outline.md`, section 9 below. **How the deck is built:** slide flow, which frameworks go on main slides, plain titles, poll tags, backups, close.
+
 **Adopted:** Nov 9, 2026
-**Rule:** WAC v3 wins. If the deck disagrees with this file, the deck changes. Deck content that WAC does not cover stays only if it does not contradict WAC.
+**Rules:**
+- If the deck disagrees with these two, the deck changes.
+- **If the two disagree with each other, WAC v3 wins.** It was written after the review and fixes the review's break-even math (17.5% → 13.8%).
+- Deck content that neither source covers stays only if it does not contradict them.
 **Tags:** GIVEN = in the case · COMPUTED = calculated from case figures · INTERNET = not in the case · OUR PROPOSAL = our idea, not in the case
 
 ---
@@ -106,30 +112,70 @@ NVIDIA's revenue is still growing fast, so the threat does not yet show in the n
 
 ---
 
-## 8. Slide plan (deck → WAC v3)
+## 8. Slide plan (final)
 
-Status: **KEEP** = no change · **SMALL** = wording or one line · **EDIT** = content changes · **REBUILD** = redo the slide · **NEW** = add a slide
+Built from: WAC v3 (content) + Allen's review (structure) + Kim's deck (changes that match both).
+Status: **DONE** · **KEEP** = no change · **SMALL** = wording or one line · **EDIT** = content changes · **REBUILD** · **NEW**
 
-| New # | Current # | Slide | Status | What to do |
+| # | Slide | Status | What to do | Source |
 |---|---|---|---|---|
-| 1 | 1 | Hook: −$600B | SMALL | DeepSeek figure `<$6M` → **`<$5.6M`** (slide + talking points) |
-| 2 | 2 | Timeline to $3T | KEEP | Nothing. Matches WAC (1999 GPU, 2007 CUDA, Nov 2022 ChatGPT, +126%, +217%) |
-| 3 | 3 | Loop + cost of leaving | KEEP | Nothing. Optional: add "CUDA code runs only on NVIDIA chips" to the switching panel |
-| 4 | 4 | Top 4 build own chips | SMALL | Label the 15/13/6/6% as **"outside estimates"** |
-| 5 | 5 | Problem + questions | EDIT | Use WAC's problem question ("keep pricing power **and keep growing** without pushing them out faster or drawing antitrust action"). **4 → 5 questions**: Q4 becomes "What is it worth to **keep them**?", add **Q5 "Where can NVIDIA create new demand?"** |
-| 6 | 6 | Q1: 78% from one business | KEEP | Already matches WAC. Optional: add "opex grew only 2%" |
-| 7 | 7 | Q2: price vs volume | EDIT | Add the caveat: **revenue per chip includes networking and a richer mix, so it's not a pure price measure**. Soften the title to "buyers paid a premium" |
-| 8 | 8 | Q2: finished job | SMALL | Add one line: switching is costly → demand less price-sensitive → **MR = MC gives a higher markup** |
-| 9 | 9 | Q3: Five Forces | SMALL | Rivalry box: "**weaker**" + **AMD $4.5B vs NVIDIA $76B**, software trails CUDA |
-| 10 | 10 | Q3: Four Corners | SMALL | Add **Inferentia / Trainium** as the in-house example + **"DeepSeek is a smaller worry: changes how much compute, not who supplies it; trained on NVIDIA"** |
-| 11 | 11 | Q4: break-even | **REBUILD** | Switch to the **10% discount** model: **$2.4B vs $4.4B, break-even 13.8% (~1 in 7)**. Slider becomes "Discount to top 4". Add the **volume-commitment, never no-build-promise** condition. Fix the speaker notes |
-| 12 | — | **Q5: new demand (insurer pilot)** | **NEW** | Noncustomers with shelved AI projects → AI Foundry → **mid-sized insurer claims tool**, cloud-hosted, **NIM + NeMo**, small on purpose |
-| 13 | 12 | Options screen | EDIT | Use **WAC's table exactly**: B = "low-cost custom chips" (adopt within Move 2), add the **"Our addition: profitable interoperability"** row, use WAC's columns (drop the margin cost column) |
-| 14 | 13 | Recommendation (ERRC) | EDIT | Add **approve now / test first / pilot first**. Add "**sell the whole AI system**". Move 3 = AI Foundry **starting with the insurer pilot** + governments (flagged **OUR PROPOSAL**) + "scale only if…". Trim neo-clouds / inference / edge (not in WAC) |
-| 15 | 14 | Justification trace | EDIT | Move 1 ← Q2 · Move 2 ← **Q3 + Q4 (13.8%)** · Move 3 ← **Q1 + Q5**. Add "**a substitute becomes a complement**" and "**we don't port CUDA**". Add the two rejection reasons |
-| 16 | 15 | Risks + weak spot | SMALL | Add WAC's **three watch metrics**. Weak-spot text already matches WAC |
-| 17 | 16 | Close: Microsoft question + NVLink Fusion | KEEP | Nothing. Doesn't contradict WAC |
-| B1 | B1 | 15 polling answers | SMALL | Update slide numbers (+1 after slide 11) |
-| B2 | B2 | Frameworks in reserve | SMALL | Update slide-number references |
+| 1 | Hook: −$600B | **DONE** | `<$5.6M`, "claimed" | WAC |
+| 2 | Timeline | SMALL | Add **$60.9B** / **$47.5B** under +126% / +217%. Title: see decision 1 | WAC, Kim |
+| 3 | Loop + cost of leaving | **DONE** | 5M+ developers, CUDA code runs only on NVIDIA. Title: see decision 1 | WAC |
+| 4 | Top 4 build own chips | EDIT | Title → "**Four customers that make up 40% of NVIDIA's sales are now building their own AI chips**". **$24.4B**. Label shares "**outside estimates**" | Review §7, WAC, Kim |
+| 5 | Problem + **5 questions** | EDIT | WAC problem question (Kim's wording). Q4 → "What is it worth to **keep them**?". **Add Q5** "Where can NVIDIA create new demand?" | WAC, Kim |
+| 6 | Q1: 78% from one business | SMALL | "AI Foundry: potential pioneer, **tested by a pilot (slide 12)**". Optional: opex grew only 2% | WAC, Kim |
+| 7 | Q2: price vs volume | EDIT | Kim's version: title "**Data center revenue grew faster than estimated GPU shipments**" + **not-a-pure-price caveat** | WAC, Kim |
+| 8 | Q2: finished job | SMALL | Add **MR = MC → higher markup** line. Notes: "in the case example" | WAC, Kim |
+| 9 | Q3: Five Forces | SMALL | Rivalry → "**weaker**": AMD **$4.5B** AI chips vs NVIDIA **$76B** data center (~17×), software trails CUDA | WAC, Review §4 #3 |
+| 10 | Q3: Four Corners | EDIT | Kim's version: "move **workloads** in-house where cheaper" + **Inferentia / Trainium**. Add "**DeepSeek is a smaller worry**: changes how much compute, not who supplies it; trained on NVIDIA" | WAC, Kim, Review §6 |
+| 11 | Q4: break-even | **REBUILD** | Kim's version: **10% discount, $2.4B vs $4.4B, 13.8% (~1 in 7)**, discount slider, $100 example in notes. Add: discount tied to volume commitments, **never to a promise not to build own chips** | WAC, Kim |
+| 12 | **Q5: new demand** | **NEW** | Noncustomers with shelved AI projects → AI Foundry → **mid-sized insurer claims assistant**, cloud partner, **NIM + NeMo**, small on purpose | WAC |
+| 13 | Options | EDIT | Kim's version (B = case option, separate "**Our addition**" row). B wording/values per WAC: "low-cost custom chips", lock-in **Partly**. C = "enterprise **and sovereign** AI". No weighted scores | WAC, Kim, Review |
+| 14 | Recommendation (ERRC) | EDIT | Add **approve now / test first / pilot first** tags per move. "**Sell the whole AI system**". Move 3 = insurer pilot (Kim) + **governments (OUR PROPOSAL)** + scale gate. Keep "We give up" line | WAC, Kim, Review |
+| 15 | Justification trace | EDIT | Kim's Q3/Q4 rows (13.8%, volume commitments). Move 3 ← **Q1 + Q5**. Add "**a substitute becomes a complement**", "**we don't port CUDA**". One line: **seven tests** passed (detail in B2) | WAC, Kim, Review §2 |
+| 16 | Risks + weak spot | EDIT | Kim's version (pilot-doesn't-convert row; TSMC kept as "monitor, no second source" in notes). Add WAC's **3 watch metrics**: top-4 share of sales · gross margin trend · big buyer moving **training** off NVIDIA | WAC, Kim, Review §4 #10 |
+| 17 | Close | KEEP | Allen's question: "**If you were Microsoft, would you still build your own chip if it could plug into NVIDIA's systems?**" + NVLink Fusion (INTERNET). Only Kim's wording fix: "**pursuing a similar approach**" | Review §3, §7 |
+| B1 | 15 polling answers | SMALL | Kim's Q14 note. Q15 blank `[__]` → **needs the letter from Kim**. Renumber slides | Review, Kim |
+| B2 | Frameworks in reserve | SMALL | Renumber slide references | Review |
 
-**Also update:** `NVIDIA_Talking_Points.md` for every changed slide ("of 16" → "of 17", and the new Q5 script).
+**Not adopted from Kim:** the separate "What Jensen approves first" slide (its content goes onto slide 14 as tags and slide 16 as watch metrics, which keeps the deck at Allen's ~17–18 slides) · the new close question with 3 cards (Allen's review picks the Microsoft question) · Kim's slides 1–4 (older version, no images).
+
+**Speaker split (Review §7, adjusted for Q5):** Group 1 = slides 1–5 · Group 2 = slides 6–10 (Q1–Q3) · Group 3 = slides 11–17 (Q4, Q5, options, recommendation, justification, risks, close). Group 3 is now the longest. Consider moving slide 11 (Q4) to Group 2.
+
+**Also update:** `NVIDIA_Talking_Points.md` for each changed slide ("of 16" → "of 17", new Q5 script, speaker table).
+
+## 9. Allen's deck review: build rules we follow
+
+| Rule | In our deck |
+|---|---|
+| Logic chain: problem → questions → one finding each → moves → trace | ✅ (now 5 questions, per WAC) |
+| **Five Forces + Four Corners** on main slides; PESTLE, SWOT/TOWS, seven tests, CEO actions, motive/means in backup | ✅ slides 9–10, B2 |
+| **PMS map** with the "if NVIDIA stands still" toggle on Q1 | ✅ slide 6 |
+| **ERRC grid** + "We give up" line for the recommendation | ✅ slide 14 |
+| **No weighted option scorer**; screen options against findings | ✅ slide 13 |
+| Plug-in idea merged into Move 2 | ✅ |
+| Risks with early warning signals, compressed | ✅ slide 16 |
+| Close: Microsoft question, then **NVLink Fusion** labelled INTERNET / after the case | ✅ slide 17 |
+| Poll answers tagged on the slide where the evidence sits + B1 backup | ✅ |
+| **Plain, literal titles, no metaphors** | ⚠️ see decision 1 |
+| H100 vs A100: −14% TFLOPS/$ but 2.25× per training job | ✅ slide 8 |
+| Gaming dipped 27% then recovered; **no "98%" share**; no "20× cheaper" headline; 65% cloud labelled COMPUTED; no $91B; no second-sourcing | ✅ |
+| DeepSeek = hook, ranked below the hyperscalers | ✅ (add "smaller worry" line on slide 10) |
+| Seven tests: one line on the justification slide | ❌ → add on slide 15 |
+
+### Where the review and WAC v3 disagree (WAC wins)
+
+| Item | Review says | WAC v3 says | We use |
+|---|---|---|---|
+| Break-even | ~17.5%, "1 in 6 dollars" | **13.8%** (10% discount ÷ 72.7%) | **13.8%** |
+| Number of questions | Four | **Five** (adds Q5 new demand) | **Five** |
+| Slide 7 title | "Growth came mostly from higher prices, not more chips" | Not a pure price measure (networking, mix) | **Kim's caveated title** |
+| Slide 10 title | Move **inference** in-house, keep NVIDIA for frontier training | Move **work** in-house wherever cheaper | **WAC** |
+| What NVIDIA gives up | Top margins **on inference** | Top margins **on sales to the four biggest buyers** | **WAC** (already in deck) |
+| Move 3 | Grow customers who cannot build their own chips | AI Foundry **insurer pilot** + governments, scale gate | **WAC** |
+
+### Decisions still open
+
+1. **Slide 2 and 3 titles.** Allen's review uses plain sentences: "*ChatGPT turned a gaming-chip company into the world's most valuable company in two years*" and "*NVIDIA sells chips, software and a developer community as one package, and that package is hard to leave*". Ours are "NVIDIA's Journey to $3 Trillion" and "The cost of leaving". Keep ours or switch to Allen's?
+2. **Q15 letter** for the blank in B1 (from Kim).
