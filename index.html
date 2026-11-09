@@ -1250,25 +1250,104 @@ Key line: Tie any discount to a purchase commitment. Lost business rarely comes 
 </section>
 
 <!-- 12 OPTIONS -->
-<section class="slide" data-bg="dim" data-poll="Case poll Q14: E, C, B" data-label="Five possible responses, tested against what the analysis showed">
+<section id="slide-12-opt" class="slide" data-bg="dim" data-poll="Case poll Q14: E, C, B" data-label="We tested the case's five options, plus one of our own">
+<style>
+/* Entry: six option cards (four kept, two in the bottom strip), each one line + two small ratings.
+   Click 1: A and D are rejected (dim, struck, reason). Click 2: Move 1/2/3 headers drop in and the kept cards light up. */
+#slide-12-opt{--ease:cubic-bezier(.16,.84,.24,1)}
+#slide-12-opt .s12{position:relative;flex:1;min-height:0;display:flex;flex-direction:column;gap:22px}
+#slide-12-opt .moves{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:22px;flex:1;min-height:0}
+#slide-12-opt .mcol{display:flex;flex-direction:column;gap:14px;min-height:0}
+#slide-12-opt .mh{height:40px;display:flex;align-items:center;gap:12px;opacity:0;transform:translateY(-14px);transition:opacity .6s ease,transform .7s var(--ease)}
+#slide-12-opt .mh b{font-family:var(--display);font-size:26px;font-weight:700;color:var(--green-hi)}
+#slide-12-opt .mh .tag{font-size:15px}
+#slide-12-opt[data-step="2"] .mh{opacity:1;transform:none}
+#slide-12-opt[data-step="2"] .mcol:nth-child(2) .mh{transition-delay:.15s}
+#slide-12-opt[data-step="2"] .mcol:nth-child(3) .mh{transition-delay:.3s}
+#slide-12-opt .oc{position:relative;flex:1;min-height:0;overflow:hidden;border:1px solid var(--line2);border-radius:8px;background:rgba(10,15,11,.95);padding:26px 28px;
+  display:flex;flex-direction:column;gap:12px;transition:border-color .7s ease,box-shadow .7s ease}
+#slide-12-opt .oc .bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.22;-webkit-mask:linear-gradient(200deg,#000 10%,transparent 70%);mask:linear-gradient(200deg,#000 10%,transparent 70%);transition:opacity .8s ease}
+#slide-12-opt .oc>*:not(.bg){position:relative}
+#slide-12-opt .oc .hd12{display:flex;align-items:center;gap:14px}
+#slide-12-opt .lt{flex:none;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--mute);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:22px;color:var(--fg);background:#070b08}
+#slide-12-opt .oc h3{font-size:29px;line-height:1.12}
+#slide-12-opt .oc p{margin:0;font-size:22px;line-height:1.35;color:var(--mute)}
+#slide-12-opt .rt{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+#slide-12-opt .rt span{font-size:17px;padding:5px 11px;border-radius:4px;border:1px solid var(--line2);color:var(--mute);background:rgba(4,6,5,.7)}
+#slide-12-opt .rt span em{font-style:normal;color:var(--fg)}
+#slide-12-opt .ours .lt{border-style:dashed;border-color:var(--green)}
+#slide-12-opt .ours>.tag{align-self:flex-start;margin-top:-4px}
+#slide-12-opt[data-step="2"] .moves .oc{border-color:var(--green);box-shadow:0 0 50px rgba(118,185,0,.12)}
+#slide-12-opt[data-step="2"] .moves .oc .lt{border-color:var(--green);color:var(--green-hi)}
+#slide-12-opt[data-step="2"] .moves .oc .bg{opacity:.34}
+#slide-12-opt .oc .bg.lite{opacity:.12}
+#slide-12-opt[data-step="2"] .moves .oc .bg.lite{opacity:.18}
+/* entry */
+#slide-12-opt .oc,#slide-12-opt .rj{opacity:0;transform:translateY(26px) scale(.97)}
+#slide-12-opt.active .oc,#slide-12-opt.active .rj{animation:s12in .8s var(--ease) forwards;animation-delay:var(--dl)}
+@keyframes s12in{to{opacity:1;transform:none}}
+/* rejected strip */
+#slide-12-opt .rjs{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+#slide-12-opt .rjw{transition:opacity .7s ease,filter .7s ease}
+#slide-12-opt .rj{position:relative;display:flex;align-items:center;gap:16px;padding:18px 24px;border:1px solid var(--line2);border-radius:8px;background:rgba(10,15,11,.95)}
+#slide-12-opt .rj h3{font-size:26px;position:relative;display:inline-block}
+#slide-12-opt .rj h3::after{content:"";position:absolute;left:0;top:55%;height:2.5px;width:100%;background:var(--amber);transform:scaleX(0);transform-origin:0 50%;transition:transform .6s ease .2s}
+#slide-12-opt .rj .why{font-size:20px;color:var(--mute)}
+#slide-12-opt .rj .why b{font-weight:500;color:var(--amber)}
+#slide-12-opt .rj .tx{display:flex;flex-direction:column;gap:4px;min-width:0}
+#slide-12-opt .rj .pill{margin-left:auto;opacity:0;transform:scale(.8);transition:opacity .4s ease .3s,transform .5s var(--ease) .3s;border-color:var(--amber4);color:var(--amber)}
+#slide-12-opt .rj .why .after{display:none}
+#slide-12-opt:is([data-step="1"],[data-step="2"]) .rj h3::after{transform:scaleX(1)}
+#slide-12-opt:is([data-step="1"],[data-step="2"]) .rj .pill{opacity:1;transform:none}
+#slide-12-opt:is([data-step="1"],[data-step="2"]) .rj .why .before{display:none}
+#slide-12-opt:is([data-step="1"],[data-step="2"]) .rj .why .after{display:inline}
+#slide-12-opt[data-step="2"] .rjw{opacity:.45;filter:saturate(.3)}
+@media(prefers-reduced-motion:reduce){#slide-12-opt .oc,#slide-12-opt .rj{opacity:1;transform:none;animation:none!important}}
+</style>
   <header class="hd b">
-  <h2>Five possible responses, tested against what the analysis showed</h2></header>
-  <table class="t b">
-    <thead><tr><th style="width:30%">Option</th><th>Protects lock-in?</th><th>Reduces reliance on top 4?</th><th>Antitrust risk</th><th>Margin cost</th><th>Decision</th></tr></thead>
-    <tbody>
-      <tr><td>E · Fortify the software and developer ecosystem</td><td class="y">Yes, directly</td><td>Indirectly</td><td>Medium if CUDA stays closed</td><td class="y">Low</td><td><span class="pill keep">Keep · Move 1</span></td></tr>
-      <tr><td>B · Semi-custom products, a plug-in path, targeted pricing</td><td class="y">Yes, keeps them on NVIDIA systems</td><td class="n">No</td><td class="y">Low</td><td class="w">Medium, top 4 only</td><td><span class="pill keep">Keep · Move 2</span></td></tr>
-      <tr><td>C · Broaden the customer base</td><td class="y">Yes, more developers on CUDA</td><td class="y">Yes</td><td class="y">Low</td><td class="y">Low</td><td><span class="pill keep">Keep · Move 3</span></td></tr>
-      <tr><td>A · Exclusive contracts to stop in-house chips</td><td class="w">Short term only</td><td class="n">No</td><td class="w">High, regulators already watching</td><td class="y">Low</td><td><span class="pill rej">Reject</span></td></tr>
-      <tr><td>D · Sell design IP and consulting to chip builders</td><td class="n">No, it helps rivals build</td><td class="n">No</td><td class="y">Low</td><td class="w">Gains fees, loses the software edge</td><td><span class="pill rej">Reject</span></td></tr>
-    </tbody>
-  </table>
-  <p class="txt b" style="font-size:22px">No weighted scores: the weights would be our own guesses, and changing them could change the winner.</p>
-  <aside class="notes">[Steady and quick. Don’t read the table.]
+  <h2>We tested the case’s five options, plus one of our own</h2></header>
+  <div class="s12">
+    <div class="moves">
+      <div class="mcol">
+        <div class="mh"><b>Move 1</b><span class="tag c">APPROVE NOW</span></div>
+        <div class="oc" style="--dl:.5s"><div class="bg" style="background-image:url(nvidia_assets/_picks/moat_software/cuda_libraries.jpg)"></div>
+          <div class="hd12"><span class="lt">E</span><h3>Strengthen CUDA and developer support</h3></div>
+          <p>Gives developers a reason to keep choosing NVIDIA</p>
+          <div class="rt"><span>Top-4 reliance <em>no direct effect</em></span><span>Antitrust <em>lower</em></span></div></div>
+      </div>
+      <div class="mcol">
+        <div class="mh"><b>Move 2</b><span class="tag c">TEST FIRST</span></div>
+        <div class="oc" style="--dl:.62s"><div class="bg" style="background-image:url(nvidia_assets/_picks/moat_system/compute_tray.png)"></div>
+          <div class="hd12"><span class="lt">B</span><h3>Low-cost custom chips for large buyers</h3></div>
+          <p>Could keep selected chip orders</p>
+          <div class="rt"><span>Top-4 reliance <em>no</em></span><span>Antitrust <em>depends on terms</em></span></div></div>
+        <div class="oc ours" style="--dl:.74s"><div class="bg" style="background-image:url(nvidia_assets/_picks/moat_system/gb200_rack.jpg)"></div>
+          <div class="hd12"><span class="lt">+</span><h3>Their chips in NVIDIA systems, plus targeted volume pricing</h3></div>
+          <span class="tag i">OUR ADDITION</span>
+          <p>Could keep networking and systems sales</p>
+          <div class="rt"><span>Top-4 reliance <em>no</em></span><span>Antitrust <em>depends on terms</em></span></div></div>
+      </div>
+      <div class="mcol">
+        <div class="mh"><b>Move 3</b><span class="tag c">PILOT FIRST</span></div>
+        <div class="oc" style="--dl:.86s"><div class="bg lite" style="background-image:url(nvidia_assets/_picks/ai_factory/ai_factory_hall.jpg)"></div>
+          <div class="hd12"><span class="lt">C</span><h3>Broaden the customer base</h3></div>
+          <p>Tests whether AI Foundry can win first-time enterprise buyers</p>
+          <div class="rt"><span>Top-4 reliance <em>less, if the pilot scales</em></span><span>Antitrust <em>lower</em></span></div></div>
+      </div>
+    </div>
+    <div class="rjs">
+      <div class="rjw"><div class="rj" style="--dl:1s"><span class="lt">A</span><div class="tx"><h3>Exclusive contracts</h3><span class="why"><span class="before">Keeps purchases only for the contract term</span><span class="after"><b>Antitrust risk higher:</b> regulators already watch NVIDIA</span></span></div><span class="pill rej">Reject</span></div></div>
+      <div class="rjw"><div class="rj" style="--dl:1.1s"><span class="lt">D</span><div class="tx"><h3>Sell design know-how</h3><span class="why"><span class="before">Earns fees from chip builders</span><span class="after"><b>Helps rivals copy NVIDIA</b> and build competing chips</span></span></div><span class="pill rej">Reject</span></div></div>
+    </div>
+    <i data-frag="1" hidden></i><i data-frag="2" hidden></i>
+  </div>
+  <aside class="notes">[The six cards come in. Steady and quick. Don’t read the cards.]
 
-The case gives five possible responses. We tested each one with four questions. Does it protect the lock-in? Does it reduce reliance on the top four? Does it risk antitrust trouble? What does it cost in margin?
+The case gives five possible responses. We added one of our own: let the big buyers’ chips run inside NVIDIA’s systems, with targeted volume pricing. That one is not a poll option, so it gets its own card.
 
-[Point to the two rejected rows.]
+We tested each one against what the analysis showed. Does it reduce reliance on the top four? And what is the antitrust risk?
+
+[CLICK 1: The two bottom options are struck out.]
 
 Two fail.
 
@@ -1276,11 +1355,13 @@ Exclusive contracts fail. Regulators are already watching NVIDIA. And a contract
 
 Selling NVIDIA’s chip design know-how fails too. It hands rivals the very advantage NVIDIA is trying to protect.
 
-[Point to the three kept rows.]
+[CLICK 2: The move labels drop in and the four kept cards light up.]
 
-Three pass. Together, they become our recommendation.
+The other four pass, and they become our three moves. Strengthening CUDA, we approve now. Custom chips and our plug-in path, we test first. And broadening the customer base, we pilot first.
 
-Key line: Two options fail. Three pass.</aside>
+Key line: Two options fail. Four pass and become three moves.
+
+Q&A note: We used no weighted scores. The weights would be our own guesses, and changing them could change the winner.</aside>
 </section>
 
 <!-- 13 RECOMMENDATION -->

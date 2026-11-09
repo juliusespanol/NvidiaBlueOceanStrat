@@ -441,13 +441,16 @@ So which response should NVIDIA choose?
 
 ## SLIDE 12 of 16 · Options · Group 3 · ~1.5 min
 
-**On screen:** Five possible responses, tested against what the analysis showed
+**On screen:** We tested the case’s five options, plus one of our own  
+**Clicks:** 2 (A and D are struck out, then the Move 1/2/3 labels and the kept cards light up)
 
-*[Steady and quick. Don’t read the table.]*
+*[The six cards come in. Steady and quick. Don’t read the cards.]*
 
-The case gives five possible responses. We tested each one with four questions. Does it protect the lock-in? Does it reduce reliance on the top four? Does it risk antitrust trouble? What does it cost in margin?
+The case gives five possible responses. We added one of our own: let the big buyers’ chips run inside NVIDIA’s systems, with targeted volume pricing. That one is not a poll option, so it gets its own card.
 
-*[Point to the two rejected rows.]*
+We tested each one against what the analysis showed. Does it reduce reliance on the top four? And what is the antitrust risk?
+
+*[CLICK 1: The two bottom options are struck out.]*
 
 Two fail.
 
@@ -455,11 +458,13 @@ Exclusive contracts fail. Regulators are already watching NVIDIA. And a contract
 
 Selling NVIDIA’s chip design know-how fails too. It hands rivals the very advantage NVIDIA is trying to protect.
 
-*[Point to the three kept rows.]*
+*[CLICK 2: The move labels drop in and the four kept cards light up.]*
 
-Three pass. Together, they become our recommendation.
+The other four pass, and they become our three moves. Strengthening CUDA, we approve now. Custom chips and our plug-in path, we test first. And broadening the customer base, we pilot first.
 
-**Key line:** Two options fail. Three pass.
+**Key line:** Two options fail. Four pass and become three moves.
+
+**Note for Q&A:** We used no weighted scores. The weights would be our own guesses, and changing them could change the winner.
 
 ## SLIDE 13 of 16 · Recommendation · Group 3 · ~2.5 min
 
