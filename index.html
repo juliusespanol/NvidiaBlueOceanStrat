@@ -518,7 +518,7 @@ Key line: NVIDIA’s biggest customers are building their own replacement for NV
 </section>
 
 <!-- 5 PROBLEM -->
-<section id="slide-5-problem" class="slide" data-bg="black" data-label="How can NVIDIA keep its pricing power and keep growing?">
+<section id="slide-5-problem" class="slide" data-bg="dim" data-label="How can NVIDIA keep its pricing power and keep growing?">
 <style>
 /* Hero (step 0–1): big title left, chip right, like the mockup. Step 2+: title shrinks to the top-left and the five questions rise in under it. */
 #slide-5-problem{--ease:cubic-bezier(.65,0,.2,1)}
@@ -985,7 +985,7 @@ const tex=document.createElement('canvas');tex.width=tex.height=256;
   x.strokeStyle='rgba(255,255,255,.25)';for(let i=0;i<6;i++){x.strokeRect((Math.random()*12|0)*16+2,(Math.random()*12|0)*16+2,48,32)}})();
 const cam={z:1.35,tz:1.35,r:-.08,tr:-.08,d:1,td:1};
 let mode='macro';
-const OP={macro:.95,dim:.2,split:.92,fusion:.85,black:0};
+const OP={macro:.95,dim:.2,split:.92,fusion:.85};
 function setMode(md){
   if(md===mode&&cv.style.opacity)return;mode=md;cv.style.opacity=OP[md]??.2;
   const P={macro:[1.35,-.08,1],dim:[1.1,-.04,1],split:[1.0,0,0],fusion:[1.12,-.03,.4]}[md]||[1.1,-.04,1];
