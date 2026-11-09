@@ -214,20 +214,20 @@ That is our problem.
 **Presenter:** Group 1  
 **Estimated time:** ~1.5 min
 
-**On screen:** How can NVIDIA keep its pricing power and keep growing?  
-**Clicks:** 3 (reason and means, the five questions, the condition)
+**On screen:** How can NVIDIA keep its pricing power and keep growing? (title alone, large, next to the Blackwell chip)  
+**Clicks:** 3 (the CUDA lock-in line, the title moves up and the five questions appear, the condition)
 
 ### Speaker script
 
-*[Slow and deliberate. This is the thesis of the presentation.]*
+*[Slow and deliberate. This is the thesis of the presentation. Let the title sit alone for a beat.]*
 
 Let me put the problem in one sentence.
 
 How can NVIDIA keep its pricing power, and keep growing?
 
-It charges premium prices because customers are locked into CUDA.
+*[CLICK 1: The line under the title appears: “Customers are locked into CUDA. Now the four biggest have the reason and the means to leave.”]*
 
-*[CLICK 1: Reason and means appear.]*
+It charges premium prices because customers are locked into CUDA.
 
 And its four biggest customers now have both the reason and the means to break free.
 
@@ -235,7 +235,7 @@ The reason? NVIDIA’s high prices.
 
 The means? Their money. Their engineers. Their own clouds, so they can rent out their own chips.
 
-*[CLICK 2: The five questions appear. Point to them one at a time.]*
+*[CLICK 2: The title moves up and the five questions appear one by one. Point to them one at a time.]*
 
 To decide what NVIDIA should do, we need five answers. How much rides on this business? Why can NVIDIA charge so much? Who can break the lock-in? What is it worth to keep them? And where can NVIDIA find new customers who are not building their own chips?
 
@@ -264,13 +264,13 @@ Two years earlier, data centers were 39% of NVIDIA’s revenue. Then 56%. Now 78
 
 Almost four out of every five dollars come from one business.
 
-And it is very profitable. About 85 cents of every extra dollar of sales became operating profit. Operating profit is what is left after making the chips and running the company.
+And it is very profitable. Operating expenses grew only 2%, so about 85 cents of every extra dollar of sales became operating profit. Operating profit is what is left after making the chips and running the company.
 
 *[Move to the map on the right.]*
 
 The case uses a Blue Ocean tool that sorts businesses into three groups. Pioneers offer value nobody offered before. Migrators are better than rivals, but in a crowded market. Settlers are me-too.
 
-Today, the AI data center business is a pioneer. Gaming is a migrator. AI Foundry, NVIDIA’s new service that helps companies build their own AI models, might be the next pioneer. But the case shows no revenue for it yet.
+Today, the AI data center business is a pioneer. Gaming is a migrator. AI Foundry, NVIDIA’s new service that helps companies build their own AI models, might be the next pioneer. But the case shows no revenue for it yet. **We will test it with a pilot aimed at first-time buyers on slide 12.**
 
 *[Click. Let the box slide across.]*
 
