@@ -32,7 +32,7 @@ Each slide ends with a **Key line**: if you forget everything else on that slide
 | 2 | 6–10 | The proof: four analysis questions (Q1–Q3) | ~10.5 min |
 | 3 | 11–16 | Q4, options, recommendation, justification, close | ~10.5 min |
 
-## SLIDE 1 of 16 · Hook · Group 1 · ~1.5 min
+## SLIDE 1 of 17 · Hook · Group 1 · ~1.5 min
 
 **On screen:** On one day in January 2025, NVIDIA lost $600 billion in market value. Was cheaper AI the real threat?
 
@@ -74,7 +74,7 @@ To see it, we first need to know how NVIDIA got so big.
 
 **Key line:** The real threat is on NVIDIA’s own customer list.
 
-## SLIDE 2 of 16 · Case facts · Group 1 · ~2 min
+## SLIDE 2 of 17 · Case facts · Group 1 · ~2 min
 
 **On screen:** NVIDIA’s Journey to $3 Trillion  
 **Clicks:** 3 (1999 → 2007 with the CUDA logo, then ChatGPT, then the market value bars)
@@ -113,7 +113,7 @@ So how did one company capture so much of this boom? Because NVIDIA does not jus
 
 **Note for Q&A:** If asked: “fiscal 2024” is NVIDIA’s financial year ending January 2024.
 
-## SLIDE 3 of 16 · Case facts · Group 1 · ~2 min
+## SLIDE 3 of 17 · Case facts · Group 1 · ~2 min
 
 **On screen:** NVIDIA sells one package that is hard to leave  
 **Clicks:** 6 (one per loop step, then the switching cost panel)
@@ -160,7 +160,7 @@ So who has enough money and engineers to pay that cost?
 
 **Key line:** The cost of leaving is what NVIDIA really sells.
 
-## SLIDE 4 of 16 · Case facts · Group 1 · ~1.5 min
+## SLIDE 4 of 17 · Case facts · Group 1 · ~1.5 min
 
 **On screen:** NVIDIA's biggest customers are now building their own chips (donut chart: top 4 = 40%, everyone else = 60%)  
 **Clicks:** 1 (each company’s own chip)
@@ -189,7 +189,7 @@ That is our problem.
 
 **Key line:** NVIDIA’s biggest customers are building their own replacement for NVIDIA.
 
-## SLIDE 5 of 16 · Problem · Group 1 · ~1.5 min
+## SLIDE 5 of 17 · Problem · Group 1 · ~1.5 min
 
 **On screen:** How can NVIDIA keep its pricing power and keep growing? (title alone, large, next to the Blackwell chip)  
 **Clicks:** 3 (the CUDA lock-in line, the title moves up and the five questions appear, the condition)
@@ -224,7 +224,7 @@ My colleague will take us through the evidence. First question: how much does NV
 
 **Key line:** Five questions decide what NVIDIA should do.
 
-## SLIDE 6 of 16 · Analysis · Q1 · Group 2 · ~2.5 min
+## SLIDE 6 of 17 · Analysis · Q1 · Group 2 · ~2.5 min
 
 **On screen:** 78% of NVIDIA’s revenue now comes from one business, and it is NVIDIA’s only proven growth engine  
 **Clicks:** 3 (operating margin, the portfolio map, “if NVIDIA stands still”)
@@ -261,7 +261,7 @@ Next question. Why can NVIDIA charge so much?
 
 **Key line:** If NVIDIA stands still, it has no proven pioneer left.
 
-## SLIDE 7 of 16 · Analysis · Q2 · Group 2 · ~2 min
+## SLIDE 7 of 17 · Analysis · Q2 · Group 2 · ~2 min
 
 **On screen:** Data center revenue grew faster than estimated GPU shipments  
 **Clicks:** 3 (the "not a pure price" note + labels on the NVIDIA tray, the gross margin columns, the NVIDIA tax gap)
@@ -300,7 +300,7 @@ So what exactly are they paying for?
 
 **Key line:** The 73% margin is NVIDIA’s reward and its weak spot.
 
-## SLIDE 8 of 16 · Analysis · Q2 · Group 2 · ~2 min
+## SLIDE 8 of 17 · Analysis · Q2 · Group 2 · ~2 min
 
 **On screen:** Buyers pay for the finished AI job, not for raw chip speed
 
@@ -330,7 +330,7 @@ So if the difficulty of switching is what lets NVIDIA earn 73%, the real questio
 
 **Key line:** Buyers pay for the finished job, not the chip.
 
-## SLIDE 9 of 16 · Analysis · Q3 · Group 2 · ~2 min
+## SLIDE 9 of 17 · Analysis · Q3 · Group 2 · ~2 min
 
 **On screen:** NVIDIA’s biggest buyers are also its biggest substitutes  
 **Clicks:** 2 (the other forces fade and buyers + substitutes turn amber, then the four names and their chips with “Same four firms”)
@@ -367,7 +367,7 @@ So what will these four do next?
 
 **Note for Q&A (details taken off the slide):** New entrants: $8.8 billion of venture money went into chip startups in 2023, but CUDA and scarce TSMC capacity hold them back. Suppliers: TSMC alone mass-produces 3-nanometer chips and is booked to 2026; ASML is the only maker of the EUV machines. Rivals: AMD MI300X, Intel Gaudi 3, Huawei Ascend. Substitutes: Amazon’s Trainium trains at about half the cost; open software such as PyTorch and UXL makes switching easier.
 
-## SLIDE 10 of 16 · Analysis · Q3 · Group 2 · ~2 min
+## SLIDE 10 of 17 · Analysis · Q3 · Group 2 · ~2 min
 
 **On screen:** The big buyers will move work to their own chips wherever it is cheaper  
 **Clicks:** 2 (the corners fold away and the prediction flow takes their place, then the Amazon example)
@@ -402,7 +402,7 @@ So the big buyers will keep moving work away. How much is it worth to NVIDIA to 
 
 **Note for Q&A:** Current strategy detail taken off the slide: they rent their chips through their clouds rather than sell them, and Amazon tied Anthropic to its chips.
 
-## SLIDE 11 of 16 · Analysis · Q4 · Group 3 · ~2 min
+## SLIDE 11 of 17 · Analysis · Q4 · Group 3 · ~2 min
 
 **On screen:** A 10% discount pays for itself if it keeps 1 in 7 dollars from leaving  
 **Clicks:** 2 (the two option bars, then the purchase-commitment rule). Sliders can be dragged at any time.
@@ -439,7 +439,7 @@ So which response should NVIDIA choose?
 
 **Key line:** Tie any discount to a purchase commitment. Lost business rarely comes back.
 
-## SLIDE 12 of 16 · Options · Group 3 · ~1.5 min
+## SLIDE 12 of 17 · Options · Group 3 · ~1.5 min
 
 **On screen:** We tested the case’s five options, plus one of our own  
 **Clicks:** 2 (A and D are struck out, then the Move 1/2/3 labels and the kept cards light up)
@@ -466,7 +466,7 @@ The other four pass, and they become our three moves. Strengthening CUDA, we app
 
 **Note for Q&A:** We used no weighted scores. The weights would be our own guesses, and changing them could change the winner.
 
-## SLIDE 13 of 16 · Recommendation · Group 3 · ~2.5 min
+## SLIDE 13 of 17 · Recommendation · Group 3 · ~2.5 min
 
 **On screen:** Invest in CUDA now, and test the other two moves before scaling them  
 **Clicks:** 3 (Move 2, Move 3, then the ERRC strip)
@@ -495,7 +495,7 @@ Every move answers one finding. Here is the proof.
 
 **Key line:** Invest in CUDA now. Test the other two before scaling them.
 
-## SLIDE 14 of 16 · Justification · Group 3 · ~1.5 min
+## SLIDE 14 of 17 · Justification · Group 3 · ~1.5 min
 
 **On screen:** Every move comes from a finding in our analysis. Three finding cards on the left (73% · ≈40% · 78%), each move card arrives on the right.
 
@@ -537,7 +537,7 @@ Now, what could break this plan?
 
 **Note for Q&A:** The 73% is NVIDIA’s company-wide gross margin in fiscal 2024 (72.7%), a GIVEN case figure. We don’t port CUDA to rival chips: the plug-in path is for racks, networking and system software.
 
-## SLIDE 15 of 16 · Risks · Group 3 · ~1.5 min
+## SLIDE 15 of 17 · Risks · Group 3 · ~1.5 min
 
 **On screen:** What could go wrong, and how we would know early. One risk card per move (warning sign + our response), then a "We would watch" strip and the closing line.
 
@@ -571,7 +571,7 @@ So let’s test our recommendation. Put yourself in Microsoft’s position.
 
 **Note for Q&A:** Other risks we would watch: regulators acting against NVIDIA’s deals (like the Run.ai review in the case), AI getting so cheap that spending slows (Move 3 widens the customer base), and chip supply at TSMC (no real second source for leading chips). After the case, NVIDIA’s revenue kept growing and its margin returned to about 75%; that figure is from outside the case, so say so if asked.
 
-## SLIDE 16 of 16 · Close · Group 3 · ~1.5 min
+## SLIDE 16 of 17 · Close · Group 3 · ~1.5 min
 
 **On screen:** If you were Microsoft, would you still build your own chip if it could plug into NVIDIA’s systems? Then the NVLink Fusion board rises in, its chips light up (NVIDIA GPUs green, their own chip blue), and the final line appears.
 
@@ -608,6 +608,14 @@ Thank you.
 **Key line:** Make staying the best option, and the biggest buyers stay.
 
 **Note for Q&A:** NVLink Fusion is from outside the case (announced May 18, 2025). Partners named at launch included MediaTek, Marvell, Qualcomm and Fujitsu. In NVIDIA’s picture the customer’s chip is drawn as a CPU; Fusion also pairs customers’ own AI chips with NVIDIA’s CPUs and networking.
+
+## SLIDE 17 of 17 · Thank you · All · ~0.2 min
+
+**On screen:** "Thank you" and the members of LT 1, LT 2 and LT 9.
+
+*[Everyone on stage. Smile.]*
+
+Thank you. We’re happy to take your questions.
 
 ## BACKUP SLIDES B1 and B2 · Group 3 (Q&A captain)
 
