@@ -1661,29 +1661,93 @@ Q&A note: Other risks we would watch: regulators acting against NVIDIA’s deals
 </section>
 
 <!-- 16 CLOSE -->
-<section class="slide" data-bg="dim" data-bg1="fusion" data-bg2="fusion" data-label="If you were Microsoft, would you still build your own chip if it could plug into NVIDIA's systems?">
-  <header class="hd b"></header>
-  <p class="closeq b">If you were <b>Microsoft</b>, would you still build your own chip if it could plug into <b>NVIDIA's systems</b>?</p>
-  <div class="reveal" data-frag="1">
-    <div class="col" style="gap:8px"><span class="k" style="color:var(--green)">What NVIDIA did</span><span class="date">May 18,<br>2025</span></div>
-    <div class="col" style="gap:14px"><h3 style="font-size:40px">NVLink Fusion</h3>
-      <p class="txt" style="font-size:25px">Customers can pair their own custom AI chips and CPUs with NVIDIA's rack-scale systems and networking. Partners named at launch included MediaTek, Marvell, Qualcomm and Fujitsu. <span class="tag i">INTERNET · AFTER THE CASE</span></p>
-      <p class="txt" style="font-size:22px">It shows NVIDIA chose a move close to our Move 2. It does not yet prove the move works.</p></div>
+<section id="slide-16-close" class="slide" data-bg="dim" data-bg1="fusion" data-bg2="fusion" data-bg3="fusion" data-label="If you were Microsoft, would you still build your own chip if it could plug into NVIDIA's systems?">
+<style>
+/* Entry: the question alone, big. Click 1: question moves up, the NVLink Fusion board rises in, name + date on the left.
+   Click 2: NVIDIA GPUs glow green, the customer's chip glows cyan, NVLink pulses between them, labels + caveat line.
+   Click 3: the final line. Board photo: _picks/threat_response/nvlink_fusion_board.png shown at 0.88 scale, cropped to the board
+   (image x 589-1327, y 176-1079). Chip boxes below are image coords minus that origin, times 0.88. */
+#slide-16-close{--ease:cubic-bezier(.16,.84,.24,1);--cy:#5ad7ea;padding:0}
+#slide-16-close .s16{position:absolute;inset:0}
+/* question */
+#slide-16-close .qw{position:absolute;left:128px;right:128px;top:50%;transform:translateY(-58%);font-size:84px;
+  transition:top 1.1s var(--ease),transform 1.1s var(--ease),font-size 1.1s var(--ease)}
+#slide-16-close .q16{font-family:var(--display);font-stretch:112%;font-weight:300;font-size:inherit;line-height:1.06;letter-spacing:-.03em;max-width:1640px;text-wrap:balance;margin:0}
+#slide-16-close .q16 b{font-weight:800;color:var(--green-hi)}
+#slide-16-close:not([data-step="0"]) .qw{top:96px;transform:none;font-size:48px}
+/* board */
+#slide-16-close .brd{position:absolute;left:880px;top:285px;width:649px;height:795px;border-radius:14px 14px 0 0;
+  background:url(nvidia_assets/_picks/threat_response/nvlink_fusion_board.png) -518px -155px/1690px 950px no-repeat;
+  box-shadow:0 0 140px rgba(118,185,0,.18),0 0 0 1px rgba(255,255,255,.04);
+  -webkit-mask:linear-gradient(180deg,#000 72%,transparent 100%);mask:linear-gradient(180deg,#000 72%,transparent 100%);
+  transform:translateY(160px) scale(.94);filter:blur(10px);transition:opacity 1.2s ease,transform 1.5s var(--ease),filter 1.1s ease}
+#slide-16-close .brd.on{transform:none;filter:none}
+#slide-16-close .brd::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.16) 48%,rgba(190,240,120,.1) 52%,transparent 65%) no-repeat;background-size:250% 100%;background-position:130% 0;opacity:0}
+#slide-16-close .brd.on::after{animation:s16shine 1.8s ease-out 1.1s 1 forwards}
+@keyframes s16shine{0%{opacity:1;background-position:130% 0}100%{opacity:1;background-position:-30% 0}}
+#slide-16-close .gl{position:absolute;border-radius:6px;opacity:0;transition:opacity .8s ease}
+#slide-16-close .gl.gpu{border:2.5px solid var(--green-hi);box-shadow:0 0 28px rgba(168,227,58,.75),inset 0 0 26px rgba(168,227,58,.35)}
+#slide-16-close .gl.own{border:2.5px solid var(--cy);box-shadow:0 0 32px rgba(90,215,234,.85),inset 0 0 30px rgba(90,215,234,.4);transition-delay:.35s}
+#slide-16-close .gl.g1{left:58px;top:84px;width:242px;height:267px}
+#slide-16-close .gl.g2{left:379px;top:87px;width:236px;height:262px}
+#slide-16-close .gl.ow{left:227px;top:417px;width:220px;height:236px}
+#slide-16-close .lk{position:absolute;left:0;top:0;width:649px;height:795px;overflow:visible;opacity:0;transition:opacity .6s ease .6s}
+#slide-16-close .lk path{fill:none;stroke-width:6;stroke-linecap:round;stroke-dasharray:8 10;animation:s16flow .9s linear infinite;filter:drop-shadow(0 0 6px rgba(140,230,200,.9))}
+@keyframes s16flow{to{stroke-dashoffset:-36}}
+#slide-16-close:is([data-step="2"],[data-step="3"]) .gl,#slide-16-close:is([data-step="2"],[data-step="3"]) .lk{opacity:1}
+#slide-16-close:is([data-step="2"],[data-step="3"]) .gl.gpu{animation:s16pulse 2.6s ease-in-out infinite}
+#slide-16-close:is([data-step="2"],[data-step="3"]) .gl.own{animation:s16pulse 2.6s ease-in-out infinite 1.3s}
+@keyframes s16pulse{50%{filter:brightness(1.35)}}
+/* chip labels (right of the board) */
+#slide-16-close .lb{position:absolute;left:1529px;display:flex;align-items:center;gap:0}
+#slide-16-close .lb i{display:block;height:2px;flex:none}
+#slide-16-close .lb span{font-family:var(--display);font-size:30px;font-weight:700;line-height:1.1;padding-left:16px;white-space:nowrap}
+#slide-16-close .lb.l1{top:487px;left:1495px} #slide-16-close .lb.l1 i{width:34px;background:var(--green-hi)} #slide-16-close .lb.l1 span{color:var(--green-hi)}
+#slide-16-close .lb.l2{top:802px;left:1327px} #slide-16-close .lb.l2 i{width:202px;background:var(--cy)} #slide-16-close .lb.l2 span{color:var(--cy)}
+#slide-16-close .lb[data-frag]{transform:translateX(-16px)}
+#slide-16-close .lb[data-frag].on{transform:none;transition-delay:.5s}
+/* left column */
+#slide-16-close .lc{position:absolute;left:128px;top:330px;width:690px;display:flex;flex-direction:column;gap:34px}
+#slide-16-close .nm h3{font-family:var(--display);font-stretch:118%;font-weight:800;font-size:72px;line-height:1;letter-spacing:-.02em;color:var(--fg)}
+#slide-16-close .nm p{margin-top:16px;font-size:26px;color:var(--mute);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+#slide-16-close .cv{font-size:28px;line-height:1.38;color:var(--mute);padding-left:24px;border-left:3px solid var(--green)}
+#slide-16-close .cv b{color:var(--fg);font-weight:500}
+#slide-16-close .fin{position:absolute;left:128px;top:742px;width:690px;font-family:var(--display);font-stretch:108%;font-weight:700;font-size:46px;line-height:1.1;letter-spacing:-.02em;color:var(--fg)}
+#slide-16-close .fin em{font-style:normal;color:var(--green-hi)}
+@media(prefers-reduced-motion:reduce){#slide-16-close .lk path,#slide-16-close .gl{animation:none!important}}
+</style>
+  <div class="s16">
+    <div class="qw"><p class="q16 b">If you were <b>Microsoft</b>, would you still build your own chip if it could plug into <b>NVIDIA’s systems</b>?</p></div>
+    <div class="brd" data-frag="1" role="img" aria-label="NVLink Fusion board: two NVIDIA GPUs above a customer's own chip">
+      <svg class="lk" viewBox="0 0 649 795"><defs><linearGradient id="s16g" gradientUnits="userSpaceOnUse" x1="0" y1="415" x2="0" y2="351"><stop offset="0" stop-color="#5ad7ea"/><stop offset="1" stop-color="#a8e33a"/></linearGradient></defs>
+        <path d="M256 415V353" style="stroke:url(#s16g)"/><path d="M276 415V353" style="stroke:url(#s16g)"/><path d="M396 415V351" style="stroke:url(#s16g)"/><path d="M416 415V351" style="stroke:url(#s16g)"/></svg>
+      <div class="gl gpu g1"></div><div class="gl gpu g2"></div><div class="gl own ow"></div>
+    </div>
+    <div class="lb l1" data-frag="2"><i></i><span>NVIDIA GPUs</span></div>
+    <div class="lb l2" data-frag="2"><i></i><span>Their own chip</span></div>
+    <div class="lc">
+      <div class="nm" data-frag="1"><h3>NVLink Fusion</h3><p>Announced May 18, 2025 <span class="tag i">INTERNET · AFTER THE CASE</span></p></div>
+      <p class="cv" data-frag="2"><b>It shows NVIDIA pursuing a similar approach.</b><br>It does not yet prove the move works.</p>
+    </div>
+    <p class="fin" data-frag="3">Make staying the best option, and <em>the biggest buyers stay.</em></p>
   </div>
-  <p class="lede" data-frag="2" style="font-size:38px;max-width:1500px">The $600 billion fall was about cheaper AI. NVIDIA's lasting risk is about <b>who builds the chips</b>. Make staying the best option, and the biggest buyers stay.</p>
   <aside class="notes">[Pause. Look at the room. Ask, then wait.]
 
 If you were Microsoft, would you still spend billions building your own chip, if that chip could plug straight into NVIDIA’s systems?
 
 [Take two or three answers. Don’t argue. Thank each person.]
 
-[Click.]
+[CLICK 1: The board rises in.]
 
-In May 2025, after this case was written, NVIDIA announced NVLink Fusion. NVLink is NVIDIA’s high-speed connection between chips. Fusion lets customers’ own chips run inside NVIDIA’s racks.
+In May 2025, after this case was written, NVIDIA announced NVLink Fusion. NVLink is NVIDIA’s high-speed connection between chips.
 
-This is close to our Move 2. It does not prove the move works. But it shows NVIDIA chose it.
+[CLICK 2: The chips light up.]
 
-[Click. Walk back to the spot where you started Slide 1.]
+The two green chips are NVIDIA GPUs. The blue one is the customer’s own chip. Fusion lets that chip connect straight to NVIDIA’s GPUs, inside NVIDIA’s systems.
+
+That is the idea behind our Move 2: keep selling systems when customers build their own chips. It shows NVIDIA pursuing a similar approach. It does not yet prove the move works.
+
+[CLICK 3: The final line appears. Walk back to the spot where you started Slide 1.]
 
 So, back to that $600 billion.
 
@@ -1695,7 +1759,9 @@ Make staying the best option, and the biggest buyers stay.
 
 Thank you.
 
-Key line: Make staying the best option, and the biggest buyers stay.</aside>
+Key line: Make staying the best option, and the biggest buyers stay.
+
+Q&amp;A note: NVLink Fusion is from outside the case (announced May 18, 2025). Partners named at launch included MediaTek, Marvell, Qualcomm and Fujitsu. In NVIDIA’s picture the customer’s chip is drawn as a CPU; Fusion also pairs customers’ own AI chips with NVIDIA’s CPUs and networking.</aside>
 </section>
 
 <!-- B1 -->

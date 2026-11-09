@@ -573,7 +573,9 @@ So let’s test our recommendation. Put yourself in Microsoft’s position.
 
 ## SLIDE 16 of 16 · Close · Group 3 · ~1.5 min
 
-**On screen:** If you were Microsoft, would you still build your own chip if it could plug into NVIDIA’s systems?
+**On screen:** If you were Microsoft, would you still build your own chip if it could plug into NVIDIA’s systems? Then the NVLink Fusion board rises in, its chips light up (NVIDIA GPUs green, their own chip blue), and the final line appears.
+
+**Clicks:** 3 (board + NVLink Fusion name · chips light up + caveat · final line)
 
 *[Pause. Look at the room. Ask, then wait.]*
 
@@ -581,13 +583,17 @@ If you were Microsoft, would you still spend billions building your own chip, if
 
 *[Take two or three answers. Don’t argue. Thank each person.]*
 
-*[Click.]*
+*[CLICK 1: The board rises in.]*
 
-In May 2025, after this case was written, NVIDIA announced NVLink Fusion. NVLink is NVIDIA’s high-speed connection between chips. Fusion lets customers’ own chips run inside NVIDIA’s racks.
+In May 2025, after this case was written, NVIDIA announced NVLink Fusion. NVLink is NVIDIA’s high-speed connection between chips.
 
-This is close to our Move 2. It does not prove the move works. But it shows NVIDIA chose it.
+*[CLICK 2: The chips light up.]*
 
-*[Click. Walk back to the spot where you started Slide 1.]*
+The two green chips are NVIDIA GPUs. The blue one is the customer’s own chip. Fusion lets that chip connect straight to NVIDIA’s GPUs, inside NVIDIA’s systems.
+
+That is the idea behind our Move 2: keep selling systems when customers build their own chips. It shows NVIDIA pursuing a similar approach. It does not yet prove the move works.
+
+*[CLICK 3: The final line appears. Walk back to the spot where you started Slide 1.]*
 
 So, back to that $600 billion.
 
@@ -600,6 +606,8 @@ Make staying the best option, and the biggest buyers stay.
 Thank you.
 
 **Key line:** Make staying the best option, and the biggest buyers stay.
+
+**Note for Q&A:** NVLink Fusion is from outside the case (announced May 18, 2025). Partners named at launch included MediaTek, Marvell, Qualcomm and Fujitsu. In NVIDIA’s picture the customer’s chip is drawn as a CPU; Fusion also pairs customers’ own AI chips with NVIDIA’s CPUs and networking.
 
 ## BACKUP SLIDES B1 and B2 · Group 3 (Q&A captain)
 

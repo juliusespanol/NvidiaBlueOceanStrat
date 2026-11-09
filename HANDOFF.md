@@ -5,7 +5,7 @@ Read this first in a new chat. It covers what is done, how we work, and exactly 
 **Presentation:** ECO 502 NVIDIA group presentation, Nov 14, 2026, ~30 min, 3 speaker groups.
 **Git:** clean at commit `cd8cc9f` ("slide 13 added images"). Everything below marked done is committed. Julius commits himself.
 
-**▶ Next up: slide 16, the close (`<!-- 16 CLOSE -->`)** (see §6). Slides 14 and 15 were rebuilt Nov 10 (not yet committed). Then the backups and the leftovers in §7.
+**▶ Next up: backups B1 and B2** (see §6). Slides 14–16 were rebuilt Nov 10 (not yet committed). Then the leftovers in §7.
 
 **Slide numbers in this file = the deck as it is now: 16 main slides + B1, B2.** The planned new Q5 slide was **not** inserted (see §8, decision 1).
 
@@ -55,9 +55,9 @@ Read this first in a new chat. It covers what is done, how we work, and exactly 
 - **Backups behind B:** slide 16 is the last slide unless **B** is pressed. B unlocks B1–B2 after 16; B again locks them and jumps back to 16. Opening `#s17`/`#s18` by URL or from the titles list unlocks them. Code: `let backups`, `lastIdx()`, `updBar()` in the main script.
 - **Progress bar:** counts 16 slides when backups are off (slide 16 = 100%), 18 when on.
 - **Break-even calculator JS fixed:** `costA = mv/100*SALES`, `lossB = lv/100*GP`, `be = mv/GM*100`, plus `≈ 1 in N dollars`.
-- **Images already used** (avoid reusing): `ai_factory/data_center_row`, `ai_factory/ai_factory_hall` (slides 12 faint + 13), `company/deepseek_logo`, `geforce_chip_1999`, `jensen_opentowork_meme`, `nvidia_logo_stacked` (1, 9), `moat_software/cuda_libraries` (3, 12), `cuda_logo`, `moat_system/blackwell_chip` (5, 10), `compute_tray` (12), `compute_tray_cut` (7), `gb200_rack` (12), `04_cuda_software/nvidia-cuda-x-og` (13), `05_networking/infiniband-switches-2c50-d-2x` (13), `04_cuda_software/nsight-developer-tools`, `_picks/networking/connectx_exploded`, `04_cuda_software/nvaie-og` (14), `04_cuda_software/cuda-kv-toolkit-ari`, `02_chips_blackwell/blackwell-architecture-ari-1920x1080`, `06_data_center_ai_factory/nvidia-ai-factory-enterprise` (15). Save `_picks/threat_response/nvlink_fusion_*` for slide 16.
+- **Images already used** (avoid reusing): `ai_factory/data_center_row`, `ai_factory/ai_factory_hall` (slides 12 faint + 13), `company/deepseek_logo`, `geforce_chip_1999`, `jensen_opentowork_meme`, `nvidia_logo_stacked` (1, 9), `moat_software/cuda_libraries` (3, 12), `cuda_logo`, `moat_system/blackwell_chip` (5, 10), `compute_tray` (12), `compute_tray_cut` (7), `gb200_rack` (12), `04_cuda_software/nvidia-cuda-x-og` (13), `05_networking/infiniband-switches-2c50-d-2x` (13), `04_cuda_software/nsight-developer-tools`, `_picks/networking/connectx_exploded`, `04_cuda_software/nvaie-og` (14), `04_cuda_software/cuda-kv-toolkit-ari`, `02_chips_blackwell/blackwell-architecture-ari-1920x1080`, `06_data_center_ai_factory/nvidia-ai-factory-enterprise` (15), `_picks/threat_response/nvlink_fusion_board` (16). Save `_picks/threat_response/nvlink_fusion_*` for slide 16.
 
-## 5. Done: slides 1–15
+## 5. Done: slides 1–16
 
 | # | Title (on screen) | Status / what it is now |
 |---|---|---|
@@ -76,6 +76,7 @@ Read this first in a new chat. It covers what is done, how we work, and exactly 
 | 13 | "Invest in CUDA now, and test the other two moves before scaling them" | **Rebuilt.** Three move cards with photos: 1 Approve now (CUDA-X image), 2 Test first (InfiniBand switches), 3 Pilot first (AI factory hall). One card per click, then a one-line ERRC strip (Eliminate exclusive deals · Reduce discounts without a commitment · Raise CUDA ease of use · Create a plug-in path · an AI Foundry package). No M-tags, no "We give up". |
 | 14 | "Every move comes from a finding in our analysis" | **Rebuilt** (title awaiting Julius). Left: three finding cards with a big number (73% gross margin · Q2, ≈40% of sales from four buyers · Q3 + Q4, 78% of revenue from data centers · Q1 + Q5). Clicks 1–3: arrow draws, move card with photo slides in (Nsight dev tools, ConnectX exploded tray, NVIDIA AI Enterprise), its finding lights up. Click 4: "Rejected" strip, exclusive contracts + selling design know-how struck out. Seven-tests line not added (§8 #5). |
 | 15 | "What could go wrong, and how we would know early" | **Rebuilt** (title awaiting Julius). Three photo cards, one risk per move (entry, click 1, click 2): Move 1 · open software makes CUDA optional; Move 2 · their own chips get good enough sooner; Move 3 · the pilot does not convert or costs too much. Each has a warning sign + our response. Click 3: "We would watch" strip (≈40% top-4 share · 73% gross margin trend · Training moving off NVIDIA). Click 4: green line "Strong revenue growth gives NVIDIA room to act while the core business is still performing well." Regulators, cheaper AI, TSMC and the post-case ~75% margin are a Q&A note only (§8 #6). |
+| 16 | Close: Microsoft question | **Rebuilt** (Julius picked the layout). Entry: the question alone, big. Click 1: question moves to the top, the NVLink Fusion board (`_picks/threat_response/nvlink_fusion_board.png`, cropped to the board) rises in with a light sweep, "NVLink Fusion · Announced May 18, 2025 · INTERNET · AFTER THE CASE" on the left. Click 2: glow boxes on the chips (NVIDIA GPUs green, their own chip cyan), flowing NVLink lanes, labels, caveat "It shows NVIDIA pursuing a similar approach. It does not yet prove the move works." Click 3: "Make staying the best option, and the biggest buyers stay." (Julius kept this line.) Background stays the "fusion" die. Partners + "drawn as a CPU" are a Q&A note. Glow boxes are hard-coded px from the photo at 0.88 scale (see the slide's CSS comment). |
 
 Titles of 7, 9–13 were written by Claude; Julius said "Go" on each slide but did not comment on the titles individually.
 
@@ -100,14 +101,14 @@ Currently a 5-row table + "Our weak spot" box (old timing argument, INTERNET 75%
 - Weak spot → the new WAC close: "Strong revenue growth gives NVIDIA room to act while the core business is still performing well." Whether to keep the post-case 75% margin (INTERNET) is a decision (§8).
 - Fewer words: one risk per click or a compact card layout.
 
-### Slide 16: Close (`<!-- 16 CLOSE -->`), SMALL  ← **START HERE**
+### Slide 16: Close (`<!-- 16 CLOSE -->`), ✅ DONE Nov 10 (see §5)
 - Keep Allen's question and NVLink Fusion (May 18, 2025, INTERNET · AFTER THE CASE).
 - Change "It shows NVIDIA chose a move close to our Move 2." → "**It shows NVIDIA pursuing a similar approach.** It does not yet prove the move works." (slide + notes + MD).
 - Move 2's new name ("keep selling systems when customers build their own chips") fits; consider echoing it.
 - Image: `_picks/threat_response/nvlink_fusion_rack_infra.jpg` or `nvlink_fusion_board.png` (not used anywhere yet).
 - Closing line in the script ("Make staying the best option…") is from the old WAC one-liner; consider the new one.
 
-### B1: polling answers, SMALL
+### B1: polling answers, SMALL  ← **START HERE**
 - Q14 → "E, C, B · B = the case's custom-chip option". Q15 → "D, E, F, [__]" (letter from Kim). Footnote: "Q14: the plug-in path and targeted pricing are our proposals, not one of the case's options."
 - Check the "Slide" column against the current numbering (no Q5 slide).
 
