@@ -517,7 +517,7 @@ Selling NVIDIA’s chip design know-how fails too. It hands rivals the very adva
 
 *[CLICK 2: The move labels drop in and the four kept cards light up.]*
 
-The other four pass, and they become our three moves. Strengthening CUDA, we approve now. Move two has two routes and one goal: keep their spend with NVIDIA. Option B is NVIDIA designing a custom chip. Our addition is the buyer’s chip connecting to NVIDIA networking and systems. They are different routes, and both need testing. And broadening the customer base, we pilot first.
+The other four pass, and they become our three moves. Strengthening CUDA, we approve now. Move two can go two ways, and both try to keep the big buyers spending with NVIDIA. Option B is NVIDIA designing a custom chip. Our addition is the buyer’s chip connecting to NVIDIA networking and systems. They are different routes, and both need testing. And broadening the customer base, we pilot first.
 
 **Key line:** Two options fail. Four pass and become three moves.
 
