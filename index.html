@@ -1231,9 +1231,9 @@ They will look at each AI workload. If their own chip can do it well enough, and
 
 And they already have the chips to do it. Amazon has Inferentia for inference, which is when a trained AI answers your question. And it has Trainium for training, which the case says trains at about half the cost.
 
-[Continue to the break-even calculation.]
+[Continue to the profit-at-risk calculation.]
 
-So the big buyers will keep moving work away. What is it worth to NVIDIA to protect the work that still depends on it?
+So the big buyers will keep moving work away. How much profit is at risk if they do?
 
 Key line: Each job moves to their own chips once those chips can do it for less.
 
@@ -1241,100 +1241,86 @@ Note for Q&amp;A: Current strategy detail taken off the slide: they rent their c
 </section>
 
 <!-- 11 Q4 BREAK-EVEN -->
-<section id="slide-11-be" class="slide" data-bg="dim" data-label="A 10% discount pays for itself if it keeps 1 in 7 dollars from leaving">
+<section id="slide-11-be" class="slide" data-bg="dim" data-label="If the top four move a quarter of their purchases in-house, about $4.4 billion of gross profit is at risk">
 <style>
-/* Entry: sliders + break-even 13.8% with a row of 7 chips (one slides away).
-   Click 1: the two options as bars ($2.4B vs $4.4B) + verdict. Click 2: the rule (purchase commitment). */
+/* One idea per click, one bar that breaks down.
+   Entry: $24.4B top-4 sales (full grey bar). Click 1: $17.7B gross profit (green part of the bar).
+   Click 2: −$4.4B at risk (red slice of the green) + the slider. Click 3: what Move 2 tests. */
 #slide-11-be{--ease:cubic-bezier(.16,.84,.24,1)}
-#slide-11-be .s11{display:grid;grid-template-columns:700px 1fr;gap:56px;flex:1;min-height:0}
-#slide-11-be .lp{display:flex;flex-direction:column;gap:22px;padding:26px 36px}
-#slide-11-be .ctl label{font-size:27px}
-#slide-11-be .ctl label output{font-size:46px}
-#slide-11-be .ctl .hint{font-size:18px;line-height:1.4}
-#slide-11-be .bev{margin-top:auto;padding-top:20px;border-top:1px solid var(--line2);display:grid;grid-template-columns:auto 1fr;column-gap:30px;row-gap:10px;align-items:center}
-#slide-11-be .bev .k{grid-column:1/-1}
-#slide-11-be .bev .num{font-family:var(--display);font-stretch:118%;font-weight:800;font-size:108px;line-height:.9;letter-spacing:-.035em;color:var(--green-hi);text-shadow:0 0 60px rgba(118,185,0,.3);font-variant-numeric:tabular-nums}
-#slide-11-be .bev .one{display:flex;flex-direction:column;gap:14px}
-#slide-11-be .bev .one b{font-family:var(--display);font-size:34px;font-weight:650;color:var(--fg)}
-#slide-11-be .bev p{grid-column:1/-1;margin:6px 0 0;font-size:21px;line-height:1.4;color:var(--mute)}
-/* right */
-#slide-11-be .rp{display:flex;flex-direction:column;justify-content:center;gap:40px}
-#slide-11-be .opt .top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:14px}
-#slide-11-be .opt .nm{font-family:var(--display);font-size:32px;font-weight:650;color:var(--fg)}
-#slide-11-be .opt .nm small{display:block;font-family:var(--body);font-size:19px;font-weight:400;color:var(--dim);margin-top:6px}
-#slide-11-be .opt .val{font-family:var(--display);font-stretch:115%;font-weight:800;font-size:64px;line-height:.9;letter-spacing:-.02em}
-#slide-11-be .verdict{margin:0;font-family:var(--display);font-size:30px;font-weight:600;line-height:1.3}
-#slide-11-be .rule{display:flex;flex-direction:column;gap:10px;padding:22px 28px;border-left:3px solid var(--amber);background:linear-gradient(90deg,rgba(255,194,102,.1),transparent 80%)}
-#slide-11-be .rule b{font-family:var(--display);font-size:34px;font-weight:700;color:var(--fg)}
-#slide-11-be .rule p{margin:0;font-size:24px;line-height:1.4;color:var(--mute)}
-
-#slide-11-be .opt.oa .val,#slide-11-be .opt.ob .val{color:#ff7a85}
-#slide-11-be .opt{padding:24px 0;border-bottom:1px solid var(--line2)}
-#slide-11-be .opt .nm{max-width:460px;font-size:30px}
-#slide-11-be .rp{gap:22px}
-#slide-11-be .rule b{font-size:30px}
-#slide-11-be .rule p{font-size:24px}
-#slide-11-be .rule small{font-size:18px;line-height:1.5;color:var(--mute)}
-
+#slide-11-be .pr{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:34px}
+#slide-11-be .st{display:grid;grid-template-columns:1fr 80px 1fr 80px 1fr;align-items:end}
+#slide-11-be .c{display:flex;flex-direction:column;gap:12px;transition:opacity .8s ease,transform 1s var(--ease),filter .8s ease}
+#slide-11-be .c .num{font-family:var(--display);font-stretch:118%;font-weight:800;font-size:116px;line-height:.9;letter-spacing:-.035em;font-variant-numeric:tabular-nums;color:var(--fg)}
+#slide-11-be .c small{font-size:21px;line-height:1.35;color:var(--dim)}
+#slide-11-be .c2 .num{color:var(--green-hi)}
+#slide-11-be .c3 .num{color:#ff7a85;text-shadow:0 0 60px rgba(255,122,133,.22)}
+#slide-11-be .ar{align-self:center;justify-self:center;font-size:44px;color:var(--dim);padding-top:30px}
+/* once the risk is on screen, the first two numbers step back */
+#slide-11-be:is([data-step="2"],[data-step="3"]) :is(.c1,.c2){opacity:.45}
+/* the bar */
+#slide-11-be .bar{position:relative;height:30px;border-radius:6px;background:rgba(255,255,255,.14);overflow:hidden}
+#slide-11-be .bar i{position:absolute;top:0;bottom:0;transform:scaleX(0);transition:transform 1.1s var(--ease)}
+#slide-11-be .bar .gp{left:0;width:72.7%;background:var(--green);transform-origin:left}
+#slide-11-be .bar .rk{right:27.3%;width:var(--rw,18.2%);background:#ff7a85;transform-origin:right;transition:transform 1s var(--ease) .25s,width .3s ease}
+#slide-11-be:is([data-step="1"],[data-step="2"],[data-step="3"]) .bar .gp{transform:none}
+#slide-11-be:is([data-step="2"],[data-step="3"]) .bar .rk{transform:none}
+#slide-11-be .bl{position:relative;height:24px;margin-top:-22px;font-family:var(--mono);font-size:16px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+#slide-11-be .bl span{position:absolute;top:0}
+#slide-11-be .bl .l1{right:0;width:27.3%;text-align:center}
+/* slider */
+#slide-11-be .ctl{display:grid;grid-template-columns:auto 1fr auto;align-items:center;column-gap:30px;row-gap:4px;max-width:1100px}
+#slide-11-be .ctl label{font-size:26px;color:var(--fg)}
+#slide-11-be .ctl output{font-family:var(--display);font-weight:800;font-stretch:115%;font-size:44px;color:#ff7a85;min-width:110px;text-align:right}
+#slide-11-be .ctl .hint{grid-column:1/-1;font-size:17px}
+#slide-11-be .rule{padding:20px 28px;border-left:3px solid var(--green);background:linear-gradient(90deg,rgba(118,185,0,.1),transparent 70%)}
+#slide-11-be .rule b{font-family:var(--display);font-size:32px;font-weight:650;color:var(--fg);line-height:1.25}
+@media(prefers-reduced-motion:reduce){#slide-11-be .bar i{transition:none}}
 </style>
   <header class="hd b">
-  <h2>A 10% discount pays for itself if it keeps 1 in 7 dollars from leaving</h2></header>
-  <div class="s11 calc">
-    <div class="panel lp b">
-      <span class="k">Top-4 sales, FY2024 · drag to test <span class="tag i" style="margin-left:8px">ASSUMPTION</span></span>
-      <div class="ctl"><label for="m">Price discount to the top 4 <output id="mo">10%</output></label>
-        <input id="m" type="range" min="1" max="30" step="1" value="10" aria-describedby="mh"><span class="hint" id="mh">Starting gross margin 72.7% (company-wide, as a proxy) · unit costs unchanged · $24.4B of top-4 sales</span></div>
-      <div class="ctl"><label for="l">Top-4 volume lost if NVIDIA holds its price <output id="lo">25%</output></label>
-        <input id="l" type="range" min="5" max="50" step="1" value="25" aria-describedby="lh"><span class="hint" id="lh">Moved to their own chips</span></div>
-      <div class="bev">
-        <span class="k">Break-even volume loss <span class="tag c" style="margin-left:8px">COMPUTED</span></span>
-        <span class="num" id="be">13.8%</span>
-        <div class="one"><b id="be1">≈ 1 in 7 dollars</b></div>
-        <p>The discount pays off if holding the price would lose more than this share of top-4 volume. Discount ÷ 72.7%.</p>
-      </div>
+  <h2>If the top four move a quarter of their purchases in&#8209;house, about $4.4 billion of gross profit is at risk</h2></header>
+  <div class="pr">
+    <div class="st">
+      <div class="c c1"><span class="k">Top-4 sales a year</span><span class="num">$24.4B</span><small>40% of $60.9B</small></div>
+      <div class="ar" data-frag="1">→</div>
+      <div class="c c2" data-frag="1"><span class="k">Gross profit on those sales</span><span class="num">$17.7B</span><small>at a 72.7% gross margin</small></div>
+      <div class="ar" data-frag="2">→</div>
+      <div class="c c3" data-frag="2"><span class="k">At risk each year</span><span class="num" id="va">−$4.4B</span><small id="vs">About 10% of NVIDIA’s total gross profit</small></div>
     </div>
-    <div class="rp">
-      <div class="opt oa" data-frag="1"><div class="top"><span class="nm">A · Discount, keep all volume<small>gross profit given up per year</small></span><span class="val" id="va">−$2.4B</span></div></div>
-      <div class="opt ob" data-frag="1"><div class="top"><span class="nm">B · Hold price, lose volume<small>gross profit lost per year</small></span><span class="val" id="vb">−$4.4B</span></div></div>
-      <p class="verdict" id="vd" data-frag="1">At these inputs, the targeted discount costs less than the business it protects.</p>
-      <div class="rule" data-frag="2"><b>Tie any discount to a purchase commitment.</b><p>Use it only where their own chip is not ready yet, mostly frontier training. A 10% cut cannot match a chip that costs Google 70–80% less.</p><small>Volume lost rarely comes back. <span class="tag i">OUR JUDGMENT</span></small></div>
+    <div class="bar" id="rb" aria-hidden="true"><i class="gp"></i><i class="rk"></i></div>
+    <div class="bl" aria-hidden="true"><span class="l1" data-frag="1">Costs</span></div>
+    <div class="ctl" data-frag="2">
+      <label for="l">Share of top-4 purchases moved in&#8209;house <span class="tag i" style="margin-left:8px">ASSUMPTION</span></label>
+      <input id="l" type="range" min="5" max="50" step="1" value="25" aria-describedby="lh">
+      <output id="lo">25%</output>
+      <span class="hint" id="lh">Illustrative, not a forecast · 72.7% company-wide margin as a proxy · same product mix · unit costs unchanged</span>
     </div>
+    <div class="rule" data-frag="3"><b>Even a partial shift matters. Move 2 tests whether NVIDIA can keep its networking and systems sales when a buyer uses its own chips.</b></div>
   </div>
-  <aside class="notes">[Be upfront. Point to the ASSUMPTION tag.]
+  <aside class="notes">[Point to the first number.]
 
-This is the only slide built on assumptions. So we labelled it, and we will let you test it.
+How much profit is at risk if the big buyers move part of their purchases to their own chips?
 
-The top four buy about $24.4 billion a year. At NVIDIA’s 72.7% gross margin, that is about $17.7 billion of gross profit. We use the company-wide margin as a proxy, and we assume unit costs stay the same.
+The top four buy about $24.4 billion a year. That is 40% of $60.9 billion.
 
-Think of 100 dollars of sales to the top four. The chips cost NVIDIA $27.30, so it keeps $72.70.
+[CLICK 1: Gross profit appears. The bar turns green.]
 
-Option A. Give a 10% discount. The price falls to $90. The cost stays $27.30. So NVIDIA keeps $62.70, and it keeps all the volume.
+At NVIDIA’s 72.7% gross margin, those sales earn about $17.7 billion of gross profit. We use the company-wide margin as a proxy, and we assume the product mix and unit costs stay the same.
 
-Option B. Hold the price, and lose some volume to their own chips.
+[CLICK 2: The red slice and the slider appear. Point to the ASSUMPTION tag.]
 
-[Point to 13.8%.]
+Now suppose they move a quarter of those purchases to their own chips. That puts about $4.4 billion of gross profit at risk every year, about a tenth of NVIDIA’s total.
 
-The two are equal when 13.8% of the volume leaves, because 62.70 divided by 72.70 is 86.2%. Break-even is the point where both options earn the same.
+The 25% is our assumption, so you can test it. [Optional: drag the slider. At 10%, about $1.8 billion is at risk. At 50%, about $8.9 billion.]
 
-In plain words: if holding the price would lose more than about one in seven dollars, the discount pays for itself.
+[CLICK 3: The Move 2 line appears.]
 
-[CLICK 1: The two loss figures grow.]
-
-In dollars, a 10% discount costs about $2.4 billion a year. Losing a quarter of their volume would cost about $4.4 billion of gross profit.
-
-[Optional: drag a slider if time allows.]
-
-[CLICK 2: The rule appears.]
-
-Tie any discount to a purchase commitment. Use it only where the customer’s own chip is not ready yet, mostly frontier training. A 10% cut cannot match a chip that costs Google 70–80% less. This protects eligible workloads; it does not make customers abandon their chip programs.
-
-Our judgment is that volume lost rarely comes back. That is a strategic judgment, not an input proved by the calculator.
+This is an illustrative scenario, not a forecast. But even a partial shift matters. And it sets up what we test in move two: can NVIDIA keep selling networking and systems when a buyer uses its own chips?
 
 [Handoff to Group 3.]
 
 That protects today’s business. Where can NVIDIA create new demand?
 
-Key line: Tie any discount to a purchase commitment. Lost business rarely comes back.</aside>
+Key line: Even a partial shift in-house puts billions of gross profit at risk.</aside>
 </section>
 
 <!-- 13 OPTIONS -->
@@ -2147,23 +2133,17 @@ let tx=null;
 addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true});
 addEventListener('touchend',e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50){dx<0?next():prev()}tx=null},{passive:true});
 
-/* break-even calculator */
-const m=document.getElementById('m'),l=document.getElementById('l');
-const SALES=24.4,GM=72.7,GP=SALES*GM/100;
+/* profit-at-risk calculator (slide 11): share moved in-house × top-4 gross profit; red bar = share × 72.7% of the bar */
+const l=document.getElementById('l');
+const SALES=24.4,GM=72.7,GP=SALES*GM/100,TOTAL_GP=60.9*GM/100;
 function calc(){
-  const mv=+m.value,lv=+l.value;
-  const costA=mv/100*SALES, lossB=lv/100*GP, be=mv/GM*100;
-  document.getElementById('mo').textContent=mv+'%';
+  const lv=+l.value, risk=lv/100*GP;
   document.getElementById('lo').textContent=lv+'%';
-  document.getElementById('be').textContent=be.toFixed(1)+'%';
-  document.getElementById('be1').textContent='≈ 1 in '+Math.round(100/be)+' dollars';
-  document.getElementById('va').textContent='−$'+costA.toFixed(1)+'B';
-  document.getElementById('vb').textContent='−$'+lossB.toFixed(1)+'B';
-  const vd=document.getElementById('vd');
-  vd.textContent=lossB>costA?'At these inputs, the targeted discount costs less than the business it protects.':'At these inputs, holding the price costs less. The discount pays only if more business would leave.';
-  vd.style.color=lossB>costA?'var(--green-hi)':'var(--amber)';
+  document.getElementById('va').textContent='−$'+risk.toFixed(1)+'B';
+  document.getElementById('vs').textContent='About '+Math.round(risk/TOTAL_GP*100)+'% of NVIDIA’s total gross profit';
+  document.getElementById('rb').style.setProperty('--rw',(lv/100*GM).toFixed(1)+'%');
 }
-m.addEventListener('input',calc);l.addEventListener('input',calc);calc();
+l.addEventListener('input',calc);calc();
 
 /* ---------- live GPU die ---------- */
 const cv=document.getElementById('die'),cx=cv.getContext('2d');
