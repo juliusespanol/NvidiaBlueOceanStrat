@@ -1,8 +1,8 @@
 # NVIDIA — 12-question defense bank
 
-Nov 12 local revision · 18 numbered slides · use for rehearsal and Q&A.
+Nov 13 revision · aligned to the new WAC v3 (Learning Teams 1, 2 and 9) · 18 numbered slides · use for rehearsal and Q&A.
 
-Case facts are historical. Page references below follow the supplied Nov 12 build spec; the original case PDF and WAC DOCX were not available in this checkout. Proposal and tier labels are team judgments, not observed outcomes.
+Case facts are historical. Page references below follow the supplied Nov 12 build spec; the original case PDF was not available in this checkout. Proposal and tier labels are team judgments, not observed outcomes.
 
 ## 01. Is NVIDIA still in a blue ocean?
 
@@ -10,11 +10,11 @@ By results yes, by structure no. Moves 1–2 defend today’s market; Move 3 loo
 
 **Slides:** 6, 12 · **Lead:** Group 2
 
-## 02. Why would a 10% discount matter if Google’s chip costs 70–80% less?
+## 02. Why not just give the big buyers a discount?
 
-It doesn’t for work their chip can already do. It protects the jobs their chips can’t do yet, mostly training, and only with a purchase commitment.
+A price cut can’t match a chip that costs Google 70–80% less, and it gives up margin on work that would stay anyway. So we keep CUDA worth paying for (Move 1) and test whether NVIDIA can keep its networking and systems sales when a buyer uses its own chips (Move 2). Slide 11 shows the stake: about $4.4B of gross profit a year if a quarter of top-4 purchases moves in-house.
 
-**Slides:** 11 · **Lead:** Group 2
+**Slides:** 11, 14 · **Lead:** Group 2
 
 ## 03. Wasn’t DeepSeek the real threat?
 
@@ -24,7 +24,7 @@ DeepSeek-V3 used NVIDIA H800s. Its reported training-run estimate excludes earli
 
 ## 04. Why not buy rivals or partners?
 
-Regulators blocked the $40B ARM deal and are reviewing Run.ai (p. 17).
+The $40B ARM deal was dropped after objections, and Run.ai is under review (p. 17).
 
 **Slides:** 13, 15 · **Lead:** Group 3
 
@@ -36,7 +36,7 @@ Regulators already watch NVIDIA, and a contract doesn’t stop a buyer from buil
 
 ## 06. Can’t Google and Amazon build whole systems themselves?
 
-Yes. Move 2 is for mixed fleets: they still buy NVIDIA at scale (Meta, ~350,000 H100s in 2024, p. 14). That’s why it is “test first”.
+Yes. Move 2 is for mixed fleets: they still buy NVIDIA at scale (Meta, ~350,000 H100s in 2024, p. 14). That’s why it is “test first”: we expand it only if it earns more profit than going without it, after integration costs and any GPU sales it displaces.
 
 **Slides:** 13, 17 · **Lead:** Group 3
 
@@ -66,7 +66,7 @@ At the case date, TSMC’s leading-node capacity and ASML’s EUV tools were sup
 
 ## 11. Why no inference slide?
 
-The decision rule is per workload: move when the buyer’s chip can do the job well enough for less. Inference is one early example, not an exclusive category. The discount protects jobs their chips cannot yet perform competitively, mainly frontier training.
+The decision rule is per workload: move when the buyer’s chip can do the job well enough for less. Inference is one early example, not an exclusive category. Move 2 tests whether NVIDIA can keep its networking and systems sales even on the work that moves.
 
 **Slides:** 10 · **Lead:** Group 2
 
@@ -81,5 +81,5 @@ It is the case’s 2023 figure. We didn’t replace it with later data.
 - INTERNET: [DeepSeek-V3 technical report](https://arxiv.org/html/2412.19437v2).
 - INTERNET: [NVLink Fusion launch, May 18, 2025](https://nvidianews.nvidia.com/news/nvidia-nvlink-fusion-semi-custom-ai-infrastructure-partner-ecosystem).
 - GIVEN via supplied spec: ARM / Run.ai, pp. 5 and 17; Meta mixed fleet, p. 14; China / Huawei, pp. 12 and 17; TSMC / ASML, Appendix 2.
-- OUR JUDGMENT / PROPOSAL: Blue Ocean verdict, tier mapping, insurer workflow, discount eligibility and mixed-fleet strategy. The 13.8% threshold is COMPUTED from ASSUMPTION scenarios and the case margin proxy.
+- OUR JUDGMENT / PROPOSAL: Blue Ocean verdict, tier mapping, insurer workflow and mixed-fleet strategy. The $4.4B at risk is COMPUTED from an ASSUMPTION (25% moved in-house) and the case’s 72.7% margin used as a proxy.
 - Polling Q5 is the profit-model question on slide 7; analytical Q5 is the noncustomer question on slide 12.

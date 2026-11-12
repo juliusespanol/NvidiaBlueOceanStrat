@@ -31,7 +31,7 @@ Each slide ends with a **Key line**: if you forget everything else on that slide
 | Group | Slides | Part of the story | Time |
 | --- | --- | --- | --- |
 | 1 | 1–5 | Hook, case facts, the problem | ~8.5 min |
-| 2 | 6–11 | Evidence and break-even (Q1–Q4) | ~11 min |
+| 2 | 6–11 | Evidence and profit at risk (Q1–Q4) | ~11 min |
 | 3 | 12–17 | Q5, options, recommendation, justification, risks, close | ~10 min |
 | All | 18 | Thank you / questions | ~0.2 min |
 
@@ -212,7 +212,7 @@ That is our problem.
 
 Let me put the problem in one sentence.
 
-How can NVIDIA keep its pricing power, and keep growing?
+How can NVIDIA protect its pricing power as its largest buyers build their own chips, and where can it create new demand?
 
 *[CLICK 1: The line under the title appears: “Customers are locked into CUDA. Now the four biggest have the reason and the means to leave.”]*
 
@@ -226,11 +226,7 @@ How can they leave? Their own chips, open software stacks and the scale of their
 
 *[CLICK 2: The title moves up and the five questions appear one by one. Point to them one at a time.]*
 
-To decide what NVIDIA should do, we need five answers. How much rides on this business? Why can NVIDIA charge so much? Who can break the lock-in? What is it worth to keep them? And where can NVIDIA find new customers who are not building their own chips?
-
-*[CLICK 3: The condition appears.]*
-
-And one condition. NVIDIA has to do this without pushing those customers out faster, and without drawing antitrust action. Antitrust laws stop a dominant company from blocking competition, and regulators are already watching NVIDIA.
+To decide what NVIDIA should do, we need five answers. How much rides on this business? Why can NVIDIA charge so much? Who can break the lock-in? How much profit is at risk if the largest buyers shift in-house? And where can NVIDIA find new customers who are not building their own chips?
 
 *[Handoff. Turn and open your hand toward the Group 2 presenter.]*
 
@@ -416,9 +412,9 @@ They will look at each AI workload. If their own chip can do it well enough, and
 
 And they already have the chips to do it. Amazon has Inferentia for inference, which is when a trained AI answers your question. And it has Trainium for training, which the case says trains at about half the cost.
 
-*[Continue to the break-even calculation.]*
+*[Continue to the profit-at-risk calculation.]*
 
-So the big buyers will keep moving work away. What is it worth to NVIDIA to protect the work that still depends on it?
+So the big buyers will keep moving work away. How much profit is at risk if they do?
 
 **Key line:** Each job moves to their own chips once those chips can do it for less.
 
@@ -426,44 +422,34 @@ So the big buyers will keep moving work away. What is it worth to NVIDIA to prot
 
 ## SLIDE 11 of 18 · Analysis · Q4 · Group 2 · ~2 min
 
-**On screen:** A 10% discount pays for itself if it keeps 1 in 7 dollars from leaving
-**Clicks:** 2 (the two loss figures, then the purchase-commitment rule). Sliders can be dragged at any time.
+**On screen:** If the top four move a quarter of their purchases in-house, about $4.4 billion of gross profit is at risk
+**Clicks:** 3 (gross profit, then the red at-risk slice and the slider, then the Move 2 line). The slider can be dragged at any time.
 
-*[Be upfront. Point to the ASSUMPTION tag.]*
+*[Point to the first number.]*
 
-This is the only slide built on assumptions. So we labelled it, and we will let you test it.
+How much profit is at risk if the big buyers move part of their purchases to their own chips?
 
-The top four buy about $24.4 billion a year. At NVIDIA’s 72.7% gross margin, that is about $17.7 billion of gross profit. We use the company-wide margin as a proxy, and we assume unit costs stay the same.
+The top four buy about $24.4 billion a year. That is 40% of $60.9 billion.
 
-Think of 100 dollars of sales to the top four. The chips cost NVIDIA $27.30, so it keeps $72.70.
+*[CLICK 1: Gross profit appears. The bar turns green.]*
 
-Option A. Give a 10% discount. The price falls to $90. The cost stays $27.30. So NVIDIA keeps $62.70, and it keeps all the volume.
+At NVIDIA’s 72.7% gross margin, those sales earn about $17.7 billion of gross profit. We use the company-wide margin as a proxy, and we assume the product mix and unit costs stay the same.
 
-Option B. Hold the price, and lose some volume to their own chips.
+*[CLICK 2: The red slice and the slider appear. Point to the ASSUMPTION tag.]*
 
-*[Point to 13.8%.]*
+Now suppose they move a quarter of those purchases to their own chips. That puts about $4.4 billion of gross profit at risk every year, about a tenth of NVIDIA’s total.
 
-The two are equal when 13.8% of the volume leaves, because 62.70 divided by 72.70 is 86.2%. Break-even is the point where both options earn the same.
+The 25% is our assumption, so you can test it. [Optional: drag the slider. At 10%, about $1.8 billion is at risk. At 50%, about $8.9 billion.]
 
-In plain words: if holding the price would lose more than about one in seven dollars, the discount pays for itself.
+*[CLICK 3: The Move 2 line appears.]*
 
-*[CLICK 1: The two loss figures grow.]*
-
-In dollars, a 10% discount costs about $2.4 billion a year. Losing a quarter of their volume would cost about $4.4 billion of gross profit.
-
-*[Optional: drag a slider if time allows.]*
-
-*[CLICK 2: The rule appears.]*
-
-Tie any discount to a purchase commitment. Use it only where the customer’s own chip is not ready yet, mostly frontier training. A 10% cut cannot match a chip that costs Google 70–80% less. This protects eligible workloads; it does not make customers abandon their chip programs.
-
-Our judgment is that volume lost rarely comes back. That is a strategic judgment, not an input proved by the calculator.
+This is an illustrative scenario, not a forecast. But even a partial shift matters. And it sets up what we test in move two: can NVIDIA keep selling networking and systems when a buyer uses its own chips?
 
 *[Handoff to Group 3.]*
 
 That protects today’s business. Where can NVIDIA create new demand?
 
-**Key line:** Tie any discount to a purchase commitment. Lost business rarely comes back.
+**Key line:** Even a partial shift in-house puts billions of gross profit at risk.
 
 ## SLIDE 12 of 18 · Analysis · Q5 · Group 3 · ~2 min
 
@@ -503,7 +489,7 @@ Now we can choose the responses that defend today’s market and test the next o
 
 *[The six cards come in. Steady and quick. Don’t read the cards.]*
 
-The case gives five possible responses. We added one of our own: let the big buyers’ chips run inside NVIDIA’s systems, with targeted volume pricing. That one is not a poll option, so it gets its own card.
+The case gives five possible responses. We added one of our own: let the big buyers’ own chips run inside NVIDIA’s systems. That one is not a poll option, so it gets its own card.
 
 We tested each one against what the analysis showed. Does it reduce reliance on the top four? And what is the antitrust risk?
 
@@ -511,7 +497,7 @@ We tested each one against what the analysis showed. Does it reduce reliance on 
 
 Two fail.
 
-Exclusive contracts fail. The case describes the blocked $40 billion ARM deal and review of the $700 million Run.ai deal. That is why we treat exclusive purchasing terms as a higher regulatory risk. And a contract doesn’t stop a customer from building its own chip.
+Exclusive contracts fail. The case describes the $40 billion ARM deal that was dropped after objections, and the review of the $700 million Run.ai deal. That is why we treat exclusive purchasing terms as a higher regulatory risk. And a contract doesn’t stop a customer from building its own chip.
 
 Selling NVIDIA’s chip design know-how fails too. It hands rivals the very advantage NVIDIA is trying to protect.
 
@@ -538,15 +524,15 @@ Move one, we approve now. Strengthen CUDA. Keep improving NVIDIA’s libraries, 
 
 *[CLICK 1: Move 2 appears.]*
 
-Move two, we test first. Keep selling systems when customers build their own chips. Test whether one large buyer can connect its own chips to NVIDIA’s networking and racks. Offer semi-custom products where there is a clear need. And give a discount only against a purchase commitment, and only if it earns more gross profit than holding the price.
+Move two, we test first. Keep selling systems when customers build their own chips. Test whether one large buyer can connect its own chips to NVIDIA’s networking and racks. Then compare the gross profit NVIDIA expects to earn with what it would earn without the arrangement, after the integration costs and any GPU sales it would displace. We expand it only if it improves expected profit.
 
 *[CLICK 2: Move 3 appears.]*
 
-Move three, we pilot first. Test demand from first-time enterprise buyers. Use AI Foundry and an implementation partner to offer a standard package for one task companies still do by hand. Start with companies that found custom AI too costly, as we showed on slide 12. We scale it only if those companies pay to keep using it, and NVIDIA and its partner can deliver it profitably.
+Move three, we pilot first. Test demand from first-time enterprise buyers. Use AI Foundry and an implementation partner to offer a standard package for one task companies still do by hand, running on NVIDIA software and computing infrastructure. Start with companies that found custom AI too costly, as we showed on slide 12. We scale it only if those companies pay to keep using it, and NVIDIA and its partner can deliver it profitably.
 
 *[CLICK 3: The ERRC strip appears.]*
 
-We used the ERRC grid, a Blue Ocean tool. It asks what to eliminate, reduce, raise and create. We eliminate exclusive deals. We reduce discounts that come without a commitment. We raise how easy CUDA is to use. And we create two things: a plug-in path for their chips, and an AI Foundry package.
+We used the ERRC grid, a Blue Ocean tool. It asks what to eliminate, reduce, raise and create. We eliminate exclusive deals. We reduce NVIDIA’s reliance on four big buyers. We raise how easy CUDA is to use. And we create two things: a plug-in path for their chips, and an AI Foundry package.
 
 Every move answers one finding. Here is the proof.
 
@@ -570,9 +556,9 @@ So move one, strengthen CUDA. It protects NVIDIA’s pricing power.
 
 *[CLICK 2: Move 2 appears.]*
 
-From questions three and four: the four biggest buyers are about 40% of NVIDIA’s sales, so even a partial shift to their own chips matters. But their chip can replace an NVIDIA GPU and still run on NVIDIA’s networking and racks.
+From questions three and four: the four biggest buyers are about 40% of NVIDIA’s sales, so even a partial shift to their own chips matters. On slide 11, a quarter moving in-house put about $4.4 billion of gross profit at risk.
 
-So move two, keep selling systems when they build their own chips. The test is simple: does the gross profit NVIDIA keeps cover the cost of connecting their chips, plus any discount? And CUDA stays tied to NVIDIA hardware. The plug-in path covers racks, networking and system software only.
+So move two, keep selling systems when they build their own chips. The pilot tests whether NVIDIA can keep its networking and systems sales when a buyer uses its own chips. And the test is simple: does it earn more profit than going without it, after the integration costs and any GPU gross profit it gives up? And CUDA stays tied to NVIDIA hardware. The plug-in path covers racks, networking and system software only.
 
 *[CLICK 3: Move 3 appears.]*
 
@@ -598,7 +584,7 @@ Now, what could break this plan?
 
 **On screen:** What could go wrong, and how we would know early. One risk card per move (warning sign + our response), then a "We would watch" strip and the closing line.
 
-**Clicks:** 4 (risk to Move 2 · risk to Move 3 · watch strip · "room to act" line)
+**Clicks:** 4 (risk to Move 2 · risk to Move 3 · watch strip · closing line)
 
 *[Brisk. One risk per move.]*
 
@@ -616,15 +602,15 @@ Risk to move three: the pilot doesn’t convert, or it costs too much to deliver
 
 *[CLICK 3: The watch strip appears.]*
 
-On top of that, we would watch three numbers. The top four’s share of sales, about 40% today. The gross margin trend, about 73% today. And any big buyer moving its training off NVIDIA. Training is where NVIDIA is strongest, so that would be the clearest sign.
+On top of that, we would watch three numbers. The top four’s share of sales, about 40% today. For move two, the gross profit from interoperability deals. And for move three, how many AI Foundry users convert to paid use.
 
 *[CLICK 4: The closing line appears. Slow down.]*
 
-And why act now? Strong revenue growth gives NVIDIA room to act while the core business is still performing well.
+NVIDIA can keep its advantage if customers keep getting enough value from its software and systems to keep buying, while AI Foundry brings in profitable new demand. So invest in CUDA now, and expand the two pilots only when their results justify the cost.
 
 So let’s test our recommendation. Put yourself in Microsoft’s position.
 
-**Key line:** Act while the core business is still strong.
+**Key line:** Invest in CUDA now. Expand the pilots only when their results justify the cost.
 
 **Note for Q&A:** Other risks we would watch: regulators acting against NVIDIA’s deals (like the Run.ai review in the case), AI getting so cheap that spending slows (Move 3 widens the customer base), and chip supply at TSMC (no real second source for leading chips). After the case, NVIDIA’s revenue kept growing and its margin returned to about 75%; that figure is from outside the case, so say so if asked.
 
@@ -708,9 +694,7 @@ The 12-question rehearsal defense bank is in [NVIDIA_QA_Defense.md](NVIDIA_QA_De
 | Five Forces | Porter’s tool showing who holds power: buyers, suppliers, rivals, new entrants, substitutes |
 | Substitute | A different product that does the same job |
 | Four Corners | A tool to predict a competitor’s next move: drivers, strategy, beliefs, capabilities |
-| Break-even | The point where two options cost the same |
 | ERRC grid | Blue Ocean tool: what to eliminate, raise, reduce and create |
 | PyTorch | Free AI programming software that can run on many companies’ chips |
-| Semi-custom | A product partly built to one customer’s needs |
 | TSMC | The Taiwanese company that manufactures NVIDIA’s most advanced chips |
 | NVLink Fusion | NVIDIA’s 2025 product that lets customers’ own chips connect into NVIDIA systems (outside the case) |

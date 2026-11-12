@@ -1,34 +1,33 @@
-# NVIDIA Deck: Source of Truth (Allen's WAC v3 + Allen's Deck Review)
+# NVIDIA Deck: Source of Truth (WAC v3, Learning Teams 1, 2 and 9 + Allen's Deck Review)
 
-**Sources (both from Allen):**
-1. `WAC - NVIDIA v3.docx` (Learning Team 2), sections 1–7 below. **What we say:** facts, numbers, problem, questions, options, moves, justification.
-2. `NVIDIA_Deck_Review_vs_Our_Outline.md`, section 9 below. **How the deck is built:** slide flow, which frameworks go on main slides, plain titles, poll tags, backups, close.
+**Sources:**
+1. `WAC - NVIDIA v3.docx` (Learning Teams 1, 2 and 9, received Nov 12, 2026), sections 1–7 below. **What we say:** facts, numbers, problem, questions, options, moves, justification. It replaces both earlier WAC drafts (the Nov 9 paper and the Nov 10 `v3(1)`).
+2. `NVIDIA_Deck_Review_vs_Our_Outline.md` (Allen), section 9 below. **How the deck is built:** slide flow, which frameworks go on main slides, plain titles, poll tags, backups, close.
 
-**Adopted:** Nov 9, 2026
+**Adopted:** Nov 13, 2026
 **Rules:**
 - If the deck disagrees with these two, the deck changes.
-- **If the two disagree with each other, WAC v3 wins.** It was written after the review and fixes the review's break-even math (17.5% → 13.8%).
+- **If the two disagree with each other, the WAC wins.**
 - Deck content that neither source covers stays only if it does not contradict them.
+
 **Tags:** GIVEN = in the case · COMPUTED = calculated from case figures · INTERNET = not in the case · OUR PROPOSAL = our idea, not in the case
 
 ---
 
 ## 1. Case facts
 
-- NVIDIA made the first GPU in **1999**. In **2007** it released **CUDA**, software that lets developers use NVIDIA chips for any heavy computing task.
-- AI chip demand took off after **ChatGPT launched in November 2022**.
-- **FY2024** (year to January 2024): revenue **+126% to $60.9B**; data center revenue **+217% to $47.5B**.
-- Gross margin **72.7%** vs **AMD 47%** and **Intel 41%**.
-- Customers waited **up to 18 months** for NVIDIA chips rather than buy elsewhere.
-- CUDA keeps customers with NVIDIA: **300+ code libraries**, **5M+ developers**, and CUDA code **runs only on NVIDIA chips**.
-- Top buyers (share of sales, **by outside estimates**): **Microsoft 15%, Meta 13%, Amazon 6%, Alphabet 6%**, together **about 40%**. All four now build their own AI chips.
-- Open initiatives such as the **UXL Foundation** aim to reduce dependence on CUDA. **PyTorch** runs on chips from several makers, which could make switching easier.
-- Regulators **blocked NVIDIA's purchase of ARM**, and **export rules** limit its China sales.
-- **January 2025:** DeepSeek claimed it trained a leading model for **under $5.6M**. NVIDIA lost **$600B** of market value in one day.
+- **FY2024:** revenue **+126% to $60.9B**. Data centers are **78%** of sales. Gross margin **72.7%**.
+- CUDA has **300+ code libraries** and **5M+ developers**, and CUDA code **runs only on NVIDIA chips**.
+- **Microsoft, Meta, Amazon and Alphabet** are about **40%** of sales **by outside estimates**. All four are developing their own AI chips.
+- Open initiatives such as the **UXL Foundation** and frameworks such as **PyTorch** could make switching easier.
+- NVIDIA's purchase of **ARM was dropped after objections**.
+- **January 2025:** DeepSeek claimed it trained a leading model for **under $5.6M**, which triggered a one-day drop of about **$600B** in NVIDIA's market value.
+
+Still true case facts the WAC no longer mentions (keep on slides as GIVEN if useful): 1999 first GPU, 2007 CUDA, ChatGPT Nov 2022, data center $47.5B, per-company shares (15 / 13 / 6 / 6), AMD 47% and Intel 41% margins, 18-month waits, export rules on China.
 
 ## 2. Problem statement
 
-> NVIDIA charges premium prices because its customers are locked into CUDA. Its four biggest customers now have both the reason and the means to leave. **How can NVIDIA keep its pricing power and keep growing without pushing them out faster or drawing antitrust action?**
+> NVIDIA charges premium prices because its customers are locked into CUDA. Its four biggest customers now have both the reason and the means to leave. **How can NVIDIA protect its pricing power as its largest buyers build their own chips, and where can it create new demand?**
 
 ## 3. Analysis: five questions
 
@@ -39,143 +38,135 @@
 - AI Foundry and enterprise AI services **could become the next blue ocean**, but the case gives them **no revenue yet**.
 
 ### Q2. Why can NVIDIA charge so much?
-- Estimated GPU shipments **+42% (2.64M → 3.76M)** while data center revenue **+217%**.
-- **Caveat:** the gap is **not a pure price measure**, because data center revenue also includes networking and a richer product mix. It still fits a picture of buyers paying a premium.
-- H100 costs about **4×** an A100, but NVIDIA says it trains **9× faster**, so buyers get about **2.25× more training per dollar**. Buyers pay for the **finished job, not the chip**.
+- Estimated GPU shipments **+42% (2.64M → 3.76M)** while data center revenue **+217%**. The gap **can reflect chip prices, product mix and networking sales**.
+- Gross margin rose **56.9% → 72.7%**, consistent with strong pricing power, although costs and product mix also affect margins.
+- H100 costs about **4×** an A100 but, **on NVIDIA's reported training benchmark**, runs **9× faster**: about **2.25× the training speed per dollar** of chip price, although its **raw computing performance per dollar is lower**. Buyers pay for the **finished job, not the chip**.
 - Switching is costly, so **demand is less sensitive to price**, and the profit-maximizing price (**MR = MC**) carries a **higher markup**.
 
 ### Q3. Who can break the lock-in?
-- **Five Forces:** buyer power and threat of substitutes are both **high**, and both come from **the same four firms**.
-- **Rivalry from other chipmakers is weaker.** AMD expects about **$4.5B** of AI chip revenue in 2024 vs NVIDIA's expected **$76B** from data centers, and AMD's software trails CUDA.
-- **Four Corners** on the big buyers: their drivers are **cutting the "NVIDIA tax"** and **securing supply**.
-- Amazon, Microsoft and Google hold **65% of the cloud market (32% + 23% + 10%)**.
-- **Prediction:** they move work in-house wherever their own chips can do it at lower cost. Amazon already has **Inferentia** (running models) and **Trainium** (training).
-- **DeepSeek is a smaller worry.** It changes **how much** computing AI needs, not **who supplies it**, and its models were **trained on NVIDIA chips**.
+- **Five Forces** points to an unusual threat: NVIDIA's biggest buyers are also building substitutes for its chips.
+- **Four Corners:** their drivers are **lower costs and more control over supply**.
+- Amazon already has **Inferentia** (running models) and **Trainium** (training).
+- **Prediction:** large buyers shift **specific workloads** in-house **where their chips meet performance needs at lower cost**.
 
-### Q4. What is it worth to keep them?
-- Top four buy about **$24.4B a year** (40% × $60.9B), which earns about **$17.7B gross profit**.
-- **A 10% discount** to them costs about **$2.4B a year** (assuming unit costs stay the same).
-- **Holding the price** while they move **a quarter** of purchases in-house loses about **$4.4B**.
-- **Break-even: 13.8%** (10% ÷ 72.7%). The discount pays for itself if it keeps more than 13.8% of their business. That is about **1 in 7 dollars**.
-- These numbers are **illustrative**.
-- **Antitrust condition:** tie any discount to **volume commitments**, **never** to a promise not to build their own chips, because regulators would read that as an exclusive deal.
+### Q4. How much profit is at risk if the largest buyers shift in-house?
+- Top four buy about **$24.4B a year** (40% × $60.9B).
+- Using the company-wide **72.7%** gross margin as a proxy, that is about **$17.7B** of gross profit.
+- If they shift **25%** of purchases in-house, about **$4.4B** of annual gross profit is at risk.
+- **Illustrative scenario:** same product mix, unchanged unit costs.
+- It supports **testing whether interoperability can preserve profitable networking and systems sales**.
+- **No discount and no break-even** in this paper (both earlier drafts had a 10% discount and a 13.8% break-even).
 
-> Check (COMPUTED): 0.40 × 60.9 = 24.36 · 24.36 × 0.727 = 17.71 · 10% × 24.36 = 2.44 · 25% × 17.71 = 4.43 · 10 ÷ 72.7 = 13.76%. After a 10% discount the top-4 gross margin would be about 69.7%.
+> Check (COMPUTED): 0.40 × 60.9 = 24.36 · 24.36 × 0.727 = 17.71 · 25% × 17.71 = 4.43. Total gross profit 60.9 × 0.727 = 44.27, so $4.4B ≈ 10% of it (deck only, not in the WAC).
 
 ### Q5. Where can NVIDIA create new demand?
-- Many companies have **put off custom AI projects** because they lack the staff or infrastructure to build and run them.
-- Blue Ocean: growth comes from turning **noncustomers into buyers**. AI Foundry and its enterprise services could do that.
-- **Proposed pilot: mid-sized insurers.** NVIDIA packages a tool that helps **claims staff find answers in their own policy documents**, **hosted by a cloud partner**, built on **NVIDIA's own software (NIM and NeMo)** so the demand stays on NVIDIA chips.
-- The pilot is **small on purpose**. It tests whether making AI easier to start turns shelved projects into paying customers.
+- Use **AI Foundry** to reach companies that **evaluated custom AI and decided it costs too much to implement**.
+- Through a **partner**, test a **standard package for one task these companies still do manually**.
+- The pilot answers two questions: **(1)** do the savings justify the price for a first-time buyer? **(2)** can NVIDIA and its partner deliver the same package **profitably across several customers**?
 
 ## 4. Options screen (case Q14 + our addition)
 
-| Option | Keeps lock-in? | Less reliance on top 4? | Antitrust risk | Decision |
+"We compared the options in Question 14 with our proposed approach to interoperability."
+
+| Option | Strategic effect | Reduces reliance on top four? | Antitrust risk | Decision |
 |---|---|---|---|---|
-| E. Strengthen CUDA and developer support | Yes | Indirectly | Medium | **Adopt (Move 1)** |
-| B. Low-cost custom chips for big buyers | Partly | No | Low | **Adopt within Move 2** |
-| *Our addition, not a case option:* Profitable interoperability (plug-in path, volume pricing) | Yes | No | Low | **Adopt (Move 2)** |
-| C. Broaden the customer base (enterprise and sovereign AI) | Yes | Yes | Low | **Adopt (Move 3)** |
-| A. Exclusive contracts | Short term | No | High | **Reject** |
-| D. Sell design know-how to chip builders | No | No | Low | **Reject** |
+| E. Strengthen CUDA and developer support | Gives developers a reason to keep choosing NVIDIA | No direct effect | Lower | **Approve now (Move 1)** |
+| B. Offer low-cost custom chips to large buyers | Could retain selected chip orders | No | Depends on deal terms | **Test selectively within Move 2** |
+| *Our addition:* Support customer-designed chips in NVIDIA systems | Could retain networking and systems sales when buyers use their own chips | No | Depends on deal terms | **Test first (Move 2)** |
+| C. Broaden the customer base | Tests whether AI Foundry can attract first-time enterprise buyers | Potentially, if the pilot scales | Lower | **Pilot first (Move 3)** |
+| A. Use exclusive contracts | Could retain purchases during the contract term | No | Higher | **Reject** |
+| D. Sell design know-how to chip builders | Could generate fees while helping customers develop competing chips | Unclear | Lower | **Reject** |
 
 ## 5. Recommended strategy
 
-**One line:** NVIDIA should **make staying with it the cheapest and fastest option** for its customers instead of trying to make leaving impossible. Over time this also means **selling the whole AI system** (racks, networking, software, services), so NVIDIA depends less on chip sales alone.
-
-Three moves, **approved in order**:
+**One line:** NVIDIA should **protect the value of CUDA, keep selling networking and systems when large buyers use their own chips, and test whether AI Foundry can bring in first-time enterprise buyers**. Invest in CUDA now and test the other two moves before expanding them.
 
 | Move | Approval | What it is |
 |---|---|---|
-| **1. Strengthen CUDA and developer support** | **Approve now** | Keep improving libraries, models and tools so customers can build and run AI more easily. Make sure NVIDIA hardware stays the **fastest choice when developers work in PyTorch**. |
-| **2. Support profitable interoperability** | **Test first** | Let the big buyers' own chips **plug into NVIDIA's high-bandwidth racks and networking**, offer **semi-custom products**, and give **volume discounts to the top four where the break-even supports it**. Check each arrangement to confirm it still earns enough profit. This moves NVIDIA **from selling chips into selling AI infrastructure**. |
-| **3. Expand enterprise and sovereign AI** | **Pilot first** | Help companies that cannot afford their own AI infrastructure deploy AI through **AI Foundry**, **starting with the insurer pilot**. **Governments** building national AI capacity are a second target (**OUR PROPOSAL, not covered in the case**). **Scale only if** first-time buyers move to paid use and revenue covers onboarding and support. |
+| **1. Strengthen CUDA and developer support** | **Approve now** | Keep improving NVIDIA's libraries, models and tools so developers can build and run AI more easily. Prioritize performance and ease of use for developers who already work in PyTorch. |
+| **2. Keep selling systems when customers build their own chips** | **Test first** | Test whether **one large buyer** can connect its own chips to NVIDIA's networking and racks. Compare expected gross profit **with what NVIDIA would earn without the arrangement**, counting integration costs and any additional GPU sales it would displace. **Expand only if it improves expected profit.** |
+| **3. Test demand from first-time enterprise buyers** | **Pilot first** | Use AI Foundry and an implementation partner to offer a standard package for one task companies still do manually, using NVIDIA software and computing infrastructure. **A mid-sized insurer could be the first test.** Expand only if customers **pay to keep using it** and the package **earns a profit for NVIDIA and its partner**. |
 
-**NVIDIA gives up:** exclusive deals · large acquisitions · its top margins on sales to the four biggest buyers.
+The strategy relies on stronger software, continued networking and systems sales, and demand from first-time enterprise buyers. Expand each pilot only if expected returns justify the cost.
 
-**We would watch:** the top four's share of sales · the gross margin trend · any big buyer moving its **training** off NVIDIA.
+**We would track:** gross profit from interoperability deals · AI Foundry's conversion to paid use · the top four buyers' share of sales.
+
+**Removed from earlier drafts:** discounts and purchase commitments · semi-custom products in Move 2 · governments / sovereign AI · "sell the whole AI system" · the "NVIDIA gives up" line · gross margin trend and training-off-NVIDIA as watch metrics.
 
 ## 6. Justification
 
 | Move | Comes from | Logic |
 |---|---|---|
-| Move 1 | **Q2** | Switching costs make demand less sensitive to price, which protects the **73% margin**. |
-| Move 2 | **Q3 + Q4** | The buyers who can leave are **40% of sales**, and losing their volume costs more than a targeted discount once **more than 13.8%** would go. The plug-in path changes what their chips mean: today a buyer's chip **replaces** NVIDIA's; running inside NVIDIA's racks and software, it **adds to** what NVIDIA sells. **A substitute becomes a complement.** |
-| Move 3 | **Q1 + Q5** | With **78% of revenue from one business** and **40% from four buyers**, NVIDIA needs growth that does not rest on a few chip buyers. The pilot tests one at low cost. |
+| Move 1 | **Q2** | CUDA's switching costs make customers less sensitive to price and help support NVIDIA's pricing power. |
+| Move 2 | **Q3 + Q4** | The four buyers are about **40% of sales**, so even a partial shift in-house matters. The pilot tests whether NVIDIA can keep networking and systems sales when a buyer uses its own chips, and whether that beats proceeding without it after integration costs and any further loss of GPU gross profit. |
+| Move 3 | **Q1 + Q5** | With **78%** of revenue from data centers and about **40%** of sales from four buyers, NVIDIA needs another source of growth. The pilot tests whether companies that put off custom AI will pay for a package NVIDIA and its partner can deliver profitably. |
 
-- **We would not port CUDA to rival chips.** That would remove the main reason to buy NVIDIA. Interoperability happens at the level of **racks, networking and software**.
+- Keep the plug-in path to **racks, networking and system-level software**, while **keeping CUDA tied to NVIDIA hardware**.
 - **Rejected:** exclusive contracts, because regulators already watch NVIDIA closely; selling design know-how, because it would help rivals copy NVIDIA.
 
-## 7. Weak point (timing)
+## 7. Conclusion
 
-NVIDIA's revenue is still growing fast, so the threat does not yet show in the numbers. But **competition usually hurts margins before it hurts sales**, and **in-house chips take years to mature**. **The time to act is now, while NVIDIA is strong.**
+NVIDIA can sustain its advantage if customers keep getting enough value from its software and systems to keep buying, while AI Foundry attracts profitable new demand. **Invest in CUDA now and expand the two pilots only when their results justify the cost.**
 
 ---
 
-## 8. Slide plan (final)
+## 8. Slide map (as of Nov 13)
 
-Built from: WAC v3 (content) + Allen's review (structure) + Kim's deck (changes that match both).
-Status: **DONE** · **KEEP** = no change · **SMALL** = wording or one line · **EDIT** = content changes · **REBUILD** · **NEW**
+| # | Slide | WAC section | Status |
+|---|---|---|---|
+| 1 | Hook: −$600B, DeepSeek <$5.6M | §1 | Matches |
+| 2 | Timeline | §1 (plus GIVEN facts the WAC dropped) | Matches |
+| 3 | One package that is hard to leave | §1 | Matches |
+| 4 | Top 4 build their own chips | §1 | Matches |
+| 5 | Problem + 5 questions | §2, §3 | **Updated:** Q4 "How much profit is at risk if the top four go in-house?"; antitrust condition removed from script |
+| 6 | Q1: 78% from data centers | §3 Q1 | Matches |
+| 7 | Q2: revenue vs shipments | §3 Q2 | Matches |
+| 8 | Q2: finished job | §3 Q2 | Matches |
+| 9 | Q3: Five Forces | §3 Q3 | Matches |
+| 10 | Q3: Four Corners | §3 Q3 | Handoff line updated. **Open:** title says "wherever it is cheaper"; WAC says "specific workloads where their chips meet performance needs at lower cost" |
+| 11 | Q4: profit at risk | §3 Q4 | **Rebuilt:** $24.4B → $17.7B → $4.4B at risk, one slider (share moved in-house); no discount, no 13.8% |
+| 12 | Q5: new demand | §3 Q5 | Matches |
+| 13 | Options | §4 | **Updated:** "Their own chips in NVIDIA systems" (volume pricing removed); ARM "dropped after objections" |
+| 14 | Recommendation + ERRC | §5 | **Updated:** Move 2 = with vs without profit test; ERRC Reduce = "Reliance on four big buyers" (OUR PROPOSAL) |
+| 15 | Justification trace | §6 | **Updated:** Move 2 = "Scale only if it earns more profit than going without it"; Q3+Q4 finding links to slide 11's $4.4B |
+| 16 | Risks + watch metrics | §5, §7 | **Updated:** three WAC watch metrics; closing line = WAC conclusion |
+| 17 | Close: Microsoft question + NVLink Fusion | Review §3, §7 | Matches (INTERNET, after the case) |
+| B1 | 15 polling answers | Review | Unchanged |
+| B2 | Frameworks in reserve | Review | Unchanged |
 
-| # | Slide | Status | What to do | Source |
-|---|---|---|---|---|
-| 1 | Hook: −$600B | **DONE** | `<$5.6M`, "claimed" | WAC |
-| 2 | Timeline | SMALL | Add **$60.9B** / **$47.5B** under +126% / +217%. Title: see decision 1 | WAC, Kim |
-| 3 | Loop + cost of leaving | **DONE** | 5M+ developers, CUDA code runs only on NVIDIA. Title: see decision 1 | WAC |
-| 4 | Top 4 build own chips | EDIT | Title → "**Four customers that make up 40% of NVIDIA's sales are now building their own AI chips**". **$24.4B**. Label shares "**outside estimates**" | Review §7, WAC, Kim |
-| 5 | Problem + **5 questions** | EDIT | WAC problem question (Kim's wording). Q4 → "What is it worth to **keep them**?". **Add Q5** "Where can NVIDIA create new demand?" | WAC, Kim |
-| 6 | Q1: 78% from one business | SMALL | "AI Foundry: potential pioneer, **tested by a pilot (slide 12)**". Optional: opex grew only 2% | WAC, Kim |
-| 7 | Q2: price vs volume | EDIT | Kim's version: title "**Data center revenue grew faster than estimated GPU shipments**" + **not-a-pure-price caveat** | WAC, Kim |
-| 8 | Q2: finished job | SMALL | Add **MR = MC → higher markup** line. Notes: "in the case example" | WAC, Kim |
-| 9 | Q3: Five Forces | SMALL | Rivalry → "**weaker**": AMD **$4.5B** AI chips vs NVIDIA **$76B** data center (~17×), software trails CUDA | WAC, Review §4 #3 |
-| 10 | Q3: Four Corners | EDIT | Kim's version: "move **workloads** in-house where cheaper" + **Inferentia / Trainium**. Add "**DeepSeek is a smaller worry**: changes how much compute, not who supplies it; trained on NVIDIA" | WAC, Kim, Review §6 |
-| 11 | Q4: break-even | **REBUILD** | Kim's version: **10% discount, $2.4B vs $4.4B, 13.8% (~1 in 7)**, discount slider, $100 example in notes. Add: discount tied to volume commitments, **never to a promise not to build own chips** | WAC, Kim |
-| 12 | **Q5: new demand** | **NEW** | Noncustomers with shelved AI projects → AI Foundry → **mid-sized insurer claims assistant**, cloud partner, **NIM + NeMo**, small on purpose | WAC |
-| 13 | Options | EDIT | Kim's version (B = case option, separate "**Our addition**" row). B wording/values per WAC: "low-cost custom chips", lock-in **Partly**. C = "enterprise **and sovereign** AI". No weighted scores | WAC, Kim, Review |
-| 14 | Recommendation (ERRC) | EDIT | Add **approve now / test first / pilot first** tags per move. "**Sell the whole AI system**". Move 3 = insurer pilot (Kim) + **governments (OUR PROPOSAL)** + scale gate. Keep "We give up" line | WAC, Kim, Review |
-| 15 | Justification trace | EDIT | Kim's Q3/Q4 rows (13.8%, volume commitments). Move 3 ← **Q1 + Q5**. Add "**a substitute becomes a complement**", "**we don't port CUDA**". One line: **seven tests** passed (detail in B2) | WAC, Kim, Review §2 |
-| 16 | Risks + weak spot | EDIT | Kim's version (pilot-doesn't-convert row; TSMC kept as "monitor, no second source" in notes). Add WAC's **3 watch metrics**: top-4 share of sales · gross margin trend · big buyer moving **training** off NVIDIA | WAC, Kim, Review §4 #10 |
-| 17 | Close | KEEP | Allen's question: "**If you were Microsoft, would you still build your own chip if it could plug into NVIDIA's systems?**" + NVLink Fusion (INTERNET). Only Kim's wording fix: "**pursuing a similar approach**" | Review §3, §7 |
-| B1 | 15 polling answers | SMALL | Kim's Q14 note. Q15 blank `[__]` → **needs the letter from Kim**. Renumber slides | Review, Kim |
-| B2 | Frameworks in reserve | SMALL | Renumber slide references | Review |
-
-**Not adopted from Kim:** the separate "What Jensen approves first" slide (its content goes onto slide 14 as tags and slide 16 as watch metrics, which keeps the deck at Allen's ~17–18 slides) · the new close question with 3 cards (Allen's review picks the Microsoft question) · Kim's slides 1–4 (older version, no images).
-
-**Speaker split (Review §7, adjusted for Q5):** Group 1 = slides 1–5 · Group 2 = slides 6–10 (Q1–Q3) · Group 3 = slides 11–17 (Q4, Q5, options, recommendation, justification, risks, close). Group 3 is now the longest. Consider moving slide 11 (Q4) to Group 2.
-
-**Also update:** `NVIDIA_Talking_Points.md` for each changed slide ("of 16" → "of 17", new Q5 script, speaker table).
+Speaker notes: `[ … ]` cues, **Key line** and **Note for Q&A** render in red italics in the deck's script panel (press N). `NVIDIA_Talking_Points.md` mirrors the deck notes for every updated slide.
 
 ## 9. Allen's deck review: build rules we follow
 
 | Rule | In our deck |
 |---|---|
-| Logic chain: problem → questions → one finding each → moves → trace | ✅ (now 5 questions, per WAC) |
+| Logic chain: problem → questions → one finding each → moves → trace | ✅ 5 questions, per WAC |
 | **Five Forces + Four Corners** on main slides; PESTLE, SWOT/TOWS, seven tests, CEO actions, motive/means in backup | ✅ slides 9–10, B2 |
-| **PMS map** with the "if NVIDIA stands still" toggle on Q1 | ✅ slide 6 |
-| **ERRC grid** + "We give up" line for the recommendation | ✅ slide 14 |
+| **PMS map** on Q1 | ✅ slide 6 |
+| **ERRC grid** for the recommendation | ✅ slide 14 ("We give up" line dropped, since the WAC removed it) |
 | **No weighted option scorer**; screen options against findings | ✅ slide 13 |
 | Plug-in idea merged into Move 2 | ✅ |
 | Risks with early warning signals, compressed | ✅ slide 16 |
 | Close: Microsoft question, then **NVLink Fusion** labelled INTERNET / after the case | ✅ slide 17 |
 | Poll answers tagged on the slide where the evidence sits + B1 backup | ✅ |
-| **Plain, literal titles, no metaphors** | ⚠️ see decision 1 |
-| H100 vs A100: −14% TFLOPS/$ but 2.25× per training job | ✅ slide 8 |
-| Gaming dipped 27% then recovered; **no "98%" share**; no "20× cheaper" headline; 65% cloud labelled COMPUTED; no $91B; no second-sourcing | ✅ |
-| DeepSeek = hook, ranked below the hyperscalers | ✅ (add "smaller worry" line on slide 10) |
-| Seven tests: one line on the justification slide | ❌ → add on slide 15 |
+| **Plain, literal titles, no metaphors** | ⚠️ slide 2 is still "NVIDIA's Journey to $3 Trillion" |
+| H100 vs A100: lower raw compute per dollar but 2.25× per training job | ✅ slide 8, now also in the WAC |
+| DeepSeek = hook, ranked below the hyperscalers | ✅ slide 1 |
 
-### Where the review and WAC v3 disagree (WAC wins)
+### Where the review and the WAC disagree (WAC wins)
 
-| Item | Review says | WAC v3 says | We use |
+| Item | Review says | WAC says | We use |
 |---|---|---|---|
-| Break-even | ~17.5%, "1 in 6 dollars" | **13.8%** (10% discount ÷ 72.7%) | **13.8%** |
+| Q4 | Break-even ~17.5%, "1 in 6 dollars" | No discount. Profit at risk: **$4.4B** if 25% moves in-house | **Profit at risk** |
 | Number of questions | Four | **Five** (adds Q5 new demand) | **Five** |
-| Slide 7 title | "Growth came mostly from higher prices, not more chips" | Not a pure price measure (networking, mix) | **Kim's caveated title** |
-| Slide 10 title | Move **inference** in-house, keep NVIDIA for frontier training | Move **work** in-house wherever cheaper | **WAC** |
-| What NVIDIA gives up | Top margins **on inference** | Top margins **on sales to the four biggest buyers** | **WAC** (already in deck) |
-| Move 3 | Grow customers who cannot build their own chips | AI Foundry **insurer pilot** + governments, scale gate | **WAC** |
+| Slide 7 title | "Growth came mostly from higher prices, not more chips" | The gap can reflect prices, mix and networking | **Caveated title** |
+| Slide 10 | Move **inference** in-house, keep NVIDIA for frontier training | Shift **specific workloads** where their chips meet performance needs at lower cost | **WAC** |
+| What NVIDIA gives up | Top margins on inference | Not in the WAC | **Dropped** |
+| Move 3 | Grow customers who cannot build their own chips | AI Foundry pilot with a partner, insurer as possible first test, two scale gates | **WAC** |
 
-### Decisions still open
+### Open questions for the team
 
-1. **Slide 2 and 3 titles.** Allen's review uses plain sentences: "*ChatGPT turned a gaming-chip company into the world's most valuable company in two years*" and "*NVIDIA sells chips, software and a developer community as one package, and that package is hard to leave*". Ours are "NVIDIA's Journey to $3 Trillion" and "The cost of leaving". Keep ours or switch to Allen's?
-2. **Q15 letter** for the blank in B1 (from Kim).
+1. **Option B vs Move 2.** The options table keeps B as "Test selectively within Move 2", but the Move 2 text no longer mentions custom chips. Should Move 2 name it again, or should B's decision change?
+2. **Slide 10 title** still says "wherever it is cheaper" (see slide map).
+3. **Slide 15 Move 3 finding** uses "Enterprises were not historically a GPU market (case p. 16)"; the WAC's reason is 78% from data centers + 40% from four buyers. Both are compatible.
+4. **Team slide (18):** the WAC now lists Learning Teams 1, 2 and 9.
