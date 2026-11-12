@@ -478,11 +478,11 @@ Our Blue Ocean map has three tiers. Companies already renting AI through clouds 
 
 Our target is the middle tier: companies that evaluated custom AI and found implementation too expensive. The tier mapping is our judgment. The case anchor is that enterprises were not historically a GPU market.
 
-*[CLICK 1: The offer appears.]*
+*[CLICK 1: Tiers 1 and 3 fold away. The offer appears.]*
 
 Offer a standard package for one task still done by hand. A partner delivers it using AI Foundry, with NIM for model deployment and NeMo for customization. This package is our proposal, not an existing revenue stream proved by the case.
 
-*[CLICK 2: The first test appears.]*
+*[CLICK 2: The insurer appears, and a dot lands on the tier 2 ring.]*
 
 A mid-sized insurer could be the first test. Claims staff search policy documents manually. It is a narrow, document-heavy workflow; we would validate the problem with the customer before building. The insurer is an example, not a case-proven customer.
 
