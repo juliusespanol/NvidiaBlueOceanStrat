@@ -427,7 +427,7 @@ So the big buyers will keep moving work away. How much profit is at risk if they
 ## SLIDE 11 of 18 · Analysis · Q4 · Group 2 · ~2 min
 
 **On screen:** If the top four move a quarter of their purchases in-house, about $4.4 billion of gross profit is at risk
-**Clicks:** 3 (gross profit, then the red at-risk slice and the slider, then the Move 2 line). The slider can be dragged at any time.
+**Clicks:** 3 (gross profit, then the red at-risk slice with the count-up, then the Move 2 line)
 
 *[Point to the first number.]*
 
@@ -439,15 +439,15 @@ The top four buy about $24.4 billion a year. That is 40% of $60.9 billion.
 
 At NVIDIA’s 72.7% gross margin, those sales earn about $17.7 billion of gross profit. We use the company-wide margin as a proxy, and we assume the product mix and unit costs stay the same.
 
-*[CLICK 2: The red slice and the slider appear. Point to the slider.]*
+*[CLICK 2: The red slice grows out of the green bar and the number counts up to $4.4 billion. Let it finish before you speak.]*
 
 Now suppose they move a quarter of those purchases to their own chips. That puts about $4.4 billion of gross profit at risk every year, about a tenth of NVIDIA’s total.
 
-The 25% is our assumption, so you can test it. [Optional: drag the slider. At 10%, about $1.8 billion is at risk. At 50%, about $8.9 billion.]
+The quarter is our assumption, to show the scale. It is not a forecast.
 
 *[CLICK 3: The Move 2 line appears.]*
 
-This is an illustrative scenario, not a forecast. But even a partial shift matters. And it sets up what we test in move two: can NVIDIA keep selling networking and systems when a buyer uses its own chips?
+Even a partial shift matters. And it sets up what we test in move two: can NVIDIA keep selling networking and systems when a buyer uses its own chips?
 
 *[Handoff to Group 3.]*
 

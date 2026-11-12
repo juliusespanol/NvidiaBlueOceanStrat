@@ -1258,7 +1258,8 @@ Note for Q&amp;A: Current strategy detail taken off the slide: they rent their c
 <style>
 /* One idea per click, one bar that breaks down.
    Entry: $24.4B top-4 sales (full grey bar). Click 1: $17.7B gross profit (green part of the bar).
-   Click 2: −$4.4B at risk (red slice of the green) + the slider. Click 3: what Move 2 tests. */
+   Click 2: the red slice grows out of the green while −$4.4B counts up, with the 25% assumption underneath. Click 3: what Move 2 tests.
+   No slider: the scenario is fixed at 25%. */
 #slide-11-be{--ease:cubic-bezier(.16,.84,.24,1)}
 #slide-11-be .pr{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:34px}
 #slide-11-be .st{display:grid;grid-template-columns:1fr 80px 1fr 80px 1fr;align-items:end}
@@ -1274,17 +1275,17 @@ Note for Q&amp;A: Current strategy detail taken off the slide: they rent their c
 #slide-11-be .bar{position:relative;height:30px;border-radius:6px;background:rgba(255,255,255,.14);overflow:hidden}
 #slide-11-be .bar i{position:absolute;top:0;bottom:0;transform:scaleX(0);transition:transform 1.1s var(--ease)}
 #slide-11-be .bar .gp{left:0;width:72.7%;background:var(--green);transform-origin:left}
-#slide-11-be .bar .rk{right:27.3%;width:var(--rw,18.2%);background:#ff7a85;transform-origin:right;transition:transform 1s var(--ease) .25s,width .3s ease}
+#slide-11-be .bar .rk{right:27.3%;width:18.2%;background:#ff7a85;transform-origin:right;transition:transform 1.1s var(--ease) .25s}
 #slide-11-be:is([data-step="1"],[data-step="2"],[data-step="3"]) .bar .gp{transform:none}
 #slide-11-be:is([data-step="2"],[data-step="3"]) .bar .rk{transform:none}
 #slide-11-be .bl{position:relative;height:24px;margin-top:-22px;font-family:var(--mono);font-size:16px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
 #slide-11-be .bl span{position:absolute;top:0}
 #slide-11-be .bl .l1{right:0;width:27.3%;text-align:center}
-/* slider */
-#slide-11-be .ctl{display:grid;grid-template-columns:auto 1fr auto;align-items:center;column-gap:30px;row-gap:4px;max-width:1100px}
-#slide-11-be .ctl label{font-size:26px;color:var(--fg)}
-#slide-11-be .ctl output{font-family:var(--display);font-weight:800;font-stretch:115%;font-size:44px;color:#ff7a85;min-width:110px;text-align:right}
-#slide-11-be .ctl .hint{grid-column:1/-1;font-size:17px}
+#slide-11-be .bl .l2{right:27.3%;width:18.2%;text-align:center;color:#ff7a85;transition-delay:.9s}
+/* the assumption, stated once */
+#slide-11-be .asm{margin:0;font-size:24px;line-height:1.4;color:var(--mute);transition-delay:.6s}
+#slide-11-be .asm b{color:var(--fg);font-weight:600}
+#slide-11-be .asm small{display:block;margin-top:6px;font-family:var(--mono);font-size:16px;letter-spacing:.04em;color:var(--dim)}
 #slide-11-be .rule{padding:20px 28px;border-left:3px solid var(--green);background:linear-gradient(90deg,rgba(118,185,0,.1),transparent 70%)}
 #slide-11-be .rule b{font-family:var(--display);font-size:32px;font-weight:650;color:var(--fg);line-height:1.25}
 @media(prefers-reduced-motion:reduce){#slide-11-be .bar i{transition:none}}
@@ -1297,16 +1298,11 @@ Note for Q&amp;A: Current strategy detail taken off the slide: they rent their c
       <div class="ar" data-frag="1">→</div>
       <div class="c c2" data-frag="1"><span class="k">Gross profit on those sales</span><span class="num">$17.7B</span><small>at a 72.7% gross margin</small></div>
       <div class="ar" data-frag="2">→</div>
-      <div class="c c3" data-frag="2"><span class="k">At risk each year</span><span class="num" id="va">−$4.4B</span><small id="vs">About 10% of NVIDIA’s total gross profit</small></div>
+      <div class="c c3" data-frag="2"><span class="k">At risk each year</span><span class="num" id="va">−$4.4B</span><small>About 10% of NVIDIA’s total gross profit</small></div>
     </div>
     <div class="bar" id="rb" aria-hidden="true"><i class="gp"></i><i class="rk"></i></div>
-    <div class="bl" aria-hidden="true"><span class="l1" data-frag="1">Costs</span></div>
-    <div class="ctl" data-frag="2">
-      <label for="l">Share of top-4 purchases moved in&#8209;house</label>
-      <input id="l" type="range" min="5" max="50" step="1" value="25" aria-describedby="lh">
-      <output id="lo">25%</output>
-      <span class="hint" id="lh">Illustrative, not a forecast · 72.7% company-wide margin as a proxy · same product mix · unit costs unchanged</span>
-    </div>
+    <div class="bl" aria-hidden="true"><span class="l2" data-frag="2">25% moves in&#8209;house</span><span class="l1" data-frag="1">Costs</span></div>
+    <p class="asm" data-frag="2">Assumes <b>a quarter</b> of top-4 purchases moves to their own chips.<small>Illustrative, not a forecast · 72.7% company-wide margin as a proxy · same product mix · unit costs unchanged</small></p>
     <div class="rule" data-frag="3"><b>Even a partial shift matters. Move 2 tests whether NVIDIA can keep its networking and systems sales when a buyer uses its own chips.</b></div>
   </div>
   <aside class="notes">[Point to the first number.]
@@ -1319,15 +1315,15 @@ The top four buy about $24.4 billion a year. That is 40% of $60.9 billion.
 
 At NVIDIA’s 72.7% gross margin, those sales earn about $17.7 billion of gross profit. We use the company-wide margin as a proxy, and we assume the product mix and unit costs stay the same.
 
-[CLICK 2: The red slice and the slider appear. Point to the slider.]
+[CLICK 2: The red slice grows out of the green bar and the number counts up to $4.4 billion. Let it finish before you speak.]
 
 Now suppose they move a quarter of those purchases to their own chips. That puts about $4.4 billion of gross profit at risk every year, about a tenth of NVIDIA’s total.
 
-The 25% is our assumption, so you can test it. [Optional: drag the slider. At 10%, about $1.8 billion is at risk. At 50%, about $8.9 billion.]
+The quarter is our assumption, to show the scale. It is not a forecast.
 
 [CLICK 3: The Move 2 line appears.]
 
-This is an illustrative scenario, not a forecast. But even a partial shift matters. And it sets up what we test in move two: can NVIDIA keep selling networking and systems when a buyer uses its own chips?
+Even a partial shift matters. And it sets up what we test in move two: can NVIDIA keep selling networking and systems when a buyer uses its own chips?
 
 [Handoff to Group 3.]
 
@@ -2149,17 +2145,14 @@ let tx=null;
 addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true});
 addEventListener('touchend',e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50){dx<0?next():prev()}tx=null},{passive:true});
 
-/* profit-at-risk calculator (slide 11): share moved in-house × top-4 gross profit; red bar = share × 72.7% of the bar */
-const l=document.getElementById('l');
-const SALES=24.4,GM=72.7,GP=SALES*GM/100,TOTAL_GP=60.9*GM/100;
-function calc(){
-  const lv=+l.value, risk=lv/100*GP;
-  document.getElementById('lo').textContent=lv+'%';
-  document.getElementById('va').textContent='−$'+risk.toFixed(1)+'B';
-  document.getElementById('vs').textContent='About '+Math.round(risk/TOTAL_GP*100)+'% of NVIDIA’s total gross profit';
-  document.getElementById('rb').style.setProperty('--rw',(lv/100*GM).toFixed(1)+'%');
-}
-l.addEventListener('input',calc);calc();
+/* slide 11: on click 2 the at-risk number counts up to −$4.4B in step with the red slice */
+(()=>{const s11=document.getElementById('slide-11-be'),va=document.getElementById('va'),END=4.4;let last=0,raf=0;
+  const run=()=>{cancelAnimationFrame(raf);if(reduce){va.textContent='−$'+END.toFixed(1)+'B';return}
+    const t0=performance.now()+250,d=1100;va.textContent='−$0.0B';
+    const tick=t=>{const x=Math.min(1,Math.max(0,(t-t0)/d)),e=1-Math.pow(1-x,3);va.textContent='−$'+(END*e).toFixed(1)+'B';if(x<1)raf=requestAnimationFrame(tick)};
+    raf=requestAnimationFrame(tick)};
+  new MutationObserver(()=>{const st=+s11.dataset.step||0;if(st===2&&last<2)run();last=st}).observe(s11,{attributes:true,attributeFilter:['data-step']});
+})();
 
 /* ---------- live GPU die ---------- */
 const cv=document.getElementById('die'),cx=cv.getContext('2d');
