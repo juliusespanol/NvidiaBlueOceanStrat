@@ -1,4 +1,27 @@
-# NVIDIA Deck: Handoff (Nov 10, 2026, updated after slide 13)
+# NVIDIA Deck: Handoff
+
+## Current local revision — Nov 12, 2026
+
+The user authorized the Nov 12 build spec, reviewed the local deck, and approved committing and pushing this revision.
+
+- Base: `e9834e2` on `main`, fetched and confirmed current Nov 12.
+- Deck: **18 numbered slides**, a blank opener at `#s0`, and two backups. `MAIN=19`. The new analytical Q5 is slide 12; old slides 12–17 moved to 13–18, including Thank You at 18. Scoped slide IDs follow the new numbering.
+- Added: DeepSeek three-part explainer and NVIDIA-chip reveal, dated buyer-chip evidence, explicit why/how problem framing, margin evidence and Blue Ocean verdict (slide 6, click 4), noncustomer tiers and insurer pilot (slide 12).
+- Slide 1 preserves the original solo question reveal on click 3. Click 4 moves the question up and reveals the explainer; click 5 reveals the answer. Keep the question's pause and animation separate from the explainer.
+- Fixed: slide 10 TPU comparison includes design-cost caveat; slide 11 shows negative red gross-profit losses, removes redundant bars and restricts discounts to workloads the buyer's chip cannot yet serve competitively. Calculator formulas remain unchanged.
+- Refined: Move 2 routes, Tier 2 targeting, enterprise evidence, PyTorch risk and the finale's systems decision. The closing line now allows buyers to keep building their own chips.
+- `NVIDIA_Talking_Points.md` and all 18 main-slide notes are synchronized. Group 2 owns slides 6–11; Group 3 owns 12–17; all presenters close on 18.
+- `NVIDIA_QA_Defense.md` contains the 12-question rehearsal bank with suggested presenter leads and updated slide references.
+- B1 poll Q14 → 13 and Q15 → 14. **Polling Q5 remains slide 7** (profit model); analytical Q5 is slide 12 (new demand). B2 references 14–16. Backups are at `#s19` and `#s20`; B toggles them.
+- Factual adjustment to the supplied spec: retained ChatGPT's **two-month** 100M-user timeline, supported by OpenAI's July 2025 Productivity Note (linked in the script), rather than the proposed one-month claim. Avoided an unsupported “most AI code” market-share claim; the slide explains PyTorch portability directly.
+- Evidence boundary: original case PDF and WAC v3 DOCX are absent from this checkout and Downloads. Case-page references and case inputs added here come from the supplied build spec; DeepSeek and NVLink Fusion were checked against primary sources. The Q&A bank avoids claiming an exhaustive search for undisclosed AI Foundry revenue.
+- Local review: `http://127.0.0.1:8765/index.html#s1`. Keep this revision local for the user's visual review.
+
+The Nov 10 notes below are historical. Their old slide numbers, Git status, next-step checklist and pending Q5 decision are superseded by the revision above.
+
+---
+
+## Archived handoff — Nov 10, 2026 (updated after slide 13)
 
 Read this first in a new chat. It covers what is done, how we work, and exactly what to do on each remaining slide.
 
