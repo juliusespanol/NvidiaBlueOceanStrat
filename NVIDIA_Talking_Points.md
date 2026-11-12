@@ -38,7 +38,7 @@ Each slide ends with a **Key line**: if you forget everything else on that slide
 ## SLIDE 1 of 18 · Hook · Group 1 · ~1.5 min
 
 **On screen:** On one day in January 2025, NVIDIA lost $600 billion in market value. Was cheaper AI the real threat?
-**Clicks:** 5 (meme, DeepSeek comparison, solo question reveal, three-part explainer, NVIDIA-chip answer)
+**Clicks:** 5 (meme, DeepSeek comparison, solo question reveal, "It still trained on NVIDIA chips" with three facts, bottom line)
 
 *[Walk to the centre of the room. Say nothing. Let the number sit on screen for three seconds.]*
 
@@ -72,13 +72,17 @@ So here is our question for the next thirty minutes. **Was cheaper AI the real t
 
 *[Pause two seconds. Let the question sit.]*
 
-*[CLICK 4: The question moves up and the three-part explainer appears.]*
+*[CLICK 4: The question moves up. “It still trained on NVIDIA chips.” appears, then three short facts underneath.]*
 
-Separate three things. The chips: NVIDIA H800s, constrained by export rules. The model: competitive benchmark results. The training bill: DeepSeek-V3’s reported run cost, not the full cost of developing the model. Its technical report excludes prior research and experiments.
+Here is the catch. It still trained on NVIDIA chips.
 
-*[CLICK 5: The answer appears.]*
+*[Pause.]*
 
-It still trained on NVIDIA chips. Cheaper AI rattled investors, but the lasting threat is on NVIDIA’s own customer list.
+The chips were NVIDIA H800s, export-limited versions rather than the flagship. The model still got competitive benchmark results. And the under-$5.6 million was one reported training run, not the full cost of developing the model. Its technical report excludes prior research and experiments.
+
+*[CLICK 5: The bottom line appears.]*
+
+Cheaper AI rattled investors. But the lasting threat is on NVIDIA’s own customer list.
 
 To see it, we first need to know how NVIDIA got so big.
 
