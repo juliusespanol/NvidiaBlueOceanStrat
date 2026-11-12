@@ -166,7 +166,6 @@ input[type=range]:focus-visible{outline:2px solid var(--green-hi);outline-offset
 /* overlays */
 .slide aside.notes{display:none}
 .ui{position:fixed;z-index:5;font-family:var(--mono)}
-#bar{position:fixed;left:0;bottom:0;height:3px;background:var(--green);z-index:6;transition:width .8s cubic-bezier(.2,.8,.2,1);box-shadow:0 0 18px rgba(118,185,0,.6)}
 #hint{right:max(18px,env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));font-size:12px;letter-spacing:.08em;color:var(--dim);display:flex;gap:6px;opacity:.9;transition:opacity 1s}
 #hint button{all:unset;cursor:pointer;padding:6px 10px;border:1px solid var(--line2);border-radius:3px;color:var(--mute);background:rgba(4,6,5,.7)}
 #hint button:hover,#hint button:focus-visible{color:var(--green-hi);border-color:var(--green)}
@@ -222,7 +221,7 @@ body:has(#slide-1-hook.active) #nt{white-space:pre-line}
 #slide-1-hook .ds-card .ds-vs{font-size:32px}
 #slide-1-hook .ds-card .ds-num{font-size:118px}
 /* Click 4: editorial verdict, no boxes. The question becomes a small kicker, one big line, three short facts between thin rules, one source line.
-   Click 5: the bottom line (green bar on the left). */
+   Click 5: the bottom line (green bar on the left). No source labels on slides; sources live in the speaker notes. */
 #slide-1-hook .cheaper-ai{position:absolute;left:128px;right:128px;top:330px}
 #slide-1-hook .cheaper-ai .verdict{margin:0;padding:34px 0 40px;border-top:1px solid var(--line2);font-family:var(--display);font-weight:700;font-size:112px;line-height:1;letter-spacing:-.035em;color:var(--fg)}
 #slide-1-hook .cheaper-ai .verdict em{font-style:normal;color:var(--green-hi)}
@@ -266,7 +265,6 @@ body:has(#slide-1-hook.active) #nt{white-space:pre-line}
       <div style="--d:2"><b>&lt;$5.6M</b><span>One training run, not the full R&amp;D bill</span></div>
     </div>
   </div>
-  <p class="src" data-frag="4">Sources: case p. 17 · DeepSeek-V3 technical report (INTERNET)</p>
   <p class="hook-answer" data-frag="5">Cheaper AI rattled investors. The lasting threat is on <b>NVIDIA’s own customer list.</b></p>
   <aside class="notes">[Walk to the centre of the room. Say nothing. Let the number sit on screen for three seconds.]
 
@@ -374,14 +372,14 @@ Note for Q&amp;A: INTERNET — DeepSeek-V3 technical report, https://arxiv.org/h
           <text x="1418" y="450" fill="#ffffff">$0.4T</text><text x="1498" y="366" fill="#ffffff">$1T</text><text x="1578" y="84" fill="#a8e33a" font-size="30">$3T+</text>
         </g>
         <g class="halo" font-size="22" text-anchor="middle" style="font-weight:600"><text x="1418" y="556" fill="#eef3ea">2022</text><text x="1578" y="556" fill="#eef3ea">2024</text></g>
-        <text class="halo" x="1620" y="592" text-anchor="end" font-size="17" fill="#c9d3c4">Market value · GIVEN</text>
+        <text class="halo" x="1620" y="592" text-anchor="end" font-size="17" fill="#c9d3c4">Market value</text>
       </g>
     </svg>
     <figure class="cuda-card" data-frag="1" style="transition-delay:.5s"><img src="nvidia_assets/_picks/moat_software/cuda_logo.png" alt="NVIDIA CUDA logo"></figure>
     <figure class="chip-card"><img src="nvidia_assets/_picks/company/geforce_chip_1999.jpg" alt="NVIDIA GeForce 256, the first GPU"></figure>
     <div class="stats" data-frag="3">
-      <div class="col" style="gap:6px"><span class="k">Revenue, FY2024</span><span class="big g">+126%</span><span class="txt" style="font-size:24px">to $60.9B <span class="tag">GIVEN</span></span></div>
-      <div class="col" style="gap:6px"><span class="k">Data center revenue</span><span class="big">+217%</span><span class="txt" style="font-size:24px">to $47.5B <span class="tag">GIVEN</span></span></div>
+      <div class="col" style="gap:6px"><span class="k">Revenue, FY2024</span><span class="big g">+126%</span><span class="txt" style="font-size:24px">to $60.9B</span></div>
+      <div class="col" style="gap:6px"><span class="k">Data center revenue</span><span class="big">+217%</span><span class="txt" style="font-size:24px">to $47.5B</span></div>
     </div>
   </div>
   <aside class="notes">[Point to the timeline and move your hand left to right.]
@@ -452,7 +450,7 @@ Note for Q&amp;A: INTERNET — OpenAI’s July 2025 Productivity Note confirms t
       </g>
     </svg>
     <div class="sw" data-frag="6">
-      <span class="k">Switching cost <span class="tag i" style="margin-left:10px">GIVEN</span></span>
+      <span class="k">Switching cost</span>
       <ol>
         <li><span>01</span>Rewrite software</li>
         <li><span>02</span>Retrain engineers</li>
@@ -549,7 +547,6 @@ Key line: The cost of leaving is what NVIDIA really sells.</aside>
       <text x="746" y="661" class="ch" style="fill:var(--mute)">Every other customer <tspan font-weight="750" style="fill:var(--fg)">60%</tspan></text>
     </svg>
   </div>
-  <p class="txt b" style="font-size:22px;margin-top:-6px">Customer shares: case estimates for 2023. <span class="tag">GIVEN</span> $24.4B = 40% × $60.9B <span class="tag c">COMPUTED</span> Chip dates: case pp. 13–15 <span class="tag">GIVEN</span></p>
   <aside class="notes">[Gesture to each company as it lights up.]
 
 These four. Microsoft. Meta. Amazon. And Alphabet, which owns Google.
@@ -688,7 +685,7 @@ Key line: Five questions decide what NVIDIA should do.</aside>
   <h2>78% of NVIDIA's revenue now comes from AI data centers, its only proven growth engine</h2></header>
   <div class="row" style="flex:1;min-height:0;gap:80px">
     <div class="col b" style="flex:1;gap:20px;justify-content:center">
-      <span class="k">Data center share of revenue <span class="tag c" style="margin-left:8px">COMPUTED</span></span>
+      <span class="k">Data center share of revenue</span>
       <div>
         <div class="cols" role="img" aria-label="Data center share of NVIDIA revenue: FY22 39%, FY23 56%, FY24 78%">
           <div class="vc" style="--gd:.9s"><span class="v">39%</span><div class="bar grow-y" style="height:125px;--gd:.9s"></div></div>
@@ -698,11 +695,10 @@ Key line: Five questions decide what NVIDIA should do.</aside>
         <div class="yrs"><span>FY22</span><span>FY23</span><span>FY24</span></div>
       </div>
       <div class="margin" data-frag="1">
-        <span class="k">Operating margin, FY23 → FY24 <span class="tag c" style="margin-left:8px">COMPUTED</span></span>
+        <span class="k">Operating margin, FY23 → FY24</span>
         <div class="mg">15.7%<span class="arr">→</span><span class="g">54.1%</span></div>
         <p>About 85¢ of each extra sales dollar became operating profit.</p>
         <div class="margin-proof"><span><b>+126%</b> revenue<br>$27.0B → $60.9B</span><span><b>+15.8 pts</b> gross margin<br>56.9% → 72.7%</span><span><b>+2%</b> operating costs<br>$11.1B → $11.3B</span></div>
-        <small class="proof-source">Case Fig. 2, p. 4 · GIVEN inputs / COMPUTED changes</small>
       </div>
     </div>
     <div class="col" data-frag="2" style="width:880px;gap:16px;justify-content:center">
@@ -718,7 +714,7 @@ Key line: Five questions decide what NVIDIA should do.</aside>
       </div>
     </div>
   </div>
-  <div class="ocean-verdict" data-frag="4"><span class="k">Is NVIDIA still in a blue ocean?</span><div class="ocean-answers"><p><b>By results: yes.</b><br>It created the market and earns a 73% gross margin.</p><p><b>By structure: no.</b><br>Its four biggest buyers are building substitutes.</p></div><p class="ocean-moves">Moves 1 and 2 defend today’s market. Move 3 looks for the next one.</p><span class="tag i">OUR JUDGMENT · 73% margin GIVEN</span></div>
+  <div class="ocean-verdict" data-frag="4"><span class="k">Is NVIDIA still in a blue ocean?</span><div class="ocean-answers"><p><b>By results: yes.</b><br>It created the market and earns a 73% gross margin.</p><p><b>By structure: no.</b><br>Its four biggest buyers are building substitutes.</p></div><p class="ocean-moves">Moves 1 and 2 defend today’s market. Move 3 looks for the next one.</p></div>
   <aside class="notes">[The three columns grow left to right. Point to them in order.]
 
 Two years earlier, data centers were 39% of NVIDIA’s revenue. Then 56%. Now 78%.
@@ -866,7 +862,7 @@ Note for Q&amp;A: GIVEN inputs: case Fig. 2, p. 4. COMPUTED: (60.9 / 27.0 − 1)
       </div>
     </div>
     <div class="pv">
-      <span class="k b">Data center, FY23 → FY24 <span class="tag c" style="margin-left:8px">COMPUTED</span></span>
+      <span class="k b">Data center, FY23 → FY24</span>
       <div class="mrow ship b">
         <div class="top"><span class="nm">Estimated GPU shipments<small>2.64M → 3.76M</small></span><span class="num" data-count="42" data-prefix="+" data-suffix="%">+42%</span></div>
         <div class="trk"><div class="f grow-x" style="--gd:1s"></div></div>
@@ -878,7 +874,7 @@ Note for Q&amp;A: GIVEN inputs: case Fig. 2, p. 4. COMPUTED: (60.9 / 27.0 − 1)
       <div class="note" data-frag="1"><p>Not a pure price. It also reflects product mix and <b>non-GPU sales such as networking</b>.</p></div>
     </div>
     <div class="gm" data-frag="2">
-      <span class="k">Gross margin <span class="tag" style="margin-left:8px">GIVEN</span></span>
+      <span class="k">Gross margin</span>
       <div>
         <div class="cols" role="img" aria-label="Gross margin: NVIDIA 73%, AMD 47%, Intel 41%">
           <div class="mc nv" style="--d:0"><span class="v">73%</span><div class="bar" style="height:409px"></div></div>
@@ -935,15 +931,15 @@ Key line: The 73% margin is NVIDIA’s reward and its weak spot.</aside>
     <div class="panel b col" style="gap:18px">
       <span class="k">On paper · H100 vs A100</span>
       <span class="big" style="font-size:190px;color:var(--mute)">−14%</span>
-      <p class="lede" style="font-size:30px">raw TFLOPS per dollar: 0.00195 → 0.00168. H100: $40,000; A100: $10,000. <span class="tag">GIVEN</span> <span class="tag c">COMPUTED</span></p>
+      <p class="lede" style="font-size:30px">raw TFLOPS per dollar: 0.00195 → 0.00168. H100: $40,000; A100: $10,000.</p>
     </div>
     <div class="panel b col" style="gap:18px;border-color:var(--green-lo)">
       <span class="k" style="color:var(--green)">In practice · per training job</span>
       <span class="big g" style="font-size:190px">2.25×</span>
-      <p class="lede" style="font-size:30px">more training per dollar: CUDA end-to-end training is 9× faster for 4× the chip price. 9 ÷ 4 = 2.25. <span class="tag c">COMPUTED</span></p>
+      <p class="lede" style="font-size:30px">more training per dollar: CUDA end-to-end training is 9× faster for 4× the chip price. 9 ÷ 4 = 2.25.</p>
     </div>
   </div>
-  <p class="txt b" style="font-size:30px">Customers waited up to <b>18 months</b> for NVIDIA chips rather than switch. <span class="tag">GIVEN</span></p>
+  <p class="txt b" style="font-size:30px">Customers waited up to <b>18 months</b> for NVIDIA chips rather than switch.</p>
   <aside class="notes">[Playful. This slide surprises people. Set it up like a puzzle.]
 
 Here is a puzzle.
@@ -1082,7 +1078,6 @@ Key line: Buyers pay for the finished job, not the chip.</aside>
 
     <div class="same">Same four firms</div>
     <i data-frag="1" hidden></i><i data-frag="2" hidden></i>
-    <p class="txt foot b">Ratings are our judgment from case facts. <span class="tag i">OUR JUDGMENT</span></p>
   </div>
   <aside class="notes">[The NVIDIA hub appears, then the five forces pop out around it.]
 
@@ -1201,15 +1196,15 @@ Note for Q&amp;A (details taken off the slide): New entrants: $8.8 billion of ve
   <div class="c10">
     <span class="k lbl b">Four Corners · Microsoft, Meta, Amazon, Google</span>
     <div class="grid">
-      <div class="cn l" style="--fx:-60px;--fy:-30px;--dl:.55s"><span class="k"><i>01</i>Drivers</span><p>Cut costs, secure supply and control design</p><span class="tag">GIVEN</span></div>
-      <div class="cn r" style="--fx:60px;--fy:-30px;--dl:.7s"><span class="k"><i>02</i>Assumptions<small style="color:var(--dim);letter-spacing:.04em;text-transform:none;font-size:17px">Alphabet’s CEO</small></span><p>Under-spending on AI is riskier than over-spending</p><span class="tag">GIVEN</span></div>
-      <div class="cn l" style="--fx:-60px;--fy:30px;--dl:.85s"><span class="k"><i>03</i>Current strategy</span><p>Build their own chips, rent them out in their clouds</p><span class="tag">GIVEN</span></div>
-      <div class="cn r" style="--fx:60px;--fy:30px;--dl:1s"><span class="k"><i>04</i>Capabilities</span><p>TPU: 70–80% lower cost per chip, before design costs</p><span class="tag c">COMPUTED</span></div>
+      <div class="cn l" style="--fx:-60px;--fy:-30px;--dl:.55s"><span class="k"><i>01</i>Drivers</span><p>Cut costs, secure supply and control design</p></div>
+      <div class="cn r" style="--fx:60px;--fy:-30px;--dl:.7s"><span class="k"><i>02</i>Assumptions<small style="color:var(--dim);letter-spacing:.04em;text-transform:none;font-size:17px">Alphabet’s CEO</small></span><p>Under-spending on AI is riskier than over-spending</p></div>
+      <div class="cn l" style="--fx:-60px;--fy:30px;--dl:.85s"><span class="k"><i>03</i>Current strategy</span><p>Build their own chips, rent them out in their clouds</p></div>
+      <div class="cn r" style="--fx:60px;--fy:30px;--dl:1s"><span class="k"><i>04</i>Capabilities</span><p>TPU: 70–80% lower cost per chip, before design costs</p></div>
     </div>
     <div class="bw"><div class="badge"><b>Top 4</b><span>buyers</span></div></div>
 
     <div class="pred" data-frag="1">
-      <div class="hd10"><span class="k">Likely next move</span><span class="tag i">OUR PREDICTION</span></div>
+      <div class="hd10"><span class="k">Likely next move</span></div>
       <div class="flow">
         <svg viewBox="0 0 1664 400" width="1664" height="400" aria-hidden="true">
           <path d="M330 200 L440 200"/>
@@ -1224,7 +1219,7 @@ Note for Q&amp;A (details taken off the slide): New entrants: $8.8 billion of ve
         <div class="bx o yes"><span class="chipico"></span><span>Move it in-house<small>runs on their own chip</small></span></div>
         <div class="bx o no"><img src="nvidia_assets/_picks/moat_system/blackwell_chip.webp" alt="NVIDIA chip"><span>Keep it on NVIDIA<small>where their chip falls short</small></span></div>
       </div>
-      <div class="amz" data-frag="2"><p><b>Amazon already has chips for both jobs:</b> Inferentia to run AI models, Trainium to train them.</p><span class="tag">GIVEN</span></div>
+      <div class="amz" data-frag="2"><p><b>Amazon already has chips for both jobs:</b> Inferentia to run AI models, Trainium to train them.</p></div>
     </div>
   </div>
   <aside class="notes">[The four corners fly in. Walk through them in order.]
@@ -1307,7 +1302,7 @@ Note for Q&amp;A: Current strategy detail taken off the slide: they rent their c
     <div class="bar" id="rb" aria-hidden="true"><i class="gp"></i><i class="rk"></i></div>
     <div class="bl" aria-hidden="true"><span class="l1" data-frag="1">Costs</span></div>
     <div class="ctl" data-frag="2">
-      <label for="l">Share of top-4 purchases moved in&#8209;house <span class="tag i" style="margin-left:8px">ASSUMPTION</span></label>
+      <label for="l">Share of top-4 purchases moved in&#8209;house</label>
       <input id="l" type="range" min="5" max="50" step="1" value="25" aria-describedby="lh">
       <output id="lo">25%</output>
       <span class="hint" id="lh">Illustrative, not a forecast · 72.7% company-wide margin as a proxy · same product mix · unit costs unchanged</span>
@@ -1324,7 +1319,7 @@ The top four buy about $24.4 billion a year. That is 40% of $60.9 billion.
 
 At NVIDIA’s 72.7% gross margin, those sales earn about $17.7 billion of gross profit. We use the company-wide margin as a proxy, and we assume the product mix and unit costs stay the same.
 
-[CLICK 2: The red slice and the slider appear. Point to the ASSUMPTION tag.]
+[CLICK 2: The red slice and the slider appear. Point to the slider.]
 
 Now suppose they move a quarter of those purchases to their own chips. That puts about $4.4 billion of gross profit at risk every year, about a tenth of NVIDIA’s total.
 
@@ -1420,7 +1415,6 @@ Key line: Even a partial shift in-house puts billions of gross profit at risk.</
           <text x="288" y="542" text-anchor="start" font-size="17" style="fill:var(--green-hi);letter-spacing:.06em">INSURER</text>
         </g>
       </svg>
-      <p class="src">Case: enterprises were not historically a GPU market. <span class="tag">GIVEN · p. 16</span></p>
     </div>
 
     <div class="side b" style="--i:2">
@@ -1433,7 +1427,7 @@ Key line: Even a partial shift in-house puts billions of gross profit at risk.</
       </div></div>
       <div class="fold open pw"><div>
         <div class="steps">
-          <div class="st s1" data-frag="1"><span class="num">1</span><div><div class="kh"><span class="k">The offer</span><span class="tag i">OUR PROPOSAL</span></div><h3>One task still done by hand</h3><p>AI Foundry (<b>NIM + NeMo</b>), packaged and delivered by a partner.</p></div></div>
+          <div class="st s1" data-frag="1"><span class="num">1</span><div><div class="kh"><span class="k">The offer</span></div><h3>One task still done by hand</h3><p>AI Foundry (<b>NIM + NeMo</b>), packaged and delivered by a partner.</p></div></div>
           <div class="st s2" data-frag="2"><span class="num">2</span><div><span class="k">First test</span><h3>A mid-sized insurer</h3><p>Claims staff still search policy documents by hand.</p></div></div>
           <div class="st" data-frag="3"><span class="num">3</span><div><span class="k">Scale only if both are yes</span>
             <div class="gates"><div class="gate"><i>?</i>Do the savings justify the price?</div><div class="gate"><i>?</i>Can NVIDIA and its partner deliver it profitably?</div></div></div></div>
@@ -1542,7 +1536,7 @@ Note for Q&amp;A: GIVEN anchors supplied by the build spec: enterprise market, p
           <div class="rt"><span>Top-4 reliance <em>no</em></span><span>Antitrust <em>depends on terms</em></span></div></div>
         <div class="oc ours" style="--dl:.74s"><div class="bg" style="background-image:url(nvidia_assets/_picks/moat_system/gb200_rack.jpg)"></div>
           <div class="hd12"><span class="lt">+</span><h3>Their own chips in NVIDIA systems</h3></div>
-          <span class="tag i">OUR ADDITION</span>
+         
           <p>Could keep networking and systems sales</p>
           <div class="rt"><span>Top-4 reliance <em>no</em></span><span>Antitrust <em>depends on terms</em></span></div></div>
       </div>
@@ -1734,7 +1728,7 @@ Key line: Invest in CUDA now. Test the other two before scaling them.</aside>
       </div>
       <div class="rw">
         <div class="fd b" style="--i:4"><div class="st"><b>New</b><small>enterprise demand</small></div>
-          <div class="fx"><span class="qs">Q1 + Q5</span><h3>Enterprises were not historically a GPU market</h3><p>Case p. 16 <span class="tag">GIVEN</span></p></div></div>
+          <div class="fx"><span class="qs">Q1 + Q5</span><h3>Enterprises were not historically a GPU market</h3></div></div>
         <div class="ar" data-frag="3"><svg viewBox="0 0 104 40"><path d="M6 20H96M82 8l14 12-14 12" style="stroke:var(--green)"/></svg></div>
         <div class="mvw" data-frag="3"><div class="mv"><div class="ph" style="background-image:url(nvidia_assets/04_cuda_software/nvaie-og.jpg)"></div>
           <b class="nb">3</b><div class="tx"><span class="pl">Pilot first</span><h3>Win first-time enterprise buyers</h3><p>Scale only if buyers pay and it turns a profit</p></div></div></div>
@@ -1948,7 +1942,7 @@ Note for Q&amp;A: Other risks we would watch: regulators acting against NVIDIA�
     <div class="lb l1" data-frag="2"><i></i><span>NVIDIA GPUs</span></div>
     <div class="lb l2" data-frag="2"><i></i><span>Their own chip</span></div>
     <div class="lc">
-      <div class="nm" data-frag="1"><h3>NVLink Fusion</h3><p>Announced May 18, 2025 <span class="tag i">INTERNET · AFTER THE CASE</span></p></div>
+      <div class="nm" data-frag="1"><h3>NVLink Fusion</h3><p>Announced May 18, 2025</p></div>
       <p class="cv" data-frag="2"><b>It shows NVIDIA pursuing a similar approach.</b><br>It does not yet prove the move works.</p>
     </div>
     <p class="fin" data-frag="3">Make NVIDIA’s systems the best option, <em>even when buyers build their own chips.</em></p>
@@ -2025,7 +2019,7 @@ Thank you. We’re happy to take your questions.</aside>
       <tr><td>13</td><td>Biggest challenge</td><td class="y">D · in-house chips</td><td>9</td></tr>
       <tr><td>14</td><td>Response</td><td class="y">E, C, B</td><td>13</td></tr>
       <tr><td>15</td><td>Future success</td><td class="y">D, E, F</td><td>14</td></tr>
-      <tr><td colspan="4" style="color:var(--mute);font-weight:400;font-size:18px">Q12: gaming only partly recovered ($12.5B → $9.1B → $10.4B). New AI demand drove the shift. <span class="tag c">COMPUTED</span></td></tr>
+      <tr><td colspan="4" style="color:var(--mute);font-weight:400;font-size:18px">Q12: gaming only partly recovered ($12.5B → $9.1B → $10.4B). New AI demand drove the shift.</td></tr>
     </tbody></table>
   </div>
   <aside class="notes">[Use only if the professor asks or runs the case poll. Don’t present it unprompted.]
@@ -2056,7 +2050,6 @@ The 12-question defense bank is in NVIDIA_QA_Defense.md.</aside>
 
 </main>
 
-<div id="bar" aria-hidden="true"></div>
 <div id="hint" class="ui"><button type="button" id="bp" aria-label="Previous slide">←</button><button type="button" id="bn" aria-label="Next slide">→</button><button type="button" id="bnotes" hidden>N · notes</button><button type="button" id="bidx" hidden>I · titles</button><button type="button" id="bfs" hidden>F · full screen</button></div>
 <div id="notes" class="ui" hidden><div class="nh" id="nh">Speaker script</div><div id="nt"></div></div>
 <div id="index" class="ui" hidden><div class="in"><h4>Read the titles only</h4><p class="sub">If the class reads only these, they should get the whole argument. Click one to jump.</p><ol id="il"></ol></div></div>
@@ -2105,7 +2098,6 @@ function go(n,st){
     cur=n;slides[cur].classList.add('active');counts(slides[cur]);
   }
   step=st||0;applyStep();
-  updBar();
   try{history.replaceState(null,'','#s'+cur)}catch(e){}
   const nt=slides[cur].querySelector('aside.notes');
   /* speaker script: words to say stay white; everything not read aloud ([CLICK …], [Point to …], Key line, Note for Q&A) is red italics */
@@ -2119,7 +2111,7 @@ function go(n,st){
   [...document.querySelectorAll('#il button')].forEach((b,i)=>b.classList.toggle('cur',i===cur));
 }
 let backups=false;
-function updBar(){const tot=backups?slides.length:MAIN;document.getElementById('bar').style.width=Math.min(100,cur/(tot-1)*100)+'%'} /* B key: unlock the backup slides after the last main slide */
+/* B key: unlock the backup slides after the last main slide */
 const lastIdx=()=>backups?slides.length-1:MAIN-1;
 function next(){const s=slides[cur];if(step<s._max){step++;applyStep()}else if(cur<lastIdx())go(cur+1,0)}
 function prev(){if(step>0){step--;applyStep()}else if(cur>0)go(cur-1,slides[cur-1]._max)}
@@ -2146,7 +2138,7 @@ addEventListener('keydown',e=>{
   else if(k==='n'||k==='N')toggle('notes');
   else if(k==='i'||k==='I')toggle('index');
   else if(k==='f'||k==='F')fs();
-  else if(k==='b'||k==='B'){backups=!backups;if(!backups&&cur>=MAIN)go(MAIN-1,0);updBar()}
+  else if(k==='b'||k==='B'){backups=!backups;if(!backups&&cur>=MAIN)go(MAIN-1,0)}
   else if(k==='Escape'){toggle('index',false);toggle('notes',false)}
 });
 stage.addEventListener('click',e=>{

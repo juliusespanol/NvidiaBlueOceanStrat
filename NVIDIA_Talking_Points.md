@@ -439,7 +439,7 @@ The top four buy about $24.4 billion a year. That is 40% of $60.9 billion.
 
 At NVIDIA’s 72.7% gross margin, those sales earn about $17.7 billion of gross profit. We use the company-wide margin as a proxy, and we assume the product mix and unit costs stay the same.
 
-*[CLICK 2: The red slice and the slider appear. Point to the ASSUMPTION tag.]*
+*[CLICK 2: The red slice and the slider appear. Point to the slider.]*
 
 Now suppose they move a quarter of those purchases to their own chips. That puts about $4.4 billion of gross profit at risk every year, about a tenth of NVIDIA’s total.
 
