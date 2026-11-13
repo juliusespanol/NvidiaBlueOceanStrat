@@ -24,7 +24,7 @@ Each slide ends with a **Key line**: if you forget everything else on that slide
 
 - Hand off out loud. The last line of each group is a question the next speaker answers.
 
-> Rehearsal target: about 30 minutes including transitions. Keep the dated chip examples, detailed arithmetic and the defense bank for Q&A when time is tight.
+> Rehearsal target: about 20 minutes including clicks, pauses and handoffs (about 1,660 spoken words). Keep the detailed arithmetic and the defense bank for Q&A.
 
 ## Who speaks when
 
@@ -44,35 +44,49 @@ Each slide ends with a **Key line**: if you forget everything else on that slide
 
 Six hundred billion dollars.
 
-That is how much NVIDIA’s market value fell. In one trading day. January 2025.
+That’s how much NVIDIA’s market value fell in one day in January 2025.
 
 *[Pause.]*
 
 *[CLICK 1: Jensen Huang meme appears.]*
 
-And apparently, things haven't been going too well for its CEO, Jensen Huang, either.
+Even Jensen probably had a difficult morning.
 
-Well... not exactly. But even the “king of AI” isn't safe from a controversy.
+*[Smile. Give the room a moment, then move on.]*
 
-But let's put the headlines aside for a moment. Because that $600 billion tells a much bigger story.
+Let’s look at what worried investors.
 
 *[Slow down. Let each fact land.]*
 
-Market value is what all of a company’s shares are worth together. So in a single day, investors decided NVIDIA was worth $600 billion less.
+They marked NVIDIA’s shares down by six hundred billion dollars.
 
 *[CLICK 2: The meme leaves. DeepSeek appears with “<$5.6M vs $100M+”.]*
 
-What happened? A small Chinese lab called DeepSeek claimed it trained a leading AI model for under $5.6 million. The case compares that with an estimated $100 million or more for GPT-4. These are different estimates, not an audited like-for-like comparison.
+DeepSeek reported a training run under 5.6 million dollars. The GPT-4 estimate was over a hundred million, though those figures cover different things.
 
-Investors panicked. Their logic was simple. If AI gets this cheap, the world needs fewer NVIDIA chips.
+Investors wondered whether cheaper AI meant fewer expensive chips.
 
 *[CLICK 3: The question rises in on its own. Look around the room.]*
 
-So here is our question for the next thirty minutes. **Was cheaper AI the real threat?**
+Was that NVIDIA’s biggest threat?
 
 *[Pause two seconds. Let the question sit.]*
 
-To answer it, we first need to know how NVIDIA got so big.
+*[CLICK 4: The question moves up. “It still trained on NVIDIA chips.” appears, then three short facts underneath.]*
+
+DeepSeek still used NVIDIA chips.
+
+*[Pause.]*
+
+And that training bill excluded earlier research and experiments.
+
+*[CLICK 5: The bottom line appears.]*
+
+Our view is that another threat sits on NVIDIA’s own customer list.
+
+Let’s rewind.
+
+**Key line:** Some of NVIDIA’s biggest customers are building alternatives to its chips.
 
 **Note for Q&A:** INTERNET — DeepSeek-V3 technical report, https://arxiv.org/html/2412.19437v2. Its estimated compute bill uses an assumed H800 rental rate and excludes earlier research and ablation experiments. The dollar comparison does not measure all-in R&D or the full cost of DeepSeek-R1.
 
@@ -83,35 +97,35 @@ To answer it, we first need to know how NVIDIA got so big.
 
 *[Point to the timeline and move your hand left to right.]*
 
-Rewind to 1999. NVIDIA makes the first GPU.
-
-A GPU, or graphics processing unit, is a chip that does thousands of small calculations at the same time. It was built to make video games look real.
+Back then, GPUs were mainly used to make video games run better by handling many calculations at once.
 
 *[CLICK 1: The timeline moves to 2007 and the CUDA logo appears.]*
 
-In 2007, NVIDIA releases CUDA. CUDA is software that lets programmers use those gaming chips for any heavy number-crunching. Not just games.
+Then in 2007, NVIDIA introduced Compute Unified Device Architecture (CUDA in short), allowing developers to use GPUs for more than just graphics.
 
 *[Step toward the screen. Raise your energy.]*
 
 *[CLICK 2: ChatGPT appears on the timeline.]*
 
-Then, November 2022. ChatGPT launches. It reaches an estimated 100 million monthly users in about two months. Every big company suddenly wants its own AI.
+Fast forward to 2022. ChatGPT launched, and suddenly everyone wanted to get into AI.
 
-And training AI needs exactly what a GPU does best. Millions of small calculations, all at once.
+By then, NVIDIA already had the chips and software needed to train AI models.
 
 *[CLICK 3: Market value bars grow. Point to them.]*
 
-NVIDIA’s value goes from about $400 billion to over $3 trillion. In about two years.
+And look what happened.
 
-In fiscal 2024, revenue grows 126%, to 60.9 billion dollars. Data center revenue grows 217%, to 47.5 billion.
+NVIDIA's market value grew from around 400 billion to over 3 trillion dollars.
 
-A data center is a building full of computers that companies use to run software at scale. That is where AI lives.
+In fiscal 2024, it earned 60.9 billion dollars in revenue, mostly from data centers.
 
 *[Pause. Ask the room, as if you really want an answer.]*
 
-So how did one company capture so much of this boom? Because NVIDIA does not just sell a chip.
+So, why did so many companies choose NVIDIA?
 
-**Key line:** NVIDIA does not just sell a chip.
+Well, the answer goes beyond the chips themselves.
+
+**Key line:** NVIDIA's advantage comes from its chips, software, and developer community working together.
 
 **Note for Q&A:** INTERNET — OpenAI’s July 2025 Productivity Note confirms the two-month timeline: https://cdn.openai.com/global-affairs/be0fe9e0-eb97-43d1-9614-99f2bd948bcc/OpenAI_Productivity-Note_Jul-2025.pdf. The build spec’s proposed one-month replacement is not supported by that source. If asked: “fiscal 2024” is NVIDIA’s financial year ending January 2024.
 
@@ -122,47 +136,45 @@ So how did one company capture so much of this boom? Because NVIDIA does not jus
 
 *[Trace the loop on screen with your hand, one step at a time.]*
 
-Here is how NVIDIA makes money. It is a loop with five steps.
+Now, let's look at why companies keep choosing NVIDIA.
 
 *[CLICK 1: Step 1 appears.]*
 
-One. NVIDIA builds the fastest chips.
+First, NVIDIA develops powerful chips.
 
 *[CLICK 2: Step 2 appears.]*
 
-Two. CUDA makes those chips easy to program. It comes with over 300 ready-made libraries. A library is code someone already wrote, so you don’t have to.
+Second, CUDA supplies reusable code. Someone has already done part of the work. Very helpful when your deadline is Friday.
 
 *[CLICK 3: Step 3 appears.]*
 
-Three. More than five million developers learn CUDA. And code written for CUDA runs only on NVIDIA chips.
+Third, millions of developers already know how to use CUDA.
 
 *[CLICK 4: Step 4 appears.]*
 
-Four. Buyers follow the developers. That gives NVIDIA pricing power: the ability to charge more without losing customers.
+So naturally, companies prefer buying chips their developers are already familiar with. This also allows NVIDIA to charge higher prices.
 
 *[CLICK 5: Step 5 appears.]*
 
-Five. Those profits pay for the next, faster chip. And the loop starts again.
+And with those profits, NVIDIA can invest in even better chips. The cycle continues.
 
 *[Stop moving. Lower your voice slightly. This is the key idea of the whole talk.]*
 
 *[CLICK 6: The switching cost panel appears.]*
 
-Now here is the important part. A customer who wants to leave NVIDIA can’t just swap one chip for another.
+Now, what if a company wants to switch to another chip?
 
-It has to rewrite its software. Retrain its engineers. Give up those 300 libraries.
+Your developers may need to rewrite code and learn different tools.
 
-Economists call this a **switching cost**. Simply, the cost of leaving.
+These are called switching costs.
 
-The chips and CUDA libraries improve together. Leaving means giving up that combined performance and tooling, as well as rewriting code and retraining people.
-
-And that cost of leaving is what NVIDIA really sells.
+So even if another chip is cheaper, switching could end up costing more.
 
 *[One beat of silence. Then ask.]*
 
-So who has enough money and engineers to pay that cost?
+Now, who can actually afford to make that switch?
 
-**Key line:** The cost of leaving is what NVIDIA really sells.
+**Key line:** Switching away from NVIDIA can cost more than the savings from cheaper chips.
 
 ## SLIDE 4 of 18 · Case facts · Group 1 · ~1.5 min
 
@@ -171,27 +183,27 @@ So who has enough money and engineers to pay that cost?
 
 *[Gesture to each company as it lights up.]*
 
-These four. Microsoft. Meta. Amazon. And Alphabet, which owns Google.
+Microsoft, Meta, Amazon, and Alphabet, Google’s parent company.
 
-[Point to the four colored segments of the circle.] These are the case’s 2023 customer-share estimates, not a claim about today. Together they bought about 40% of everything NVIDIA sold. That is about 24.4 billion dollars a year. Everyone else, the grey part, is the other 60%.
+*[Point to the four colored segments.]* The case’s customer-share estimates put them at about forty percent of sales. Applied to fiscal 2024 revenue, that’s roughly 24.4 billion dollars.
 
 *[Let that number sit for a moment.]*
 
 *[CLICK 1: Each company’s own chip appears next to its name.]*
 
-And every one of them is now building its own AI chip. Microsoft has MAIA. Meta has MTIA. Amazon has Trainium and Inferentia. Google has the TPU. The case dates Microsoft’s MAIA to 2024, Meta’s MTIA to 2023, Amazon’s Inferentia to 2018 and Trainium to 2020, and Google’s TPU to 2015, with version six announced in May 2024. These dated efforts show this is an established substitution threat.
+Microsoft has MAIA. Meta has MTIA. Amazon has Trainium and Inferentia. Google has the TPU.
 
-The industry calls them hyperscalers. Companies that run cloud computing at enormous scale.
+These companies operate computing infrastructure at enormous scale.
 
 *[Lean in. Make it slightly provocative.]*
 
-They have the money. They have the engineers. They even have their own software.
+They have the engineers and budgets to build alternatives.
 
-Think about that. **NVIDIA’s biggest customers are building their own replacement for NVIDIA.**
+Imagine your biggest customer saying, ‘We’ve started making our own.’ You’d probably clear your calendar.
 
-That is our problem.
+That’s our problem.
 
-**Key line:** NVIDIA’s biggest customers are building their own replacement for NVIDIA.
+**Key line:** NVIDIA’s biggest buyers have the resources to become less dependent on it.
 
 ## SLIDE 5 of 18 · Problem · Group 1 · ~1.5 min
 
@@ -200,29 +212,29 @@ That is our problem.
 
 *[Slow and deliberate. This is the thesis of the presentation. Let the title sit alone for a beat.]*
 
-Let me put the problem in one sentence.
+Here’s the decision.
 
-How can NVIDIA protect its pricing power as its largest buyers build their own chips, and where can it create new demand?
+How can NVIDIA protect its pricing power while large buyers build their own chips, and where can it create new demand?
 
 *[CLICK 1: The line under the title appears: “Customers are locked into CUDA. Now the four biggest have the reason and the means to leave.”]*
 
-It charges premium prices because customers are locked into CUDA.
+CUDA gives customers a reason to stay.
 
-And its four biggest customers now have both the reason and the means to break free.
+These four have the resources to consider leaving.
 
-Why leave? Lower costs, more secure chip supply and control over their own architecture.
+They want lower costs and dependable supply.
 
-How can they leave? Their own chips, open software stacks and the scale of their own clouds. They have the money and engineers to make those alternatives work.
+Their engineers and software give them a way to act.
 
 *[CLICK 2: The title moves up and the five questions appear one by one. Point to them one at a time.]*
 
-To decide what NVIDIA should do, we need five answers. How much rides on this business? Why can NVIDIA charge so much? Who can break the lock-in? How much profit is at risk if the largest buyers shift in-house? And where can NVIDIA find new customers who are not building their own chips?
+We’ll use these five questions to guide the recommendation.
 
 *[Handoff. Turn and open your hand toward the Group 2 presenter.]*
 
-My colleague will take us through the evidence. First question: how much does NVIDIA depend on this one business?
+My colleague will take us through the evidence, starting with revenue concentration.
 
-**Key line:** Five questions decide what NVIDIA should do.
+**Key line:** Five questions help us decide what NVIDIA should do.
 
 ## SLIDE 6 of 18 · Analysis · Q1 · Group 2 · ~2.5 min
 
@@ -231,41 +243,37 @@ My colleague will take us through the evidence. First question: how much does NV
 
 *[The three columns grow left to right. Point to them in order.]*
 
-Two years earlier, data centers were 39% of NVIDIA’s revenue. Then 56%. Now 78%.
+AI data centers went from thirty-nine percent of NVIDIA's revenue, to fifty-six, then seventy-eight.
 
-Almost four out of every five dollars come from one business.
+Now, four out of five revenue dollars come from that business.
 
 *[CLICK 1: Operating margin appears.]*
 
-A data center is a building full of computers used to run software at scale. This chart shows revenue concentration. The margin below is company-wide, not a separately disclosed AI-segment profit margin.
-
-Operating margin rose from 15.7% to 54.1%. Revenue rose from $27.0 billion to $60.9 billion, gross margin from 56.9% to 72.7%, and operating expenses barely changed, from $11.1 billion to $11.3 billion. More revenue and more gross profit per dollar, spread over nearly fixed operating costs, explain why about 85 cents of each extra sales dollar became operating profit.
+Operating margin reached fifty-four percent. Gross margin increased to seventy-three percent. And operating expenses barely changed. Combine that with strong revenue growth and they drive those strong margin gains.
 
 *[CLICK 2: The portfolio map appears.]*
 
-The case uses a Blue Ocean tool that sorts businesses into three groups. Pioneers offer value nobody offered before. Migrators are better than rivals, but in a crowded market. Settlers are me-too.
+The Blue Ocean map asks what could drive growth next.
 
-Today, the AI data center business is a pioneer. Gaming is a migrator. It dipped 27% in fiscal 2023 and only partly recovered in fiscal 2024 — $12.5 billion, then $9.1 billion, then $10.4 billion, so the shift really came from data center revenue growing four and a half times. AI Foundry, NVIDIA’s new service that helps companies build their own AI models, might be the next pioneer. But the case shows no revenue for it yet. **We will test it with a pilot aimed at first-time buyers on slide 12.**
+We place AI data centers in the pioneer column. AI Foundry could be an opportunity, but we have no revenue figure proving it yet.
 
 *[CLICK 3: The data center box slides into the migrator column.]*
 
-Now watch what happens if NVIDIA stands still. Rivals catch up. The data center slides into the migrator column.
+If alternatives catch up, data centers face more direct competition.
 
 *[Pause. Point at the empty pioneer column.]*
 
-And the pioneer column is empty.
+And then NVIDIA loses that pioneer position.
 
-That is why NVIDIA must act now, while it is still on top.
+To fill that void, NVIDIA can start testing AI Foundry while the current business is strong.
 
 *[Transition. Curious tone.]*
 
 *[CLICK 4: The verdict appears and the earlier visuals dim.]*
 
-Is NVIDIA still in a blue ocean? Our judgment: by results, yes. It created the market and earns about 73% gross margin. By structure, no. Its four biggest buyers now build substitutes. Moves one and two defend today’s market. Move three looks for the next one.
+Is NVIDIA still in a Blue Ocean? NVIDIA still offers substantial value, but its buyers can now make substitutes.
 
-Next question. Why can NVIDIA charge so much?
-
-**Key line:** If NVIDIA stands still, it has no proven pioneer left.
+**Key line:** A strong current business gives NVIDIA room to test its next source of growth.
 
 **Note for Q&A:** GIVEN inputs: case Fig. 2, p. 4. COMPUTED: (60.9 / 27.0 − 1) ≈ 126%; 72.7 − 56.9 = 15.8 percentage points; (11.3 / 11.1 − 1) ≈ 2%. The 85¢ calculation uses the change in company-wide operating profit divided by the change in revenue, with rounding.
 
@@ -276,37 +284,31 @@ Next question. Why can NVIDIA charge so much?
 
 *[The two numbers count up. Point to them one at a time.]*
 
-Question two. Why can NVIDIA charge so much?
+Looking at the numbers, estimated GPU shipments rose forty-two percent.
 
-Between fiscal 2023 and 2024, estimated data center GPU shipments rose 42%.
+But data center revenue per GPU shipped rose by one hundred twenty-two percent.
 
-But data center revenue per GPU shipped? Up 122%.
-
-*[Pause.]*
-
-So revenue grew much faster than shipments.
+Revenue grew much faster than GPU shipments.
 
 *[CLICK 1: The note appears and the tray gets two labels: GPUs and networking.]*
 
-Be careful with that ratio. A data center sale is not just a GPU. Look at this tray: the GPUs sit on top, and the networking cards sit around them. So revenue per GPU also reflects a shift to pricier products and non-GPU sales like networking. It is not a pure price increase. What it does show is that buyers spent far more per chip. Slide 8 shows why they are willing to.
+Because a data center is not just GPUs; it includes other high-value non-GPU components and services like networking. Each GPU did not magically become more profitable.
 
 *[CLICK 2: The gross margin columns grow.]*
 
-Now look at gross margin. That is the share of each sales dollar left after paying to make the product.
-
-NVIDIA: 73%. AMD: 47%. Intel: 41%.
+Looking at gross margin, NVIDIA is at seventy-three percent, versus AMD's forty-seven and Intel's forty-one.
 
 *[CLICK 3: The gap between NVIDIA and AMD lights up.]*
 
-Buyers have a name for that gap. They call it the **NVIDIA tax**.
+Buyers call this premium the ‘NVIDIA tax.’
 
 *[Lean in. Provocative.]*
 
-Here is the twist. That 73% is NVIDIA’s reward. It is also its weak spot. The bigger the tax, the stronger the reason for customers to build their own chips.
+It's good because it rewards NVIDIA, but it incentivizes customers to investigate alternatives.
 
-So what exactly are they paying for?
+So what makes NVIDIA worth paying for?
 
-**Key line:** The 73% margin is NVIDIA’s reward and its weak spot.
+**Key line:** The premium rewards NVIDIA and encourages buyers to look for alternatives.
 
 ## SLIDE 8 of 18 · Analysis · Q2 · Group 2 · ~1.5 min
 
@@ -314,29 +316,29 @@ So what exactly are they paying for?
 
 *[Playful. This slide surprises people. Set it up like a puzzle.]*
 
-Here is a puzzle.
+Imagine you’re approving this purchase.
 
-The newer H100 chip gives you 14% fewer raw calculations per dollar than the older A100. Raw speed is measured in TFLOPS, meaning trillions of calculations per second.
+On the case’s raw computing comparison, the H100 gives about fourteen percent fewer calculations per dollar.
 
-And it costs four times as much. About $40,000 each.
+And it costs roughly four times as much. Finance is gonna ask hard questions.
 
 *[Ask the room. Wait one beat.]*
 
-So why does everyone want it?
+So why would the buyer approve it?
 
-In the case comparison, the H100 with CUDA and its libraries finishes an AI training job about nine times faster. This is end-to-end job performance, not raw chip speed. Training is when an AI model learns from huge amounts of data.
+On NVIDIA’s reported training benchmark, it finishes the job about nine times faster.
 
-Nine times faster, for four times the price. That is about two and a quarter times more training for every dollar.
+Nine times the speed for four times the chip price gives about two and one-fourth times the training speed per dollar.
 
-So buyers are not paying for a chip. They are paying for the **finished job**: chip, software and networking working together.
+The hardware and software work together to deliver that result.
 
-That is why customers waited up to 18 months for NVIDIA chips instead of buying from someone else.
+Customers even waited up to eighteen months, suggesting demand exceeded the available supply .
 
 *[Transition. Firmer voice.]*
 
-So if the difficulty of switching is what lets NVIDIA earn 73%, the real question is: who is able to switch?
+Let’s look at who has a realistic alternative.
 
-**Key line:** Buyers pay for the finished job, not the chip.
+**Key line:** Compare the cost of completing the job as well as the chip’s purchase price.
 
 ## SLIDE 9 of 18 · Analysis · Q3 · Group 2 · ~1.5 min
 
@@ -345,33 +347,33 @@ So if the difficulty of switching is what lets NVIDIA earn 73%, the real questio
 
 *[The NVIDIA hub appears, then the five forces pop out around it.]*
 
-We used Porter’s Five Forces, a tool from class. It shows who holds power in an industry: buyers, suppliers, rivals, new entrants and substitutes.
+Five Forces helps us locate the pressure.
 
-A substitute is a different product that does the same job.
+Here, buyers are developing another way to get the work done.
 
 *[Pick up the pace. Move quickly past the other forces.]*
 
-AMD and Intel? Real rivals. But they mostly win when NVIDIA is sold out.
+AMD and Intel compete too, but CUDA makes switching harder.
 
-Suppliers? TSMC in Taiwan makes NVIDIA’s most advanced chips, and nobody else can make them yet. That is a risk to watch. It is not the core problem.
+On supply, dependence on TSMC can constrain deliveries.
 
 *[CLICK 1: The other forces fade. Buyers and substitutes turn amber.]*
 
 *[Slow down. This is the main insight of the analysis.]*
 
-In most industries, buyers and substitutes are different companies. Here, they are the same four.
+For our strategy, the key relationship is here.
 
 *[CLICK 2: The four names and their four chips appear, joined by “Same four firms”.]*
 
-Microsoft, Meta, Amazon and Google are NVIDIA’s biggest buyers. And their own chips, MAIA, MTIA, Trainium and the TPU, are NVIDIA’s biggest substitutes.
+The same four firms are major buyers and developers of competing chips.
 
 *[Firm.]*
 
-The threat to NVIDIA is on its own customer list.
+A customer relationship can become a competitive relationship, sometimes during the same meeting.
 
-So what will these four do next?
+What will they do next?
 
-**Key line:** The buyers and the substitutes are the same four firms.
+**Key line:** Major customers are also developing alternatives.
 
 **Note for Q&A (details taken off the slide):** New entrants: $8.8 billion of venture money went into chip startups in 2023, but CUDA and scarce TSMC capacity hold them back. Suppliers: TSMC alone mass-produces 3-nanometer chips and is booked to 2026; ASML is the only maker of the EUV machines. Rivals: AMD MI300X, Intel Gaudi 3, Huawei Ascend. Substitutes: Amazon’s Trainium trains at about half the cost; open software such as PyTorch and UXL makes switching easier.
 
@@ -382,31 +384,31 @@ So what will these four do next?
 
 *[The four corners fly in. Walk through them in order.]*
 
-To predict their next move, we used the Four Corners model. It looks at a competitor from four sides. What drives it. What it is doing now. What it believes. And what it can do.
+Four Corners helps us think through that.
 
-Drivers: lower costs, secure supply and control their own architecture.
+Their motives are lower costs, supply security, and control.
 
-Current strategy: build their own chips. Rent them out through their clouds.
+Their chip programs show the strategy in action.
 
-Belief: Google’s CEO said spending too little on AI is riskier than spending too much. So they will keep spending.
+Google’s CEO argues that spending too little on AI is the bigger risk.
 
-Capabilities: they have large engineering teams and their own clouds. The case compares a TPU manufacturing cost of $2,000–$3,000 with an A100 selling price of about $10,000: 70–80% lower cost per chip, before design costs. This is not a comparison of all-in cost per AI job.
+Google’s reported chip manufacturing cost is two to three thousand dollars, versus an A100 selling price around ten thousand. Design, software, and job performance still matter.
 
 *[CLICK 1: The four corners fold into the Top 4 badge, and the prediction takes their place. Workloads start flowing. Say it clearly.]*
 
-So here is our prediction. They will not move everything at once, and they will not move only one kind of work.
+We expect a workload-by-workload decision.
 
-They will look at each AI workload. If their own chip can do it well enough, and for less, that work moves in-house. If not, it stays on NVIDIA.
+If their own chip meets the performance need at lower overall cost, they have a reason to switch.
 
 *[CLICK 2: The Amazon example appears.]*
 
-And they already have the chips to do it. Amazon has Inferentia for inference, which is when a trained AI answers your question. And it has Trainium for training, which the case says trains at about half the cost.
+Amazon has Inferentia for running models and Trainium for training. The case reports training at about half the cost. That’s a make-versus-buy decision.
 
 *[Continue to the profit-at-risk calculation.]*
 
-So the big buyers will keep moving work away. How much profit is at risk if they do?
+How much profit could a partial shift put at risk?
 
-**Key line:** Each job moves to their own chips once those chips can do it for less.
+**Key line:** Buyers will assess each workload on performance and overall cost.
 
 **Note for Q&A:** Current strategy detail taken off the slide: they rent their chips through their clouds rather than sell them, and Amazon tied Anthropic to its chips.
 
@@ -417,29 +419,29 @@ So the big buyers will keep moving work away. How much profit is at risk if they
 
 *[Point to the first number.]*
 
-How much profit is at risk if the big buyers move part of their purchases to their own chips?
+Here’s our scenario.
 
-The top four buy about $24.4 billion a year. That is 40% of $60.9 billion.
+Estimated annual sales to the four are about 24.4 billion dollars.
 
 *[CLICK 1: Gross profit appears. The bar turns green.]*
 
-At NVIDIA’s 72.7% gross margin, those sales earn about $17.7 billion of gross profit. We use the company-wide margin as a proxy, and we assume the product mix and unit costs stay the same.
+Using the company-wide margin as a proxy gives about 17.7 billion in gross profit, assuming unchanged product mix and unit costs.
 
 *[CLICK 2: The red slice grows out of the green bar and the number counts up to $4.4 billion. Let it finish before you speak.]*
 
-Now suppose they move a quarter of those purchases to their own chips. That puts about $4.4 billion of gross profit at risk every year, about a tenth of NVIDIA’s total.
+A quarter of purchases moving in-house would put about 4.4 billion in annual gross profit at risk. Roughly a tenth of NVIDIA’s total.
 
-The quarter is our assumption, to show the scale. It is not a forecast.
+The quarter is illustrative.
 
 *[CLICK 3: The Move 2 line appears.]*
 
-Even a partial shift matters. And it sets up what we test in move two: can NVIDIA keep selling networking and systems when a buyer uses its own chips?
+That exposure supports testing whether NVIDIA can retain networking and systems sales.
 
 *[Handoff to Group 3.]*
 
-That protects today’s business. Where can NVIDIA create new demand?
+My colleague will now explore new demand.
 
-**Key line:** Even a partial shift in-house puts billions of gross profit at risk.
+**Key line:** Even a partial shift can put billions in gross profit at risk.
 
 ## SLIDE 12 of 18 · Analysis · Q5 · Group 3 · ~2 min
 
@@ -448,27 +450,27 @@ That protects today’s business. Where can NVIDIA create new demand?
 
 *[Point to the highlighted middle tier.]*
 
-Question five. Where can NVIDIA create new demand?
+Let’s turn to companies that haven’t started buying yet.
 
-Our Blue Ocean map has three tiers. Companies already renting AI through clouds are closest to the existing market. At the other end are new uses on devices and at the edge; the case gives the $249 Jetson Orin Nano Super as an example.
+This map helps us explore groups outside the existing market.
 
-Our target is the middle tier: companies that evaluated custom AI and found implementation too expensive. The tier mapping is our judgment. The case anchor is that enterprises were not historically a GPU market.
+We’d start with companies that evaluated custom AI but found implementation too expensive.
 
 *[CLICK 1: Tiers 1 and 3 fold away. The offer appears.]*
 
-Offer a standard package for one task still done by hand. A partner delivers it using AI Foundry, with NIM for model deployment and NeMo for customization. This package is our proposal, not an existing revenue stream proved by the case.
+This is our proposed offer: Test a standard package for one manual task, delivered through a partner using AI Foundry, NeMo, and NIM.
 
 *[CLICK 2: The insurer appears, and a dot lands on the tier 2 ring.]*
 
-A mid-sized insurer could be the first test. Claims staff search policy documents manually. It is a narrow, document-heavy workflow; we would validate the problem with the customer before building. The insurer is an example, not a case-proven customer.
+For example, consider an insurer searching policy documents. First, we check the time spent and willingness to pay.  And if they say ‘Let’s add AI’, well that's time for a business case.
 
 *[CLICK 3: The gates appear.]*
 
-Two questions decide whether we scale. Do the savings justify the price? And can NVIDIA and its partner deliver it profitably across customers? If either answer is no, stop or try another segment.
+We need two confirmations. One, do savings justify the price? And two, can NVIDIA and its partner deliver profitably? Otherwise, revise or stop.
 
-Now we can choose the responses that defend today’s market and test the next one.
+Now let’s choose the responses.
 
-**Key line:** Start with one manual task and prove value for both sides before scaling.
+**Key line:** Start with one task and prove that the offer pays for both sides.
 
 **Note for Q&A:** GIVEN anchors supplied by the build spec: enterprise market, p. 16; Jetson price and December 2024 timing, p. 17. Tier mapping is OUR JUDGMENT; the insurer, package and pilot gates are OUR PROPOSAL based on WAC v3.
 
@@ -479,23 +481,23 @@ Now we can choose the responses that defend today’s market and test the next o
 
 *[The six cards come in. Steady and quick. Don’t read the cards.]*
 
-The case gives five possible responses. We added one of our own: let the big buyers’ own chips run inside NVIDIA’s systems. That one is not a poll option, so it gets its own card.
+We screened the five case options and added one more, interoperability: connecting customer chips to NVIDIA networking and systems.
 
-We tested each one against what the analysis showed. Does it reduce reliance on the top four? And what is the antitrust risk?
+We looked at competitive value, customer concentration, and risk.
 
 *[CLICK 1: The two bottom options are struck out.]*
 
-Two fail.
+We rejected two of the options.
 
-Exclusive contracts fail. The case describes the $40 billion ARM deal that was dropped after objections, and the review of the $700 million Run.ai deal. That is why we treat exclusive purchasing terms as a higher regulatory risk. And a contract doesn’t stop a customer from building its own chip.
+Exclusive purchasing contracts may raise regulatory concerns and could make customers feel more constrained.
 
-Selling NVIDIA’s chip design know-how fails too. It hands rivals the very advantage NVIDIA is trying to protect.
+Meanwhile, selling chip design know-how could strengthen competing chips.
 
 *[CLICK 2: The move labels drop in and the four kept cards light up.]*
 
-The other four pass, and they become our three moves. Strengthening CUDA, we approve now. Move two can go two ways, and both try to keep the big buyers spending with NVIDIA. Option B is NVIDIA designing a custom chip. Our addition is the buyer’s chip connecting to NVIDIA networking and systems. They are different routes, and both need testing. And broadening the customer base, we pilot first.
+That leaves us with three moves: CUDA gets investment now. Custom products and interoperability need testing. New enterprise demand starts with a pilot.
 
-**Key line:** Two options fail. Four pass and become three moves.
+**Key line:** Invest in CUDA now and test the other promising options.
 
 **Note for Q&A:** GIVEN, case pp. 5, 14 and 17: large buyers can build whole systems themselves. Our proposal targets mixed fleets; Meta still planned about 350,000 H100s in 2024. We must demonstrate that integration keeps enough gross profit to cover its cost. We used no weighted scores. The weights would be our own guesses, and changing them could change the winner.
 
@@ -506,27 +508,27 @@ The other four pass, and they become our three moves. Strengthening CUDA, we app
 
 *[Stand tall. Slow down. This is the answer.]*
 
-Our recommendation in one line. Protect the value of CUDA. Keep selling networking and systems when the big buyers use their own chips. And test whether AI Foundry can bring in first-time buyers.
+Here’s what we would ask Jensen, I mean the CEO, to approve.
 
 *[Move 1 is on screen.]*
 
-Move one, we approve now. Strengthen CUDA. Keep improving NVIDIA’s libraries, models and tools, and make them fast and easy for developers who already work in PyTorch. PyTorch is free software many AI developers use, and it can run on other companies’ chips.
+Move one. Invest in CUDA now. Keep improving the tools and performance for developers, including those using PyTorch.
 
 *[CLICK 1: Move 2 appears.]*
 
-Move two, we test first. Keep selling systems when customers build their own chips. Test whether one large buyer can connect its own chips to NVIDIA’s networking and racks. Then compare the gross profit NVIDIA expects to earn with what it would earn without the arrangement, after the integration costs and any GPU sales it would displace. We expand it only if it improves expected profit.
+Move two. Test interoperability with one buyer. Compare expected profit with proceeding without it, including integration costs and any additional loss of GPU gross profit. Expand only if the comparison improves.
 
 *[CLICK 2: Move 3 appears.]*
 
-Move three, we pilot first. Test demand from first-time enterprise buyers. Use AI Foundry and an implementation partner to offer a standard package for one task companies still do by hand, running on NVIDIA software and computing infrastructure. Start with companies that found custom AI too costly, as we showed on slide 12. We scale it only if those companies pay to keep using it, and NVIDIA and its partner can deliver it profitably.
+Move three. Pilot a standard AI Foundry package for first-time buyers, delivered on NVIDIA software and computing infrastructure. Scale when customers keep paying and delivery earns a profit.
 
 *[CLICK 3: The ERRC strip appears.]*
 
-We used the ERRC grid, a Blue Ocean tool. It asks what to eliminate, reduce, raise and create. We eliminate exclusive deals. We reduce NVIDIA’s reliance on four big buyers. We raise how easy CUDA is to use. And we create two things: a plug-in path for their chips, and an AI Foundry package.
+This ERRC grid makes the choices explicit. Drop exclusive deals, reduce buyer concentration, improve developer ease, and test new offers.
 
-Every move answers one finding. Here is the proof.
+Here’s how those moves connect to the findings.
 
-**Key line:** Invest in CUDA now. Test the other two before scaling them.
+**Key line:** Approve the CUDA investment and give the two pilots clear profit tests.
 
 ## SLIDE 15 of 18 · Justification · Group 3 · ~1.5 min
 
@@ -536,37 +538,37 @@ Every move answers one finding. Here is the proof.
 
 *[The three findings are on screen. Point to the left column.]*
 
-On the left, three things our analysis found. On the right, the move each one leads to.
+Let’s follow each row.
 
-From question two: CUDA is costly to leave, so buyers are less sensitive to price.
+CUDA makes switching costly.
 
 *[CLICK 1: Move 1 appears.]*
 
-So move one, strengthen CUDA. It protects NVIDIA’s pricing power.
+So keep improving its value to developers.
 
 *[CLICK 2: Move 2 appears.]*
 
-From questions three and four: the four biggest buyers are about 40% of NVIDIA’s sales, so even a partial shift to their own chips matters. On slide 11, a quarter moving in-house put about $4.4 billion of gross profit at risk.
+The top four can shift the work in house, which would obviously put a substantial amount of profit at risk.
 
-So move two, keep selling systems when they build their own chips. The pilot tests whether NVIDIA can keep its networking and systems sales when a buyer uses its own chips. And the test is simple: does it earn more profit than going without it, after the integration costs and any GPU gross profit it gives up? And CUDA stays tied to NVIDIA hardware. The plug-in path covers racks, networking and system software only.
+So test whether retained systems sales improve the overall profit picture. Keep CUDA locked into the NVIDIA hardware.
 
 *[CLICK 3: Move 3 appears.]*
 
-From questions one and five: the case says enterprises were not historically a GPU market. That is the evidence for looking beyond today’s buyers. Slide 12 turns it into a test of companies that found custom AI too costly.
+Revenue concentration also gives NVIDIA another reason to be looking for new buyers.
 
-So move three, the AI Foundry pilot. It tests whether companies that put off custom AI will pay for a package that NVIDIA and its partner can deliver profitably.
+AI Foundry are testing whether previously reluctant customers will prove to be profitable.
 
 *[CLICK 4: The two rejected options are struck out.]*
 
-And the two we rejected. Exclusive contracts, because regulators already watch NVIDIA closely. And selling design know-how, because it would help rivals copy NVIDIA.
+We rejected the exclusive contracts and the sale of our design know how for the reasons we've already discussed.
 
 *[Firm.]*
 
-No move without a finding behind it.
+Each move is supported by evidence.
 
-Now, what could break this plan?
+What would make us change our minds?
 
-**Key line:** Every move comes from a finding. No move without one.
+**Key line:** Each move has evidence behind it and a result we can test.
 
 **Note for Q&A:** The 73% is NVIDIA’s company-wide gross margin in fiscal 2024 (72.7%), a GIVEN case figure. We don’t port CUDA to rival chips: the plug-in path is for racks, networking and system software.
 
@@ -578,29 +580,29 @@ Now, what could break this plan?
 
 *[Brisk. One risk per move.]*
 
-Every plan can fail. Here is how each of our moves could, and how we would know early.
+Here's how we keep the recommendation honest.
 
-Risk to move one: PyTorch is a framework above the chip-specific software. It can target other chips, so the same framework can make switching easier. That does not mean every CUDA workload ports without effort. The warning sign is more workloads using non-CUDA backends. Our response: keep CUDA the fastest option under PyTorch.
+For CUDA, watch the workloads move to the other chips. Keep earning developer preference.
 
 *[CLICK 1: Risk to Move 2 appears.]*
 
-The biggest risk is to move two. The big buyers’ own chips get good enough sooner than we expect. The warning sign: more of the top four’s work moving to their own chips, and outside AI labs signing up for Google’s TPU or Amazon’s Trainium. Our response: speed up the plug-in path.
+For interoperability it's watch faster shifts in-house. Test with urgency, but keep the profit gate.
 
 *[CLICK 2: Risk to Move 3 appears.]*
 
-Risk to move three: the pilot doesn’t convert, or it costs too much to deliver. The warning sign is few first-time buyers moving to paid use. Our response: stop, or try another first-time segment. That’s why it’s a pilot.
+For AI Foundry it's the paid conversion and delivery costs that we're interested in. A nice demo is all very well but it's a paying customer that tells us the real story.
 
 *[CLICK 3: The watch strip appears.]*
 
-On top of that, we would watch three numbers. The top four’s share of sales, about 40% today. For move two, the gross profit from interoperability deals. And for move three, how many AI Foundry users convert to paid use.
+Track those alongside customer concentration and total sales.
 
 *[CLICK 4: The closing line appears. Slow down.]*
 
-NVIDIA can keep its advantage if customers keep getting enough value from its software and systems to keep buying, while AI Foundry brings in profitable new demand. So invest in CUDA now, and expand the two pilots only when their results justify the cost.
+Invest in CUDA. Expand the pilots when the results warrant it.
 
-So let’s test our recommendation. Put yourself in Microsoft’s position.
+Let's test that with the room.
 
-**Key line:** Invest in CUDA now. Expand the pilots only when their results justify the cost.
+**Key line:** Pilot results should decide whether the strategy expands.
 
 **Note for Q&A:** Other risks we would watch: regulators acting against NVIDIA’s deals (like the Run.ai review in the case), AI getting so cheap that spending slows (Move 3 widens the customer base), and chip supply at TSMC (no real second source for leading chips). After the case, NVIDIA’s revenue kept growing and its margin returned to about 75%; that figure is from outside the case, so say so if asked.
 
@@ -612,33 +614,33 @@ So let’s test our recommendation. Put yourself in Microsoft’s position.
 
 *[Pause. Look at the room. Ask, then wait.]*
 
-If you were Microsoft, you’d build your own chip either way. Would you also build the racks, networking and software around it, or plug it into NVIDIA’s?
+You’re Microsoft, building your own chip. Would you also build the racks and networking, or consider NVIDIA’s? What would decide it?
 
 *[Take two or three answers. Don’t argue. Thank each person.]*
 
 *[CLICK 1: The board rises in.]*
 
-In May 2025, after this case was written, NVIDIA announced NVLink Fusion. NVLink is NVIDIA’s high-speed connection between chips.
+After the case, NVIDIA announced NVLink Fusion in May 2025.
 
 *[CLICK 2: The chips light up.]*
 
-The two green chips are NVIDIA GPUs. In this picture, the blue chip is drawn as a customer CPU. NVIDIA’s launch described custom CPUs paired with its GPUs, and custom AI accelerators paired with its CPUs and networking. This illustrates possible integration paths, not proof that every chip can plug into every configuration.
+It described ways custom chips could work with NVIDIA infrastructure. The specific configuration still needs testing.
 
-That is the idea behind our Move 2: keep selling systems when customers build their own chips. It shows NVIDIA pursuing a similar approach. It does not yet prove the move works.
+That’s similar to our second move. Commercial results would tell us how well it works.
 
 *[CLICK 3: The final line appears. Walk back to the spot where you started Slide 1.]*
 
-So, back to that $600 billion.
+Back to the opening headline.
 
-That fall was about cheaper AI. NVIDIA’s lasting risk is about who builds the chips.
+Cheaper AI raised questions about demand. We also need to ask what customers will keep buying when they build their own chips.
 
 *[Slow. Final line. Then stop.]*
 
-Make NVIDIA’s systems the best option, even when buyers build their own chips.
+Make NVIDIA’s systems valuable enough that customers keep choosing them.
 
-Thank you.
+Thank you and with that we’ll end with a short video of current happenings in the top management of NVIDIA.
 
-**Key line:** Make NVIDIA’s systems the best option, even when buyers build their own chips.
+**Key line:** Give customers a reason to keep choosing NVIDIA’s systems.
 
 **Note for Q&A:** GIVEN, case pp. 13 and 15: Amazon bought Annapurna in 2015, launched Inferentia in 2018 and Trainium in 2020, and built the Neuron SDK; Google has developed TPUs since 2015. These are years of chip, software and integration work. We do not assume an NVIDIA partnership eliminates R&D costs. INTERNET — NVLink Fusion launch: https://nvidianews.nvidia.com/news/nvidia-nvlink-fusion-semi-custom-ai-infrastructure-partner-ecosystem. NVLink Fusion is from outside the case (announced May 18, 2025). Partners named at launch included MediaTek, Marvell, Qualcomm and Fujitsu. In NVIDIA’s picture the customer’s chip is drawn as a CPU; Fusion also pairs customers’ own AI chips with NVIDIA’s CPUs and networking.
 
@@ -648,17 +650,25 @@ Thank you.
 
 *[Everyone on stage. Smile.]*
 
-Thank you. We’re happy to take your questions.
+We’d be happy to take your questions.
 
 ## BACKUP SLIDES B1 and B2 · Group 3 (Q&A captain)
 
-*[Use only if the professor asks or runs the case poll. Don’t present these unprompted.]*
+**B1, the 15 poll answers**
 
-The 12-question rehearsal defense bank is in [NVIDIA_QA_Defense.md](NVIDIA_QA_Defense.md).
+*[Use only if the professor asks or runs the case poll. Don’t present it unprompted.]*
 
-**B1, the 15 poll answers:** “Here are our answers to all fifteen questions. Each one points to the slide where we showed the evidence.” Then go straight to the slide number on the table.
+“Here’s where we landed on the fifteen case questions. Each answer points back to the slide with our evidence. Which one would you like us to discuss?” Then go to the relevant slide.
 
-**B2, other frameworks:** “We also ran PESTLE and SWOT. They point to the same conclusion as Five Forces: the threat sits with NVIDIA’s biggest buyers. So we kept the main deck focused.”
+The presentation’s analytical Q5 (new demand) is answered on slide 12. Polling Q5 here is a different question: profit model, answered on slide 7.
+
+The 12-question defense bank is in NVIDIA_QA_Defense.md.
+
+**B2, other frameworks**
+
+*[Use only if asked.]*
+
+“We also considered PESTLE and SWOT. They reinforced our focus on the large buyers, so we used Five Forces and Four Corners to keep the main discussion focused. We can talk through the other frameworks if helpful.”
 
 ## Quick glossary: every technical term in the script
 
