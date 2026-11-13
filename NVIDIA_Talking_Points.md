@@ -72,21 +72,7 @@ So here is our question for the next thirty minutes. **Was cheaper AI the real t
 
 *[Pause two seconds. Let the question sit.]*
 
-*[CLICK 4: The question moves up. “It still trained on NVIDIA chips.” appears, then three short facts underneath.]*
-
-Here is the catch. It still trained on NVIDIA chips.
-
-*[Pause.]*
-
-The chips were NVIDIA H800s, export-limited versions rather than the flagship. The model still got competitive benchmark results. And the under-$5.6 million was one reported training run, not the full cost of developing the model. Its technical report excludes prior research and experiments.
-
-*[CLICK 5: The bottom line appears.]*
-
-Cheaper AI rattled investors. But the lasting threat is on NVIDIA’s own customer list.
-
-To see it, we first need to know how NVIDIA got so big.
-
-**Key line:** The real threat is on NVIDIA’s own customer list.
+To answer it, we first need to know how NVIDIA got so big.
 
 **Note for Q&A:** INTERNET — DeepSeek-V3 technical report, https://arxiv.org/html/2412.19437v2. Its estimated compute bill uses an assumed H800 rental rate and excludes earlier research and ablation experiments. The dollar comparison does not measure all-in R&D or the full cost of DeepSeek-R1.
 

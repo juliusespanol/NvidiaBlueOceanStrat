@@ -220,27 +220,6 @@ body:has(#slide-1-hook.active) #nt{white-space:pre-line}
 
 #slide-1-hook .ds-card .ds-vs{font-size:32px}
 #slide-1-hook .ds-card .ds-num{font-size:118px}
-/* Click 4: editorial verdict, no boxes. The question becomes a small kicker, one big line, three short facts between thin rules, one source line.
-   Click 5: the bottom line (green bar on the left). No source labels on slides; sources live in the speaker notes. */
-#slide-1-hook .cheaper-ai{position:absolute;left:128px;right:128px;top:330px}
-#slide-1-hook .cheaper-ai .verdict{margin:0;padding:34px 0 40px;border-top:1px solid var(--line2);font-family:var(--display);font-weight:700;font-size:112px;line-height:1;letter-spacing:-.035em;color:var(--fg)}
-#slide-1-hook .cheaper-ai .verdict em{font-style:normal;color:var(--green-hi)}
-#slide-1-hook .cheaper-ai .facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
-#slide-1-hook .cheaper-ai .facts div{padding:28px 40px 30px;border-left:1px solid var(--line);opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .9s cubic-bezier(.16,.84,.24,1);transition-delay:calc(var(--d) * 140ms + 500ms)}
-#slide-1-hook .cheaper-ai .facts div:first-child{padding-left:0;border-left:none}
-#slide-1-hook .cheaper-ai.on .facts div{opacity:1;transform:none}
-#slide-1-hook .cheaper-ai .facts b{display:block;font-family:var(--display);font-weight:700;font-size:44px;letter-spacing:-.01em;color:var(--fg);margin-bottom:10px}
-#slide-1-hook .cheaper-ai .facts span{font-size:24px;line-height:1.35;color:var(--mute)}
-#slide-1-hook .src{position:absolute;left:128px;bottom:96px;font-family:var(--mono);font-size:15px;letter-spacing:.06em;color:var(--dim)}
-#slide-1-hook .hook-answer{position:absolute;left:128px;right:128px;top:800px;margin:0;padding-left:28px;border-left:3px solid var(--green);font-family:var(--display);font-weight:600;font-size:44px;line-height:1.25;color:var(--fg);max-width:1500px}
-#slide-1-hook .hook-answer b{color:var(--green-hi);font-weight:700}
-#slide-1-hook:is([data-step="4"],[data-step="5"]) .ds-card{opacity:0;visibility:hidden}
-#slide-1-hook:is([data-step="4"],[data-step="5"]) .mega{opacity:0!important;visibility:hidden}
-#slide-1-hook:is([data-step="4"],[data-step="5"]) .nv-logo{visibility:hidden}
-#slide-1-hook:is([data-step="4"],[data-step="5"]) .title{visibility:hidden}
-#slide-1-hook:is([data-step="4"],[data-step="5"]) .qline{top:200px;font-size:52px}
-@media(prefers-reduced-motion:reduce){#slide-1-hook .cheaper-ai .facts div{transition:opacity .3s ease;transform:none}}
-#slide-1-hook:is([data-step="4"],[data-step="5"]) .hook-meme{visibility:hidden}
 @media(prefers-reduced-motion:reduce){#slide-1-hook .qline{transition:opacity .3s ease}}
 
 </style>
@@ -257,15 +236,6 @@ body:has(#slide-1-hook.active) #nt{white-space:pre-line}
     <span class="ds-vs">GPT-4: <b>$100M+ (est.)</b></span>
   </div>
   <div class="qline" data-frag="3">Was cheaper AI the real threat?</div>
-  <div class="cheaper-ai" data-frag="4">
-    <p class="verdict">It still trained on <em>NVIDIA chips.</em></p>
-    <div class="facts">
-      <div style="--d:0"><b>H800s</b><span>Export-limited NVIDIA chips, not the flagship</span></div>
-      <div style="--d:1"><b>Competitive</b><span>Strong benchmark results despite that limit</span></div>
-      <div style="--d:2"><b>&lt;$5.6M</b><span>One training run, not the full R&amp;D bill</span></div>
-    </div>
-  </div>
-  <p class="hook-answer" data-frag="5">Cheaper AI rattled investors. The lasting threat is on <b>NVIDIA’s own customer list.</b></p>
   <aside class="notes">[Walk to the centre of the room. Say nothing. Let the number sit on screen for three seconds.]
 
 Six hundred billion dollars.
@@ -298,21 +268,7 @@ So here is our question for the next thirty minutes. Was cheaper AI the real thr
 
 [Pause two seconds. Let the question sit.]
 
-[CLICK 4: The question moves up. “It still trained on NVIDIA chips.” appears, then three short facts underneath.]
-
-Here is the catch. It still trained on NVIDIA chips.
-
-[Pause.]
-
-The chips were NVIDIA H800s, export-limited versions rather than the flagship. The model still got competitive benchmark results. And the under-$5.6 million was one reported training run, not the full cost of developing the model. Its technical report excludes prior research and experiments.
-
-[CLICK 5: The bottom line appears.]
-
-Cheaper AI rattled investors. But the lasting threat is on NVIDIA’s own customer list.
-
-To see it, we first need to know how NVIDIA got so big.
-
-Key line: The real threat is on NVIDIA’s own customer list.
+To answer it, we first need to know how NVIDIA got so big.
 
 Note for Q&amp;A: INTERNET — DeepSeek-V3 technical report, https://arxiv.org/html/2412.19437v2. Its estimated compute bill uses an assumed H800 rental rate and excludes earlier research and ablation experiments. The dollar comparison does not measure all-in R&amp;D or the full cost of DeepSeek-R1.</aside>
 </section>
